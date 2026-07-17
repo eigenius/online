@@ -10,16 +10,16 @@ import { defineConfig } from "astro/config";
 // every page is hand-authored against the shared chrome in
 // src/layouts/ and src/components/.
 //
-// Deployed to GitHub Pages as a *project* site, so it serves under
-// the /online/ base path. Every internal link must go through
-// withBase() (src/lib/url.ts) to survive that prefix. To move to a
-// custom domain later (e.g. online.eigenius.io):
-//   1. set `site` to the domain and delete `base`,
-//   2. add a public/CNAME file with the bare domain,
-//   3. point a DNS CNAME record at eigenius.github.io.
-// withBase() collapses to a no-op when `base` is unset, so links
-// need no changes.
+// Deployed to GitHub Pages under the custom apex domain
+// eigenius.online, so the site serves at the root and needs no base
+// path. The bare domain is pinned in public/CNAME (copied verbatim
+// into dist/ on every build), which is what keeps GitHub Pages from
+// resetting the custom-domain setting each deploy.
+//
+// Internal links still go through withBase() (src/lib/url.ts); with
+// no `base` set it collapses to the identity, so the indirection is
+// free and the site can move back under a path prefix by adding
+// `base` here again without touching any link.
 export default defineConfig({
-  site: "https://eigenius.github.io",
-  base: "/online",
+  site: "https://eigenius.online",
 });
