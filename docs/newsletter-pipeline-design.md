@@ -443,7 +443,7 @@ provenance is auditable):
    source (abstract, or `trafilatura`-extracted body), keyed by a hash of the
    URL + fetch date. The summarize/verify agent reads the snapshot rather than
    re-fetching, so the *exact* text a summary was checked against is preserved.
-   Extracted text only — never raw HTML or full PDFs (§10).
+   Extracted text only — never raw HTML or full PDFs (§11).
 3. **Embedding vectors — append-only sidecar** (`archive/vectors/YYYY-MM.*`).
    Persisted next to the records so each is computed **once and never
    recomputed** — embeddings are a paid API call now (§6.5). New content only,
@@ -739,7 +739,155 @@ before opening the PR.
 
 ---
 
-## 10. Legal, ethical & operational guardrails
+## 10. Module layout (Deno + TypeScript)
+
+### Repos
+
+Three repos, each with one job (resolves the layout half of §14.3):
+
+- **`eigenius/radar`** — the pipeline code (this layout).
+- **`eigenius/radar-archive`** — the git source-of-truth archive (records,
+  snapshots, vectors). Separate so the archive's high-churn history doesn't bury
+  the code history; the pipeline clones it at the start of each run (§6.2). (An
+  orphan `archive` branch inside `radar` is a lighter alternative.)
+- **`eigenius/online`** — the site; the pipeline opens PRs here with the draft
+  issue and entity-page data.
+
+### Tree
+
+```
+radar/
+├─ deno.json                    # tasks, import map, lint/fmt
+├─ deno.lock
+├─ config/
+│  ├─ topics.yaml               # taxonomy + anchors (§2)
+│  ├─ sources.yaml              # source registry (§3)
+│  └─ queries.yaml              # per-topic search templates (§6.1.1)
+├─ src/
+│  ├─ types.ts                  # Record, Sighting, Signals, Entity, Edge (§5)
+│  ├─ config.ts                 # load + zod-validate the YAML configs
+│  ├─ sources/                  # harvest adapters — deterministic, no Claude
+│  │  ├─ adapter.ts             #   interface SourceAdapter { since(watermark) → Candidate[] }
+│  │  ├─ arxiv.ts  semantic_scholar.ts  crossref.ts  biorxiv.ts
+│  │  ├─ rss.ts    hacker_news.ts
+│  │  ├─ search/                #   web-search discovery (§6.1.1)
+│  │  │  ├─ provider.ts         #     interface SearchProvider { search(query, since) → Hit[] }
+│  │  │  └─ exa.ts              #     chosen provider (§14.6)
+│  │  └─ registry.ts            #   build adapters from sources.yaml
+│  ├─ fetch/
+│  │  ├─ http.ts                # shared client: rate-limit, retry, Retry-After, ETag
+│  │  ├─ robots.ts              # robots.txt gate
+│  │  └─ extract.ts             # main-content extraction (Readability + deno-dom)
+│  ├─ pipeline/
+│  │  ├─ normalize.ts           # canonical id + common record (§4, stage 2)
+│  │  ├─ dedup.ts               # canonical / title / embedding dedup (stage 3)
+│  │  ├─ gate.ts                # cheap relevance gate (stage 4)
+│  │  └─ rank.ts                # signal fusion + shortlist (stage 7)
+│  ├─ store/
+│  │  ├─ records.ts             # JSONL append/read            (§6.2 tier 1)
+│  │  ├─ snapshots.ts           # content-addressed text        (tier 2)
+│  │  ├─ vectors.ts             # embedding sidecar             (tier 3)
+│  │  ├─ index.ts               # libSQL: build/open, FTS5 + vectors (tier 4)
+│  │  └─ retrieve.ts            # hybrid search + RRF (§6.4)
+│  ├─ embeddings/
+│  │  ├─ embedder.ts            # interface Embedder { embed(texts) → Vector[] }
+│  │  └─ voyage.ts              # Voyage via REST (§6.5)
+│  ├─ entities/
+│  │  ├─ extract.ts             # metadata + LLM extraction (§7.2)
+│  │  ├─ resolve.ts             # resolution + merge-review queue (§7.2)
+│  │  └─ graph.ts               # edges + salience (§7.3, §7.5)
+│  ├─ agents/                   # the only Claude-dependent code
+│  │  ├─ client.ts              # SDK client, model tiers, prompt caching
+│  │  ├─ schemas.ts             # zod schemas for structured outputs
+│  │  ├─ judge.ts               # Haiku relevance/significance (§4, stage 6)
+│  │  ├─ summarize.ts           # Sonnet summary + web_fetch (stage 8)
+│  │  ├─ verify.ts              # Sonnet adversarial faithfulness (stage 8)
+│  │  ├─ select.ts              # Opus selection + framing (stage 9)
+│  │  └─ recommend.ts           # Opus topic-gap recs (stage 11)
+│  ├─ render/
+│  │  ├─ newsletter.ts          # → NNN-slug.md, validated vs content schema (§5)
+│  │  ├─ entities.ts            # → entity data extract for the site (§7.4)
+│  │  └─ schema.ts              # imports online's content.config.ts to validate
+│  ├─ publish/
+│  │  └─ github.ts              # branch + commit + open PR to eigenius/online
+│  └─ jobs/
+│     ├─ harvest.ts             # DAILY  (§4 daily rhythm)
+│     └─ assemble.ts            # WEEKLY (§4 weekly rhythm)
+├─ bin/radar.ts                 # CLI: harvest | assemble | backfill | rebuild-index | doctor
+├─ tests/
+└─ .github/workflows/
+   ├─ harvest.yml               # cron: daily → commit to radar-archive
+   └─ assemble.yml              # cron: weekly → open PR to eigenius/online
+```
+
+### The seams that map to the open decisions
+
+Each provider choice is a single interface with swappable implementations, so
+the still-open decisions stay cheap to change:
+
+| Interface | File | Swap covers |
+| --- | --- | --- |
+| `SourceAdapter` | `sources/adapter.ts` | adding/removing any source |
+| `SearchProvider` | `sources/search/provider.ts` | Exa / Tavily / Brave / Bing (§14.6) |
+| `Embedder` | `embeddings/embedder.ts` | Voyage → another provider or local |
+| `Store` | `store/index.ts` | libSQL local file → Turso, no call-site change (§6.6) |
+
+**libSQL note:** `@libsql/client` gives native vector search *and* FTS5 behind
+one client — local-file mode now, hosted Turso later by changing only the
+connection URL. That collapses the store seam and the §6.6 scaling path into one
+line of config.
+
+### Layering rule
+
+`sources`, `fetch`, `pipeline`, `store`, `embeddings`, `entities` are
+**deterministic and Claude-free** — pure, unit-testable, and where the daily
+harvest lives. Only `agents/*` calls Claude, and only the weekly `assemble` job
+uses it. `jobs/*` are thin orchestrators composing the modules; `bin/radar.ts`
+is the CLI the workflows call. This mirrors the deterministic-vs-agentic split
+the whole design rests on (§4).
+
+### `deno.json` — tasks & runtime
+
+```jsonc
+{
+  "tasks": {
+    "harvest":       "deno run --allow-net --allow-read --allow-write --allow-env bin/radar.ts harvest",
+    "assemble":      "deno run --allow-net --allow-read --allow-write --allow-env bin/radar.ts assemble",
+    "backfill":      "deno run -A bin/radar.ts backfill",
+    "rebuild-index": "deno run --allow-read --allow-write bin/radar.ts rebuild-index",
+    "test":          "deno test --allow-read",
+    "check":         "deno check bin/radar.ts && deno lint && deno fmt --check"
+  },
+  "imports": {
+    "@anthropic/sdk": "npm:@anthropic-ai/sdk",          // agentic stages
+    "@libsql/client": "npm:@libsql/client",             // store: vectors + FTS5
+    "zod":            "npm:zod",                         // schemas / structured outputs
+    "@std/yaml":      "jsr:@std/yaml",                   // config
+    "readability":    "npm:@mozilla/readability",        // content extraction
+    "deno-dom":       "jsr:@b-fuze/deno-dom"             // DOM for extraction
+  }
+}
+```
+
+Deno's permission flags double as a security boundary — the harvest needs
+net/read/write/env and nothing needs `--allow-run`. Secrets (`ANTHROPIC_API_KEY`,
+`VOYAGE_API_KEY`, source API keys, a GitHub token) come from the environment
+(Actions secrets), read via `--allow-env`.
+
+### Two entrypoints
+
+- **`harvest`** (daily): clone `radar-archive` → run every `SourceAdapter` and
+  the `SearchProvider` since their watermarks → normalize → dedup → gate → embed
+  new items → append to records/snapshots/vectors → extract + resolve entities →
+  commit back. No Claude (except the optional weekly agentic-search pass).
+- **`assemble`** (weekly): rebuild the index → select new entries → `judge` →
+  `rank` → `summarize` + `verify` → `select` → `render/newsletter` +
+  `render/entities` → `recommend` → `publish/github` opens the PR to
+  `eigenius/online`.
+
+---
+
+## 11. Legal, ethical & operational guardrails
 
 - **Respect source terms.** Official APIs and RSS first; honor robots.txt and
   per-API rate limits; arXiv OAI-PMH etiquette for backfill. Scraping only where
@@ -760,7 +908,7 @@ before opening the PR.
 
 ---
 
-## 11. Quality & evaluation
+## 12. Quality & evaluation
 
 - **Editor keep-rate** — fraction of pipeline-selected items the editor keeps.
   The primary precision metric; drives anchor/rubric tuning.
@@ -777,7 +925,7 @@ folded back into the anchors and the few-shot rubric.
 
 ---
 
-## 12. Phased rollout
+## 13. Phased rollout
 
 - **Phase 0 — Archive.** Source registry + harvest + normalize + dedup + cheap
   gate + storage. No LLM. Backfill a few months so the archive isn't empty.
@@ -802,7 +950,7 @@ newsletter drafting is never turned on.
 
 ---
 
-## 13. Open questions (decisions for you)
+## 14. Open questions (decisions for you)
 
 **Decided (2026-07-17):** the pipeline runs on **Deno + TypeScript with hosted
 embeddings (Voyage AI)** — §9, §6.5.
