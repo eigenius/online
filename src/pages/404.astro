@@ -1,0 +1,27 @@
+---
+// GitHub Pages serves dist/404.html for any unknown path.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { withBase } from "../lib/url";
+---
+
+<BaseLayout
+  title="Page not found — Eigenius Community"
+  description="The page you were looking for doesn't exist."
+>
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">404</span>
+      <h1 class="section-title">This page doesn't exist.</h1>
+      <p class="section-prose">
+        The link may be out of date, or the page may have moved. The
+        <a href={withBase("/newsletter/")}>newsletter archive</a>, the
+        <a href={withBase("/articles/")}>articles</a>, and the
+        <a href={withBase("/blog/")}>blog</a> are all reachable from
+        the navigation above.
+      </p>
+      <div class="hero-actions">
+        <a class="cta cta-primary" href={withBase("/")}>Back to the start</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

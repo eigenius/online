@@ -1,0 +1,178 @@
+---
+// Landing page. Introduces the community site and routes readers to
+// the newsletter archive, articles, and blog. The hero reuses the
+// main site's typography over a layered navy gradient instead of its
+// background image, so this repo carries no multi-megabyte binary.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionCard from "../components/SectionCard.astro";
+import EntryCard from "../components/EntryCard.astro";
+import { getIssues, getPublished } from "../lib/content";
+import { withBase } from "../lib/url";
+
+const issues = await getIssues();
+const latestIssue = issues[0];
+
+// The most recent writing across articles and blog, interleaved.
+const recent = [
+  ...(await getPublished("articles")).map(
+    (entry) => ({ section: "articles", entry }) as const,
+  ),
+  ...(await getPublished("blog")).map(
+    (entry) => ({ section: "blog", entry }) as const,
+  ),
+]
+  .sort((a, b) => b.entry.data.pubDate.valueOf() - a.entry.data.pubDate.valueOf())
+  .slice(0, 3);
+---
+
+<BaseLayout
+  title="Eigenius Community — newsletter, articles, and blog"
+  description="The community home of the Eigenius project: a weekly newsletter on typed knowledge graphs and auditable AI reasoning, with articles and blog posts from the project and its community."
+>
+  <!-- ───────── Hero ───────── -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <span class="hero-eyebrow">The Eigenius community</span>
+        <h1 class="hero-headline">
+          Follow the work,<br />week by week.
+        </h1>
+        <p class="hero-pitch">
+          Eigenius is an open-source typed knowledge graph for
+          AI-assisted scientific reasoning &mdash; a compiler for AI
+          thought. This is its community home: a weekly newsletter on
+          where the project is going, plus articles and posts from the
+          people building and using it.
+        </p>
+        <div class="hero-actions">
+          <a class="cta cta-primary" href={withBase("/newsletter/")}>
+            Read the newsletter
+          </a>
+          <a class="cta cta-secondary" href="https://eigenius.io">
+            About the project <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Section cards ───────── -->
+  <section class="section section-tinted">
+    <div class="section-inner">
+      <span class="section-eyebrow">What's here</span>
+      <h2 class="section-title">Three ways to follow along.</h2>
+      <div class="card-grid">
+        <SectionCard
+          label="Newsletter"
+          tagline="One issue a week on the state of the project."
+          bullets={[
+            "What landed, what changed, what's next",
+            "Highlights from the community",
+            "Every issue archived here, readable without email",
+          ]}
+          href={withBase("/newsletter/")}
+          linkLabel="Browse the archive →"
+        />
+        <SectionCard
+          label="Articles"
+          tagline="Longer-form pieces that stand on their own."
+          bullets={[
+            "Deep dives on concepts and design decisions",
+            "Worked examples and case studies",
+            "Written to be readable months later",
+          ]}
+          href={withBase("/articles/")}
+          linkLabel="Read the articles →"
+        />
+        <SectionCard
+          label="Blog"
+          tagline="Shorter, timelier notes from the project."
+          bullets={[
+            "Release notes and announcements",
+            "Meetups, talks, and community calls",
+            "Quick updates between newsletter issues",
+          ]}
+          href={withBase("/blog/")}
+          linkLabel="Read the blog →"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────── Latest issue ───────── -->
+  {
+    latestIssue && (
+      <section class="section">
+        <div class="section-inner">
+          <span class="section-eyebrow">Latest issue</span>
+          <h2 class="section-title">From the newsletter.</h2>
+          <ul class="post-list">
+            <li class="post-item">
+              <EntryCard
+                section="newsletter"
+                entry={latestIssue}
+                chip={`Issue #${latestIssue.data.issue}`}
+              />
+            </li>
+          </ul>
+          <p class="section-footnote">
+            Every issue is archived on this site and available as an{" "}
+            <a href={withBase("/newsletter/rss.xml")}>RSS feed</a>.
+            Email delivery is coming; until then, the feed is the way
+            to subscribe.
+          </p>
+        </div>
+      </section>
+    )
+  }
+
+  <!-- ───────── Recent writing ───────── -->
+  {
+    recent.length > 0 && (
+      <section class="section section-tinted">
+        <div class="section-inner">
+          <span class="section-eyebrow">Recent writing</span>
+          <h2 class="section-title">Latest articles and posts.</h2>
+          <ul class="post-list">
+            {recent.map(({ section, entry }) => (
+              <li class="post-item">
+                <EntryCard section={section} entry={entry} />
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    )
+  }
+</BaseLayout>
+
+<style>
+  /* Page-unique styles; the shared chrome lives in
+     src/styles/custom.css. The gradient stands in for the main
+     site's hero background image using the same navy vocabulary. */
+  .hero {
+    border-bottom: 1px solid var(--sl-color-hairline);
+    background:
+      radial-gradient(
+        60rem 30rem at 85% 15%,
+        color-mix(in srgb, var(--eigenius-brand-deep) 45%, transparent),
+        transparent 70%
+      ),
+      linear-gradient(
+        to bottom right,
+        var(--eigenius-navy-1) 0%,
+        var(--eigenius-navy-2) 55%,
+        var(--eigenius-navy-3) 100%
+      );
+  }
+
+  .hero-inner {
+    padding: 5rem 1.5rem 6rem 1.5rem;
+    max-width: 72rem;
+    margin: 0 auto;
+  }
+
+  .hero-content {
+    max-width: 40rem;
+  }
+</style>

@@ -1,0 +1,46 @@
+---
+// Blog index, reverse-chronological.
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EntryCard from "../../components/EntryCard.astro";
+import { getPublished } from "../../lib/content";
+import { withBase } from "../../lib/url";
+
+const posts = await getPublished("blog");
+---
+
+<BaseLayout
+  title="Blog — Eigenius Community"
+  description="Shorter, timelier notes from the Eigenius project: release notes, announcements, meetups, and quick updates between newsletter issues."
+  current="blog"
+>
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">Blog</span>
+      <h1 class="section-title">Notes from the project</h1>
+      <p class="section-prose">
+        Shorter, timelier posts: release notes, announcements, meetups
+        and community calls, and quick updates between newsletter
+        issues.
+      </p>
+
+      {
+        posts.length === 0 ? (
+          <p class="section-prose post-empty">No posts yet.</p>
+        ) : (
+          <ul class="post-list">
+            {posts.map((post) => (
+              <li class="post-item">
+                <EntryCard section="blog" entry={post} />
+              </li>
+            ))}
+          </ul>
+        )
+      }
+
+      <p class="section-footnote">
+        Posts are also part of the site's{" "}
+        <a href={withBase("/rss.xml")}>combined RSS feed</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

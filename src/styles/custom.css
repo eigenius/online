@@ -1,0 +1,572 @@
+/* =====================================================================
+ * Eigenius Community — site palette, adapted from the main site
+ * (eigenius/eigenius repo, website/src/styles/custom.css)
+ *
+ * The logo is a metallic steel-blue logomark on a dark navy charcoal
+ * background. The site picks up the same colour vocabulary:
+ *   - Steel-blue as the brand accent (links, focus, primary actions)
+ *   - Dark navy as the dark-mode surface
+ *   - A muted cool-grey ramp for borders, dividers, and body text
+ *
+ * The --sl-color-* tokens below mirror the Starlight token names the
+ * main site maps its palette onto. This site has no Starlight, but
+ * keeping the same token layer means chrome components can be moved
+ * between the two sites without a rename pass.
+ * ===================================================================== */
+
+:root {
+  /* ---------- Brand ----------
+   * Eigenius steel-blue: an analytical, slightly industrial blue
+   * that picks up the metallic logomark. Used for accents, links,
+   * focus rings. */
+  --eigenius-brand:       #5C7A9E;    /* core brand */
+  --eigenius-brand-bright:#7B9DC0;    /* hover / hi-contrast */
+  --eigenius-brand-deep:  #3A4F6B;    /* pressed / shadow */
+  --eigenius-brand-bg:    #5C7A9E18;  /* subtle wash */
+
+  /* ---------- Navy ramp ----------
+   * Pulled from the logo's gradient background, used as the dark-mode
+   * surface system. */
+  --eigenius-navy-1: #14181F;  /* deepest */
+  --eigenius-navy-2: #1A1F2A;  /* page bg */
+  --eigenius-navy-3: #232938;  /* surface 1 */
+  --eigenius-navy-4: #2D3447;  /* surface 2 — sidebars, cards */
+  --eigenius-navy-5: #3A4257;  /* border / divider */
+
+  /* ---------- Cool grey ramp ----------
+   * Used for body text, muted captions, and borders in light mode. */
+  --eigenius-grey-1: #FBFCFD;
+  --eigenius-grey-2: #F1F3F6;
+  --eigenius-grey-3: #E1E5EA;
+  --eigenius-grey-4: #B8BFCA;
+  --eigenius-grey-5: #8A95A5;
+  --eigenius-grey-6: #5A6478;
+  --eigenius-grey-7: #2D3447;
+
+  /* ---------- Warrant categories ----------
+   * The conceptual spine of the Eigenius framework; kept identical to
+   * the main site so figures and chips read the same across both.
+   * Here the derived amber doubles as the draft-marker colour. */
+  --warrant-observed: #3A7CA5;
+  --warrant-derived:  #D98C5F;
+  --warrant-verified: #2E9D5D;
+  --warrant-declared: #8B5CB0;
+
+  --warrant-observed-bg: #3A7CA51A;
+  --warrant-derived-bg:  #D98C5F1A;
+  --warrant-verified-bg: #2E9D5D1A;
+  --warrant-declared-bg: #8B5CB01A;
+}
+
+/* Dark mode (site default; BaseLayout sets data-theme="dark") */
+:root {
+  --sl-color-accent-low:  var(--eigenius-brand-deep);
+  --sl-color-accent:      var(--eigenius-brand);
+  --sl-color-accent-high: var(--eigenius-brand-bright);
+
+  --sl-color-bg:          var(--eigenius-navy-2);
+  --sl-color-bg-nav:      var(--eigenius-navy-1);
+  --sl-color-bg-inline-code: var(--eigenius-navy-4);
+
+  --sl-color-text:        var(--eigenius-grey-2);
+  --sl-color-text-accent: var(--eigenius-brand-bright);
+  --sl-color-white:       #FFFFFF;
+  --sl-color-gray-1:      #F8F9FB;
+  --sl-color-gray-2:      var(--eigenius-grey-3);
+  --sl-color-gray-3:      var(--eigenius-grey-4);
+  --sl-color-gray-4:      var(--eigenius-grey-5);
+  --sl-color-gray-5:      var(--eigenius-grey-6);
+  --sl-color-gray-6:      var(--eigenius-navy-4);
+  --sl-color-gray-7:      var(--eigenius-navy-3);
+  --sl-color-black:       var(--eigenius-navy-1);
+
+  --sl-color-hairline:    var(--eigenius-navy-5);
+}
+
+/* Light mode — unused while BaseLayout pins dark, kept so a future
+   theme toggle only has to flip the data-theme attribute. */
+:root[data-theme="light"] {
+  --sl-color-accent-low:  #BCCBDC;
+  --sl-color-accent:      var(--eigenius-brand);
+  --sl-color-accent-high: var(--eigenius-brand-deep);
+
+  --sl-color-bg:          var(--eigenius-grey-1);
+  --sl-color-bg-nav:      #FFFFFF;
+  --sl-color-bg-inline-code: var(--eigenius-grey-2);
+
+  --sl-color-text:        var(--eigenius-grey-7);
+  --sl-color-text-accent: var(--eigenius-brand-deep);
+  --sl-color-white:       var(--eigenius-grey-7);
+  --sl-color-gray-1:      var(--eigenius-navy-2);
+  --sl-color-gray-2:      var(--eigenius-grey-7);
+  --sl-color-gray-3:      var(--eigenius-grey-6);
+  --sl-color-gray-4:      var(--eigenius-grey-5);
+  --sl-color-gray-5:      var(--eigenius-grey-4);
+  --sl-color-gray-6:      var(--eigenius-grey-3);
+  --sl-color-gray-7:      var(--eigenius-grey-2);
+  --sl-color-black:       #FFFFFF;
+
+  --sl-color-hairline:    var(--eigenius-grey-3);
+}
+
+/* =====================================================================
+ * Body baseline and shared page chrome
+ *
+ * Every page shares the same body baseline, section frame, CTA
+ * buttons, and card grid. Centralised here so each page only carries
+ * the styles unique to its own hero and content.
+ * ===================================================================== */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--sl-color-bg);
+  color: var(--sl-color-text);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+}
+
+.hero-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: var(--eigenius-grey-5);
+  font-weight: 600;
+}
+
+.hero-headline {
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.hero-pitch {
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  color: var(--sl-color-gray-3);
+  max-width: 56ch;
+  line-height: 1.5;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.6rem;
+  flex-wrap: wrap;
+}
+
+.section {
+  padding: 4rem 1.5rem;
+  border-top: 1px solid var(--sl-color-hairline);
+}
+
+.section-tinted {
+  background: color-mix(in srgb, var(--sl-color-bg-nav) 50%, transparent);
+}
+
+.section-inner {
+  max-width: 72rem;
+  margin: 0 auto;
+}
+
+.section-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--sl-color-text-accent);
+}
+
+.section-title {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+  margin: 0.4rem 0 1.4rem 0;
+  max-width: 36ch;
+}
+
+.section-prose {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--sl-color-gray-3);
+  max-width: 56ch;
+}
+
+.section-prose + .section-prose {
+  margin-top: 1rem;
+}
+
+.section-prose a {
+  color: var(--sl-color-text-accent);
+}
+
+.section-footnote {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--sl-color-gray-3);
+  max-width: 56ch;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed var(--sl-color-hairline);
+}
+
+.section-footnote a {
+  color: var(--sl-color-text-accent);
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.65rem 1.2rem;
+  border-radius: 0.4rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.cta-primary {
+  background: var(--sl-color-accent);
+  color: white;
+  border: 1px solid var(--sl-color-accent);
+}
+.cta-primary:hover {
+  background: var(--sl-color-accent-high);
+  transform: translateY(-1px);
+}
+
+.cta-secondary {
+  color: var(--sl-color-text);
+  border: 1px solid var(--sl-color-hairline);
+  background: transparent;
+}
+.cta-secondary:hover {
+  border-color: var(--sl-color-accent);
+  color: var(--sl-color-text-accent);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 60rem) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =====================================================================
+ * Entry lists — newsletter archive, article and blog indexes
+ * ===================================================================== */
+
+.post-list {
+  list-style: none;
+  margin: 2.5rem 0 0 0;
+  padding: 0;
+}
+
+.post-item {
+  padding: 1.75rem 0;
+  border-top: 1px solid var(--sl-color-hairline);
+}
+
+.post-item:first-child {
+  border-top: none;
+  padding-top: 0.5rem;
+}
+
+.post-item-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.post-date {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--eigenius-grey-5);
+}
+
+.post-chip,
+.post-draft-chip {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 0.25rem;
+  padding: 0.12rem 0.42rem;
+}
+
+.post-chip {
+  color: var(--sl-color-text-accent);
+  background: var(--eigenius-brand-bg);
+}
+
+.post-draft-chip {
+  color: var(--warrant-derived);
+  background: var(--warrant-derived-bg);
+}
+
+.post-title {
+  font-size: clamp(1.25rem, 2.2vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.25;
+  margin: 0.45rem 0 0 0;
+}
+
+.post-title a {
+  color: var(--sl-color-text);
+  text-decoration: none;
+}
+
+.post-title a:hover {
+  color: var(--sl-color-text-accent);
+}
+
+.post-excerpt {
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: var(--sl-color-gray-3);
+  max-width: 56ch;
+  margin: 0.6rem 0 0 0;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0.9rem 0 0 0;
+  padding: 0;
+}
+
+.post-tag {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--sl-color-text-accent);
+  background: var(--eigenius-brand-bg);
+  border: 1px solid var(--sl-color-hairline);
+  border-radius: 0.25rem;
+  padding: 0.18rem 0.5rem;
+}
+
+.post-empty {
+  margin-top: 2rem;
+  font-style: italic;
+}
+
+/* ---------- Entry body (issue, article, or post page) ---------- */
+
+.post-body {
+  max-width: 44rem;
+  margin: 0 auto;
+}
+
+.post-back {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--sl-color-text-accent);
+  text-decoration: none;
+  margin-bottom: 1.2rem;
+}
+
+.post-back:hover {
+  text-decoration: underline;
+}
+
+.post-headline {
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0;
+}
+
+.post-subtitle {
+  font-size: clamp(1.05rem, 1.7vw, 1.25rem);
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--sl-color-gray-3);
+  margin: 0.7rem 0 0 0;
+  max-width: 46ch;
+}
+
+.post-meta {
+  font-size: 0.88rem;
+  color: var(--eigenius-grey-5);
+  margin: 0.8rem 0 0 0;
+}
+
+.post-meta-sep {
+  margin: 0 0.45rem;
+  opacity: 0.6;
+}
+
+.post-draft-banner {
+  margin: 1.2rem 0 0 0;
+  padding: 0.6rem 0.9rem;
+  border-radius: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--warrant-derived);
+  background: var(--warrant-derived-bg);
+  border: 1px solid var(--warrant-derived);
+}
+
+.post-prose {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--sl-color-hairline);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--sl-color-text);
+}
+
+.post-prose h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 2.4rem 0 0.8rem 0;
+}
+
+.post-prose h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 1.9rem 0 0.6rem 0;
+}
+
+.post-prose p,
+.post-prose ul,
+.post-prose ol {
+  margin: 0 0 1.15rem 0;
+}
+
+.post-prose a {
+  color: var(--sl-color-text-accent);
+}
+
+.post-prose code {
+  background: var(--sl-color-bg-inline-code);
+  border-radius: 0.25rem;
+  padding: 0.1rem 0.32rem;
+  font-size: 0.92em;
+}
+
+.post-prose pre {
+  background: var(--sl-color-bg-inline-code);
+  border: 1px solid var(--sl-color-hairline);
+  border-radius: 0.4rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.post-prose pre code {
+  background: none;
+  padding: 0;
+}
+
+.post-prose blockquote {
+  margin: 1.4rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid var(--sl-color-accent);
+  color: var(--sl-color-gray-3);
+}
+
+.post-prose img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.4rem;
+}
+
+.post-prose table {
+  display: block;
+  overflow-x: auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.post-prose th,
+.post-prose td {
+  border: 1px solid var(--sl-color-hairline);
+  padding: 0.5rem 0.7rem;
+  text-align: left;
+}
+
+/* ---------- Previous / next between newsletter issues ---------- */
+
+.post-adjacent-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--sl-color-hairline);
+}
+
+.post-adjacent-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--sl-color-hairline);
+  border-radius: 0.4rem;
+  text-decoration: none;
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.post-adjacent-link:hover {
+  border-color: var(--sl-color-accent);
+  transform: translateY(-1px);
+}
+
+.post-adjacent-link-next {
+  grid-column: 2;
+  text-align: right;
+}
+
+.post-adjacent-dir {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--sl-color-text-accent);
+}
+
+.post-adjacent-title {
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--sl-color-text);
+  line-height: 1.35;
+}
+
+@media (max-width: 40rem) {
+  .post-adjacent-nav {
+    grid-template-columns: 1fr;
+  }
+
+  .post-adjacent-link-next {
+    grid-column: 1;
+    text-align: left;
+  }
+}

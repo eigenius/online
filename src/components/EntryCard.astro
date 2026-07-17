@@ -1,0 +1,42 @@
+---
+// One entry as it appears on an index page. Shared by the newsletter
+// archive, the article index, and the blog index so the three can't
+// drift apart. `chip` is an optional label rendered next to the date,
+// e.g. "Issue #3" on the newsletter archive.
+import { entryUrl, formatDate, isoDate } from "../lib/content";
+import type { Entry, SectionName } from "../lib/content";
+
+interface Props {
+  section: SectionName;
+  entry: Entry;
+  chip?: string;
+}
+
+const { section, entry, chip } = Astro.props;
+---
+
+<article>
+  <div class="post-item-meta">
+    <time class="post-date" datetime={isoDate(entry.data.pubDate)}>
+      {formatDate(entry.data.pubDate)}
+    </time>
+    {chip && <span class="post-chip">{chip}</span>}
+    {entry.data.draft && <span class="post-draft-chip">Draft</span>}
+  </div>
+
+  <h3 class="post-title">
+    <a href={entryUrl(section, entry)}>{entry.data.title}</a>
+  </h3>
+
+  <p class="post-excerpt">{entry.data.description}</p>
+
+  {
+    entry.data.tags.length > 0 && (
+      <ul class="post-tags">
+        {entry.data.tags.map((tag) => (
+          <li class="post-tag">{tag}</li>
+        ))}
+      </ul>
+    )
+  }
+</article>

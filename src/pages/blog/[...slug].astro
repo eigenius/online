@@ -1,0 +1,23 @@
+---
+// A single blog post. `[...slug]` (rest param) rather than `[slug]`
+// so nested paths work — src/content/blog/2026/foo.md serves at
+// /blog/2026/foo/.
+import EntryLayout from "../../layouts/EntryLayout.astro";
+import { getPublished, type Entry } from "../../lib/content";
+
+export async function getStaticPaths() {
+  const posts = await getPublished("blog");
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+interface Props {
+  post: Entry;
+}
+
+const { post } = Astro.props;
+---
+
+<EntryLayout entry={post} section="blog" backLabel="Blog" />

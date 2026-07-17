@@ -1,0 +1,46 @@
+---
+// Article index, reverse-chronological.
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EntryCard from "../../components/EntryCard.astro";
+import { getPublished } from "../../lib/content";
+import { withBase } from "../../lib/url";
+
+const articles = await getPublished("articles");
+---
+
+<BaseLayout
+  title="Articles — Eigenius Community"
+  description="Longer-form pieces from the Eigenius project and its community: deep dives on concepts and design decisions, worked examples, and case studies."
+  current="articles"
+>
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">Articles</span>
+      <h1 class="section-title">Longer-form pieces</h1>
+      <p class="section-prose">
+        Deep dives on concepts and design decisions, worked examples,
+        and case studies &mdash; written to stand on their own and be
+        readable months later.
+      </p>
+
+      {
+        articles.length === 0 ? (
+          <p class="section-prose post-empty">No articles yet.</p>
+        ) : (
+          <ul class="post-list">
+            {articles.map((article) => (
+              <li class="post-item">
+                <EntryCard section="articles" entry={article} />
+              </li>
+            ))}
+          </ul>
+        )
+      }
+
+      <p class="section-footnote">
+        Articles are also part of the site's{" "}
+        <a href={withBase("/rss.xml")}>combined RSS feed</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

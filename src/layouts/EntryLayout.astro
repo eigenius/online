@@ -1,0 +1,63 @@
+---
+// Shared page body for a single article or blog post. Newsletter
+// issues have their own page (issue chip, previous/next navigation)
+// and do not use this.
+import { render } from "astro:content";
+import BaseLayout from "./BaseLayout.astro";
+import { formatDate, isoDate, type Entry } from "../lib/content";
+import { withBase } from "../lib/url";
+
+interface Props {
+  entry: Entry;
+  section: "articles" | "blog";
+  backLabel: string;
+}
+
+const { entry, section, backLabel } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<BaseLayout
+  title={`${entry.data.title} — Eigenius Community`}
+  description={entry.data.description}
+  current={section}
+  ogType="article"
+>
+  <article class="section">
+    <div class="post-body">
+      <header>
+        <a class="post-back" href={withBase(`/${section}/`)}>← {backLabel}</a>
+        <h1 class="post-headline">{entry.data.title}</h1>
+        {entry.data.subtitle && (
+          <p class="post-subtitle">{entry.data.subtitle}</p>
+        )}
+        <p class="post-meta">
+          <time datetime={isoDate(entry.data.pubDate)}>
+            {formatDate(entry.data.pubDate)}
+          </time>
+          <span class="post-meta-sep">·</span>
+          <span>{entry.data.author}</span>
+          {
+            entry.data.updatedDate && (
+              <>
+                <span class="post-meta-sep">·</span>
+                <span>Updated {formatDate(entry.data.updatedDate)}</span>
+              </>
+            )
+          }
+        </p>
+        {
+          entry.data.draft && (
+            <p class="post-draft-banner">
+              Draft — not included in production builds.
+            </p>
+          )
+        }
+      </header>
+
+      <div class="post-prose">
+        <Content />
+      </div>
+    </div>
+  </article>
+</BaseLayout>

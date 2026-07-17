@@ -1,0 +1,103 @@
+---
+// A single newsletter issue. `[...slug]` (rest param) rather than
+// `[slug]` so nested paths work — src/content/newsletter/2026/foo.md
+// serves at /newsletter/2026/foo/.
+import { render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import {
+  getIssues,
+  getIssueContext,
+  entryUrl,
+  formatDate,
+  isoDate,
+  type Issue,
+} from "../../lib/content";
+import { withBase } from "../../lib/url";
+
+export async function getStaticPaths() {
+  const issues = await getIssues();
+  return issues.map((issue) => ({
+    params: { slug: issue.id },
+    props: { issue },
+  }));
+}
+
+interface Props {
+  issue: Issue;
+}
+
+const { issue } = Astro.props;
+const { Content } = await render(issue);
+const { prev, next } = await getIssueContext(issue);
+---
+
+<BaseLayout
+  title={`${issue.data.title} — Eigenius Community`}
+  description={issue.data.description}
+  current="newsletter"
+  ogType="article"
+>
+  <article class="section">
+    <div class="post-body">
+      <header>
+        <a class="post-back" href={withBase("/newsletter/")}>← Newsletter</a>
+        <h1 class="post-headline">{issue.data.title}</h1>
+        {issue.data.subtitle && (
+          <p class="post-subtitle">{issue.data.subtitle}</p>
+        )}
+        <p class="post-meta">
+          <span>Issue #{issue.data.issue}</span>
+          <span class="post-meta-sep">·</span>
+          <time datetime={isoDate(issue.data.pubDate)}>
+            {formatDate(issue.data.pubDate)}
+          </time>
+          <span class="post-meta-sep">·</span>
+          <span>{issue.data.author}</span>
+          {
+            issue.data.updatedDate && (
+              <>
+                <span class="post-meta-sep">·</span>
+                <span>Updated {formatDate(issue.data.updatedDate)}</span>
+              </>
+            )
+          }
+        </p>
+        {
+          issue.data.draft && (
+            <p class="post-draft-banner">
+              Draft — not included in production builds.
+            </p>
+          )
+        }
+      </header>
+
+      <div class="post-prose">
+        <Content />
+      </div>
+
+      {
+        (prev || next) && (
+          <nav class="post-adjacent-nav" aria-label="Adjacent issues">
+            {prev ? (
+              <a class="post-adjacent-link" href={entryUrl("newsletter", prev)}>
+                <span class="post-adjacent-dir">← Issue #{prev.data.issue}</span>
+                <span class="post-adjacent-title">{prev.data.title}</span>
+              </a>
+            ) : (
+              <span />
+            )}
+            {next && (
+              <a
+                class="post-adjacent-link post-adjacent-link-next"
+                href={entryUrl("newsletter", next)}
+              >
+                <span class="post-adjacent-dir">Issue #{next.data.issue} →</span>
+                <span class="post-adjacent-title">{next.data.title}</span>
+              </a>
+            )}
+          </nav>
+        )
+      }
+    </div>
+  </article>
+</BaseLayout>
