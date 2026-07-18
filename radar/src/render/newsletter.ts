@@ -34,6 +34,23 @@ export function slugify(s: string): string {
     .slice(0, 60) || "issue";
 }
 
+/** Titles of the content already published in a collection dir — used by the
+ *  topic recommender to avoid proposing what the site has already covered. */
+export async function readTitles(dir: string): Promise<string[]> {
+  const titles: string[] = [];
+  try {
+    for await (const e of Deno.readDir(dir)) {
+      if (!e.isFile || !/\.mdx?$/.test(e.name)) continue;
+      const text = await Deno.readTextFile(join(dir, e.name));
+      const m = text.match(/^title:\s*"?(.+?)"?\s*$/m);
+      if (m) titles.push(m[1]);
+    }
+  } catch (err) {
+    if (!(err instanceof Deno.errors.NotFound)) throw err;
+  }
+  return titles;
+}
+
 /**
  * The next unused issue number, read from the site's newsletter directory (§5).
  * Scans `issue:` in each `.md` frontmatter and returns max + 1 (1 if empty).

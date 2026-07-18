@@ -5,6 +5,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import type { ArchiveRecord } from "../types.ts";
 import { MODELS } from "./client.ts";
+import { withStyle } from "../style.ts";
 
 const SYSTEM = "You write summaries for a research newsletter on neurosymbolic techniques, " +
   "AI-supported science, formal verification and formal methods, and AI in the " +
@@ -13,13 +14,21 @@ const SYSTEM = "You write summaries for a research newsletter on neurosymbolic t
   "text supports — no speculation, no hype, no invented numbers. Do not repeat " +
   "the title verbatim; lead with what is new or interesting.";
 
-export async function summarize(client: Anthropic, rec: ArchiveRecord): Promise<string> {
+export async function summarize(
+  client: Anthropic,
+  rec: ArchiveRecord,
+  style = "",
+): Promise<string> {
   const source = rec.abstract?.trim() || "(no source text available)";
   const res = await client.messages.create({
     model: MODELS.summarize,
     max_tokens: 512,
     thinking: { type: "disabled" }, // short factual task — no reasoning needed
-    system: [{ type: "text", text: SYSTEM, cache_control: { type: "ephemeral" } }],
+    system: [{
+      type: "text",
+      text: withStyle(style, SYSTEM),
+      cache_control: { type: "ephemeral" },
+    }],
     messages: [
       { role: "user", content: `Title: ${rec.title}\n\nSource text:\n${source}` },
     ],

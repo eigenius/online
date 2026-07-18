@@ -2,6 +2,7 @@
 // module (including the not-yet-imported stubs) so `deno task check` covers them.
 export * from "./types.ts";
 export * from "./config.ts";
+export * from "./style.ts";
 
 export * from "./sources/adapter.ts";
 export * from "./sources/arxiv.ts";

@@ -1,7 +1,9 @@
-// WEEKLY assembly (design §4, weekly rhythm; §13 Phase 2). Judges the week's
-// new entries, ranks them, summarizes the shortlist (Sonnet), lets the editor
-// model select and frame the issue (Opus), renders the Markdown, and either
-// writes it locally or opens a PR against the site.
+// WEEKLY assembly (design §4, weekly rhythm; §13 Phase 2 + Phase 3). Judges the
+// week's new entries, ranks them, summarizes the shortlist (Sonnet), verifies
+// each summary against its source and drops any that overreach (adversarial
+// faithfulness — the "show your work" guarantee), lets the editor model select
+// and frame the issue (Opus), renders the Markdown, generates topic
+// recommendations, and either writes locally or opens a PR.
 import { ensureDir } from "@std/fs";
 import { join } from "@std/path";
 import { loadConfig } from "../config.ts";
@@ -10,16 +12,21 @@ import { anthropic, MODELS } from "../agents/client.ts";
 import { makeJudge } from "../agents/judge.ts";
 import { rank } from "../pipeline/rank.ts";
 import { summarize } from "../agents/summarize.ts";
+import { verify } from "../agents/verify.ts";
 import { type IssuePlan, select } from "../agents/select.ts";
+import { recommend } from "../agents/recommend.ts";
 import {
   issueFilename,
   type IssueSection,
   nextIssueNumber,
+  readTitles,
   renderIssue,
   slugify,
 } from "../render/newsletter.ts";
 import { type FileChange, openPullRequest } from "../publish/github.ts";
+import { loadStyleGuide } from "../style.ts";
 import type { JobOptions } from "./harvest.ts";
+import type { TopicRecommendation } from "../agents/schemas.ts";
 import type { ArchiveRecord } from "../types.ts";
 
 export interface AssembleOptions extends JobOptions {
@@ -31,8 +38,10 @@ export interface AssembleOptions extends JobOptions {
   shortlist?: number;
   /** Max items in the issue. Default 6. */
   maxItems?: number;
-  /** Site newsletter dir (read for the next issue number, written to). */
-  newsletterDir?: string;
+  /** Site content dir (holds newsletter/, articles/, blog/). Default ../src/content. */
+  contentDir?: string;
+  /** Path to the house style guide. Default docs/guides/eigenius-perspective-short.md. */
+  styleGuidePath?: string;
   /** Print the Markdown and exit — no file, no PR. */
   dryRun?: boolean;
   /** Also open a PR against the site (needs GITHUB_TOKEN). */
@@ -55,10 +64,24 @@ function buildSections(plan: IssuePlan, byId: Map<string, ArchiveRecord>): Issue
   return order.map((heading) => ({ heading, items: groups.get(heading)! }));
 }
 
+/** Render the topic recommendations as a Markdown block (for the PR / stdout). */
+function renderRecommendations(recs: TopicRecommendation[]): string {
+  if (recs.length === 0) return "";
+  const lines = ["## Topic recommendations (for articles/blog)", ""];
+  recs.forEach((r, i) => {
+    lines.push(`${i + 1}. **${r.topic}**`);
+    lines.push(`   ${r.rationale}`);
+    if (r.sources.length) lines.push(`   Sources: ${r.sources.join(", ")}`);
+    lines.push("");
+  });
+  return lines.join("\n");
+}
+
 export async function assemble(opts: AssembleOptions = {}): Promise<void> {
   const cfg = await loadConfig(opts.configDir ?? "config");
   const store = new RecordStore(opts.archiveDir ?? "archive");
-  const newsletterDir = opts.newsletterDir ?? "../src/content/newsletter";
+  const contentDir = opts.contentDir ?? "../src/content";
+  const newsletterDir = join(contentDir, "newsletter");
   const sinceDays = opts.sinceDays ?? 7;
   const shortlistN = opts.shortlist ?? 8;
   const maxItems = opts.maxItems ?? 6;
@@ -73,6 +96,7 @@ export async function assemble(opts: AssembleOptions = {}): Promise<void> {
   }
 
   const client = anthropic();
+  const style = await loadStyleGuide(opts.styleGuidePath);
 
   // 1. Judge (Haiku) + rank, then take the shortlist.
   const judge = makeJudge(client, cfg.topics);
@@ -88,15 +112,45 @@ export async function assemble(opts: AssembleOptions = {}): Promise<void> {
   }
   const shortlist = rank(candidates).slice(0, shortlistN).map((r) => r.record);
 
-  // 2. Summarize (Sonnet) each shortlisted item.
+  // 2. Summarize (Sonnet) then verify (adversarial). Keep only records whose
+  //    summary is faithful to its source; one re-summarize retry on failure.
+  const verified: ArchiveRecord[] = [];
   for (const rec of shortlist) {
-    const summary = await summarize(client, rec);
-    rec.editorial = { ...rec.editorial, summary, summaryModel: MODELS.summarize };
+    // Summaries stay strictly faithful to the source (no editorial "one step
+    // further" — that lives in the intro + recommendations below); otherwise
+    // the faithfulness gate rightly drops interpretive summaries.
+    const source = rec.abstract ?? "";
+    let summary = await summarize(client, rec);
+    let check = await verify(client, summary, source);
+    if (!check.supported) {
+      summary = await summarize(client, rec);
+      check = await verify(client, summary, source);
+    }
+    if (check.supported) {
+      rec.editorial = {
+        ...rec.editorial,
+        summary,
+        summaryModel: MODELS.summarize,
+        summaryVerified: true,
+      };
+      verified.push(rec);
+    } else {
+      console.error(
+        `assemble: dropped "${rec.title}" — summary not supported by source ` +
+          `(${check.unsupportedClaims.join("; ")})`,
+      );
+    }
+  }
+  if (verified.length === 0) {
+    console.log("assemble: no summaries passed the faithfulness check — skipping.");
+    return;
   }
 
-  // 3. Editorial selection + framing (Opus).
-  const plan = await select(client, shortlist, maxItems);
-  const byId = new Map(shortlist.map((r) => [r.id, r]));
+  // 3. Editorial selection + framing (Opus). The newsletter is a neutral digest,
+  //    so no house style guide here — it's reserved for commentary/articles/blog
+  //    (and the recommendations below, which propose exactly those).
+  const plan = await select(client, verified, maxItems);
+  const byId = new Map(verified.map((r) => [r.id, r]));
   const sections = buildSections(plan, byId);
   if (sections.length === 0) {
     console.log("assemble: the editor selected nothing — skipping.");
@@ -106,7 +160,6 @@ export async function assemble(opts: AssembleOptions = {}): Promise<void> {
   // 4. Render to the site's newsletter schema.
   const issue = await nextIssueNumber(newsletterDir);
   const pubDate = new Date().toISOString().slice(0, 10);
-  const slug = slugify(plan.title);
   const markdown = renderIssue({
     issue,
     pubDate,
@@ -116,24 +169,35 @@ export async function assemble(opts: AssembleOptions = {}): Promise<void> {
     sections,
   });
 
+  // 5. Topic recommendations (Opus), contrasted with what the site already covers.
+  const covered = [
+    ...await readTitles(join(contentDir, "articles")),
+    ...await readTitles(join(contentDir, "blog")),
+  ];
+  const recs = await recommend(client, verified, covered, style);
+  const recMd = renderRecommendations(recs);
+
   if (opts.dryRun) {
     console.log(markdown);
+    if (recMd) console.log("\n" + recMd);
     return;
   }
 
-  // 5. Write locally (the editor commits it), and optionally open the PR.
-  const filename = issueFilename(issue, slug);
+  // 6. Write the issue locally (the editor commits it), surface the
+  //    recommendations, and optionally open the PR carrying both.
+  const filename = issueFilename(issue, slugify(plan.title));
   await ensureDir(newsletterDir);
   await Deno.writeTextFile(join(newsletterDir, filename), markdown);
   console.log(`assemble: wrote ${join(newsletterDir, filename)} (issue #${issue}, draft)`);
+  if (recMd) console.log("\n" + recMd);
 
   if (opts.pr) {
     const change: FileChange = { path: `src/content/newsletter/${filename}`, content: markdown };
     const url = await openPullRequest([change], {
       branch: `radar/issue-${issue}`,
       title: `Newsletter #${issue}: ${plan.title}`,
-      body:
-        `Draft newsletter issue #${issue}, assembled by radar. Review, set \`draft: false\`, and merge.`,
+      body: `Draft newsletter issue #${issue}, assembled by radar. Review, set ` +
+        `\`draft: false\`, and merge.\n\n${recMd}`,
     });
     console.log(`assemble: opened PR ${url}`);
   }

@@ -5,6 +5,7 @@
 import Anthropic from "@anthropic-ai/sdk";
 import type { ArchiveRecord } from "../types.ts";
 import { MODELS } from "./client.ts";
+import { withStyle } from "../style.ts";
 
 export interface Selection {
   /** A record id from the shortlist. */
@@ -65,13 +66,18 @@ export async function select(
   client: Anthropic,
   shortlist: ArchiveRecord[],
   maxItems = 6,
+  style = "",
 ): Promise<IssuePlan> {
   const res = await client.messages.create({
     model: MODELS.select,
     max_tokens: 4096,
     thinking: { type: "adaptive" },
     output_config: { effort: "medium", format: { type: "json_schema", schema: SCHEMA } },
-    system: [{ type: "text", text: SYSTEM, cache_control: { type: "ephemeral" } }],
+    system: [{
+      type: "text",
+      text: withStyle(style, SYSTEM),
+      cache_control: { type: "ephemeral" },
+    }],
     messages: [
       {
         role: "user",

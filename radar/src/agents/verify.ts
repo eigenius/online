@@ -1,11 +1,50 @@
+// Adversarial faithfulness check (design §4, stage 8) — a *separate* call from
+// the summarizer, prompted to find claims the source doesn't support and to
+// default to "not supported" when uncertain. This is the mechanism behind "the
+// newsletter shows its work": a summary that overreaches its source is dropped.
+import Anthropic from "@anthropic-ai/sdk";
 import type { FaithfulnessCheck } from "./schemas.ts";
+import { MODELS } from "./client.ts";
 
-/**
- * Adversarial faithfulness check (design §4, stage 8) — a *separate* call from
- * the summarizer, prompted to find unsupported claims and default to
- * "not supported" when uncertain. This is the mechanism behind "the newsletter
- * shows its work." Stub — Phase 3.
- */
-export function verify(_summary: string, _sourceText: string): Promise<FaithfulnessCheck> {
-  throw new Error("verify not implemented (Phase 3)");
+const SYSTEM = "You are a skeptical fact-checker for a research newsletter. You are given a " +
+  "SOURCE text and a SUMMARY written from it. Decide whether every factual claim " +
+  "in the summary is directly supported by the source. Be adversarial: if the " +
+  "summary adds detail, numbers, named entities, or conclusions not present in " +
+  "the source, or generalizes beyond it, treat that as unsupported. Default to " +
+  "not-supported when uncertain. Set supported=true only if the entire summary " +
+  "is faithful to the source.";
+
+const SCHEMA: Record<string, unknown> = {
+  type: "object",
+  additionalProperties: false,
+  required: ["supported", "unsupportedClaims"],
+  properties: {
+    supported: { type: "boolean" },
+    unsupportedClaims: { type: "array", items: { type: "string" } },
+  },
+};
+
+export async function verify(
+  client: Anthropic,
+  summary: string,
+  source: string,
+): Promise<FaithfulnessCheck> {
+  const res = await client.messages.create({
+    model: MODELS.verify,
+    max_tokens: 1024,
+    thinking: { type: "adaptive" }, // careful reading is the whole point here
+    output_config: { format: { type: "json_schema", schema: SCHEMA } },
+    system: [{ type: "text", text: SYSTEM, cache_control: { type: "ephemeral" } }],
+    messages: [
+      { role: "user", content: `SOURCE:\n${source}\n\n---\n\nSUMMARY:\n${summary}` },
+    ],
+  });
+  const text = res.content.map((b) => (b.type === "text" ? b.text : "")).join("");
+  const parsed = JSON.parse(text) as Partial<FaithfulnessCheck>;
+  return {
+    supported: parsed.supported === true,
+    unsupportedClaims: Array.isArray(parsed.unsupportedClaims)
+      ? parsed.unsupportedClaims.map(String)
+      : [],
+  };
 }
