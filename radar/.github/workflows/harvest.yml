@@ -1,0 +1,33 @@
+# TEMPLATE — move to the repository root `.github/workflows/` (or into a
+# standalone eigenius/radar repo) to activate; GitHub only runs workflows at the
+# repo root. Runs the daily deterministic harvest. See design §6.2 and §9.
+name: radar-harvest
+
+on:
+  schedule:
+    - cron: "17 6 * * *" # daily, 06:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  harvest:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: radar
+    steps:
+      - uses: actions/checkout@v5
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      # TODO: restore/check out the archive before harvest (design §6.2, "Where it runs")
+      - run: deno task doctor
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          VOYAGE_API_KEY: ${{ secrets.VOYAGE_API_KEY }}
+      - run: deno task harvest
+        env:
+          VOYAGE_API_KEY: ${{ secrets.VOYAGE_API_KEY }}
+      # TODO: commit the archive changes back (design §6.2)

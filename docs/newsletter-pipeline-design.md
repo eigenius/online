@@ -512,16 +512,20 @@ Three query shapes, all served from `index.db`:
 
 ### 6.5 Embeddings
 
-The Claude API has no first-party embeddings endpoint. **Decided (2026-07-17):
-a hosted embeddings API — Voyage AI** (Anthropic's recommended embeddings
-partner). This pairs with the Deno + TypeScript choice (§9): no local ML runtime
-to ship in CI, and strong quality on scientific text, at a modest per-call cost
-(embeddings are cheap at this volume) and one external dependency.
+The Claude API has no first-party embeddings endpoint. **Decided (updated
+2026-07-17): Vertex AI text embeddings** (`text-embedding-005` by default),
+since the project runs on GCP. This keeps embeddings under the same GCP
+billing, IAM, and data-residency as the rest of the infrastructure, with no
+separate vendor: the harvest job authenticates with Application Default
+Credentials (Workload Identity on GCP, `gcloud auth application-default login`
+locally) and calls the Vertex predict endpoint. The client lives behind the
+`Embedder` interface (`src/embeddings/vertex.ts`), so the model or provider is a
+one-file swap.
 
-The alternative considered was a **local open-source model** (a
-sentence-transformers / BGE-class model in the harvest job) — zero per-call
-cost and fully self-hosted, but it wants Python's ML ecosystem and a heavier
-runtime, which is why the hosted route wins alongside a TypeScript pipeline.
+Alternatives considered: a hosted third-party API (Voyage AI — strong on
+scientific text, but a separate vendor outside GCP), or a local
+sentence-transformers model (zero per-call cost but wants Python's ML ecosystem
+and a heavier runtime). Vertex wins by consolidating on GCP.
 
 Embed the snapshot (title + abstract/body) **once**, persist the vector to the
 append-only sidecar (§6.2), and load it into `sqlite-vec` on index rebuild — so
@@ -723,15 +727,16 @@ consistency with the rest of the stack.
 
 **The deciding factor is embeddings.** With **local** embeddings, Python's ML
 ecosystem is a real advantage and the safe pick. With a **hosted** embeddings
-API (Voyage — already an option in §6.5), Python's main edge disappears and a
-TypeScript pipeline becomes attractive: one language across the site and the
-pipeline, direct reuse of the content schema to validate generated issues *and*
-entity pages, and a lighter CI.
+API (Vertex AI — see §6.5), Python's main edge disappears and a TypeScript
+pipeline becomes attractive: one language across the site and the pipeline,
+direct reuse of the content schema to validate generated issues *and* entity
+pages, and a lighter CI.
 
 **Decision (2026-07-17): Deno + TypeScript, paired with hosted embeddings
-(§6.5).** It keeps the whole property in one language, reuses the site's schema,
-and matches tooling the org already runs. The remaining harvest needs — feeds,
-HTTP, content extraction — are all well served in TS. (Python was the
+(Vertex AI, §6.5).** It keeps the whole property in one language, reuses the
+site's schema, and matches tooling the org already runs. The remaining harvest
+needs — feeds, HTTP, content extraction — are all well served in TS. (Python was
+the
 alternative, warranted only if local embeddings or the richest scientific-source
 clients were required; the hosted-embeddings decision removes that pull.) The
 draft/entity-page stages validate their output against `src/content.config.ts`
@@ -791,7 +796,7 @@ radar/
 │  │  └─ retrieve.ts            # hybrid search + RRF (§6.4)
 │  ├─ embeddings/
 │  │  ├─ embedder.ts            # interface Embedder { embed(texts) → Vector[] }
-│  │  └─ voyage.ts              # Voyage via REST (§6.5)
+│  │  └─ vertex.ts              # Vertex AI embeddings via REST (§6.5)
 │  ├─ entities/
 │  │  ├─ extract.ts             # metadata + LLM extraction (§7.2)
 │  │  ├─ resolve.ts             # resolution + merge-review queue (§7.2)
@@ -829,7 +834,7 @@ the still-open decisions stay cheap to change:
 | --- | --- | --- |
 | `SourceAdapter` | `sources/adapter.ts` | adding/removing any source |
 | `SearchProvider` | `sources/search/provider.ts` | Exa / Tavily / Brave / Bing (§14.6) |
-| `Embedder` | `embeddings/embedder.ts` | Voyage → another provider or local |
+| `Embedder` | `embeddings/embedder.ts` | Vertex model → another provider or local |
 | `Store` | `store/index.ts` | libSQL local file → Turso, no call-site change (§6.6) |
 
 **libSQL note:** `@libsql/client` gives native vector search *and* FTS5 behind
@@ -952,13 +957,18 @@ newsletter drafting is never turned on.
 
 ## 14. Open questions (decisions for you)
 
-**Decided (2026-07-17):** the pipeline runs on **Deno + TypeScript with hosted
-embeddings (Voyage AI)** — §9, §6.5.
+**Decided (2026-07-17):** **Deno + TypeScript** (§9); **Vertex AI embeddings**
+(§6.5), as the project runs on GCP; **running locally to start** — the hosted
+compute substrate is deferred (see item 1). Claude access stays on the
+first-party Anthropic API for now.
 
 Still open:
 
-1. **Where does it run?** GitHub Actions cron + Claude API (Option A,
-   recommended) vs Managed Agents scheduled deployment (Option B).
+1. **Where does it run (hosted)?** Running locally to start. When hosted, the
+   GCP-native path is **Cloud Run Jobs + Cloud Scheduler** (with the archive in a
+   GCS bucket); GitHub Actions cron is the alternative. Separately, whether to
+   move **Claude** onto Vertex AI (GCP-native IAM/billing, but no `web_fetch` and
+   only basic `web_search` server tools) or keep the first-party Anthropic API.
 2. **Archive storage?** Git-tracked JSONL + SQLite (recommended) vs a hosted DB
    from the start.
 3. **Repo layout?** Pipeline as a directory in this repo, a sibling repo, or

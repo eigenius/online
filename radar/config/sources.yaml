@@ -1,0 +1,15 @@
+# Source registry (design §3). Each entry becomes a SourceAdapter via
+# src/sources/registry.ts. Only `arxiv` is implemented in Phase 0; the rest are
+# stubs. Adding a source is a one-line edit here.
+sources:
+  - id: arxiv
+    kind: arxiv
+    categories: [cs.AI, cs.LG, cs.LO, cs.SC, cs.PL, cs.SE, math.LO, stat.ML]
+    maxResults: 50
+  # Stubs — uncomment once the adapter lands (Phase 0/1):
+  # - id: deepmind-blog
+  #   kind: rss
+  #   url: https://deepmind.google/blog/rss.xml
+  #   sourceKind: industry
+  # - id: semantic-scholar
+  #   kind: semantic_scholar

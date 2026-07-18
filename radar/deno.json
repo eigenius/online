@@ -1,0 +1,31 @@
+{
+  "name": "@eigenius/radar",
+  "version": "0.0.1",
+  "exports": "./src/mod.ts",
+  "tasks": {
+    "harvest": "deno run --allow-net --allow-read --allow-write --allow-env bin/radar.ts harvest",
+    "digest": "deno run --allow-net --allow-read --allow-env bin/radar.ts digest",
+    "assemble": "deno run --allow-net --allow-read --allow-write --allow-env bin/radar.ts assemble",
+    "doctor": "deno run --allow-read --allow-env bin/radar.ts doctor",
+    "backfill": "deno run -A bin/radar.ts backfill",
+    "rebuild-index": "deno run --allow-read --allow-write bin/radar.ts rebuild-index",
+    "test": "deno test --allow-read",
+    "check": "deno check bin/radar.ts src/mod.ts && deno lint && deno fmt --check"
+  },
+  "imports": {
+    "@anthropic-ai/sdk": "npm:@anthropic-ai/sdk",
+    "@libsql/client": "npm:@libsql/client",
+    "google-auth-library": "npm:google-auth-library",
+    "zod": "npm:zod",
+    "@libs/xml": "jsr:@libs/xml",
+    "@b-fuze/deno-dom": "jsr:@b-fuze/deno-dom",
+    "@std/yaml": "jsr:@std/yaml",
+    "@std/cli": "jsr:@std/cli",
+    "@std/fs": "jsr:@std/fs",
+    "@std/path": "jsr:@std/path",
+    "@std/encoding": "jsr:@std/encoding",
+    "@std/assert": "jsr:@std/assert"
+  },
+  "fmt": { "lineWidth": 100 },
+  "lint": { "rules": { "tags": ["recommended"] } }
+}

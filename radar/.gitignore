@@ -1,0 +1,8 @@
+# Local runtime archive. Whether/where the source-of-truth archive is persisted
+# is a deployment decision (see ../docs/newsletter-pipeline-design.md §6.2,
+# "Where it runs") — it is NOT committed into the website repo by default.
+/archive/
+
+# Local environment
+.env
+.env.*

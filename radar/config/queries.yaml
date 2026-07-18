@@ -1,0 +1,19 @@
+# Per-topic web-search discovery templates (design §6.1.1). Run against the
+# search provider with a recency filter; results flow into the same
+# normalize → dedup → gate → archive path as everything else.
+topics:
+  - topic: neurosymbolic
+    queries:
+      - neurosymbolic reasoning LLM
+      - program synthesis knowledge graph
+  - topic: ai-scientist
+    queries:
+      - AI scientist autonomous research agent
+      - self-driving laboratory hypothesis generation
+  - topic: formal-verification
+    queries:
+      - LLM theorem proving Lean
+      - verified AI output formal methods
+  - topic: ai-life-sciences
+    queries:
+      - AI drug discovery protein model
