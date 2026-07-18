@@ -7,9 +7,10 @@ export * from "./style.ts";
 export * from "./sources/adapter.ts";
 export * from "./sources/arxiv.ts";
 export * from "./sources/rss.ts";
+export * from "./sources/semantic_scholar.ts";
 export * from "./sources/registry.ts";
 export * from "./sources/search/provider.ts";
-export * from "./sources/search/google.ts";
+export * from "./sources/search/grounding.ts";
 
 export * from "./fetch/http.ts";
 export * from "./fetch/robots.ts";
@@ -27,6 +28,7 @@ export * from "./store/index.ts";
 export * from "./store/retrieve.ts";
 
 export * from "./embeddings/embedder.ts";
+export * from "./embeddings/batch.ts";
 export * from "./embeddings/vertex.ts";
 
 export * from "./entities/extract.ts";
@@ -47,5 +49,7 @@ export * from "./render/entities.ts";
 export * from "./publish/github.ts";
 
 export * from "./jobs/harvest.ts";
+export * from "./jobs/candidates.ts";
 export * from "./jobs/digest.ts";
 export * from "./jobs/assemble.ts";
+export * from "./jobs/backfill.ts";

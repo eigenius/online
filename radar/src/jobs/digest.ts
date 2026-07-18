@@ -3,7 +3,7 @@
 // summaries yet (that is Phase 2). This is the "trustworthy what's-new" list the
 // editor eyeballs to size real volume and relevance.
 import { loadConfig } from "../config.ts";
-import { RecordStore } from "../store/records.ts";
+import { newCandidates } from "./candidates.ts";
 import { anthropic, MODELS } from "../agents/client.ts";
 import { makeJudge } from "../agents/judge.ts";
 import { rank, type RankedRecord } from "../pipeline/rank.ts";
@@ -63,12 +63,13 @@ function renderJson(ranked: RankedRecord[]): string {
 
 export async function digest(opts: DigestOptions = {}): Promise<string> {
   const cfg = await loadConfig(opts.configDir ?? "config");
-  const store = new RecordStore(opts.archiveDir ?? "archive");
+  const archiveDir = opts.archiveDir ?? "archive";
   const sinceDays = opts.sinceDays ?? 7;
   const since = new Date(Date.now() - sinceDays * 86_400_000).toISOString();
 
-  let records = (await store.newSince(since))
-    .sort((a, b) => (a.firstSeen < b.firstSeen ? 1 : -1)); // newest first
+  const { records: deduped, collapsed } = await newCandidates(archiveDir, since);
+  if (collapsed > 0) console.error(`digest: collapsed ${collapsed} near-duplicate(s)`);
+  let records = deduped.sort((a, b) => (a.firstSeen < b.firstSeen ? 1 : -1)); // newest first
   if (opts.limit && opts.limit > 0) records = records.slice(0, opts.limit);
 
   const judge = makeJudge(anthropic(), cfg.topics);

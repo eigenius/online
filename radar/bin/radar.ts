@@ -4,16 +4,17 @@ import { loadConfig } from "../src/config.ts";
 import { harvest, type JobOptions } from "../src/jobs/harvest.ts";
 import { digest } from "../src/jobs/digest.ts";
 import { assemble } from "../src/jobs/assemble.ts";
+import { backfill } from "../src/jobs/backfill.ts";
 
 const HELP = `radar — research-radar & newsletter pipeline
 
 Usage:
-  radar harvest   [--config <dir>] [--archive <dir>] [--dry-run] [--no-embed] [--no-fetch]
+  radar harvest   [--config <dir>] [--archive <dir>] [--dry-run] [--no-embed] [--no-fetch] [--no-search]
   radar digest    [--config <dir>] [--archive <dir>] [--since-days N] [--limit N] [--json]
   radar assemble  [--config <dir>] [--archive <dir>] [--since-days N] [--limit N] [--dry-run] [--pr]
   radar doctor    [--config <dir>]     validate config + report environment
-  radar backfill                       (not yet implemented)
-  radar rebuild-index                  (not yet implemented)
+  radar rebuild-index [--archive <dir>]  rebuild the libSQL index from the archive
+  radar backfill  [--archive <dir>] [--dry-run]  embed archived records missing a vector
 
 digest judges the week's new archive entries with Haiku and prints a raw ranked
 list (design §13, Phase 1). Needs ANTHROPIC_API_KEY.`;
@@ -27,9 +28,8 @@ async function doctor(opts: JobOptions): Promise<void> {
   for (
     const key of [
       "ANTHROPIC_API_KEY",
-      "GOOGLE_CLOUD_PROJECT",
-      "GOOGLE_PSE_API_KEY",
-      "GOOGLE_PSE_CX",
+      "GOOGLE_CLOUD_PROJECT", // Vertex embeddings + Gemini grounding search
+      "VERTEX_LOCATION",
       "GITHUB_TOKEN",
     ]
   ) {
@@ -39,7 +39,7 @@ async function doctor(opts: JobOptions): Promise<void> {
 
 async function main(): Promise<void> {
   const args = parseArgs(Deno.args, {
-    boolean: ["dry-run", "no-embed", "no-fetch", "json", "pr", "help"],
+    boolean: ["dry-run", "no-embed", "no-fetch", "no-search", "no-citations", "json", "pr", "help"],
     string: ["config", "archive", "since-days", "limit"],
     alias: { h: "help" },
   });
@@ -55,6 +55,8 @@ async function main(): Promise<void> {
     dryRun: args["dry-run"],
     noEmbed: args["no-embed"],
     noFetch: args["no-fetch"],
+    noSearch: args["no-search"],
+    noCitations: args["no-citations"],
   };
 
   switch (cmd) {
@@ -80,10 +82,17 @@ async function main(): Promise<void> {
     case "doctor":
       await doctor(opts);
       break;
+    case "rebuild-index": {
+      const { openIndex, rebuildIndex } = await import("../src/store/index.ts");
+      const dir = opts.archiveDir ?? "archive";
+      const counts = await rebuildIndex(openIndex(`file:${dir}/index.db`), dir);
+      console.log(
+        `rebuild-index: ${counts.records} records (${counts.vectors} with vectors) -> ${dir}/index.db`,
+      );
+      break;
+    }
     case "backfill":
-    case "rebuild-index":
-      console.error(`${cmd}: not yet implemented`);
-      Deno.exit(1);
+      await backfill(opts);
       break;
     default:
       console.error(`unknown command: ${cmd}`);

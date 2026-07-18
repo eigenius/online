@@ -368,7 +368,7 @@ last watermark. Prefer the most structured access each source offers.
 | bioRxiv / medRxiv | REST details API | `httpx` |
 | RSS / Atom (org blogs, researcher blogs) | Feeds | `feedparser` |
 | Hacker News | Algolia search API | `httpx` |
-| Web-search discovery (deterministic) | Search API with freshness filter | Google Programmable Search — Custom Search JSON API (see §6.1.1) |
+| Web-search discovery (deterministic) | Search API with freshness filter | Vertex Gemini + Google Search grounding (see §6.1.1) |
 | Generic web pages (last resort) | HTTP + extraction | `httpx` + `trafilatura` (main-content extraction) |
 | Agentic discovery / reading | Claude server tools | `web_search_20260209`, `web_fetch_20260209` |
 
@@ -387,20 +387,32 @@ Web search runs at two levels of cost and openness; both feed the same
 normalize → dedup → gate → archive path, so search-discovered items dedup
 cleanly against the feed harvest.
 
-- **Search-API sweep (deterministic, every harvest).** Issue the per-topic
-  query templates (`queries.yaml`) against a search API with a recency filter,
-  collect result URLs + snippets, and hand them to normalization. No model
-  tokens; controllable and cheap. **Decided: Google Programmable Search** (the
-  Custom Search JSON API), for GCP consistency — a Programmable Search Engine
-  configured to search the whole web, queried with `key` + `cx` and a
-  `dateRestrict` recency window; implemented in `sources/search/google.ts`.
-  **Vertex AI Search** is the heavier alternative (a search app over data
-  stores / grounded search) — more than a query→URLs sweep needs, so it's the
-  upgrade path, not the default. The provider sits behind the `SearchProvider`
-  interface, so swapping to Tavily/Brave/Bing later is one file.
+- **Search sweep (every harvest).** Issue the per-topic query templates
+  (`queries.yaml`) against a web search, collect result URLs + snippets, and hand
+  them to normalization. **Decided: Vertex Gemini + Google Search grounding**
+  (`sources/search/grounding.ts`), for GCP consistency — same project, billing,
+  and ADC as the embeddings, no extra vendor. We call `generateContent` with the
+  `googleSearch` tool and harvest the `groundingChunks` it grounds on.
+  *Why not the obvious choice:* Google **closed the Custom Search JSON API to new
+  projects on 2026-01-20** — a hard entitlement gate (a fresh key on our project
+  still 403s), so the classic Programmable Search / `key`+`cx` path is dead for
+  us. *Why not Vertex AI Search (Discovery Engine):* its site-restricted mode is
+  a website data store whose good indexing tier requires verifying you **own**
+  each domain — wrong shape for "monitor 32 orgs we follow." Grounding gives
+  whole-web results on our existing creds.
 
-  Controls: cap results per query, apply the freshness window, and dedup against
-  the archive *before* the cheap gate so recurring hits cost nothing.
+  Two grounding-specific wrinkles, handled in the provider so nothing downstream
+  sees them: (a) results are opaque, ~30-day-expiring **redirect URLs**, so we
+  resolve each to its canonical publisher URL before archiving (id/dedup key off
+  the real URL); (b) a chunk's title is usually just the domain and there's no
+  snippet, so we synthesize a snippet from the answer segments that cite each
+  source (`groundingSupports`) to feed the cheap gate, and replace the weak title
+  with the page's real `<title>` during the page-fetch step. The provider sits
+  behind the `SearchProvider` interface, so swapping to Brave/Tavily later (if we
+  ever want raw URLs + precise `site:` filters) is one file.
+
+  Controls: apply the freshness window (as a recency hint in the prompt) and
+  dedup against the archive *before* the cheap gate so recurring hits cost nothing.
 
 - **Agentic search (weekly, Claude `web_search_20260209`).** A per-topic
   open-ended pass — "surface the most notable new work in <topic> from the last
@@ -777,7 +789,7 @@ radar/
 │  │  ├─ rss.ts    hacker_news.ts
 │  │  ├─ search/                #   web-search discovery (§6.1.1)
 │  │  │  ├─ provider.ts         #     interface SearchProvider { search(query, since) → Hit[] }
-│  │  │  └─ google.ts           #     Google Programmable Search (§14.6)
+│  │  │  └─ grounding.ts        #     Vertex Gemini + Google Search grounding (§6.1.1)
 │  │  └─ registry.ts            #   build adapters from sources.yaml
 │  ├─ fetch/
 │  │  ├─ http.ts                # shared client: rate-limit, retry, Retry-After, ETag
@@ -833,7 +845,7 @@ the still-open decisions stay cheap to change:
 | Interface | File | Swap covers |
 | --- | --- | --- |
 | `SourceAdapter` | `sources/adapter.ts` | adding/removing any source |
-| `SearchProvider` | `sources/search/provider.ts` | Google PSE → Tavily / Brave / Bing (§14.6) |
+| `SearchProvider` | `sources/search/provider.ts` | Gemini grounding → Brave / Tavily / Bing (§6.1.1) |
 | `Embedder` | `embeddings/embedder.ts` | Vertex model → another provider or local |
 | `Store` | `store/index.ts` | libSQL local file → Turso, no call-site change (§6.6) |
 
@@ -979,10 +991,11 @@ Still open:
 5. **Source & query sign-off** — the initial `sources.yaml` (company blogs,
    opinion leaders) and `queries.yaml` (per-topic search templates) are
    editorial choices worth doing by hand.
-6. **Discovery search API** — decided: **Google Programmable Search** (Custom
-   Search JSON API), for GCP consistency; Vertex AI Search is the upgrade path
-   (§6.1.1). Still needs a Programmable Search Engine (`cx`) + Custom Search API
-   key, and wiring the query sweep into the harvest.
+6. **Discovery search API** — ~~decided: Google Programmable Search~~ **RESOLVED:
+   Google closed the Custom Search JSON API to new projects (2026-01-20), so we
+   use Vertex Gemini + Google Search grounding instead** (§6.1.1) — runs on the
+   existing GCP creds, query sweep wired into harvest. Brave is the drop-in
+   fallback if we ever want raw URLs + precise `site:` filters.
 7. **Automation level** — confirm the human-merge gate (recommended) vs any
    appetite for auto-publishing routine issues later.
 8. **Entity pages** — which entity types to launch first (people /

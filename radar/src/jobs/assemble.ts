@@ -7,7 +7,7 @@
 import { ensureDir } from "@std/fs";
 import { join } from "@std/path";
 import { loadConfig } from "../config.ts";
-import { RecordStore } from "../store/records.ts";
+import { newCandidates } from "./candidates.ts";
 import { anthropic, MODELS } from "../agents/client.ts";
 import { makeJudge } from "../agents/judge.ts";
 import { rank } from "../pipeline/rank.ts";
@@ -79,7 +79,7 @@ function renderRecommendations(recs: TopicRecommendation[]): string {
 
 export async function assemble(opts: AssembleOptions = {}): Promise<void> {
   const cfg = await loadConfig(opts.configDir ?? "config");
-  const store = new RecordStore(opts.archiveDir ?? "archive");
+  const archiveDir = opts.archiveDir ?? "archive";
   const contentDir = opts.contentDir ?? "../src/content";
   const newsletterDir = join(contentDir, "newsletter");
   const sinceDays = opts.sinceDays ?? 7;
@@ -87,8 +87,9 @@ export async function assemble(opts: AssembleOptions = {}): Promise<void> {
   const maxItems = opts.maxItems ?? 6;
   const since = new Date(Date.now() - sinceDays * 86_400_000).toISOString();
 
-  let candidates = (await store.newSince(since))
-    .sort((a, b) => (a.firstSeen < b.firstSeen ? 1 : -1));
+  const { records: deduped, collapsed } = await newCandidates(archiveDir, since);
+  if (collapsed > 0) console.error(`assemble: collapsed ${collapsed} near-duplicate(s)`);
+  let candidates = deduped.sort((a, b) => (a.firstSeen < b.firstSeen ? 1 : -1));
   if (opts.limit && opts.limit > 0) candidates = candidates.slice(0, opts.limit);
   if (candidates.length === 0) {
     console.log("assemble: no new entries in the window — nothing to draft.");

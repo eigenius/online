@@ -4,6 +4,7 @@
 import { GoogleAuth } from "google-auth-library";
 import type { Vector } from "../types.ts";
 import type { Embedder } from "./embedder.ts";
+import { batchByTokens } from "./batch.ts";
 
 export interface VertexConfig {
   /** GCP project id. Defaults to $VERTEX_PROJECT, then $GOOGLE_CLOUD_PROJECT. */
@@ -33,6 +34,7 @@ export function vertexEmbedder(cfg: VertexConfig = {}): Embedder {
       if (!project) {
         throw new Error("Vertex project not set (VERTEX_PROJECT / GOOGLE_CLOUD_PROJECT)");
       }
+      if (texts.length === 0) return [];
       const client = await auth.getClient();
       const { token } = await client.getAccessToken();
       if (!token) {
@@ -40,20 +42,25 @@ export function vertexEmbedder(cfg: VertexConfig = {}): Embedder {
           "no Application Default Credentials — run `gcloud auth application-default login`",
         );
       }
-      const res = await fetch(endpoint, {
-        method: "POST",
-        headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
-        body: JSON.stringify({
-          instances: texts.map((content) => ({ content, task_type: "RETRIEVAL_DOCUMENT" })),
-        }),
-      });
-      if (!res.ok) {
-        throw new Error(`vertex embeddings -> ${res.status}: ${await res.text()}`);
+      // One predict call per token-bounded sub-batch, results concatenated in order.
+      const out: Vector[] = [];
+      for (const batch of batchByTokens(texts)) {
+        const res = await fetch(endpoint, {
+          method: "POST",
+          headers: { authorization: `Bearer ${token}`, "content-type": "application/json" },
+          body: JSON.stringify({
+            instances: batch.map((content) => ({ content, task_type: "RETRIEVAL_DOCUMENT" })),
+          }),
+        });
+        if (!res.ok) {
+          throw new Error(`vertex embeddings -> ${res.status}: ${await res.text()}`);
+        }
+        const json = await res.json() as {
+          predictions: { embeddings: { values: number[] } }[];
+        };
+        for (const p of json.predictions) out.push(new Float32Array(p.embeddings.values));
       }
-      const json = await res.json() as {
-        predictions: { embeddings: { values: number[] } }[];
-      };
-      return json.predictions.map((p) => new Float32Array(p.embeddings.values));
+      return out;
     },
   };
 }

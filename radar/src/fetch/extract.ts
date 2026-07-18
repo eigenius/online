@@ -33,3 +33,26 @@ export function extractMainText(html: string, _url: string): string {
 
   return (main?.textContent ?? "").replace(/\s+/g, " ").trim();
 }
+
+/**
+ * The page's title, from og:title (usually cleaner) or the <title> tag, with a
+ * trailing " — Site Name" / " | Site Name" suffix trimmed off. Used to replace
+ * weak titles (e.g. a bare domain from grounding) with the real headline.
+ */
+export function extractTitle(html: string): string | undefined {
+  const doc = new DOMParser().parseFromString(html, "text/html");
+  if (!doc) return undefined;
+  const og = doc.querySelector('meta[property="og:title"]')?.getAttribute("content");
+  const raw = (og ?? doc.querySelector("title")?.textContent ?? "").replace(/\s+/g, " ").trim();
+  if (!raw) return undefined;
+  const trimmed = raw.replace(/\s*[|–—·-]\s*[^|–—·-]{1,40}$/, "").trim();
+  return trimmed.length >= 10 ? trimmed : raw; // don't strip down to almost nothing
+}
+
+/** A title that carries no real information — empty, or a bare domain/URL. */
+export function isWeakTitle(title: string | undefined): boolean {
+  if (!title) return true;
+  const t = title.trim();
+  if (!t.includes(" ") && /\.[a-z]{2,}(\/|$)/i.test(t)) return true; // looks like a domain/URL
+  return t.length < 8;
+}

@@ -3,12 +3,12 @@
   "version": "0.0.1",
   "exports": "./src/mod.ts",
   "tasks": {
-    "harvest": "deno run --allow-net --allow-read --allow-write --allow-env bin/radar.ts harvest",
-    "digest": "deno run --allow-net --allow-read --allow-env bin/radar.ts digest",
-    "assemble": "deno run --allow-net --allow-read --allow-write --allow-env bin/radar.ts assemble",
-    "doctor": "deno run --allow-read --allow-env bin/radar.ts doctor",
-    "backfill": "deno run -A bin/radar.ts backfill",
-    "rebuild-index": "deno run --allow-read --allow-write bin/radar.ts rebuild-index",
+    "harvest": "deno run --env-file=../.env --allow-net --allow-read --allow-write --allow-env bin/radar.ts harvest",
+    "digest": "deno run --env-file=../.env --allow-net --allow-read --allow-env bin/radar.ts digest",
+    "assemble": "deno run --env-file=../.env --allow-net --allow-read --allow-write --allow-env bin/radar.ts assemble",
+    "doctor": "deno run --env-file=../.env --allow-read --allow-env bin/radar.ts doctor",
+    "backfill": "deno run --env-file=../.env --allow-net --allow-read --allow-write --allow-env bin/radar.ts backfill",
+    "rebuild-index": "deno run --allow-read --allow-write --allow-env --allow-ffi --allow-sys bin/radar.ts rebuild-index",
     "test": "deno test --allow-read",
     "check": "deno check bin/radar.ts src/mod.ts && deno lint && deno fmt --check"
   },
