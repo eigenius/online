@@ -1,0 +1,89 @@
+name	url	feed_url	category	topics	cadence	notes
+DeepMind Science Blog	https://deepmind.google/discover/blog/	https://deepmind.google/blog/rss.xml	industry	ai-scientist, ai-life-sciences	~weekly	
+Covers major frontier research, including AlphaFold 3 and Co-Scientist. 1 
+
+Isomorphic Labs Articles	https://www.isomorphiclabs.com/articles	none	industry	ai-life-sciences	~monthly	
+High-signal corporate announcements regarding IsoDDE and pharma collaborations. 2 
+
+FutureHouse Research	https://www.futurehouse.org/research	none	industry	ai-scientist, ai-life-sciences	~monthly	
+Focuses on Crow, Owl, Falcon, and automated literature synthesis. 3 
+
+FutureHouse News	https://www.futurehouse.org/news	none	industry	ai-scientist	~monthly	
+Covers institutional updates, funding, and the ether0 chemistry model. 4 
+
+Sakana AI Blog	https://sakana.ai/blog/	https://sakana.ai/feed.xml	industry	ai-scientist	~monthly	
+Covers automated research, AI Scientist-v2, and Fugu orchestration. 5 
+
+EvolutionaryScale Blog	https://evolutionaryscale.ai/blog	none	industry	ai-life-sciences	~monthly	
+Focuses on ESM3 multimodal models, ESM Cambrian, and programmable biology. 6 
+
+Chai Discovery Press	https://www.chaidiscovery.com/	none	industry	ai-life-sciences	~monthly	
+Primary announcements regarding the Chai molecular design suite. 7 
+
+Profluent Media	https://www.profluent.bio/media	none	industry	ai-life-sciences	~monthly	
+Focuses on OpenCRISPR-1, ProGen, and customizable genome editors. 8 
+
+Cradle Bio Blog	https://www.cradle.bio/blog	none	industry	ai-life-sciences, ai-scientist	~monthly	
+Covers cradle-1, variant selection strategy, and guided wet-lab rounds. 9 
+
+Valence Labs Substack	https://valencelabs.substack.com/	https://valencelabs.substack.com/feed	industry	ai-life-sciences, ai-scientist	~monthly	
+In-depth research from Valence/Recursion on Virtual Cells and AquaGen. 10 
+
+Iambic News	https://www.iambic.ai/news	none	industry	ai-life-sciences	~monthly	
+Covers Enchant, NeuralPLexer, and clinical HER2 small-molecule pipelines. 11 
+
+Insilico Medicine Blog	https://insilico.com/blog	none	industry	ai-life-sciences, ai-scientist	~weekly	
+Details LabClaw automation, Pharma.AI, ChemCensor, and MMAI Gym. 12 
+
+Owkin Blog	https://www.owkin.com/blog	none	industry	ai-scientist, ai-life-sciences	~weekly	
+Covers K Pro AI Scientist, digital pathology, and oncology pipelines. 13 
+
+Lila Sciences	https://www.lila.ai/	none	industry	ai-scientist, ai-life-sciences	~monthly	
+Focuses on closed-loop AI Science Factories and mRNA engineering. 14 
+
+Lean FRO Roadmap	https://lean-lang.org/fro/	none	industry	formal-methods, formal-verification	~quarterly	
+Covers Lean language engineering, compiler updates, and roadmap deliverables. 15 
+
+Harmonic News	https://harmonic.fun/news/	none	industry	formal-methods, formal-verification	~monthly	
+Covers Mathematical Superintelligence, Aristotle, and the Lean REPL. 16 
+
+Axiom Math Papers	https://arxiv.org/html/2606.26442	none	industry	formal-methods, formal-verification	ad-hoc	
+Technical documentation for the Axle Lean Engine and AxiomProver. 17 
+
+AWS Automated Reasoning	https://aws.amazon.com/blogs/security/tag/automated-reasoning/	https://aws.amazon.com/blogs/security/tag/automated-reasoning/feed/	industry	formal-verification, formal-methods	~monthly	
+High-signal security blog focused on AWS Cedar and SampCert verification. 18 
+
+Symbolica AI Blog	https://www.symbolica.ai/blog	none	industry	neurosymbolic, ai-scientist	~monthly	
+Focuses on the Agentica SDK, stateful REPLs, and ARC-AGI benchmarking. 19 
+
+Galois Blog	https://galois.com/blog/	https://galois.com/blog/feed/	industry	formal-methods, formal-verification	~monthly	
+High-assurance software engineering, Haskell systems, and Copilot monitors. 20 
+
+SIGPLAN Blog	https://blog.sigplan.org/	https://blog.sigplan.org/feed/	news	formal-methods, formal-verification	~weekly	Peer-reviewed articles on programming languages, type systems, and verification.
+Center for Open Science	https://www.cos.io/blog	none	news	verified-science	~monthly	
+Focuses on the Open Science Framework, reproducibility infrastructure, and FAIR data. 21 
+
+What's New (Terence Tao)	https://terrytao.wordpress.com/	https://terrytao.wordpress.com/feed/	opinion	formal-methods, formal-verification	~weekly	
+High-signal mathematical commentary, interactive theorem provers, and Lean. 22 
+
+Xena Project Blog	https://xenaproject.wordpress.com/	https://xenaproject.wordpress.com/feed/	opinion	formal-methods, formal-verification	~monthly	
+Kevin Buzzard’s blog focusing on Mathlib formalization projects. 23 
+
+arg min (Ben Recht)	https://www.argmin.net/	https://www.argmin.net/feed	opinion	verified-science	~weekly	
+Critical perspective on scientific reproducibility, optimization fallacies, and health tech. 24 
+
+Gary Marcus (Marcus on AI)	https://marcusonai.substack.com/	https://marcusonai.substack.com/feed	opinion	neurosymbolic, verified-science	~weekly	Critical analysis of neural systems, hallucinations, and neurosymbolic approaches.
+Sebastian Raschka	https://aheadofai.substack.com/	https://aheadofai.substack.com/feed	opinion	ai-life-sciences, ai-scientist	~weekly	Academic deep-dives into modern AI architectures, molecular modeling, and training.
+Simon Willison	https://simonwillison.net/	https://simonwillison.net/atom/entries/	opinion	ai-scientist	~daily	Technical developer blog covering LLMs, code interpreters, and agentic tools.
+François Chollet	https://fchollet.substack.com/	https://fchollet.substack.com/feed	opinion	neurosymbolic, ai-scientist	~monthly	
+Focuses on abstract reasoning, generalized intelligence, and the ARC-AGI benchmark. 19 
+
+Quanta Magazine Tag AI	https://www.quantamagazine.org/tag/artificial-intelligence/	https://www.quantamagazine.org/tag/artificial-intelligence/feed/	news	neurosymbolic, formal-methods, ai-scientist	~weekly	
+High-signal journalism on computer-assisted proofs, neural math, and physics. 25 
+
+Nature News AI	https://www.nature.com/subjects/artificial-intelligence	https://www.nature.com/subjects/artificial-intelligence/news.rss	news	ai-life-sciences, ai-scientist	~weekly	
+Journalistic tag covering international drug discovery and lab automation. 26 
+
+MIT Technology Review AI	https://www.technologyreview.com/topic/artificial-intelligence/	https://www.technologyreview.com/topic/artificial-intelligence/feed/	news	ai-scientist, ai-life-sciences	~weekly	Technical news outlet covering AI in biotechnology and physical chemistry.
+Import AI (Jack Clark)	https://importai.substack.com/	https://importai.substack.com/feed	news	ai-scientist, verified-science	~weekly	Weekly industry newsletter monitoring agent architectures and compute policy.
+The Batch (DeepLearning.AI)	https://www.deeplearning.ai/the-batch/	none	news	ai-scientist, neurosymbolic	~weekly	General industry monitoring; filter for topics relevant to computational science.

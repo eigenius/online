@@ -8,7 +8,7 @@ import { assemble } from "../src/jobs/assemble.ts";
 const HELP = `radar — research-radar & newsletter pipeline
 
 Usage:
-  radar harvest   [--config <dir>] [--archive <dir>] [--dry-run] [--no-embed]
+  radar harvest   [--config <dir>] [--archive <dir>] [--dry-run] [--no-embed] [--no-fetch]
   radar digest    [--config <dir>] [--archive <dir>] [--since-days N] [--limit N] [--json]
   radar assemble  [--config <dir>] [--archive <dir>] [--since-days N] [--limit N] [--dry-run] [--pr]
   radar doctor    [--config <dir>]     validate config + report environment
@@ -24,14 +24,22 @@ async function doctor(opts: JobOptions): Promise<void> {
     `config ok: ${cfg.topics.length} topics, ${cfg.sources.length} source(s), ` +
       `${cfg.queries.length} query set(s)`,
   );
-  for (const key of ["ANTHROPIC_API_KEY", "GOOGLE_CLOUD_PROJECT", "EXA_API_KEY", "GITHUB_TOKEN"]) {
+  for (
+    const key of [
+      "ANTHROPIC_API_KEY",
+      "GOOGLE_CLOUD_PROJECT",
+      "GOOGLE_PSE_API_KEY",
+      "GOOGLE_PSE_CX",
+      "GITHUB_TOKEN",
+    ]
+  ) {
     console.log(`${key}: ${Deno.env.get(key) ? "set" : "MISSING"}`);
   }
 }
 
 async function main(): Promise<void> {
   const args = parseArgs(Deno.args, {
-    boolean: ["dry-run", "no-embed", "json", "pr", "help"],
+    boolean: ["dry-run", "no-embed", "no-fetch", "json", "pr", "help"],
     string: ["config", "archive", "since-days", "limit"],
     alias: { h: "help" },
   });
@@ -46,6 +54,7 @@ async function main(): Promise<void> {
     archiveDir: args.archive,
     dryRun: args["dry-run"],
     noEmbed: args["no-embed"],
+    noFetch: args["no-fetch"],
   };
 
   switch (cmd) {

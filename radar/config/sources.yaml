@@ -1,15 +1,132 @@
 # Source registry (design §3). Each entry becomes a SourceAdapter via
-# src/sources/registry.ts. Only `arxiv` is implemented in Phase 0; the rest are
-# stubs. Adding a source is a one-line edit here.
+# src/sources/registry.ts. Adding a source is one entry here.
+# Feeds researched 2026-07 — see docs/sources.txt and the trailing topic notes.
 sources:
   - id: arxiv
     kind: arxiv
     categories: [cs.AI, cs.LG, cs.LO, cs.SC, cs.PL, cs.SE, math.LO, stat.ML]
     maxResults: 50
-  # Stubs — uncomment once the adapter lands (Phase 0/1):
-  # - id: deepmind-blog
-  #   kind: rss
-  #   url: https://deepmind.google/blog/rss.xml
-  #   sourceKind: industry
-  # - id: semantic-scholar
-  #   kind: semantic_scholar
+
+  # ---- Industry (company / lab blogs) ----
+  - {
+      id: deepmind-blog,
+      kind: rss,
+      url: "https://deepmind.google/blog/rss.xml",
+      sourceKind: industry,
+    } # ai-scientist, ai-life-sciences
+  - {
+      id: sakana-ai,
+      kind: rss,
+      url: "https://sakana.ai/feed.xml",
+      sourceKind: industry,
+    } # ai-scientist
+  - {
+      id: valence-labs,
+      kind: rss,
+      url: "https://valencelabs.substack.com/feed",
+      sourceKind: industry,
+    } # ai-life-sciences, ai-scientist
+  - {
+      id: aws-automated-reasoning,
+      kind: rss,
+      url: "https://aws.amazon.com/blogs/security/tag/automated-reasoning/feed/",
+      sourceKind: industry,
+    } # formal-verification, formal-methods
+  # Galois — https://galois.com/blog/ — formal-methods, formal-verification
+  #   The feed advertised in the site footer (https://galois.com/feed/) returns
+  #   404 — it's broken on their end. Harvest via Google PSE site: discovery
+  #   instead once that's wired.
+
+  # ---- News & analysis ----
+  - {
+      id: sigplan,
+      kind: rss,
+      url: "https://blog.sigplan.org/feed/",
+      sourceKind: news,
+    } # formal-methods, formal-verification
+  - {
+      id: quanta-ai,
+      kind: rss,
+      url: "https://www.quantamagazine.org/tag/artificial-intelligence/feed/",
+      sourceKind: news,
+    } # neurosymbolic, formal-methods, ai-scientist
+  - {
+      id: nature-ml,
+      kind: rss,
+      url: "https://www.nature.com/subjects/machine-learning.rss",
+      sourceKind: news,
+    } # ai-life-sciences, ai-scientist
+  - {
+      id: mit-tech-review-ai,
+      kind: rss,
+      url: "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
+      sourceKind: news,
+    } # ai-scientist, ai-life-sciences
+  - {
+      id: import-ai,
+      kind: rss,
+      url: "https://importai.substack.com/feed",
+      sourceKind: news,
+    } # ai-scientist, verified-science
+
+  # ---- Opinion (individual blogs / Substacks) ----
+  - {
+      id: terence-tao,
+      kind: rss,
+      url: "https://terrytao.wordpress.com/feed/",
+      sourceKind: opinion,
+    } # formal-methods, formal-verification
+  - {
+      id: xena-project,
+      kind: rss,
+      url: "https://xenaproject.wordpress.com/feed/",
+      sourceKind: opinion,
+    } # formal-methods, formal-verification
+  - {
+      id: argmin,
+      kind: rss,
+      url: "https://www.argmin.net/feed",
+      sourceKind: opinion,
+    } # verified-science
+  - {
+      id: gary-marcus,
+      kind: rss,
+      url: "https://garymarcus.substack.com/feed",
+      sourceKind: opinion,
+    } # neurosymbolic, verified-science
+  - {
+      id: sebastian-raschka,
+      kind: rss,
+      url: "https://magazine.sebastianraschka.com/feed",
+      sourceKind: opinion,
+    } # ai-life-sciences, ai-scientist
+  - {
+      id: simon-willison,
+      kind: rss,
+      url: "https://simonwillison.net/atom/entries/",
+      sourceKind: opinion,
+    } # ai-scientist
+  - {
+      id: francois-chollet,
+      kind: rss,
+      url: "https://fchollet.substack.com/feed",
+      sourceKind: opinion,
+    } # neurosymbolic, ai-scientist
+
+# ---- No feed yet: need the page-fetch adapter (pending fetch/extract.ts) ----
+# Isomorphic Labs     https://www.isomorphiclabs.com/articles   industry  ai-life-sciences
+# FutureHouse         https://www.futurehouse.org/research      industry  ai-scientist, ai-life-sciences
+# FutureHouse News    https://www.futurehouse.org/news          industry  ai-scientist
+# EvolutionaryScale   https://evolutionaryscale.ai/blog         industry  ai-life-sciences
+# Chai Discovery      https://www.chaidiscovery.com/            industry  ai-life-sciences
+# Profluent           https://www.profluent.bio/media           industry  ai-life-sciences
+# Cradle Bio          https://www.cradle.bio/blog               industry  ai-life-sciences, ai-scientist
+# Iambic              https://www.iambic.ai/news                industry  ai-life-sciences
+# Insilico Medicine   https://insilico.com/blog                 industry  ai-life-sciences, ai-scientist
+# Owkin               https://www.owkin.com/blog                industry  ai-scientist, ai-life-sciences
+# Lila Sciences       https://www.lila.ai/                      industry  ai-scientist, ai-life-sciences
+# Lean FRO            https://lean-lang.org/fro/                industry  formal-methods, formal-verification
+# Harmonic            https://harmonic.fun/news/                industry  formal-methods, formal-verification
+# Symbolica AI        https://www.symbolica.ai/blog             industry  neurosymbolic, ai-scientist
+# Center for Open Sci https://www.cos.io/blog                   news      verified-science
+# The Batch           https://www.deeplearning.ai/the-batch/    news      ai-scientist, neurosymbolic

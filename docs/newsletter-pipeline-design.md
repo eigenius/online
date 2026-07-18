@@ -368,7 +368,7 @@ last watermark. Prefer the most structured access each source offers.
 | bioRxiv / medRxiv | REST details API | `httpx` |
 | RSS / Atom (org blogs, researcher blogs) | Feeds | `feedparser` |
 | Hacker News | Algolia search API | `httpx` |
-| Web-search discovery (deterministic) | Search API with freshness filter | Brave Search API / Tavily / Exa / Bing (see §6.1.1) |
+| Web-search discovery (deterministic) | Search API with freshness filter | Google Programmable Search — Custom Search JSON API (see §6.1.1) |
 | Generic web pages (last resort) | HTTP + extraction | `httpx` + `trafilatura` (main-content extraction) |
 | Agentic discovery / reading | Claude server tools | `web_search_20260209`, `web_fetch_20260209` |
 
@@ -390,14 +390,14 @@ cleanly against the feed harvest.
 - **Search-API sweep (deterministic, every harvest).** Issue the per-topic
   query templates (`queries.yaml`) against a search API with a recency filter,
   collect result URLs + snippets, and hand them to normalization. No model
-  tokens; controllable and cheap. Options, roughly by fit:
-  - **Exa** — neural/semantic search built for agent-style content discovery;
-    strong at "find content *like this*" and topic sweeps.
-  - **Tavily** — a search API designed for LLM/research pipelines (returns
-    clean, rankable results).
-  - **Brave Search API** — independent index, good freshness, simple REST.
-  - **Bing Web Search / Google Programmable Search (or SerpAPI)** — broad
-    coverage; heavier terms/quota.
+  tokens; controllable and cheap. **Decided: Google Programmable Search** (the
+  Custom Search JSON API), for GCP consistency — a Programmable Search Engine
+  configured to search the whole web, queried with `key` + `cx` and a
+  `dateRestrict` recency window; implemented in `sources/search/google.ts`.
+  **Vertex AI Search** is the heavier alternative (a search app over data
+  stores / grounded search) — more than a query→URLs sweep needs, so it's the
+  upgrade path, not the default. The provider sits behind the `SearchProvider`
+  interface, so swapping to Tavily/Brave/Bing later is one file.
 
   Controls: cap results per query, apply the freshness window, and dedup against
   the archive *before* the cheap gate so recurring hits cost nothing.
@@ -777,7 +777,7 @@ radar/
 │  │  ├─ rss.ts    hacker_news.ts
 │  │  ├─ search/                #   web-search discovery (§6.1.1)
 │  │  │  ├─ provider.ts         #     interface SearchProvider { search(query, since) → Hit[] }
-│  │  │  └─ exa.ts              #     chosen provider (§14.6)
+│  │  │  └─ google.ts           #     Google Programmable Search (§14.6)
 │  │  └─ registry.ts            #   build adapters from sources.yaml
 │  ├─ fetch/
 │  │  ├─ http.ts                # shared client: rate-limit, retry, Retry-After, ETag
@@ -833,7 +833,7 @@ the still-open decisions stay cheap to change:
 | Interface | File | Swap covers |
 | --- | --- | --- |
 | `SourceAdapter` | `sources/adapter.ts` | adding/removing any source |
-| `SearchProvider` | `sources/search/provider.ts` | Exa / Tavily / Brave / Bing (§14.6) |
+| `SearchProvider` | `sources/search/provider.ts` | Google PSE → Tavily / Brave / Bing (§14.6) |
 | `Embedder` | `embeddings/embedder.ts` | Vertex model → another provider or local |
 | `Store` | `store/index.ts` | libSQL local file → Turso, no call-site change (§6.6) |
 
@@ -979,9 +979,10 @@ Still open:
 5. **Source & query sign-off** — the initial `sources.yaml` (company blogs,
    opinion leaders) and `queries.yaml` (per-topic search templates) are
    editorial choices worth doing by hand.
-6. **Discovery search API** — which provider backs the deterministic web-search
-   sweep (Exa / Tavily / Brave / Bing), weighed on coverage, freshness, and cost
-   (§6.1.1).
+6. **Discovery search API** — decided: **Google Programmable Search** (Custom
+   Search JSON API), for GCP consistency; Vertex AI Search is the upgrade path
+   (§6.1.1). Still needs a Programmable Search Engine (`cx`) + Custom Search API
+   key, and wiring the query sweep into the harvest.
 7. **Automation level** — confirm the human-merge gate (recommended) vs any
    appetite for auto-publishing routine issues later.
 8. **Entity pages** — which entity types to launch first (people /

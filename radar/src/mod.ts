@@ -9,7 +9,7 @@ export * from "./sources/arxiv.ts";
 export * from "./sources/rss.ts";
 export * from "./sources/registry.ts";
 export * from "./sources/search/provider.ts";
-export * from "./sources/search/exa.ts";
+export * from "./sources/search/google.ts";
 
 export * from "./fetch/http.ts";
 export * from "./fetch/robots.ts";

@@ -5,7 +5,7 @@ export interface SearchHit {
   snippet?: string;
 }
 
-/** A web-search discovery backend — Exa / Tavily / Brave / Bing (§6.1.1, §14.6). */
+/** A web-search discovery backend — Google Programmable Search (§6.1.1, §14.6). */
 export interface SearchProvider {
   readonly id: string;
   search(query: string, since?: string): Promise<SearchHit[]>;
