@@ -16,7 +16,7 @@ import { vertexEmbedder } from "../embeddings/vertex.ts";
 import { groundingSearchProvider } from "../sources/search/grounding.ts";
 import { enrichCitations } from "../sources/semantic_scholar.ts";
 import type { Embedder } from "../embeddings/embedder.ts";
-import type { ArchiveRecord, Candidate } from "../types.ts";
+import type { ArchiveRecord, Candidate, Vector } from "../types.ts";
 
 /** Below this many chars, a feed body is a stub and we fetch the full page. */
 const THIN_ABSTRACT = 1_200;
@@ -169,12 +169,31 @@ export async function harvest(opts: JobOptions = {}): Promise<void> {
   }
 
   const willEmbed = !opts.dryRun && !opts.noEmbed;
-  const embedder: Embedder | null = willEmbed ? vertexEmbedder() : null;
+  let embedder: Embedder | null = willEmbed ? vertexEmbedder() : null;
+  const embedderId = embedder?.id;
+  let embedFailed = false;
 
   if (!opts.dryRun) {
     for (let i = 0; i < fresh.length; i += EMBED_BATCH) {
       const batch = fresh.slice(i, i + EMBED_BATCH);
-      const vecs = embedder ? await embedder.embed(batch.map(embedText)) : null;
+      let vecs: Vector[] | null = null;
+      if (embedder) {
+        try {
+          vecs = await embedder.embed(batch.map(embedText));
+        } catch (err) {
+          // Don't lose the whole harvest to a transient embeddings outage (an
+          // expired GCP token, a 5xx): archive the records now without vectors
+          // and let `backfill` embed them later. Stop retrying after the first
+          // failure so we don't hammer a dead endpoint.
+          console.error(
+            `harvest: embedding failed — archiving without vectors, run \`backfill\` later: ${
+              err instanceof Error ? err.message : err
+            }`,
+          );
+          embedder = null;
+          embedFailed = true;
+        }
+      }
       for (let j = 0; j < batch.length; j++) {
         const rec = batch[j];
         // Vector first, then record, so an archived record always has a vector.
@@ -186,8 +205,10 @@ export async function harvest(opts: JobOptions = {}): Promise<void> {
 
   const tail = opts.dryRun
     ? " (dry run — nothing written)"
+    : embedFailed
+    ? ", archived WITHOUT vectors (embedding failed — run `backfill`)"
     : willEmbed
-    ? `, embedded (${embedder?.id}) + archived`
+    ? `, embedded (${embedderId}) + archived`
     : ", archived (no embeddings)";
   console.log(
     `harvest: ${seen} candidates from ${adapters.length} source(s), ` +

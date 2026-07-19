@@ -35,7 +35,18 @@ export interface EntitiesOptions extends JobOptions {
   trackMin?: number;
 }
 
-export async function entities(opts: EntitiesOptions = {}): Promise<void> {
+export interface EntityExtractResult {
+  /** The JSON extract, ready to write or carry in a PR (trailing newline). */
+  json: string;
+  resolved: number;
+  tracked: number;
+}
+
+/** Build the entity-index JSON from the archive — no file write. Shared by the
+ *  `entities` CLI job and the weekly assembly, which carries it in the same PR. */
+export async function buildEntityExtract(
+  opts: EntitiesOptions = {},
+): Promise<EntityExtractResult> {
   const archiveDir = opts.archiveDir ?? "archive";
   const cfg = await loadConfig(opts.configDir ?? "config");
   const topicLabel = new Map(cfg.topics.map((t) => [t.key, t.label]));
@@ -117,14 +128,18 @@ export async function entities(opts: EntitiesOptions = {}): Promise<void> {
   });
 
   const tracked = pages.filter((p) => p.tracked).length;
+  return { json: renderEntityData(pages, now) + "\n", resolved: resolved.length, tracked };
+}
+
+/** Build the entity extract and write it to disk (or, with --dry-run, report). */
+export async function entities(opts: EntitiesOptions = {}): Promise<void> {
+  const { json, resolved, tracked } = await buildEntityExtract(opts);
   if (opts.dryRun) {
-    console.log(
-      `entities: ${resolved.length} resolved, ${tracked} tracked (dry run — not written)`,
-    );
+    console.log(`entities: ${resolved} resolved, ${tracked} tracked (dry run — not written)`);
     return;
   }
   const out = opts.out ?? "../src/data/entities.json";
   await ensureDir(dirname(out));
-  await Deno.writeTextFile(out, renderEntityData(pages, now) + "\n");
-  console.log(`entities: ${resolved.length} resolved, ${tracked} tracked -> ${out}`);
+  await Deno.writeTextFile(out, json);
+  console.log(`entities: ${resolved} resolved, ${tracked} tracked -> ${out}`);
 }

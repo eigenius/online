@@ -5,9 +5,10 @@
 // and frame the issue (Opus), renders the Markdown, generates topic
 // recommendations, and either writes locally or opens a PR.
 import { ensureDir } from "@std/fs";
-import { join } from "@std/path";
+import { dirname, join } from "@std/path";
 import { loadConfig } from "../config.ts";
 import { newCandidates } from "./candidates.ts";
+import { buildEntityExtract } from "./entities.ts";
 import { anthropic, MODELS } from "../agents/client.ts";
 import { makeJudge } from "../agents/judge.ts";
 import { rank } from "../pipeline/rank.ts";
@@ -46,6 +47,8 @@ export interface AssembleOptions extends JobOptions {
   dryRun?: boolean;
   /** Also open a PR against the site (needs GITHUB_TOKEN). */
   pr?: boolean;
+  /** Skip refreshing the entity-index extract that rides the same PR (§7.4). */
+  noEntities?: boolean;
 }
 
 /** Group the plan's selections into ordered sections of records. */
@@ -178,27 +181,51 @@ export async function assemble(opts: AssembleOptions = {}): Promise<void> {
   const recs = await recommend(client, verified, covered, style);
   const recMd = renderRecommendations(recs);
 
+  // 5b. Refresh the entity-index extract from the full archive — it rides this
+  //     same PR (design §7.4). Independent of the newsletter window.
+  const entityExtract = opts.noEntities
+    ? null
+    : await buildEntityExtract({ archiveDir, configDir: opts.configDir });
+  const entitiesRepoPath = "src/data/entities.json";
+  const entitiesFile = join(dirname(contentDir), "data", "entities.json");
+
   if (opts.dryRun) {
     console.log(markdown);
     if (recMd) console.log("\n" + recMd);
+    if (entityExtract) {
+      console.log(
+        `\n[entities] ${entityExtract.resolved} resolved, ${entityExtract.tracked} tracked (dry run)`,
+      );
+    }
     return;
   }
 
-  // 6. Write the issue locally (the editor commits it), surface the
-  //    recommendations, and optionally open the PR carrying both.
+  // 6. Write the issue locally (the editor commits it), refresh the entity
+  //    extract, surface the recommendations, and optionally open the PR.
   const filename = issueFilename(issue, slugify(plan.title));
   await ensureDir(newsletterDir);
   await Deno.writeTextFile(join(newsletterDir, filename), markdown);
   console.log(`assemble: wrote ${join(newsletterDir, filename)} (issue #${issue}, draft)`);
+  if (entityExtract) {
+    await ensureDir(dirname(entitiesFile));
+    await Deno.writeTextFile(entitiesFile, entityExtract.json);
+    console.log(`assemble: wrote ${entitiesFile} (${entityExtract.tracked} tracked entities)`);
+  }
   if (recMd) console.log("\n" + recMd);
 
   if (opts.pr) {
-    const change: FileChange = { path: `src/content/newsletter/${filename}`, content: markdown };
-    const url = await openPullRequest([change], {
+    const changes: FileChange[] = [
+      { path: `src/content/newsletter/${filename}`, content: markdown },
+    ];
+    if (entityExtract) changes.push({ path: entitiesRepoPath, content: entityExtract.json });
+    const entitiesLine = entityExtract
+      ? `\n\nAlso refreshes the entity index (\`${entitiesRepoPath}\`, ${entityExtract.tracked} tracked).`
+      : "";
+    const url = await openPullRequest(changes, {
       branch: `radar/issue-${issue}`,
       title: `Newsletter #${issue}: ${plan.title}`,
       body: `Draft newsletter issue #${issue}, assembled by radar. Review, set ` +
-        `\`draft: false\`, and merge.\n\n${recMd}`,
+        `\`draft: false\`, and merge.${entitiesLine}\n\n${recMd}`,
     });
     console.log(`assemble: opened PR ${url}`);
   }

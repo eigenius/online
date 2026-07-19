@@ -12,7 +12,7 @@ const HELP = `radar — research-radar & newsletter pipeline
 Usage:
   radar harvest   [--config <dir>] [--archive <dir>] [--dry-run] [--no-embed] [--no-fetch] [--no-search]
   radar digest    [--config <dir>] [--archive <dir>] [--since-days N] [--limit N] [--json]
-  radar assemble  [--config <dir>] [--archive <dir>] [--since-days N] [--limit N] [--dry-run] [--pr]
+  radar assemble  [--config <dir>] [--archive <dir>] [--since-days N] [--limit N] [--dry-run] [--pr] [--no-entities]
   radar doctor    [--config <dir>]     validate config + report environment
   radar rebuild-index [--archive <dir>]  rebuild the libSQL index from the archive
   radar backfill  [--archive <dir>] [--dry-run]  embed archived records missing a vector
@@ -41,7 +41,17 @@ async function doctor(opts: JobOptions): Promise<void> {
 
 async function main(): Promise<void> {
   const args = parseArgs(Deno.args, {
-    boolean: ["dry-run", "no-embed", "no-fetch", "no-search", "no-citations", "json", "pr", "help"],
+    boolean: [
+      "dry-run",
+      "no-embed",
+      "no-fetch",
+      "no-search",
+      "no-citations",
+      "no-entities",
+      "json",
+      "pr",
+      "help",
+    ],
     string: ["config", "archive", "since-days", "limit", "out", "track-min"],
     alias: { h: "help" },
   });
@@ -79,6 +89,7 @@ async function main(): Promise<void> {
         sinceDays: args["since-days"] ? Number(args["since-days"]) : undefined,
         limit: args.limit ? Number(args.limit) : undefined,
         pr: args.pr,
+        noEntities: args["no-entities"],
       });
       break;
     case "doctor":
