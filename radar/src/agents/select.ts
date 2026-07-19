@@ -22,10 +22,9 @@ export interface IssuePlan {
   selections: Selection[];
 }
 
-const SYSTEM = "You are the editor of a weekly research newsletter covering neurosymbolic " +
-  "techniques, AI Scientists / AI-supported research, formal verification, " +
-  "verified science, formal methods in science & engineering, and AI-science " +
-  "for life sciences. From the candidate items, select the most interesting " +
+const SYSTEM = "You are the editor of a weekly research newsletter on AI scientists and " +
+  "AI engineers, neurosymbolic and hybrid AI, formal methods and verified science, and " +
+  "AI in the life sciences. From the candidate items, select the most interesting " +
   "ones (up to the stated maximum), drop the rest, group the picks into 2-4 " +
   "sections, and order them most-interesting first. Write a short issue title, " +
   "a one-to-two sentence description, and a 2-3 sentence intro. Reference items " +

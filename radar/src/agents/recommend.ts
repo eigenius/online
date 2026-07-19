@@ -8,9 +8,8 @@ import { MODELS } from "./client.ts";
 import { withStyle } from "../style.ts";
 
 const SYSTEM = "You are the editor planning future articles and blog posts for a research " +
-  "site on neurosymbolic techniques, AI Scientists / AI-supported research, " +
-  "formal verification, verified science, formal methods in science & " +
-  "engineering, and AI-science for life sciences. Given items surfaced this week " +
+  "site on AI scientists and AI engineers, neurosymbolic and hybrid AI, formal methods " +
+  "and verified science, and AI in the life sciences. Given items surfaced this week " +
   "and the titles the site has ALREADY published, propose 2-4 new article or " +
   "blog-post topics that are timely, fit the site's focus, and are NOT already " +
   "covered. Each needs a concrete working title, a one-to-two sentence " +

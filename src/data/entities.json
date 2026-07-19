@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-07-19T06:46:44.121Z",
+  "generatedAt": "2026-07-19T17:01:40.532Z",
   "counts": {
     "people": 7,
     "organizations": 0,
-    "sources": 15,
-    "research": 6
+    "sources": 14,
+    "research": 4
   },
   "people": [
     {
@@ -115,14 +115,14 @@
           "displayName": "argmin.net"
         },
         {
-          "id": "research:formal-methods",
+          "id": "research:formal-rigor",
           "kind": "research",
-          "displayName": "Formal methods in science & engineering"
+          "displayName": "Formal Methods & Verified Science"
         },
         {
           "id": "research:ai-life-sciences",
           "kind": "research",
-          "displayName": "AI-science for Life Sciences & Medicine"
+          "displayName": "AI in Life Sciences & Medicine"
         }
       ]
     },
@@ -166,14 +166,14 @@
       ],
       "related": [
         {
-          "id": "research:formal-methods",
+          "id": "research:formal-rigor",
           "kind": "research",
-          "displayName": "Formal methods in science & engineering"
+          "displayName": "Formal Methods & Verified Science"
         },
         {
-          "id": "research:ai-scientist",
+          "id": "research:agentic-ai",
           "kind": "research",
-          "displayName": "AI Scientists & AI-supported research"
+          "displayName": "AI Scientists & AI Engineers"
         }
       ]
     },
@@ -222,19 +222,14 @@
           "displayName": "importai.substack.com"
         },
         {
-          "id": "research:formal-methods",
+          "id": "research:formal-rigor",
           "kind": "research",
-          "displayName": "Formal methods in science & engineering"
+          "displayName": "Formal Methods & Verified Science"
         },
         {
           "id": "research:ai-life-sciences",
           "kind": "research",
-          "displayName": "AI-science for Life Sciences & Medicine"
-        },
-        {
-          "id": "research:verified-science",
-          "kind": "research",
-          "displayName": "Verified science & reproducibility"
+          "displayName": "AI in Life Sciences & Medicine"
         }
       ]
     },
@@ -283,14 +278,14 @@
           "displayName": "terrytao.wordpress.com"
         },
         {
-          "id": "research:formal-methods",
+          "id": "research:formal-rigor",
           "kind": "research",
-          "displayName": "Formal methods in science & engineering"
+          "displayName": "Formal Methods & Verified Science"
         },
         {
           "id": "research:ai-life-sciences",
           "kind": "research",
-          "displayName": "AI-science for Life Sciences & Medicine"
+          "displayName": "AI in Life Sciences & Medicine"
         }
       ]
     },
@@ -374,84 +369,9 @@
           "displayName": "xenaproject.wordpress.com"
         },
         {
-          "id": "research:formal-methods",
+          "id": "research:formal-rigor",
           "kind": "research",
-          "displayName": "Formal methods in science & engineering"
-        },
-        {
-          "id": "research:formal-verification",
-          "kind": "research",
-          "displayName": "Formal verification of / with AI"
-        }
-      ]
-    },
-    {
-      "id": "person:name:supriya-anand",
-      "slug": "supriya-anand",
-      "kind": "person",
-      "displayName": "Supriya Anand",
-      "aliases": [
-        "Supriya Anand"
-      ],
-      "links": {},
-      "tracked": true,
-      "salience": {
-        "items30d": 0,
-        "itemsTotal": 5,
-        "trend": "flat"
-      },
-      "items": [
-        {
-          "id": "sha256:6a0b250068240424c6b6b3115fda995e825e64c8dee81e5c34280d4eafa82672",
-          "title": "Daniel Schwartz-Narbonne shares how automated reasoning is helping achieve the provable security of AWS boot code",
-          "url": "https://aws.amazon.com/blogs/security/automated-reasoning-provable-security-of-boot-code-tlarg/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:39bf2c0dbb41ac474caea727727b25bb178743be2d73962cc7d97af68b435b32",
-          "title": "Provable security podcast: automated reasoning’s past, present, and future with Moshe Vardi",
-          "url": "https://aws.amazon.com/blogs/security/provable-security-podcast-automated-reasonings-past-present-and-future-with-moshe-vardi/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:e6bd5fbc9a7ca0311948213030d8f954911885593a6630f9c055a052047bf3f3",
-          "title": "AWS Security Profile: John Backes, Senior Software Development Engineer",
-          "url": "https://aws.amazon.com/blogs/security/aws-security-profile-john-backes-senior-software-development-engineer/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:c3f87b6a79d2d237b1090ec1274f3925776f095a9bc2c30da920f293a6f00864",
-          "title": "AWS Security Profile: Rustan Leino, Senior Principal Applied Scientist",
-          "url": "https://aws.amazon.com/blogs/security/aws-security-profile-rustan-leino-senior-principal-applied-scientist/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:2b90fbf0056204fac4797d7aec714be07b6f059f9eef5ef4af4c9d4f59cad1dd",
-          "title": "AWS Security Profile: Byron Cook, Director of the AWS Automated Reasoning Group",
-          "url": "https://aws.amazon.com/blogs/security/aws-security-profile-byron-cook-director-aws-automated-reasoning-group/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        }
-      ],
-      "related": [
-        {
-          "id": "source:aws.amazon.com",
-          "kind": "source",
-          "displayName": "aws.amazon.com"
-        },
-        {
-          "id": "research:formal-verification",
-          "kind": "research",
-          "displayName": "Formal verification of / with AI"
-        },
-        {
-          "id": "research:formal-methods",
-          "kind": "research",
-          "displayName": "Formal methods in science & engineering"
+          "displayName": "Formal Methods & Verified Science"
         }
       ]
     },
@@ -502,17 +422,68 @@
         {
           "id": "research:ai-life-sciences",
           "kind": "research",
-          "displayName": "AI-science for Life Sciences & Medicine"
+          "displayName": "AI in Life Sciences & Medicine"
         },
         {
           "id": "research:neurosymbolic",
           "kind": "research",
-          "displayName": "Neurosymbolic techniques"
+          "displayName": "Neurosymbolic & Hybrid AI"
         },
         {
-          "id": "research:verified-science",
+          "id": "research:formal-rigor",
           "kind": "research",
-          "displayName": "Verified science & reproducibility"
+          "displayName": "Formal Methods & Verified Science"
+        }
+      ]
+    },
+    {
+      "id": "person:name:supriya-anand",
+      "slug": "supriya-anand",
+      "kind": "person",
+      "displayName": "Supriya Anand",
+      "aliases": [
+        "Supriya Anand"
+      ],
+      "links": {},
+      "tracked": true,
+      "salience": {
+        "items30d": 0,
+        "itemsTotal": 3,
+        "trend": "flat"
+      },
+      "items": [
+        {
+          "id": "sha256:39bf2c0dbb41ac474caea727727b25bb178743be2d73962cc7d97af68b435b32",
+          "title": "Provable security podcast: automated reasoning’s past, present, and future with Moshe Vardi",
+          "url": "https://aws.amazon.com/blogs/security/provable-security-podcast-automated-reasonings-past-present-and-future-with-moshe-vardi/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:c3f87b6a79d2d237b1090ec1274f3925776f095a9bc2c30da920f293a6f00864",
+          "title": "AWS Security Profile: Rustan Leino, Senior Principal Applied Scientist",
+          "url": "https://aws.amazon.com/blogs/security/aws-security-profile-rustan-leino-senior-principal-applied-scientist/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:2b90fbf0056204fac4797d7aec714be07b6f059f9eef5ef4af4c9d4f59cad1dd",
+          "title": "AWS Security Profile: Byron Cook, Director of the AWS Automated Reasoning Group",
+          "url": "https://aws.amazon.com/blogs/security/aws-security-profile-byron-cook-director-aws-automated-reasoning-group/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        }
+      ],
+      "related": [
+        {
+          "id": "source:aws.amazon.com",
+          "kind": "source",
+          "displayName": "aws.amazon.com"
+        },
+        {
+          "id": "research:formal-rigor",
+          "kind": "research",
+          "displayName": "Formal Methods & Verified Science"
         }
       ]
     }
@@ -640,7 +611,7 @@
         {
           "id": "research:ai-life-sciences",
           "kind": "research",
-          "displayName": "AI-science for Life Sciences & Medicine"
+          "displayName": "AI in Life Sciences & Medicine"
         },
         {
           "id": "person:name:ravishankar-v",
@@ -730,202 +701,6 @@
       ]
     },
     {
-      "id": "source:arxiv.org",
-      "slug": "arxiv-org",
-      "kind": "source",
-      "displayName": "arxiv.org",
-      "aliases": [],
-      "links": {
-        "homepage": "https://arxiv.org"
-      },
-      "tracked": true,
-      "salience": {
-        "items30d": 8,
-        "itemsTotal": 8,
-        "trend": "rising"
-      },
-      "items": [
-        {
-          "id": "sha256:662e8281461695937b786c731f4731644b6c1667e098a0187e6aa86702252b66",
-          "title": "BrainPilot: Automating Brain Discovery with Agentic Research",
-          "url": "http://arxiv.org/abs/2607.15079v1",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:5fe8d086ee360c2c36e5b3520b3927953f84b97636025ff9ed580d31afcbc5ce",
-          "title": "MedFailBench: A Clinician-Built Open-Source Benchmark for Medical AI Safety Boundary Inspection",
-          "url": "http://arxiv.org/abs/2607.15166v1",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:8e55aef75497daec79c2125eb50d5132b353ad4d8c776c620b71604f2979ebcd",
-          "title": "Mech: Mechanised Choreographic Programming",
-          "url": "http://arxiv.org/abs/2607.15174v1",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:c58e4387875cce2a3fde96d027e836b1f3c4123a138a90c5449b5e945b61d3d0",
-          "title": "Self-Evolving Human-Centered Framework for Explainable Depression Symptom Annotation",
-          "url": "http://arxiv.org/abs/2607.15202v1",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:fb1ff7163ddf3bd689ef953cae7f06a7dedfd965d2308ed70164b6e893a8d993",
-          "title": "MM-IssueLoc: A Controlled Benchmark for Evaluating Visual Evidence in Multimodal Repository-Level Issue Localization",
-          "url": "http://arxiv.org/abs/2607.15205v1",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:c99c27f5e0d48445b902ab89ff1d883f5e58fcdb58002c2c434c9a845a7d12df",
-          "title": "BadWAM: When World-Action Models Dream Right but Act Wrong",
-          "url": "http://arxiv.org/abs/2607.15207v1",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:7bad02b6ef3caf6e3ad63bfcc5e2e823cb34523e48aa13f5651419ca6092128c",
-          "title": "Disintegration Temporal Logic for Probabilistic Hyperproperties",
-          "url": "http://arxiv.org/abs/2607.15223v1",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:79831ba2b3ef6db3b7944142420a4a9a7e8c9adf54c7942fe5843e8b764c9f13",
-          "title": "teLLMe Why (Ain't Nothing but a Jam): Exploratory Causal Analysis of Urban Driving Data",
-          "url": "http://arxiv.org/abs/2607.15254v1",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        }
-      ],
-      "related": [
-        {
-          "id": "person:name:qiwei-li",
-          "kind": "person",
-          "displayName": "Qiwei Li"
-        },
-        {
-          "id": "person:name:jorge-ortiz",
-          "kind": "person",
-          "displayName": "Jorge Ortiz"
-        },
-        {
-          "id": "research:ai-scientist",
-          "kind": "research",
-          "displayName": "AI Scientists & AI-supported research"
-        },
-        {
-          "id": "person:name:mishel-carelli",
-          "kind": "person",
-          "displayName": "Mishel Carelli"
-        },
-        {
-          "id": "person:name:bernd-finkbeiner",
-          "kind": "person",
-          "displayName": "Bernd Finkbeiner"
-        },
-        {
-          "id": "research:formal-methods",
-          "kind": "research",
-          "displayName": "Formal methods in science & engineering"
-        },
-        {
-          "id": "person:name:qi-li",
-          "kind": "person",
-          "displayName": "Qi Li"
-        },
-        {
-          "id": "person:name:xingyi-yang",
-          "kind": "person",
-          "displayName": "Xingyi Yang"
-        },
-        {
-          "id": "person:name:xinchao-wang",
-          "kind": "person",
-          "displayName": "Xinchao Wang"
-        },
-        {
-          "id": "person:name:shaoxiong-zhan",
-          "kind": "person",
-          "displayName": "Shaoxiong Zhan"
-        },
-        {
-          "id": "person:name:shi-hu",
-          "kind": "person",
-          "displayName": "Shi Hu"
-        },
-        {
-          "id": "person:name:boyu-feng",
-          "kind": "person",
-          "displayName": "Boyu Feng"
-        },
-        {
-          "id": "person:name:hai-lin",
-          "kind": "person",
-          "displayName": "Hai Lin"
-        },
-        {
-          "id": "person:name:andrew-gong",
-          "kind": "person",
-          "displayName": "Andrew Gong"
-        },
-        {
-          "id": "person:name:zhengda-zhou",
-          "kind": "person",
-          "displayName": "Zhengda Zhou"
-        },
-        {
-          "id": "person:name:jiaying-zhou",
-          "kind": "person",
-          "displayName": "Jiaying Zhou"
-        },
-        {
-          "id": "person:name:yunyun-hou",
-          "kind": "person",
-          "displayName": "Yunyun Hou"
-        },
-        {
-          "id": "person:name:hao-su",
-          "kind": "person",
-          "displayName": "Hao Su"
-        },
-        {
-          "id": "person:name:hai-tao-zheng",
-          "kind": "person",
-          "displayName": "Hai-Tao Zheng"
-        },
-        {
-          "id": "person:name:hoang-loc-cao",
-          "kind": "person",
-          "displayName": "Hoang-Loc Cao"
-        },
-        {
-          "id": "person:name:van-pham",
-          "kind": "person",
-          "displayName": "Van Pham"
-        },
-        {
-          "id": "person:name:truong-thanh-hung-nguyen",
-          "kind": "person",
-          "displayName": "Truong Thanh Hung Nguyen"
-        },
-        {
-          "id": "person:name:phuc-truong-loc-nguyen",
-          "kind": "person",
-          "displayName": "Phuc Truong Loc Nguyen"
-        },
-        {
-          "id": "person:name:phuc-ho",
-          "kind": "person",
-          "displayName": "Phuc Ho"
-        }
-      ]
-    },
-    {
       "id": "source:technologyreview.com",
       "slug": "technologyreview-com",
       "kind": "source",
@@ -998,9 +773,9 @@
           "displayName": "Monique Kuglitsch, Jesper Dramsch, Franz G. Kuglitsch, Andrea Toreti"
         },
         {
-          "id": "research:formal-methods",
+          "id": "research:formal-rigor",
           "kind": "research",
-          "displayName": "Formal methods in science & engineering"
+          "displayName": "Formal Methods & Verified Science"
         },
         {
           "id": "person:name:james-o-donnell",
@@ -1010,7 +785,7 @@
         {
           "id": "research:ai-life-sciences",
           "kind": "research",
-          "displayName": "AI-science for Life Sciences & Medicine"
+          "displayName": "AI in Life Sciences & Medicine"
         },
         {
           "id": "person:name:will-douglas-heaven",
@@ -1026,11 +801,6 @@
           "id": "person:name:grace-huckins",
           "kind": "person",
           "displayName": "Grace Huckins"
-        },
-        {
-          "id": "research:verified-science",
-          "kind": "research",
-          "displayName": "Verified science & reproducibility"
         }
       ]
     },
@@ -1142,14 +912,189 @@
           "displayName": "Ben Recht"
         },
         {
-          "id": "research:formal-methods",
+          "id": "research:formal-rigor",
           "kind": "research",
-          "displayName": "Formal methods in science & engineering"
+          "displayName": "Formal Methods & Verified Science"
         },
         {
           "id": "research:ai-life-sciences",
           "kind": "research",
-          "displayName": "AI-science for Life Sciences & Medicine"
+          "displayName": "AI in Life Sciences & Medicine"
+        }
+      ]
+    },
+    {
+      "id": "source:arxiv.org",
+      "slug": "arxiv-org",
+      "kind": "source",
+      "displayName": "arxiv.org",
+      "aliases": [],
+      "links": {
+        "homepage": "https://arxiv.org"
+      },
+      "tracked": true,
+      "salience": {
+        "items30d": 5,
+        "itemsTotal": 5,
+        "trend": "rising"
+      },
+      "items": [
+        {
+          "id": "sha256:5fe8d086ee360c2c36e5b3520b3927953f84b97636025ff9ed580d31afcbc5ce",
+          "title": "MedFailBench: A Clinician-Built Open-Source Benchmark for Medical AI Safety Boundary Inspection",
+          "url": "http://arxiv.org/abs/2607.15166v1",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:8e55aef75497daec79c2125eb50d5132b353ad4d8c776c620b71604f2979ebcd",
+          "title": "Mech: Mechanised Choreographic Programming",
+          "url": "http://arxiv.org/abs/2607.15174v1",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:c58e4387875cce2a3fde96d027e836b1f3c4123a138a90c5449b5e945b61d3d0",
+          "title": "Self-Evolving Human-Centered Framework for Explainable Depression Symptom Annotation",
+          "url": "http://arxiv.org/abs/2607.15202v1",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:fb1ff7163ddf3bd689ef953cae7f06a7dedfd965d2308ed70164b6e893a8d993",
+          "title": "MM-IssueLoc: A Controlled Benchmark for Evaluating Visual Evidence in Multimodal Repository-Level Issue Localization",
+          "url": "http://arxiv.org/abs/2607.15205v1",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:c99c27f5e0d48445b902ab89ff1d883f5e58fcdb58002c2c434c9a845a7d12df",
+          "title": "BadWAM: When World-Action Models Dream Right but Act Wrong",
+          "url": "http://arxiv.org/abs/2607.15207v1",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "preprint"
+        }
+      ],
+      "related": [
+        {
+          "id": "person:name:qi-li",
+          "kind": "person",
+          "displayName": "Qi Li"
+        },
+        {
+          "id": "person:name:xingyi-yang",
+          "kind": "person",
+          "displayName": "Xingyi Yang"
+        },
+        {
+          "id": "person:name:xinchao-wang",
+          "kind": "person",
+          "displayName": "Xinchao Wang"
+        },
+        {
+          "id": "research:formal-rigor",
+          "kind": "research",
+          "displayName": "Formal Methods & Verified Science"
+        },
+        {
+          "id": "person:name:shaoxiong-zhan",
+          "kind": "person",
+          "displayName": "Shaoxiong Zhan"
+        },
+        {
+          "id": "person:name:shi-hu",
+          "kind": "person",
+          "displayName": "Shi Hu"
+        },
+        {
+          "id": "person:name:boyu-feng",
+          "kind": "person",
+          "displayName": "Boyu Feng"
+        },
+        {
+          "id": "person:name:hai-lin",
+          "kind": "person",
+          "displayName": "Hai Lin"
+        },
+        {
+          "id": "person:name:andrew-gong",
+          "kind": "person",
+          "displayName": "Andrew Gong"
+        },
+        {
+          "id": "person:name:zhengda-zhou",
+          "kind": "person",
+          "displayName": "Zhengda Zhou"
+        },
+        {
+          "id": "person:name:jiaying-zhou",
+          "kind": "person",
+          "displayName": "Jiaying Zhou"
+        },
+        {
+          "id": "person:name:yunyun-hou",
+          "kind": "person",
+          "displayName": "Yunyun Hou"
+        },
+        {
+          "id": "person:name:hao-su",
+          "kind": "person",
+          "displayName": "Hao Su"
+        },
+        {
+          "id": "person:name:hai-tao-zheng",
+          "kind": "person",
+          "displayName": "Hai-Tao Zheng"
+        },
+        {
+          "id": "person:name:hoang-loc-cao",
+          "kind": "person",
+          "displayName": "Hoang-Loc Cao"
+        },
+        {
+          "id": "person:name:van-pham",
+          "kind": "person",
+          "displayName": "Van Pham"
+        },
+        {
+          "id": "person:name:truong-thanh-hung-nguyen",
+          "kind": "person",
+          "displayName": "Truong Thanh Hung Nguyen"
+        },
+        {
+          "id": "person:name:phuc-truong-loc-nguyen",
+          "kind": "person",
+          "displayName": "Phuc Truong Loc Nguyen"
+        },
+        {
+          "id": "person:name:phuc-ho",
+          "kind": "person",
+          "displayName": "Phuc Ho"
+        },
+        {
+          "id": "person:name:veronica-whitford",
+          "kind": "person",
+          "displayName": "Veronica Whitford"
+        },
+        {
+          "id": "person:name:hung-cao",
+          "kind": "person",
+          "displayName": "Hung Cao"
+        },
+        {
+          "id": "research:ai-life-sciences",
+          "kind": "research",
+          "displayName": "AI in Life Sciences & Medicine"
+        },
+        {
+          "id": "person:name:xueying-qin",
+          "kind": "person",
+          "displayName": "Xueying Qin"
+        },
+        {
+          "id": "person:name:marco-peressotti",
+          "kind": "person",
+          "displayName": "Marco Peressotti"
         }
       ]
     },
@@ -1195,12 +1140,12 @@
         {
           "id": "research:ai-life-sciences",
           "kind": "research",
-          "displayName": "AI-science for Life Sciences & Medicine"
+          "displayName": "AI in Life Sciences & Medicine"
         },
         {
-          "id": "research:ai-scientist",
+          "id": "research:agentic-ai",
           "kind": "research",
-          "displayName": "AI Scientists & AI-supported research"
+          "displayName": "AI Scientists & AI Engineers"
         }
       ]
     },
@@ -1249,58 +1194,19 @@
           "displayName": "Gary Marcus"
         },
         {
-          "id": "research:formal-methods",
+          "id": "research:formal-rigor",
           "kind": "research",
-          "displayName": "Formal methods in science & engineering"
+          "displayName": "Formal Methods & Verified Science"
         },
         {
           "id": "research:neurosymbolic",
           "kind": "research",
-          "displayName": "Neurosymbolic techniques"
-        }
-      ]
-    },
-    {
-      "id": "source:openreview.net",
-      "slug": "openreview-net",
-      "kind": "source",
-      "displayName": "openreview.net",
-      "aliases": [],
-      "links": {
-        "homepage": "https://openreview.net"
-      },
-      "tracked": true,
-      "salience": {
-        "items30d": 2,
-        "itemsTotal": 2,
-        "trend": "rising"
-      },
-      "items": [
-        {
-          "id": "sha256:74a502b59b1885eb210fd65ae58cdcdc23e552d22cce363ab0f4fcc8424513ef",
-          "title": "Verifying your browser",
-          "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DEWbCCYsR9M",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
+          "displayName": "Neurosymbolic & Hybrid AI"
         },
         {
-          "id": "sha256:9a3e56defb2a90b4e1027e43772a793cec363af4c6b944c7c31df4bcaad392c5",
-          "title": "Verifying your browser",
-          "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3D2J9nUnbk8n",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        }
-      ],
-      "related": [
-        {
-          "id": "research:neurosymbolic",
+          "id": "research:ai-life-sciences",
           "kind": "research",
-          "displayName": "Neurosymbolic techniques"
-        },
-        {
-          "id": "research:ai-scientist",
-          "kind": "research",
-          "displayName": "AI Scientists & AI-supported research"
+          "displayName": "AI in Life Sciences & Medicine"
         }
       ]
     },
@@ -1405,14 +1311,14 @@
           "displayName": "Emmanuel Bengio"
         },
         {
-          "id": "research:formal-methods",
+          "id": "research:formal-rigor",
           "kind": "research",
-          "displayName": "Formal methods in science & engineering"
+          "displayName": "Formal Methods & Verified Science"
         },
         {
           "id": "research:ai-life-sciences",
           "kind": "research",
-          "displayName": "AI-science for Life Sciences & Medicine"
+          "displayName": "AI in Life Sciences & Medicine"
         },
         {
           "id": "person:name:jason-hartford",
@@ -1437,12 +1343,7 @@
         {
           "id": "research:neurosymbolic",
           "kind": "research",
-          "displayName": "Neurosymbolic techniques"
-        },
-        {
-          "id": "research:verified-science",
-          "kind": "research",
-          "displayName": "Verified science & reproducibility"
+          "displayName": "Neurosymbolic & Hybrid AI"
         },
         {
           "id": "person:name:yunhui-jang",
@@ -1453,59 +1354,6 @@
           "id": "person:name:cas",
           "kind": "person",
           "displayName": "Cas"
-        }
-      ]
-    },
-    {
-      "id": "source:simonwillison.net",
-      "slug": "simonwillison-net",
-      "kind": "source",
-      "displayName": "simonwillison.net",
-      "aliases": [],
-      "links": {
-        "homepage": "https://simonwillison.net"
-      },
-      "tracked": true,
-      "salience": {
-        "items30d": 1,
-        "itemsTotal": 4,
-        "trend": "falling"
-      },
-      "items": [
-        {
-          "id": "sha256:351949916d5e43815910491b655c00fe566c7b5e335118d15aeb1950958b67d4",
-          "title": "Running Python code in a sandbox with MicroPython and WASM",
-          "url": "https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/#atom-entries",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:396b94ed7dc811f84a24995753ad0f50365a7b9b8046128d729e3fd65dc8c7bf",
-          "title": "Initial impressions of Claude Fable 5",
-          "url": "https://simonwillison.net/2026/Jun/9/claude-fable-5/#atom-entries",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:680e877533fdee2e7bb38c1824b25f1cf99d750f107b9bad982e0fe861a6a684",
-          "title": "Publishing WASM wheels to PyPI for use with Pyodide",
-          "url": "https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/#atom-entries",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:8bd82ea947286aba3a705ede01cfba85740210165c19d57fd76a8626b6070572",
-          "title": "sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)",
-          "url": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-entries",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        }
-      ],
-      "related": [
-        {
-          "id": "research:formal-methods",
-          "kind": "research",
-          "displayName": "Formal methods in science & engineering"
         }
       ]
     },
@@ -1554,19 +1402,60 @@
           "displayName": "Jack Clark"
         },
         {
-          "id": "research:formal-methods",
+          "id": "research:formal-rigor",
           "kind": "research",
-          "displayName": "Formal methods in science & engineering"
+          "displayName": "Formal Methods & Verified Science"
         },
         {
           "id": "research:ai-life-sciences",
           "kind": "research",
-          "displayName": "AI-science for Life Sciences & Medicine"
+          "displayName": "AI in Life Sciences & Medicine"
+        }
+      ]
+    },
+    {
+      "id": "source:simonwillison.net",
+      "slug": "simonwillison-net",
+      "kind": "source",
+      "displayName": "simonwillison.net",
+      "aliases": [],
+      "links": {
+        "homepage": "https://simonwillison.net"
+      },
+      "tracked": true,
+      "salience": {
+        "items30d": 1,
+        "itemsTotal": 3,
+        "trend": "falling"
+      },
+      "items": [
+        {
+          "id": "sha256:351949916d5e43815910491b655c00fe566c7b5e335118d15aeb1950958b67d4",
+          "title": "Running Python code in a sandbox with MicroPython and WASM",
+          "url": "https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/#atom-entries",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
         },
         {
-          "id": "research:verified-science",
+          "id": "sha256:396b94ed7dc811f84a24995753ad0f50365a7b9b8046128d729e3fd65dc8c7bf",
+          "title": "Initial impressions of Claude Fable 5",
+          "url": "https://simonwillison.net/2026/Jun/9/claude-fable-5/#atom-entries",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:8bd82ea947286aba3a705ede01cfba85740210165c19d57fd76a8626b6070572",
+          "title": "sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)",
+          "url": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-entries",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        }
+      ],
+      "related": [
+        {
+          "id": "research:formal-rigor",
           "kind": "research",
-          "displayName": "Verified science & reproducibility"
+          "displayName": "Formal Methods & Verified Science"
         }
       ]
     },
@@ -1615,142 +1504,14 @@
           "displayName": "Terence Tao"
         },
         {
-          "id": "research:formal-methods",
+          "id": "research:formal-rigor",
           "kind": "research",
-          "displayName": "Formal methods in science & engineering"
+          "displayName": "Formal Methods & Verified Science"
         },
         {
           "id": "research:ai-life-sciences",
           "kind": "research",
-          "displayName": "AI-science for Life Sciences & Medicine"
-        }
-      ]
-    },
-    {
-      "id": "source:aws.amazon.com",
-      "slug": "aws-amazon-com",
-      "kind": "source",
-      "displayName": "aws.amazon.com",
-      "aliases": [],
-      "links": {
-        "homepage": "https://aws.amazon.com"
-      },
-      "tracked": true,
-      "salience": {
-        "items30d": 0,
-        "itemsTotal": 9,
-        "trend": "flat"
-      },
-      "items": [
-        {
-          "id": "sha256:53b3c264c05edcaeb104ba180b16e4c4c434d5b33d4d784ead00c9300ed1c743",
-          "title": "Automated Reasoning and Amazon s2n",
-          "url": "https://aws.amazon.com/blogs/security/automated-reasoning-and-amazon-s2n/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:56cf33b5793d67992dffeae733c72c223e1a3eaeb91e2c246a88cc36fc30b25a",
-          "title": "In Case You Missed These: AWS Security Blog Posts from September and October",
-          "url": "https://aws.amazon.com/blogs/security/in-case-you-missed-these-aws-security-blog-posts-from-september-and-october/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:65758831edc9c7a0af233e9912f1b74e7b1df571d7fae9a8b3554eec1ea31295",
-          "title": "How AWS uses automated reasoning to help you achieve security at scale",
-          "url": "https://aws.amazon.com/blogs/security/protect-sensitive-data-in-the-cloud-with-automated-reasoning-zelkova/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:6a0b250068240424c6b6b3115fda995e825e64c8dee81e5c34280d4eafa82672",
-          "title": "Daniel Schwartz-Narbonne shares how automated reasoning is helping achieve the provable security of AWS boot code",
-          "url": "https://aws.amazon.com/blogs/security/automated-reasoning-provable-security-of-boot-code-tlarg/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:39bf2c0dbb41ac474caea727727b25bb178743be2d73962cc7d97af68b435b32",
-          "title": "Provable security podcast: automated reasoning’s past, present, and future with Moshe Vardi",
-          "url": "https://aws.amazon.com/blogs/security/provable-security-podcast-automated-reasonings-past-present-and-future-with-moshe-vardi/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:e6bd5fbc9a7ca0311948213030d8f954911885593a6630f9c055a052047bf3f3",
-          "title": "AWS Security Profile: John Backes, Senior Software Development Engineer",
-          "url": "https://aws.amazon.com/blogs/security/aws-security-profile-john-backes-senior-software-development-engineer/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:c3f87b6a79d2d237b1090ec1274f3925776f095a9bc2c30da920f293a6f00864",
-          "title": "AWS Security Profile: Rustan Leino, Senior Principal Applied Scientist",
-          "url": "https://aws.amazon.com/blogs/security/aws-security-profile-rustan-leino-senior-principal-applied-scientist/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:2b90fbf0056204fac4797d7aec714be07b6f059f9eef5ef4af4c9d4f59cad1dd",
-          "title": "AWS Security Profile: Byron Cook, Director of the AWS Automated Reasoning Group",
-          "url": "https://aws.amazon.com/blogs/security/aws-security-profile-byron-cook-director-aws-automated-reasoning-group/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:027f8948d1348471da9b4d5011dbf9f43749ef1e330958f77d9caf6eb50d2897",
-          "title": "Why Policy in Amazon Bedrock AgentCore chose Cedar for securing agentic workflows",
-          "url": "https://aws.amazon.com/blogs/security/why-policy-in-amazon-bedrock-agentcore-chose-cedar-for-securing-agentic-workflows/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        }
-      ],
-      "related": [
-        {
-          "id": "person:name:liana-hadarean",
-          "kind": "person",
-          "displayName": "Liana Hadarean"
-        },
-        {
-          "id": "research:neurosymbolic",
-          "kind": "research",
-          "displayName": "Neurosymbolic techniques"
-        },
-        {
-          "id": "research:verified-science",
-          "kind": "research",
-          "displayName": "Verified science & reproducibility"
-        },
-        {
-          "id": "person:name:supriya-anand",
-          "kind": "person",
-          "displayName": "Supriya Anand"
-        },
-        {
-          "id": "research:formal-verification",
-          "kind": "research",
-          "displayName": "Formal verification of / with AI"
-        },
-        {
-          "id": "research:formal-methods",
-          "kind": "research",
-          "displayName": "Formal methods in science & engineering"
-        },
-        {
-          "id": "person:name:andrew-gacek",
-          "kind": "person",
-          "displayName": "Andrew Gacek"
-        },
-        {
-          "id": "person:name:craig-liebendorfer",
-          "kind": "person",
-          "displayName": "Craig Liebendorfer"
-        },
-        {
-          "id": "person:name:colm-maccarthaigh",
-          "kind": "person",
-          "displayName": "Colm MacCárthaigh"
+          "displayName": "AI in Life Sciences & Medicine"
         }
       ]
     },
@@ -1834,14 +1595,106 @@
           "displayName": "xenaproject"
         },
         {
-          "id": "research:formal-methods",
+          "id": "research:formal-rigor",
           "kind": "research",
-          "displayName": "Formal methods in science & engineering"
+          "displayName": "Formal Methods & Verified Science"
+        }
+      ]
+    },
+    {
+      "id": "source:aws.amazon.com",
+      "slug": "aws-amazon-com",
+      "kind": "source",
+      "displayName": "aws.amazon.com",
+      "aliases": [],
+      "links": {
+        "homepage": "https://aws.amazon.com"
+      },
+      "tracked": true,
+      "salience": {
+        "items30d": 0,
+        "itemsTotal": 6,
+        "trend": "flat"
+      },
+      "items": [
+        {
+          "id": "sha256:53b3c264c05edcaeb104ba180b16e4c4c434d5b33d4d784ead00c9300ed1c743",
+          "title": "Automated Reasoning and Amazon s2n",
+          "url": "https://aws.amazon.com/blogs/security/automated-reasoning-and-amazon-s2n/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
         },
         {
-          "id": "research:formal-verification",
+          "id": "sha256:65758831edc9c7a0af233e9912f1b74e7b1df571d7fae9a8b3554eec1ea31295",
+          "title": "How AWS uses automated reasoning to help you achieve security at scale",
+          "url": "https://aws.amazon.com/blogs/security/protect-sensitive-data-in-the-cloud-with-automated-reasoning-zelkova/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:39bf2c0dbb41ac474caea727727b25bb178743be2d73962cc7d97af68b435b32",
+          "title": "Provable security podcast: automated reasoning’s past, present, and future with Moshe Vardi",
+          "url": "https://aws.amazon.com/blogs/security/provable-security-podcast-automated-reasonings-past-present-and-future-with-moshe-vardi/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:c3f87b6a79d2d237b1090ec1274f3925776f095a9bc2c30da920f293a6f00864",
+          "title": "AWS Security Profile: Rustan Leino, Senior Principal Applied Scientist",
+          "url": "https://aws.amazon.com/blogs/security/aws-security-profile-rustan-leino-senior-principal-applied-scientist/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:2b90fbf0056204fac4797d7aec714be07b6f059f9eef5ef4af4c9d4f59cad1dd",
+          "title": "AWS Security Profile: Byron Cook, Director of the AWS Automated Reasoning Group",
+          "url": "https://aws.amazon.com/blogs/security/aws-security-profile-byron-cook-director-aws-automated-reasoning-group/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:027f8948d1348471da9b4d5011dbf9f43749ef1e330958f77d9caf6eb50d2897",
+          "title": "Why Policy in Amazon Bedrock AgentCore chose Cedar for securing agentic workflows",
+          "url": "https://aws.amazon.com/blogs/security/why-policy-in-amazon-bedrock-agentcore-chose-cedar-for-securing-agentic-workflows/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        }
+      ],
+      "related": [
+        {
+          "id": "person:name:liana-hadarean",
+          "kind": "person",
+          "displayName": "Liana Hadarean"
+        },
+        {
+          "id": "research:agentic-ai",
           "kind": "research",
-          "displayName": "Formal verification of / with AI"
+          "displayName": "AI Scientists & AI Engineers"
+        },
+        {
+          "id": "research:neurosymbolic",
+          "kind": "research",
+          "displayName": "Neurosymbolic & Hybrid AI"
+        },
+        {
+          "id": "person:name:supriya-anand",
+          "kind": "person",
+          "displayName": "Supriya Anand"
+        },
+        {
+          "id": "research:formal-rigor",
+          "kind": "research",
+          "displayName": "Formal Methods & Verified Science"
+        },
+        {
+          "id": "person:name:andrew-gacek",
+          "kind": "person",
+          "displayName": "Andrew Gacek"
+        },
+        {
+          "id": "person:name:colm-maccarthaigh",
+          "kind": "person",
+          "displayName": "Colm MacCárthaigh"
         }
       ]
     },
@@ -1857,7 +1710,7 @@
       "tracked": true,
       "salience": {
         "items30d": 0,
-        "itemsTotal": 3,
+        "itemsTotal": 2,
         "trend": "flat"
       },
       "items": [
@@ -1865,13 +1718,6 @@
           "id": "sha256:375a8e0017d08d8669580afb41aa06156520a8b67af0016a036dac7743ad342c",
           "title": "Testing AI Software Isn’t Like Testing Plain Old Software",
           "url": "https://blog.sigplan.org/2025/03/20/testing-ai-software-isnt-like-testing-plain-old-software/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:8683fe6ac3ca90c3943ca5bffcbf9491ad9e0f2fc0b14cae1fc96d7a2576f3dd",
-          "title": "How to Give a Good Talk",
-          "url": "https://blog.sigplan.org/2025/03/31/how-to-give-a-good-talk/",
           "firstSeen": "2026-07-19T06:32:40.855Z",
           "sourceKind": "news"
         },
@@ -1890,14 +1736,9 @@
           "displayName": "Adrian Sampson"
         },
         {
-          "id": "research:formal-methods",
+          "id": "research:formal-rigor",
           "kind": "research",
-          "displayName": "Formal methods in science & engineering"
-        },
-        {
-          "id": "person:name:michael-greenberg",
-          "kind": "person",
-          "displayName": "Michael Greenberg"
+          "displayName": "Formal Methods & Verified Science"
         },
         {
           "id": "person:name:ben-zorn",
@@ -1907,12 +1748,7 @@
         {
           "id": "research:neurosymbolic",
           "kind": "research",
-          "displayName": "Neurosymbolic techniques"
-        },
-        {
-          "id": "research:formal-verification",
-          "kind": "research",
-          "displayName": "Formal verification of / with AI"
+          "displayName": "Neurosymbolic & Hybrid AI"
         }
       ]
     },
@@ -1951,28 +1787,28 @@
         {
           "id": "research:ai-life-sciences",
           "kind": "research",
-          "displayName": "AI-science for Life Sciences & Medicine"
+          "displayName": "AI in Life Sciences & Medicine"
         },
         {
-          "id": "research:formal-methods",
+          "id": "research:formal-rigor",
           "kind": "research",
-          "displayName": "Formal methods in science & engineering"
+          "displayName": "Formal Methods & Verified Science"
         }
       ]
     }
   ],
   "research": [
     {
-      "id": "research:formal-methods",
-      "slug": "formal-methods",
+      "id": "research:formal-rigor",
+      "slug": "formal-rigor",
       "kind": "research",
-      "displayName": "Formal methods in science & engineering",
+      "displayName": "Formal Methods & Verified Science",
       "aliases": [],
       "links": {},
       "tracked": true,
       "salience": {
-        "items30d": 29,
-        "itemsTotal": 54,
+        "items30d": 32,
+        "itemsTotal": 57,
         "trend": "rising"
       },
       "items": [
@@ -2019,16 +1855,16 @@
           "sourceKind": "opinion"
         },
         {
-          "id": "sha256:680e877533fdee2e7bb38c1824b25f1cf99d750f107b9bad982e0fe861a6a684",
-          "title": "Publishing WASM wheels to PyPI for use with Pyodide",
-          "url": "https://simonwillison.net/2026/Jun/13/publishing-wasm-wheels/#atom-entries",
+          "id": "sha256:8bd82ea947286aba3a705ede01cfba85740210165c19d57fd76a8626b6070572",
+          "title": "sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)",
+          "url": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-entries",
           "firstSeen": "2026-07-19T06:32:40.855Z",
           "sourceKind": "opinion"
         },
         {
-          "id": "sha256:8bd82ea947286aba3a705ede01cfba85740210165c19d57fd76a8626b6070572",
-          "title": "sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)",
-          "url": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-entries",
+          "id": "sha256:b4d272183b6265e3cbc770fa18b0ae9a0f146d4001e55dfbf12239dc1d94d7db",
+          "title": "Using Local Coding Agents",
+          "url": "https://magazine.sebastianraschka.com/p/using-local-coding-agents",
           "firstSeen": "2026-07-19T06:32:40.855Z",
           "sourceKind": "opinion"
         },
@@ -2173,6 +2009,13 @@
           "sourceKind": "news"
         },
         {
+          "id": "sha256:a872e8b9e825b6c4166c6835c957c36c1414f1198d818fe2917484122a43e9bb",
+          "title": "Claude Science is Anthropic’s newest flagship product",
+          "url": "https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
           "id": "sha256:8c8513d0103eee77458ededdaebb381dde1aca88937089aa008e7a3023f4b20b",
           "title": "LLMs are stuck in a groupthink groove. This startup is trying to get them out.",
           "url": "https://www.technologyreview.com/2026/07/01/1140003/llms-are-stuck-in-a-groupthink-rut-this-startup-is-trying-to-get-them-out/",
@@ -2215,13 +2058,6 @@
           "sourceKind": "news"
         },
         {
-          "id": "sha256:8683fe6ac3ca90c3943ca5bffcbf9491ad9e0f2fc0b14cae1fc96d7a2576f3dd",
-          "title": "How to Give a Good Talk",
-          "url": "https://blog.sigplan.org/2025/03/31/how-to-give-a-good-talk/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
           "id": "sha256:8e9cadaacd51818ae80dbf503326b2b10edd6f305f4b65b9f12a64364e3de8f4",
           "title": "The Academic Pipeline Stall: Why Industry Must Stand for Academia",
           "url": "https://blog.sigplan.org/2025/05/19/the-academic-pipeline-stall-why-industry-must-stand-for-academia/",
@@ -2229,16 +2065,16 @@
           "sourceKind": "news"
         },
         {
-          "id": "sha256:65758831edc9c7a0af233e9912f1b74e7b1df571d7fae9a8b3554eec1ea31295",
-          "title": "How AWS uses automated reasoning to help you achieve security at scale",
-          "url": "https://aws.amazon.com/blogs/security/protect-sensitive-data-in-the-cloud-with-automated-reasoning-zelkova/",
+          "id": "sha256:53b3c264c05edcaeb104ba180b16e4c4c434d5b33d4d784ead00c9300ed1c743",
+          "title": "Automated Reasoning and Amazon s2n",
+          "url": "https://aws.amazon.com/blogs/security/automated-reasoning-and-amazon-s2n/",
           "firstSeen": "2026-07-19T06:32:40.855Z",
           "sourceKind": "industry"
         },
         {
-          "id": "sha256:6a0b250068240424c6b6b3115fda995e825e64c8dee81e5c34280d4eafa82672",
-          "title": "Daniel Schwartz-Narbonne shares how automated reasoning is helping achieve the provable security of AWS boot code",
-          "url": "https://aws.amazon.com/blogs/security/automated-reasoning-provable-security-of-boot-code-tlarg/",
+          "id": "sha256:65758831edc9c7a0af233e9912f1b74e7b1df571d7fae9a8b3554eec1ea31295",
+          "title": "How AWS uses automated reasoning to help you achieve security at scale",
+          "url": "https://aws.amazon.com/blogs/security/protect-sensitive-data-in-the-cloud-with-automated-reasoning-zelkova/",
           "firstSeen": "2026-07-19T06:32:40.855Z",
           "sourceKind": "industry"
         },
@@ -2250,9 +2086,16 @@
           "sourceKind": "industry"
         },
         {
-          "id": "sha256:e6bd5fbc9a7ca0311948213030d8f954911885593a6630f9c055a052047bf3f3",
-          "title": "AWS Security Profile: John Backes, Senior Software Development Engineer",
-          "url": "https://aws.amazon.com/blogs/security/aws-security-profile-john-backes-senior-software-development-engineer/",
+          "id": "sha256:c3f87b6a79d2d237b1090ec1274f3925776f095a9bc2c30da920f293a6f00864",
+          "title": "AWS Security Profile: Rustan Leino, Senior Principal Applied Scientist",
+          "url": "https://aws.amazon.com/blogs/security/aws-security-profile-rustan-leino-senior-principal-applied-scientist/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:2b90fbf0056204fac4797d7aec714be07b6f059f9eef5ef4af4c9d4f59cad1dd",
+          "title": "AWS Security Profile: Byron Cook, Director of the AWS Automated Reasoning Group",
+          "url": "https://aws.amazon.com/blogs/security/aws-security-profile-byron-cook-director-aws-automated-reasoning-group/",
           "firstSeen": "2026-07-19T06:32:40.855Z",
           "sourceKind": "industry"
         },
@@ -2260,6 +2103,13 @@
           "id": "sha256:67302868f39346bfd1b68da5d4116083e376ba4b2f4c55ef5ed7e93d9336895e",
           "title": "Towards Reasoning in Virtual Cells",
           "url": "https://valencelabs.substack.com/p/towards-reasoning-in-virtual-cells",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:827d58250b747ebb684edca89d426638d32e0b7b15a45f128b19c7b10e9f145e",
+          "title": "Grounding Perturbation Prediction in Biological Knowledge",
+          "url": "https://valencelabs.substack.com/p/grounding-perturbation-prediction",
           "firstSeen": "2026-07-19T06:32:40.855Z",
           "sourceKind": "industry"
         },
@@ -2306,43 +2156,14 @@
           "sourceKind": "news"
         },
         {
-          "id": "sha256:c45a959079ea905f6ae9062171ac9b908825847843d5fd281445b25f921b966d",
-          "title": "Show HN: Salt – a systems language with Z3 theorem proving in the compiler",
-          "url": "https://salt-lang.dev",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:9fc9f829928c345bfcb59de24b7f192ceaba5f09e352aa04f1b7d9baca525536",
-          "title": "Show HN: Frugon – Find which LLM calls a cheaper model could handle (local, MIT)",
-          "url": "https://github.com/Rodiun/frugon",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:259e03354502dd5ab5ec90cd3ee0fcb6b8ed04c0048ab14bc95e8bb9fb5c219f",
-          "title": "Launch HN: Context.dev (YC S26) – API to get structured data from any website",
-          "url": "https://www.context.dev",
+          "id": "sha256:466891fefc4199e1101fccba77f9d580a72460be5a757105364767d900e06ad7",
+          "title": "Show HN: Requirements Engineering with Formal Verification",
+          "url": "https://fizzbee.ai/",
           "firstSeen": "2026-07-19T06:32:40.855Z",
           "sourceKind": "news"
         }
       ],
       "related": [
-        {
-          "id": "person:name:mishel-carelli",
-          "kind": "person",
-          "displayName": "Mishel Carelli"
-        },
-        {
-          "id": "person:name:bernd-finkbeiner",
-          "kind": "person",
-          "displayName": "Bernd Finkbeiner"
-        },
-        {
-          "id": "source:arxiv.org",
-          "kind": "source",
-          "displayName": "arxiv.org"
-        },
         {
           "id": "person:name:qi-li",
           "kind": "person",
@@ -2357,6 +2178,11 @@
           "id": "person:name:xinchao-wang",
           "kind": "person",
           "displayName": "Xinchao Wang"
+        },
+        {
+          "id": "source:arxiv.org",
+          "kind": "source",
+          "displayName": "arxiv.org"
         },
         {
           "id": "person:name:shaoxiong-zhan",
@@ -2424,29 +2250,39 @@
           "displayName": "Fabrizio Montesi"
         },
         {
-          "id": "person:name:theyahiabakour",
+          "id": "person:name:bialobrzewski-m-k",
           "kind": "person",
-          "displayName": "TheYahiaBakour"
+          "displayName": "Bialobrzewski, M. K."
         },
         {
-          "id": "source:context.dev",
-          "kind": "source",
-          "displayName": "context.dev"
-        },
-        {
-          "id": "person:name:jarodrh",
+          "id": "person:name:cieplak-rotowska-m-k",
           "kind": "person",
-          "displayName": "jarodrh"
+          "displayName": "Cieplak-Rotowska, M. K."
         },
         {
-          "id": "source:github.com",
-          "kind": "source",
-          "displayName": "github.com"
-        },
-        {
-          "id": "person:name:bneb-dev",
+          "id": "person:name:michas-a",
           "kind": "person",
-          "displayName": "bneb-dev"
+          "displayName": "Michas, A."
+        },
+        {
+          "id": "person:name:staszalek-z",
+          "kind": "person",
+          "displayName": "Staszalek, Z."
+        },
+        {
+          "id": "person:name:sonenberg-n",
+          "kind": "person",
+          "displayName": "Sonenberg, N."
+        },
+        {
+          "id": "person:name:dadlez-m",
+          "kind": "person",
+          "displayName": "Dadlez, M."
+        },
+        {
+          "id": "person:name:niedzwiecka-a",
+          "kind": "person",
+          "displayName": "Niedzwiecka, A."
         }
       ]
     },
@@ -2454,13 +2290,13 @@
       "id": "research:ai-life-sciences",
       "slug": "ai-life-sciences",
       "kind": "research",
-      "displayName": "AI-science for Life Sciences & Medicine",
+      "displayName": "AI in Life Sciences & Medicine",
       "aliases": [],
       "links": {},
       "tracked": true,
       "salience": {
-        "items30d": 25,
-        "itemsTotal": 42,
+        "items30d": 27,
+        "itemsTotal": 44,
         "trend": "rising"
       },
       "items": [
@@ -2496,6 +2332,13 @@
           "id": "sha256:b81ce108049c5e249e5e07a74e8e3b24b08b009b22175e6fa5eeb2ae0035f3b1",
           "title": "Frontiers | Spectral Analysis and AI/ML-based Data-Driven Approaches for Enhanced Protein Conformation Selection and Prediction in Drug Discovery",
           "url": "https://www.frontiersin.org/journals/drug-discovery/articles/10.3389/fddsv.2026.1805731/abstract",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:09a46ced3d83cb66b472ceddd0a9c68b08dbd0b93e66f8456f8bcaa0cd756c05",
+          "title": "Even more good news for the future of neurosymbolic AI",
+          "url": "https://garymarcus.substack.com/p/even-more-good-news-for-the-future",
           "firstSeen": "2026-07-19T06:32:40.855Z",
           "sourceKind": "news"
         },
@@ -2580,6 +2423,13 @@
           "id": "sha256:4f862fc46699f25a1bbe0de4306d4e8cae5ee527f2bc0010497b230268e4ae53",
           "title": "Empowering clinical trial design with agentic intelligence and real-world data",
           "url": "https://www.nature.com/articles/s41467-026-74501-2",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:b43e5abbf91deae89f1e7685a9d174e7c77501cb07aa15900d6e3fe3a1165973",
+          "title": "Which ‘AI scientist’ suits your lab? A guide for the perplexed",
+          "url": "https://www.nature.com/articles/d41586-026-02091-6",
           "firstSeen": "2026-07-19T06:32:40.855Z",
           "sourceKind": "news"
         },
@@ -2886,13 +2736,13 @@
       "id": "research:neurosymbolic",
       "slug": "neurosymbolic",
       "kind": "research",
-      "displayName": "Neurosymbolic techniques",
+      "displayName": "Neurosymbolic & Hybrid AI",
       "aliases": [],
       "links": {},
       "tracked": true,
       "salience": {
-        "items30d": 12,
-        "itemsTotal": 18,
+        "items30d": 10,
+        "itemsTotal": 16,
         "trend": "rising"
       },
       "items": [
@@ -2900,20 +2750,6 @@
           "id": "sha256:59682dad016fe7cd2b0cfd3bcb32f137dde377a23fed60704f2baf477ff47aa3",
           "title": "AI-Driven Formal Theorem Proving in the Lean Ecosystem",
           "url": "https://leandojo.org/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:459b73537641c509f8791b22262cc6705237251b00d6b58269c0aae72d264534",
-          "title": "TALK - [MERL Seminar Series 2026] Alex Gu presents talk titled Proving and Improving: Language Models for Theorem Proving and Proof Shortening in Lean",
-          "url": "https://www.merl.com/news/talk-20260211-1593",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:9a3e56defb2a90b4e1027e43772a793cec363af4c6b944c7c31df4bcaad392c5",
-          "title": "Verifying your browser",
-          "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3D2J9nUnbk8n",
           "firstSeen": "2026-07-19T06:32:40.855Z",
           "sourceKind": "news"
         },
@@ -3035,24 +2871,19 @@
           "displayName": "valencelabs.substack.com"
         },
         {
-          "id": "research:verified-science",
+          "id": "research:formal-rigor",
           "kind": "research",
-          "displayName": "Verified science & reproducibility"
+          "displayName": "Formal Methods & Verified Science"
         },
         {
           "id": "research:ai-life-sciences",
           "kind": "research",
-          "displayName": "AI-science for Life Sciences & Medicine"
+          "displayName": "AI in Life Sciences & Medicine"
         },
         {
           "id": "person:name:yunhui-jang",
           "kind": "person",
           "displayName": "Yunhui Jang"
-        },
-        {
-          "id": "research:formal-methods",
-          "kind": "research",
-          "displayName": "Formal methods in science & engineering"
         },
         {
           "id": "person:name:jason-hartford",
@@ -3070,6 +2901,11 @@
           "displayName": "aws.amazon.com"
         },
         {
+          "id": "research:agentic-ai",
+          "kind": "research",
+          "displayName": "AI Scientists & AI Engineers"
+        },
+        {
           "id": "person:name:ben-zorn",
           "kind": "person",
           "displayName": "Ben Zorn"
@@ -3078,11 +2914,6 @@
           "id": "source:blog.sigplan.org",
           "kind": "source",
           "displayName": "blog.sigplan.org"
-        },
-        {
-          "id": "research:formal-verification",
-          "kind": "research",
-          "displayName": "Formal verification of / with AI"
         },
         {
           "id": "person:name:gary-marcus",
@@ -3135,253 +2966,26 @@
           "displayName": "emergentmind.com"
         },
         {
-          "id": "source:openreview.net",
+          "id": "source:leandojo.org",
           "kind": "source",
-          "displayName": "openreview.net"
-        },
-        {
-          "id": "source:merl.com",
-          "kind": "source",
-          "displayName": "merl.com"
+          "displayName": "leandojo.org"
         }
       ]
     },
     {
-      "id": "research:verified-science",
-      "slug": "verified-science",
+      "id": "research:agentic-ai",
+      "slug": "agentic-ai",
       "kind": "research",
-      "displayName": "Verified science & reproducibility",
+      "displayName": "AI Scientists & AI Engineers",
       "aliases": [],
       "links": {},
       "tracked": true,
       "salience": {
-        "items30d": 5,
-        "itemsTotal": 11,
-        "trend": "rising"
-      },
-      "items": [
-        {
-          "id": "sha256:72786a4aae13c3b365adb9d80513bcff10471559a5d5a2b427e91fea0a4c1b9e",
-          "title": "Neuro-Symbolic AI Trends in Silicon Valley 2026",
-          "url": "https://www.stanfordtechreview.com/articles/neuro-symbolic-ai-in-silicon-valley-2026",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:584ab4fc37602f7668793c9f58b88b96426b449ee6cfcfae66081e10631e257e",
-          "title": "neurosymbolic-ai-journal.com",
-          "url": "https://neurosymbolic-ai-journal.com/underreview",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:b4d272183b6265e3cbc770fa18b0ae9a0f146d4001e55dfbf12239dc1d94d7db",
-          "title": "Using Local Coding Agents",
-          "url": "https://magazine.sebastianraschka.com/p/using-local-coding-agents",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:fe05c6e741aa6e1972df7403a6593db0fe6c549ec8b24138438ea4aff09522d1",
-          "title": "Import AI 455: AI systems are about to start building themselves.",
-          "url": "https://importai.substack.com/p/import-ai-455-automating-ai-research",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:a872e8b9e825b6c4166c6835c957c36c1414f1198d818fe2917484122a43e9bb",
-          "title": "Claude Science is Anthropic’s newest flagship product",
-          "url": "https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:53b3c264c05edcaeb104ba180b16e4c4c434d5b33d4d784ead00c9300ed1c743",
-          "title": "Automated Reasoning and Amazon s2n",
-          "url": "https://aws.amazon.com/blogs/security/automated-reasoning-and-amazon-s2n/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:56cf33b5793d67992dffeae733c72c223e1a3eaeb91e2c246a88cc36fc30b25a",
-          "title": "In Case You Missed These: AWS Security Blog Posts from September and October",
-          "url": "https://aws.amazon.com/blogs/security/in-case-you-missed-these-aws-security-blog-posts-from-september-and-october/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:027f8948d1348471da9b4d5011dbf9f43749ef1e330958f77d9caf6eb50d2897",
-          "title": "Why Policy in Amazon Bedrock AgentCore chose Cedar for securing agentic workflows",
-          "url": "https://aws.amazon.com/blogs/security/why-policy-in-amazon-bedrock-agentcore-chose-cedar-for-securing-agentic-workflows/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:67302868f39346bfd1b68da5d4116083e376ba4b2f4c55ef5ed7e93d9336895e",
-          "title": "Towards Reasoning in Virtual Cells",
-          "url": "https://valencelabs.substack.com/p/towards-reasoning-in-virtual-cells",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:827d58250b747ebb684edca89d426638d32e0b7b15a45f128b19c7b10e9f145e",
-          "title": "Grounding Perturbation Prediction in Biological Knowledge",
-          "url": "https://valencelabs.substack.com/p/grounding-perturbation-prediction",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:662e8281461695937b786c731f4731644b6c1667e098a0187e6aa86702252b66",
-          "title": "BrainPilot: Automating Brain Discovery with Agentic Research",
-          "url": "http://arxiv.org/abs/2607.15079v1",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        }
-      ],
-      "related": [
-        {
-          "id": "person:name:haoxuan-li",
-          "kind": "person",
-          "displayName": "Haoxuan Li"
-        },
-        {
-          "id": "person:name:tianci-gao",
-          "kind": "person",
-          "displayName": "Tianci Gao"
-        },
-        {
-          "id": "person:name:jianhe-li",
-          "kind": "person",
-          "displayName": "Jianhe Li"
-        },
-        {
-          "id": "person:name:yang-fan",
-          "kind": "person",
-          "displayName": "Yang Fan"
-        },
-        {
-          "id": "person:name:runze-shi",
-          "kind": "person",
-          "displayName": "Runze Shi"
-        },
-        {
-          "id": "person:name:weiran-wang",
-          "kind": "person",
-          "displayName": "Weiran Wang"
-        },
-        {
-          "id": "person:name:tianxiang-zhao",
-          "kind": "person",
-          "displayName": "Tianxiang Zhao"
-        },
-        {
-          "id": "person:name:zezhao-wu",
-          "kind": "person",
-          "displayName": "Zezhao Wu"
-        },
-        {
-          "id": "person:name:xiaoyang-jiang",
-          "kind": "person",
-          "displayName": "Xiaoyang Jiang"
-        },
-        {
-          "id": "person:name:qihui-zhang",
-          "kind": "person",
-          "displayName": "Qihui Zhang"
-        },
-        {
-          "id": "person:name:jia-li",
-          "kind": "person",
-          "displayName": "Jia Li"
-        },
-        {
-          "id": "person:name:xiao-xiao",
-          "kind": "person",
-          "displayName": "Xiao Xiao"
-        },
-        {
-          "id": "person:name:kai-du",
-          "kind": "person",
-          "displayName": "Kai Du"
-        },
-        {
-          "id": "person:name:xiaoxuan-jia",
-          "kind": "person",
-          "displayName": "Xiaoxuan Jia"
-        },
-        {
-          "id": "person:name:chao-xie",
-          "kind": "person",
-          "displayName": "Chao Xie"
-        },
-        {
-          "id": "person:name:lu-mi",
-          "kind": "person",
-          "displayName": "Lu Mi"
-        },
-        {
-          "id": "source:arxiv.org",
-          "kind": "source",
-          "displayName": "arxiv.org"
-        },
-        {
-          "id": "person:name:ihab",
-          "kind": "person",
-          "displayName": "Ihab"
-        },
-        {
-          "id": "source:valencelabs.substack.com",
-          "kind": "source",
-          "displayName": "valencelabs.substack.com"
-        },
-        {
-          "id": "research:neurosymbolic",
-          "kind": "research",
-          "displayName": "Neurosymbolic techniques"
-        },
-        {
-          "id": "research:ai-life-sciences",
-          "kind": "research",
-          "displayName": "AI-science for Life Sciences & Medicine"
-        },
-        {
-          "id": "person:name:yunhui-jang",
-          "kind": "person",
-          "displayName": "Yunhui Jang"
-        },
-        {
-          "id": "research:formal-methods",
-          "kind": "research",
-          "displayName": "Formal methods in science & engineering"
-        },
-        {
-          "id": "person:name:liana-hadarean",
-          "kind": "person",
-          "displayName": "Liana Hadarean"
-        }
-      ]
-    },
-    {
-      "id": "research:ai-scientist",
-      "slug": "ai-scientist",
-      "kind": "research",
-      "displayName": "AI Scientists & AI-supported research",
-      "aliases": [],
-      "links": {},
-      "tracked": true,
-      "salience": {
-        "items30d": 5,
+        "items30d": 4,
         "itemsTotal": 6,
         "trend": "rising"
       },
       "items": [
-        {
-          "id": "sha256:da4e2891d94722f4f38e206f18820f8513c3d80a818f13d3f17a637a89553ec7",
-          "title": "royalsocietypublishing.org",
-          "url": "https://royalsocietypublishing.org/rsos/article/12/7/250646/235354/Autonomous-self-driving-laboratories-a-review-of",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
         {
           "id": "sha256:d7d52df127d3d65a3e747646ab32afb9d98dd8c384e16aabcd90931398aed4dd",
           "title": "acs.org",
@@ -3397,6 +3001,13 @@
           "sourceKind": "news"
         },
         {
+          "id": "sha256:1dca2c6c247a718d62550b70d3add57536eadc8ef93620b8a447fb5ffe98ae25",
+          "title": "Neuro-Symbolic AI Wins On Long-Horizon Reasoning And Does So At A Lower Energy Cost",
+          "url": "https://www.forbes.com/sites/lanceeliot/2026/04/16/neuro-symbolic-ai-wins-on-long-horizon-reasoning-and-does-so-at-a-lower-energy-cost/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
           "id": "sha256:b43e5abbf91deae89f1e7685a9d174e7c77501cb07aa15900d6e3fe3a1165973",
           "title": "Which ‘AI scientist’ suits your lab? A guide for the perplexed",
           "url": "https://www.nature.com/articles/d41586-026-02091-6",
@@ -3404,45 +3015,55 @@
           "sourceKind": "news"
         },
         {
+          "id": "sha256:027f8948d1348471da9b4d5011dbf9f43749ef1e330958f77d9caf6eb50d2897",
+          "title": "Why Policy in Amazon Bedrock AgentCore chose Cedar for securing agentic workflows",
+          "url": "https://aws.amazon.com/blogs/security/why-policy-in-amazon-bedrock-agentcore-chose-cedar-for-securing-agentic-workflows/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        },
+        {
           "id": "sha256:ac9ff977398c5d2e0e77f14d324a9e55e3f21752302d95be102e1b498ce60bbe",
           "title": "Sakana AI、初の商用プロダクト「Sakana Marlin」を提供開始",
           "url": "/marlin-release/",
           "firstSeen": "2026-07-19T06:32:40.855Z",
           "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:79831ba2b3ef6db3b7944142420a4a9a7e8c9adf54c7942fe5843e8b764c9f13",
-          "title": "teLLMe Why (Ain't Nothing but a Jam): Exploratory Causal Analysis of Urban Driving Data",
-          "url": "http://arxiv.org/abs/2607.15254v1",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
         }
       ],
       "related": [
-        {
-          "id": "person:name:qiwei-li",
-          "kind": "person",
-          "displayName": "Qiwei Li"
-        },
-        {
-          "id": "person:name:jorge-ortiz",
-          "kind": "person",
-          "displayName": "Jorge Ortiz"
-        },
-        {
-          "id": "source:arxiv.org",
-          "kind": "source",
-          "displayName": "arxiv.org"
-        },
         {
           "id": "person:name:sakana-ai",
           "kind": "person",
           "displayName": "Sakana AI"
         },
         {
+          "id": "person:name:liana-hadarean",
+          "kind": "person",
+          "displayName": "Liana Hadarean"
+        },
+        {
+          "id": "source:aws.amazon.com",
+          "kind": "source",
+          "displayName": "aws.amazon.com"
+        },
+        {
+          "id": "research:neurosymbolic",
+          "kind": "research",
+          "displayName": "Neurosymbolic & Hybrid AI"
+        },
+        {
           "id": "source:nature.com",
           "kind": "source",
           "displayName": "nature.com"
+        },
+        {
+          "id": "research:ai-life-sciences",
+          "kind": "research",
+          "displayName": "AI in Life Sciences & Medicine"
+        },
+        {
+          "id": "source:forbes.com",
+          "kind": "source",
+          "displayName": "forbes.com"
         },
         {
           "id": "source:openreview.net",
@@ -3453,167 +3074,6 @@
           "id": "source:pubs.acs.org",
           "kind": "source",
           "displayName": "pubs.acs.org"
-        },
-        {
-          "id": "source:royalsocietypublishing.org",
-          "kind": "source",
-          "displayName": "royalsocietypublishing.org"
-        }
-      ]
-    },
-    {
-      "id": "research:formal-verification",
-      "slug": "formal-verification",
-      "kind": "research",
-      "displayName": "Formal verification of / with AI",
-      "aliases": [],
-      "links": {},
-      "tracked": true,
-      "salience": {
-        "items30d": 2,
-        "itemsTotal": 9,
-        "trend": "rising"
-      },
-      "items": [
-        {
-          "id": "sha256:f5e8da988ed72f7ed89ff83cb4d409168d73fa6c48218f16360ee3bc02170bf2",
-          "title": "Formalization of Erdős problems",
-          "url": "https://xenaproject.wordpress.com/2025/12/05/formalization-of-erdos-problems/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:375a8e0017d08d8669580afb41aa06156520a8b67af0016a036dac7743ad342c",
-          "title": "Testing AI Software Isn’t Like Testing Plain Old Software",
-          "url": "https://blog.sigplan.org/2025/03/20/testing-ai-software-isnt-like-testing-plain-old-software/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:53b3c264c05edcaeb104ba180b16e4c4c434d5b33d4d784ead00c9300ed1c743",
-          "title": "Automated Reasoning and Amazon s2n",
-          "url": "https://aws.amazon.com/blogs/security/automated-reasoning-and-amazon-s2n/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:65758831edc9c7a0af233e9912f1b74e7b1df571d7fae9a8b3554eec1ea31295",
-          "title": "How AWS uses automated reasoning to help you achieve security at scale",
-          "url": "https://aws.amazon.com/blogs/security/protect-sensitive-data-in-the-cloud-with-automated-reasoning-zelkova/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:39bf2c0dbb41ac474caea727727b25bb178743be2d73962cc7d97af68b435b32",
-          "title": "Provable security podcast: automated reasoning’s past, present, and future with Moshe Vardi",
-          "url": "https://aws.amazon.com/blogs/security/provable-security-podcast-automated-reasonings-past-present-and-future-with-moshe-vardi/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:c3f87b6a79d2d237b1090ec1274f3925776f095a9bc2c30da920f293a6f00864",
-          "title": "AWS Security Profile: Rustan Leino, Senior Principal Applied Scientist",
-          "url": "https://aws.amazon.com/blogs/security/aws-security-profile-rustan-leino-senior-principal-applied-scientist/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:2b90fbf0056204fac4797d7aec714be07b6f059f9eef5ef4af4c9d4f59cad1dd",
-          "title": "AWS Security Profile: Byron Cook, Director of the AWS Automated Reasoning Group",
-          "url": "https://aws.amazon.com/blogs/security/aws-security-profile-byron-cook-director-aws-automated-reasoning-group/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:76bda50743199c8c872c92d57d2046e39b7271aa25f2beb3a16e1f681323616c",
-          "title": "Show HN: zkGolf – Competitive optimization of formally verified circuits",
-          "url": "https://zk.golf/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:466891fefc4199e1101fccba77f9d580a72460be5a757105364767d900e06ad7",
-          "title": "Show HN: Requirements Engineering with Formal Verification",
-          "url": "https://fizzbee.ai/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        }
-      ],
-      "related": [
-        {
-          "id": "person:name:jayaprabhakar",
-          "kind": "person",
-          "displayName": "jayaprabhakar"
-        },
-        {
-          "id": "source:fizzbee.ai",
-          "kind": "source",
-          "displayName": "fizzbee.ai"
-        },
-        {
-          "id": "person:name:rot256",
-          "kind": "person",
-          "displayName": "rot256"
-        },
-        {
-          "id": "source:zk.golf",
-          "kind": "source",
-          "displayName": "zk.golf"
-        },
-        {
-          "id": "research:formal-methods",
-          "kind": "research",
-          "displayName": "Formal methods in science & engineering"
-        },
-        {
-          "id": "person:name:supriya-anand",
-          "kind": "person",
-          "displayName": "Supriya Anand"
-        },
-        {
-          "id": "source:aws.amazon.com",
-          "kind": "source",
-          "displayName": "aws.amazon.com"
-        },
-        {
-          "id": "person:name:andrew-gacek",
-          "kind": "person",
-          "displayName": "Andrew Gacek"
-        },
-        {
-          "id": "person:name:colm-maccarthaigh",
-          "kind": "person",
-          "displayName": "Colm MacCárthaigh"
-        },
-        {
-          "id": "research:verified-science",
-          "kind": "research",
-          "displayName": "Verified science & reproducibility"
-        },
-        {
-          "id": "person:name:ben-zorn",
-          "kind": "person",
-          "displayName": "Ben Zorn"
-        },
-        {
-          "id": "source:blog.sigplan.org",
-          "kind": "source",
-          "displayName": "blog.sigplan.org"
-        },
-        {
-          "id": "research:neurosymbolic",
-          "kind": "research",
-          "displayName": "Neurosymbolic techniques"
-        },
-        {
-          "id": "person:name:xenaproject",
-          "kind": "person",
-          "displayName": "xenaproject"
-        },
-        {
-          "id": "source:xenaproject.wordpress.com",
-          "kind": "source",
-          "displayName": "xenaproject.wordpress.com"
         }
       ]
     }

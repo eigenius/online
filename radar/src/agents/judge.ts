@@ -11,9 +11,9 @@ import { MODELS } from "./client.ts";
 function rubric(topics: Topic[]): string {
   const lines = topics.map((t) => `- ${t.key}: ${t.label}. ${t.anchors.join(" ")}`);
   return [
-    "You are a strict relevance judge for a research newsletter covering neurosymbolic",
-    "techniques, AI Scientists / AI-supported research, formal verification, verified",
-    "science, formal methods in science & engineering, and AI-science for life sciences.",
+    "You are a strict relevance judge for a research newsletter on AI scientists and AI",
+    "engineers, neurosymbolic and hybrid AI, formal methods and verified science, and AI",
+    "in the life sciences.",
     "",
     "Topics:",
     ...lines,

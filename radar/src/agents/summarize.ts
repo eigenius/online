@@ -7,9 +7,9 @@ import type { ArchiveRecord } from "../types.ts";
 import { MODELS } from "./client.ts";
 import { withStyle } from "../style.ts";
 
-const SYSTEM = "You write summaries for a research newsletter on neurosymbolic techniques, " +
-  "AI-supported science, formal verification and formal methods, and AI in the " +
-  "life sciences. Given a title and its source text, write ONE tight paragraph " +
+const SYSTEM = "You write summaries for a research newsletter on AI scientists and AI " +
+  "engineers, neurosymbolic and hybrid AI, formal methods and verified science, and AI " +
+  "in the life sciences. Given a title and its source text, write ONE tight paragraph " +
   "(2-4 sentences) that a busy researcher can skim. State only what the source " +
   "text supports — no speculation, no hype, no invented numbers. Do not repeat " +
   "the title verbatim; lead with what is new or interesting.";

@@ -3,11 +3,13 @@
 // the newsletter archive, articles, and blog. The hero reuses the
 // main site's typography over a layered navy gradient instead of its
 // background image, so this repo carries no multi-megabyte binary.
+import { getImage } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionCard from "../components/SectionCard.astro";
 import EntryCard from "../components/EntryCard.astro";
 import { getIssues, getPublished } from "../lib/content";
 import { withBase } from "../lib/url";
+import heroBgSrc from "../assets/hero_background.png";
 
 const issues = await getIssues();
 const latestIssue = issues[0];
@@ -23,6 +25,9 @@ const recent = [
 ]
   .sort((a, b) => b.entry.data.pubDate.valueOf() - a.entry.data.pubDate.valueOf())
   .slice(0, 3);
+
+// Optimized hero background (the 5.8MB source PNG never ships).
+const heroBg = await getImage({ src: heroBgSrc, format: "webp", width: 2752 });
 ---
 
 <BaseLayout
@@ -35,15 +40,15 @@ const recent = [
       <div class="hero-content">
         <span class="hero-eyebrow">The Eigenius community</span>
         <h1 class="hero-headline">
-          Follow the work,<br />week by week.
+          Verified Minds
         </h1>
         <p class="hero-pitch">
-          A weekly radar over the research frontier where formal rigor
-          meets AI: neurosymbolic reasoning, AI-driven science, formal
-          methods and verification, and AI in the life sciences. Each
-          issue is a curated, sourced digest of the week's new papers,
-          tools, and writing &mdash; every item summarized and linked back
-          to the original.
+          A weekly brief on the frontier of reliable, agentic AI. 
+          We cut through the noise to bring you the latest papers, 
+          industry news, and open-source tools across four pillars: 
+          autonomous AI agents, neurosymbolic logic, formal verification, 
+          and applied life sciences. 
+          Sourced, summarized, and strictly hype-free.
         </p>
         <div class="hero-actions">
           <a class="cta cta-primary" href={withBase("/newsletter/")}>
@@ -163,18 +168,20 @@ const recent = [
   </section>
 </BaseLayout>
 
-<style>
-  /* Page-unique styles; the shared chrome lives in
-     src/styles/custom.css. The gradient stands in for the main
-     site's hero background image using the same navy vocabulary. */
+<style define:vars={{ heroBg: `url("${heroBg.src}")` }}>
+  /* Page-unique styles; the shared chrome lives in src/styles/custom.css.
+     The hero uses the main site's knowledge-graph background, with a
+     left-anchored navy scrim so the hero text stays legible over it. */
   .hero {
     border-bottom: 1px solid var(--sl-color-hairline);
     background:
-      radial-gradient(
-        60rem 30rem at 85% 15%,
-        color-mix(in srgb, var(--eigenius-brand-deep) 45%, transparent),
-        transparent 70%
+      linear-gradient(
+        to right,
+        var(--eigenius-navy-1) 0%,
+        color-mix(in srgb, var(--eigenius-navy-1) 55%, transparent) 45%,
+        transparent 80%
       ),
+      var(--heroBg) center / cover no-repeat,
       linear-gradient(
         to bottom right,
         var(--eigenius-navy-1) 0%,

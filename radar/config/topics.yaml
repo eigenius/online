@@ -1,45 +1,58 @@
-# Topic taxonomy + anchors (design §2). `keywords` drive the cheap relevance
+# Topic taxonomy + anchors. `keywords` drive the cheap relevance
 # gate; `anchors` prime the embedding centroid and the LLM relevance rubric.
 topics:
+  - key: agentic-ai
+    label: AI Scientists & AI Engineers
+    keywords: [
+      AI scientist,
+      AI engineer,
+      autonomous research,
+      agentic workflows,
+      code synthesis,
+      self-driving lab,
+      lab automation,
+    ]
+    anchors:
+      - "Autonomous or AI-assisted scientific research and software engineering: hypothesis generation, agentic coding workflows, experiment design, and lab automation."
+
   - key: neurosymbolic
-    label: Neurosymbolic techniques
+    label: Neurosymbolic & Hybrid AI
     keywords: [
       neurosymbolic,
       neuro-symbolic,
       program synthesis,
       knowledge graph,
       symbolic reasoning,
+      hybrid AI,
     ]
     anchors:
-      - Combining neural networks with symbolic reasoning, knowledge graphs, or program synthesis.
-  - key: ai-scientist
-    label: AI Scientists & AI-supported research
+      - "Combining neural networks with symbolic reasoning, knowledge graphs, or structured logic to improve reasoning and robustness."
+
+  - key: formal-rigor
+    label: Formal Methods & Verified Science
     keywords: [
-      AI scientist,
-      autonomous research,
-      hypothesis generation,
-      self-driving lab,
-      lab automation,
+      formal verification,
+      formal methods,
+      Lean,
+      Coq,
+      Isabelle,
+      theorem proving,
+      verified output,
+      machine-checkable,
+      reproducibility,
     ]
     anchors:
-      - "Autonomous or AI-assisted scientific research: hypothesis generation, experiment design, lab automation."
-  - key: formal-verification
-    label: Formal verification of / with AI
-    keywords: [formal verification, proof-carrying, verified output, spec compliance, LLM proving]
-    anchors:
-      - Verifying AI outputs, or using AI to produce machine-checkable proofs.
-  - key: verified-science
-    label: Verified science & reproducibility
-    keywords: [reproducibility, machine-checkable, auditable, verified science]
-    anchors:
-      - Making scientific claims machine-checkable, auditable, and reproducible.
-  - key: formal-methods
-    label: Formal methods in science & engineering
-    keywords: [Lean, Coq, Isabelle, theorem proving, model checking, SMT, type system]
-    anchors:
-      - Theorem proving, model checking, and type systems applied to science and engineering.
+      - "Applying theorem proving, model checking, and formal methods to verify AI outputs, or making scientific and engineering claims machine-checkable and auditable."
+
   - key: ai-life-sciences
-    label: AI-science for Life Sciences & Medicine
-    keywords: [protein, drug discovery, molecule, clinical, genomics, comp-bio]
+    label: AI in Life Sciences & Medicine
+    keywords: [
+      protein,
+      drug discovery,
+      molecule,
+      clinical,
+      genomics,
+      comp-bio,
+    ]
     anchors:
-      - "AI applied to biology and medicine: protein/molecule models, drug discovery, clinical reasoning."
+      - "AI applied to biology and medicine: protein/molecule models, drug discovery, clinical reasoning, and genomic analysis."

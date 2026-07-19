@@ -1,19 +1,24 @@
 # Per-topic web-search discovery templates (design §6.1.1). Run against the
 # search provider with a recency filter; results flow into the same
-# normalize → dedup → gate → archive path as everything else.
+# normalize → dedup → gate → archive path as everything else. Topic keys match
+# config/topics.yaml.
 topics:
+  - topic: agentic-ai
+    queries:
+      - AI scientist autonomous research agent
+      - self-driving laboratory hypothesis generation
+      - AI engineer agentic coding workflow
   - topic: neurosymbolic
     queries:
       - neurosymbolic reasoning LLM
       - program synthesis knowledge graph
-  - topic: ai-scientist
-    queries:
-      - AI scientist autonomous research agent
-      - self-driving laboratory hypothesis generation
-  - topic: formal-verification
+      - hybrid neural symbolic AI
+  - topic: formal-rigor
     queries:
       - LLM theorem proving Lean
       - verified AI output formal methods
+      - machine-checked proof reproducibility
   - topic: ai-life-sciences
     queries:
       - AI drug discovery protein model
+      - AI genomics clinical reasoning
