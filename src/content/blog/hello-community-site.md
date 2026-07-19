@@ -29,9 +29,8 @@ Around it:
   perspective, and worked examples.
 - **Blog** — shorter, timelier notes like this one.
 - **Field index** — the archive doubles as a typed knowledge base of the
-  field, browsable by [research area](../../research/), by
-  [source](../../sources/), and by the [people](../../people/) doing the
-  work — the same shape Eigenius is built around.
+  field, browsable by [research area](../../research/) — the same shape
+  Eigenius is built around.
 
 Everything here is plain Markdown in a public repository, built with
 Astro and served from GitHub Pages — spot a typo or want to contribute a

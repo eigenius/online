@@ -2,7 +2,15 @@
 // Detail body for one entity, rendered against BaseLayout (not EntryLayout,
 // which expects a markdown body). Every item and related link is an edge back to
 // a sourced record — the entity page "shows its work" (design §7.3, §7.4).
-import { entityUrl, formatDate, pageById, SECTION, SECTION_LABEL, trendLabel } from "../lib/entities";
+import {
+  entityUrl,
+  formatDate,
+  isPublishedSection,
+  pageById,
+  SECTION,
+  SECTION_LABEL,
+  trendLabel,
+} from "../lib/entities";
 import type { EntityKind, EntityPage } from "../lib/entities";
 import { withBase } from "../lib/url";
 
@@ -82,7 +90,9 @@ const relatedGroups = KIND_ORDER
                 return (
                   <>
                     {i > 0 && ", "}
-                    {target ? <a href={entityUrl(target)}>{r.displayName}</a> : r.displayName}
+                    {target && isPublishedSection(target.kind)
+                      ? <a href={entityUrl(target)}>{r.displayName}</a>
+                      : r.displayName}
                   </>
                 );
               })}

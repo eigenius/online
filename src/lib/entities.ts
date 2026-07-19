@@ -86,6 +86,16 @@ export function entityUrl(page: { kind: EntityKind; slug: string }): string {
   return withBase(`/${SECTION[page.kind]}/${page.slug}/`);
 }
 
+/** Entity sections hidden from the published site (their routes aren't built —
+ *  the page dirs are underscore-prefixed). Related links to these render as
+ *  plain text instead of dead hrefs. Un-hide by un-prefixing the page dir and
+ *  removing the kind here. */
+export const HIDDEN_SECTIONS = new Set<Section>(["people", "sources", "organizations"]);
+
+export function isPublishedSection(kind: EntityKind): boolean {
+  return !HIDDEN_SECTIONS.has(SECTION[kind]);
+}
+
 export function trendLabel(trend: Trend): string {
   return trend === "rising" ? "↑ rising" : trend === "falling" ? "↓ cooling" : "→ steady";
 }
