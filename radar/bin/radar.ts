@@ -47,12 +47,14 @@ async function main(): Promise<void> {
       "no-fetch",
       "no-search",
       "no-citations",
+      "no-arxiv",
       "no-entities",
+      "no-context",
       "json",
       "pr",
       "help",
     ],
-    string: ["config", "archive", "since-days", "limit", "out", "track-min"],
+    string: ["config", "archive", "since-days", "limit", "max-age-days", "out", "track-min"],
     alias: { h: "help" },
   });
   const cmd = String(args._[0] ?? "");
@@ -69,6 +71,7 @@ async function main(): Promise<void> {
     noFetch: args["no-fetch"],
     noSearch: args["no-search"],
     noCitations: args["no-citations"],
+    noArxiv: args["no-arxiv"],
   };
 
   switch (cmd) {
@@ -80,6 +83,7 @@ async function main(): Promise<void> {
         ...opts,
         sinceDays: args["since-days"] ? Number(args["since-days"]) : undefined,
         limit: args.limit ? Number(args.limit) : undefined,
+        maxAgeDays: args["max-age-days"] ? Number(args["max-age-days"]) : undefined,
         json: args.json,
       });
       break;
@@ -88,8 +92,10 @@ async function main(): Promise<void> {
         ...opts,
         sinceDays: args["since-days"] ? Number(args["since-days"]) : undefined,
         limit: args.limit ? Number(args.limit) : undefined,
+        maxAgeDays: args["max-age-days"] ? Number(args["max-age-days"]) : undefined,
         pr: args.pr,
         noEntities: args["no-entities"],
+        noContext: args["no-context"],
       });
       break;
     case "doctor":

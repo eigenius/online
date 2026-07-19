@@ -14,6 +14,8 @@ export interface DigestOptions extends JobOptions {
   sinceDays?: number;
   /** Cap the number of records judged (cost control / smoke test). */
   limit?: number;
+  /** Drop items published more than this many days ago. Default 90. */
+  maxAgeDays?: number;
   /** Emit JSON instead of Markdown. */
   json?: boolean;
 }
@@ -67,7 +69,10 @@ export async function digest(opts: DigestOptions = {}): Promise<string> {
   const sinceDays = opts.sinceDays ?? 7;
   const since = new Date(Date.now() - sinceDays * 86_400_000).toISOString();
 
-  const { records: deduped, collapsed } = await newCandidates(archiveDir, since);
+  const { records: deduped, stale, collapsed } = await newCandidates(archiveDir, since, {
+    maxAgeDays: opts.maxAgeDays,
+  });
+  if (stale > 0) console.error(`digest: dropped ${stale} stale item(s) (published past max-age)`);
   if (collapsed > 0) console.error(`digest: collapsed ${collapsed} near-duplicate(s)`);
   let records = deduped.sort((a, b) => (a.firstSeen < b.firstSeen ? 1 : -1)); // newest first
   if (opts.limit && opts.limit > 0) records = records.slice(0, opts.limit);

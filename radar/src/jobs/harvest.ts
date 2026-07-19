@@ -15,6 +15,7 @@ import { httpGet } from "../fetch/http.ts";
 import { vertexEmbedder } from "../embeddings/vertex.ts";
 import { groundingSearchProvider } from "../sources/search/grounding.ts";
 import { enrichCitations } from "../sources/semantic_scholar.ts";
+import { enrichArxiv } from "../sources/arxiv.ts";
 import type { Embedder } from "../embeddings/embedder.ts";
 import type { ArchiveRecord, Candidate, Vector } from "../types.ts";
 
@@ -39,6 +40,8 @@ export interface JobOptions {
   noSearch?: boolean;
   /** Skip Semantic Scholar citation enrichment. */
   noCitations?: boolean;
+  /** Skip arXiv metadata enrichment. */
+  noArxiv?: boolean;
 }
 
 export const EMBED_BATCH = 16;
@@ -153,6 +156,19 @@ export async function harvest(opts: JobOptions = {}): Promise<void> {
           `harvest: page fetch failed for ${rec.url}: ${err instanceof Error ? err.message : err}`,
         );
       }
+    }
+  }
+
+  // arXiv metadata enrichment: fill authors/date/abstract for arXiv records that
+  // arrived thin (e.g. via the web-search sweep, which gives only a title + snippet).
+  if (!opts.dryRun && !opts.noArxiv && fresh.length > 0) {
+    try {
+      const n = await enrichArxiv(fresh);
+      if (n > 0) console.log(`harvest: ${n} arXiv records enriched with metadata`);
+    } catch (err) {
+      console.error(
+        `harvest: arxiv enrichment failed: ${err instanceof Error ? err.message : err}`,
+      );
     }
   }
 

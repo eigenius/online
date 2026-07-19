@@ -17,17 +17,40 @@ const KEEP_RANK: Record<SourceKind, number> = {
   news: 3,
 };
 
+/** Default: an item published more than this many days ago isn't "new" for the
+ *  issue, even if we only just discovered it. Generous enough for slightly-lagged
+ *  discovery; a stale RSS post or a resurfaced old paper is dropped. */
+export const DEFAULT_MAX_AGE_DAYS = 90;
+
 export interface Candidates {
   /** New records with near-duplicates collapsed (keep-preference order). */
   records: ArchiveRecord[];
-  /** New records in the window before dedup. */
+  /** New records in the window before recency filter + dedup. */
   total: number;
+  /** How many were dropped as too old (publishedAt past the max age). */
+  stale: number;
   /** How many were merged away as duplicates. */
   collapsed: number;
 }
 
-export async function newCandidates(archiveDir: string, sinceIso: string): Promise<Candidates> {
-  const fresh = await new RecordStore(archiveDir).newSince(sinceIso);
+export interface CandidatesOptions {
+  /** Max publish age in days; older items are dropped. Default 90. */
+  maxAgeDays?: number;
+}
+
+export async function newCandidates(
+  archiveDir: string,
+  sinceIso: string,
+  opts: CandidatesOptions = {},
+): Promise<Candidates> {
+  const all = await new RecordStore(archiveDir).newSince(sinceIso);
+
+  // Recency: "new this week" means recently *published*, not just recently
+  // discovered. Drop records whose known publish date is past the max age;
+  // records with no publishedAt pass (we can't tell).
+  const maxAge = opts.maxAgeDays ?? DEFAULT_MAX_AGE_DAYS;
+  const staleBefore = new Date(Date.now() - maxAge * 86_400_000).toISOString().slice(0, 10);
+  const fresh = all.filter((r) => !r.publishedAt || r.publishedAt >= staleBefore);
 
   // Keep-preference order for dedup: primary sources first, then newest.
   fresh.sort((a, b) => {
@@ -37,5 +60,10 @@ export async function newCandidates(archiveDir: string, sinceIso: string): Promi
 
   const vecMap = await new VectorStore(archiveDir).map();
   const records = dedupByEmbedding(fresh, (id) => vecMap.get(id));
-  return { records, total: fresh.length, collapsed: fresh.length - records.length };
+  return {
+    records,
+    total: all.length,
+    stale: all.length - fresh.length,
+    collapsed: fresh.length - records.length,
+  };
 }

@@ -43,6 +43,7 @@ export * from "./agents/judge.ts";
 export * from "./agents/summarize.ts";
 export * from "./agents/verify.ts";
 export * from "./agents/select.ts";
+export * from "./agents/context.ts";
 export * from "./agents/recommend.ts";
 
 export * from "./render/newsletter.ts";

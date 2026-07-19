@@ -101,3 +101,72 @@ const { prev, next } = await getIssueContext(issue);
     </div>
   </article>
 </BaseLayout>
+
+<style is:global>
+  /* Progressive-disclosure cards for newsletter items. The radar renders these
+     as raw HTML inside .post-prose, so the styles must be global (content from
+     <Content /> doesn't receive Astro's scoped attribute). Selectors are scoped
+     to .nl-* so they only touch newsletter items. */
+  .post-prose .nl-context {
+    margin: 0.25rem 0 1.15rem;
+    padding-left: 0.9rem;
+    border-left: 2px solid var(--sl-color-hairline);
+    color: var(--sl-color-gray-3);
+    font-size: 0.97rem;
+  }
+  .post-prose details.nl-item {
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 10px;
+    margin: 0.7rem 0;
+    background: color-mix(in srgb, var(--sl-color-bg-nav) 45%, transparent);
+  }
+  .post-prose details.nl-item > summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 0.85rem 2.4rem 0.85rem 1.1rem;
+    position: relative;
+  }
+  .post-prose details.nl-item > summary::-webkit-details-marker {
+    display: none;
+  }
+  .post-prose details.nl-item > summary::after {
+    content: "›";
+    position: absolute;
+    right: 1.1rem;
+    top: 0.78rem;
+    font-size: 1.2rem;
+    color: var(--sl-color-gray-3);
+    transition: transform 0.15s ease;
+  }
+  .post-prose details.nl-item[open] > summary::after {
+    transform: rotate(90deg);
+  }
+  .post-prose details.nl-item[open] > summary {
+    border-bottom: 1px solid var(--sl-color-hairline);
+  }
+  .post-prose .nl-item-title {
+    display: block;
+    font-weight: 600;
+    color: var(--sl-color-text);
+    line-height: 1.35;
+  }
+  .post-prose details.nl-item > summary:hover .nl-item-title {
+    color: var(--sl-color-text-accent);
+  }
+  .post-prose .nl-item-meta {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.82rem;
+    color: var(--sl-color-gray-3);
+  }
+  .post-prose .nl-item-body {
+    padding: 0.9rem 1.1rem 1rem;
+  }
+  .post-prose .nl-item-body > p {
+    margin: 0 0 0.6rem;
+  }
+  .post-prose .nl-item-more {
+    margin: 0;
+    font-size: 0.9rem;
+  }
+</style>

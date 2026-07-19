@@ -6,6 +6,8 @@ import type { ArchiveRecord } from "../types.ts";
 
 export interface IssueSection {
   heading: string;
+  /** Optional positioning paragraph shown under the section header. */
+  context?: string;
   items: ArchiveRecord[];
 }
 
@@ -70,6 +72,74 @@ export async function nextIssueNumber(newsletterDir: string): Promise<number> {
   return max + 1;
 }
 
+function esc(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+/** HTML-safe, single-line text — collapse whitespace so a card stays one
+ *  contiguous CommonMark raw-HTML block (no blank lines to break it). */
+function inline(s: string): string {
+  return esc(s.replace(/\s+/g, " ").trim());
+}
+
+function hostOf(url: string): string | null {
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return null;
+  }
+}
+
+/** `2026-07-12` → `12 Jul 2026`. */
+function fmtDate(iso?: string): string | null {
+  if (!iso) return null;
+  const d = new Date(iso);
+  return isNaN(d.getTime()) ? null : d.toLocaleDateString("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
+
+function authorLine(authors: string[]): string | null {
+  if (authors.length === 0) return null;
+  return authors.length <= 3 ? authors.join(", ") : `${authors.slice(0, 3).join(", ")} et al.`;
+}
+
+/** "Authors · source.com · 12 Jul 2026", omitting whatever's unavailable. */
+function metaLine(r: ArchiveRecord): string {
+  return [authorLine(r.authors), hostOf(r.url), fmtDate(r.publishedAt)]
+    .filter((x): x is string => !!x)
+    .join(" · ");
+}
+
+/**
+ * One item as a progressive-disclosure card. Emitted as a single contiguous
+ * raw-HTML block (no blank lines inside), so Markdown passes it through intact;
+ * the site styles `.nl-item`. Collapsed shows title + author/source/date; the
+ * summary and source link are revealed on expand.
+ */
+function itemCard(r: ArchiveRecord): string {
+  const meta = metaLine(r);
+  const summary = r.editorial?.summary ?? "";
+  return [
+    `<details class="nl-item">`,
+    `<summary><span class="nl-item-title">${inline(r.title)}</span>` +
+    (meta ? `<span class="nl-item-meta">${inline(meta)}</span>` : "") +
+    `</summary>`,
+    `<div class="nl-item-body">`,
+    ...(summary ? [`<p>${inline(summary)}</p>`] : []),
+    `<p class="nl-item-more"><a href="${esc(r.url)}">Read the source →</a></p>`,
+    `</div>`,
+    `</details>`,
+  ].join("\n");
+}
+
 export function renderIssue(input: IssueInput): string {
   const tags = [
     ...new Set(input.sections.flatMap((s) => s.items).flatMap((r) => r.topics)),
@@ -90,11 +160,8 @@ export function renderIssue(input: IssueInput): string {
   const body: string[] = [input.intro];
   for (const section of input.sections) {
     body.push(`\n## ${section.heading}\n`);
-    for (const r of section.items) {
-      body.push(`### ${r.title}`);
-      if (r.editorial?.summary) body.push(r.editorial.summary);
-      body.push(`[Read the source →](${r.url})\n`);
-    }
+    if (section.context) body.push(`<p class="nl-context">${inline(section.context)}</p>`);
+    for (const r of section.items) body.push(itemCard(r));
   }
 
   return `${frontmatter}\n\n${body.join("\n")}\n`;

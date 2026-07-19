@@ -13,8 +13,45 @@ export function canonicalUrl(u: string): string {
   }
 }
 
+/** The arXiv id in a URL (abs/pdf/html, any version), or null. */
+export function arxivId(u: string): string | null {
+  try {
+    const url = new URL(u);
+    if (url.hostname.replace(/^www\./, "") !== "arxiv.org") return null;
+    const m = url.pathname.match(/^\/(?:abs|pdf|html)\/(.+?)(?:v\d+)?(?:\.pdf)?$/);
+    return m ? m[1] : null;
+  } catch {
+    return null;
+  }
+}
+
+/** The DOI in a doi.org resolver URL, or null. */
+export function doiFromUrl(u: string): string | null {
+  try {
+    const url = new URL(u);
+    if (!/^(dx\.)?doi\.org$/.test(url.hostname.replace(/^www\./, ""))) return null;
+    const doi = decodeURIComponent(url.pathname.replace(/^\/+/, ""));
+    return /^10\.\d+\//.test(doi) ? doi : null;
+  } catch {
+    return null;
+  }
+}
+
+/**
+ * Best canonical identity for a candidate's URL: an arXiv id or DOI when the URL
+ * carries one (so the same work found via the feed, web search, or as abs/pdf/
+ * html all collapse to one record), else the fragment-stripped URL.
+ */
+export function canonicalFromUrl(u: string): Canonical {
+  const ax = arxivId(u);
+  if (ax) return { type: "arxiv", value: ax };
+  const doi = doiFromUrl(u);
+  if (doi) return { type: "doi", value: doi };
+  return { type: "url", value: canonicalUrl(u) };
+}
+
 export function canonicalOf(c: Candidate): Canonical {
-  return c.canonicalHint ?? { type: "url", value: canonicalUrl(c.url) };
+  return c.canonicalHint ?? canonicalFromUrl(c.url);
 }
 
 /** Content-addressed record id from the canonical identity. */

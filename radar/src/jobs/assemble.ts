@@ -15,6 +15,7 @@ import { rank } from "../pipeline/rank.ts";
 import { summarize } from "../agents/summarize.ts";
 import { verify } from "../agents/verify.ts";
 import { type IssuePlan, select } from "../agents/select.ts";
+import { sectionContext } from "../agents/context.ts";
 import { recommend } from "../agents/recommend.ts";
 import {
   issueFilename,
@@ -35,6 +36,8 @@ export interface AssembleOptions extends JobOptions {
   sinceDays?: number;
   /** Cap the number of new records judged (cost control / smoke test). */
   limit?: number;
+  /** Drop items published more than this many days ago. Default 90. */
+  maxAgeDays?: number;
   /** Candidates carried into summarize + select. Default 8. */
   shortlist?: number;
   /** Max items in the issue. Default 6. */
@@ -49,6 +52,8 @@ export interface AssembleOptions extends JobOptions {
   pr?: boolean;
   /** Skip refreshing the entity-index extract that rides the same PR (§7.4). */
   noEntities?: boolean;
+  /** Skip the per-section positioning paragraphs. */
+  noContext?: boolean;
 }
 
 /** Group the plan's selections into ordered sections of records. */
@@ -90,7 +95,10 @@ export async function assemble(opts: AssembleOptions = {}): Promise<void> {
   const maxItems = opts.maxItems ?? 6;
   const since = new Date(Date.now() - sinceDays * 86_400_000).toISOString();
 
-  const { records: deduped, collapsed } = await newCandidates(archiveDir, since);
+  const { records: deduped, stale, collapsed } = await newCandidates(archiveDir, since, {
+    maxAgeDays: opts.maxAgeDays,
+  });
+  if (stale > 0) console.error(`assemble: dropped ${stale} stale item(s) (published past max-age)`);
   if (collapsed > 0) console.error(`assemble: collapsed ${collapsed} near-duplicate(s)`);
   let candidates = deduped.sort((a, b) => (a.firstSeen < b.firstSeen ? 1 : -1));
   if (opts.limit && opts.limit > 0) candidates = candidates.slice(0, opts.limit);
@@ -159,6 +167,31 @@ export async function assemble(opts: AssembleOptions = {}): Promise<void> {
   if (sections.length === 0) {
     console.log("assemble: the editor selected nothing — skipping.");
     return;
+  }
+
+  // 3b. Positioning paragraph per multi-item section — a neutral synthesis of
+  //     what the items share and how they differ (Sonnet). A single-item section
+  //     needs none.
+  if (!opts.noContext) {
+    for (const section of sections) {
+      if (section.items.length < 2) continue;
+      try {
+        section.context = await sectionContext(
+          client,
+          section.heading,
+          section.items.map((r) => ({
+            title: r.title,
+            summary: r.editorial?.summary ?? r.abstract ?? "",
+          })),
+        );
+      } catch (err) {
+        console.error(
+          `assemble: section context for "${section.heading}" failed: ${
+            err instanceof Error ? err.message : err
+          }`,
+        );
+      }
+    }
   }
 
   // 4. Render to the site's newsletter schema.
