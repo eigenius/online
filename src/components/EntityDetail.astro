@@ -1,0 +1,107 @@
+---
+// Detail body for one entity, rendered against BaseLayout (not EntryLayout,
+// which expects a markdown body). Every item and related link is an edge back to
+// a sourced record — the entity page "shows its work" (design §7.3, §7.4).
+import { entityUrl, formatDate, pageById, SECTION, SECTION_LABEL, trendLabel } from "../lib/entities";
+import type { EntityKind, EntityPage } from "../lib/entities";
+import { withBase } from "../lib/url";
+
+interface Props {
+  page: EntityPage;
+}
+
+const { page } = Astro.props;
+const section = SECTION[page.kind];
+const s = page.salience;
+const links = Object.entries(page.links);
+
+const KIND_ORDER: EntityKind[] = ["person", "organization", "source", "research"];
+const relatedGroups = KIND_ORDER
+  .map((kind) => ({ kind, refs: page.related.filter((r) => r.kind === kind) }))
+  .filter((g) => g.refs.length > 0);
+---
+
+<section class="section">
+  <div class="section-inner entity-detail">
+    <a class="post-back" href={withBase(`/${section}/`)}>← {SECTION_LABEL[section]}</a>
+    <span class="section-eyebrow">{SECTION_LABEL[section]}</span>
+    <h1 class="section-title">{page.displayName}</h1>
+
+    <p class="section-prose entity-salience">
+      {s.itemsTotal} tracked item{s.itemsTotal === 1 ? "" : "s"} · {s.items30d} in the last 30 days
+      · {trendLabel(s.trend)}
+    </p>
+
+    {
+      links.length > 0 && (
+        <p class="section-prose entity-links">
+          {links.map(([rel, href], i) => (
+            <>
+              {i > 0 && <span class="entity-sep"> · </span>}
+              <a href={href}>{rel}</a>
+            </>
+          ))}
+        </p>
+      )
+    }
+
+    {
+      page.aliases.length > 1 && (
+        <p class="section-prose entity-aliases">Also seen as: {page.aliases.join(", ")}</p>
+      )
+    }
+
+    <h2 class="entity-subhead">Items</h2>
+    <ul class="post-list">
+      {
+        page.items.map((it) => (
+          <li class="post-item">
+            <div class="post-item-meta">
+              <time class="post-date" datetime={it.firstSeen.slice(0, 10)}>
+                {formatDate(it.firstSeen)}
+              </time>
+              <span class="post-chip">{it.sourceKind}</span>
+            </div>
+            <h3 class="post-title">
+              <a href={it.url}>{it.title}</a>
+            </h3>
+          </li>
+        ))
+      }
+    </ul>
+
+    {
+      relatedGroups.length > 0 && (
+        <>
+          <h2 class="entity-subhead">Related</h2>
+          {relatedGroups.map((g) => (
+            <p class="section-prose entity-related">
+              <strong>{SECTION_LABEL[SECTION[g.kind]]}:</strong>{" "}
+              {g.refs.map((r, i) => {
+                const target = pageById(r.id);
+                return (
+                  <>
+                    {i > 0 && ", "}
+                    {target ? <a href={entityUrl(target)}>{r.displayName}</a> : r.displayName}
+                  </>
+                );
+              })}
+            </p>
+          ))}
+        </>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .entity-subhead {
+    margin-top: 2rem;
+    font-size: 1.1rem;
+    color: var(--sl-color-text-accent);
+  }
+  .entity-salience {
+    color: var(--sl-color-gray-3);
+    font-size: 0.95rem;
+  }
+</style>

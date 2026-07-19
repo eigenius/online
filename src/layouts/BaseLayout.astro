@@ -10,7 +10,14 @@ import { withBase } from "../lib/url";
 interface Props {
   title: string;
   description: string;
-  current?: "newsletter" | "articles" | "blog";
+  current?:
+    | "newsletter"
+    | "articles"
+    | "blog"
+    | "people"
+    | "organizations"
+    | "sources"
+    | "research";
   /** Absolute-from-root path to a social preview image, e.g. `/og/post.png`. */
   ogImage?: string;
   /** `article` for newsletter issues, articles, and posts; `website` otherwise. */

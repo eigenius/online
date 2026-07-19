@@ -1,0 +1,40 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EntityCard from "../../components/EntityCard.astro";
+import { pagesFor } from "../../lib/entities";
+
+const pages = pagesFor("people");
+---
+
+<BaseLayout
+  title="People — Eigenius Community"
+  description="Researchers and authors surfacing in the Eigenius radar's archive."
+  current="people"
+>
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">People</span>
+      <h1 class="section-title">People in the field</h1>
+      <p class="section-prose">
+        Researchers and authors recurring across tracked items, by recent activity.
+      </p>
+      {
+        pages.length === 0 ? (
+          <p class="section-prose">Nobody tracked yet.</p>
+        ) : (
+          <ul class="post-list">
+            {pages.map((page) => (
+              <li class="post-item">
+                <EntityCard page={page} />
+              </li>
+            ))}
+          </ul>
+        )
+      }
+      <p class="section-footnote">
+        A page exists only for people recurring across several sourced items, and is reviewed
+        before publishing.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

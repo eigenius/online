@@ -1,0 +1,27 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EntityDetail from "../../components/EntityDetail.astro";
+import { pagesFor } from "../../lib/entities";
+import type { EntityPage } from "../../lib/entities";
+
+export async function getStaticPaths() {
+  return pagesFor("research").map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+interface Props {
+  page: EntityPage;
+}
+
+const { page } = Astro.props;
+---
+
+<BaseLayout
+  title={`${page.displayName} — Eigenius Community`}
+  description={`Sourced items on ${page.displayName} tracked by the Eigenius radar.`}
+  current="research"
+>
+  <EntityDetail page={page} />
+</BaseLayout>

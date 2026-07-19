@@ -7,7 +7,14 @@ import logo from "../assets/eigenius_logo_400x400.png";
 import { withBase } from "../lib/url";
 
 interface Props {
-  current?: "newsletter" | "articles" | "blog";
+  current?:
+    | "newsletter"
+    | "articles"
+    | "blog"
+    | "people"
+    | "organizations"
+    | "sources"
+    | "research";
 }
 
 const { current } = Astro.props;
@@ -16,6 +23,9 @@ const items = [
   { href: withBase("/newsletter/"), label: "Newsletter", key: "newsletter" },
   { href: withBase("/articles/"), label: "Articles", key: "articles" },
   { href: withBase("/blog/"), label: "Blog", key: "blog" },
+  { href: withBase("/research/"), label: "Research", key: "research" },
+  { href: withBase("/sources/"), label: "Sources", key: "sources" },
+  { href: withBase("/people/"), label: "People", key: "people" },
 ];
 ---
 

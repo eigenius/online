@@ -1,0 +1,38 @@
+---
+// One entity as it appears on an index page. Reuses the same post-* classes as
+// EntryCard so people/sources/research lists match the newsletter/blog look.
+import { entityUrl, trendLabel } from "../lib/entities";
+import type { EntityPage } from "../lib/entities";
+
+interface Props {
+  page: EntityPage;
+}
+
+const { page } = Astro.props;
+const s = page.salience;
+---
+
+<article>
+  <div class="post-item-meta">
+    <span class="post-chip">{s.itemsTotal} item{s.itemsTotal === 1 ? "" : "s"}</span>
+    <span class="post-chip">{trendLabel(s.trend)}</span>
+  </div>
+
+  <h3 class="post-title">
+    <a href={entityUrl(page)}>{page.displayName}</a>
+  </h3>
+
+  <p class="post-excerpt">
+    {s.items30d} item{s.items30d === 1 ? "" : "s"} in the last 30 days
+  </p>
+
+  {
+    page.related.length > 0 && (
+      <ul class="post-tags">
+        {page.related.slice(0, 5).map((r) => (
+          <li class="post-tag">{r.displayName}</li>
+        ))}
+      </ul>
+    )
+  }
+</article>

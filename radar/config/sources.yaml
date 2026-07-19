@@ -7,6 +7,25 @@ sources:
     categories: [cs.AI, cs.LG, cs.LO, cs.SC, cs.PL, cs.SE, math.LO, stat.ML]
     maxResults: 50
 
+  # ---- Preprint & community APIs ----
+  - id: biorxiv
+    kind: biorxiv
+    server: biorxiv
+    days: 2
+    maxResults: 300 # no query API — the topic gate keeps only the AI-in-bio ones
+  # medRxiv (clinical preprints) — enable if life-sciences coverage wants it:
+  # - { id: medrxiv, kind: biorxiv, server: medrxiv, days: 2, maxResults: 200 }
+  - id: hacker-news
+    kind: hacker_news
+    minPoints: 25
+    queries:
+      - neurosymbolic
+      - theorem proving
+      - formal verification
+      - AI drug discovery
+      - AI for science
+      - protein design
+
   # ---- Industry (company / lab blogs) ----
   - {
       id: deepmind-blog,

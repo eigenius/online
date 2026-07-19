@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EntityCard from "../../components/EntityCard.astro";
+import { pagesFor } from "../../lib/entities";
+
+const pages = pagesFor("organizations");
+---
+
+<BaseLayout
+  title="Organizations — Eigenius Community"
+  description="Labs, companies, and institutions behind the tracked work."
+  current="organizations"
+>
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">Organizations</span>
+      <h1 class="section-title">Labs, companies &amp; institutions</h1>
+      <p class="section-prose">
+        The organizations behind the tracked work.
+      </p>
+      {
+        pages.length === 0 ? (
+          <p class="section-prose">
+            No organizations tracked yet — org attribution needs affiliation data the deterministic
+            pass doesn't yet extract.
+          </p>
+        ) : (
+          <ul class="post-list">
+            {pages.map((page) => (
+              <li class="post-item">
+                <EntityCard page={page} />
+              </li>
+            ))}
+          </ul>
+        )
+      }
+      <p class="section-footnote">
+        Generated from sourced archive items and reviewed before publishing.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

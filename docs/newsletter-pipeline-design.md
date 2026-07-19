@@ -961,6 +961,12 @@ folded back into the anchors and the few-shot rubric.
   Phase 0; this phase adds resolution, the `tracked` curation gate, and the
   generated `/people`, `/organizations`, `/sources`, `/research` pages.
   *Exit:* a browsable, sourced knowledge base that grows with the archive.
+  **Status: v1 shipped.** `deno task entities` builds the JSON extract
+  (`src/data/entities.json`) via deterministic extraction (person←authors,
+  source←domain, research←topics), id-only resolution, salience, and the
+  `tracked` gate; Astro renders the four index + detail routes from it.
+  *Not yet:* organizations (need affiliation/LLM extraction) and an LLM pass to
+  fix RSS author fields that name orgs/blogs rather than people.
 
 Each phase is independently useful; the archive (Phase 0) has value even if the
 newsletter drafting is never turned on.

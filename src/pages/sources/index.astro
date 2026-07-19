@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EntityCard from "../../components/EntityCard.astro";
+import { pagesFor } from "../../lib/entities";
+
+const pages = pagesFor("sources");
+---
+
+<BaseLayout
+  title="Sources — Eigenius Community"
+  description="Publications, blogs, and venues the tracked items come from."
+  current="sources"
+>
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">Sources</span>
+      <h1 class="section-title">Publications &amp; venues</h1>
+      <p class="section-prose">
+        Where the tracked items are published, ordered by recent volume.
+      </p>
+      {
+        pages.length === 0 ? (
+          <p class="section-prose">Nothing tracked yet.</p>
+        ) : (
+          <ul class="post-list">
+            {pages.map((page) => (
+              <li class="post-item">
+                <EntityCard page={page} />
+              </li>
+            ))}
+          </ul>
+        )
+      }
+      <p class="section-footnote">
+        Generated from sourced archive items and reviewed before publishing.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

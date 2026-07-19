@@ -1,0 +1,39 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import EntityCard from "../../components/EntityCard.astro";
+import { pagesFor } from "../../lib/entities";
+
+const pages = pagesFor("research");
+---
+
+<BaseLayout
+  title="Research — Eigenius Community"
+  description="The research areas the Eigenius radar follows, and what's moving in each."
+  current="research"
+>
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">Research</span>
+      <h1 class="section-title">Research areas</h1>
+      <p class="section-prose">
+        The topic areas the radar follows — each links to the sourced items behind it.
+      </p>
+      {
+        pages.length === 0 ? (
+          <p class="section-prose">Nothing tracked yet.</p>
+        ) : (
+          <ul class="post-list">
+            {pages.map((page) => (
+              <li class="post-item">
+                <EntityCard page={page} />
+              </li>
+            ))}
+          </ul>
+        )
+      }
+      <p class="section-footnote">
+        Generated from sourced archive items and reviewed before publishing.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

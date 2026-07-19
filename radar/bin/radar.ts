@@ -5,6 +5,7 @@ import { harvest, type JobOptions } from "../src/jobs/harvest.ts";
 import { digest } from "../src/jobs/digest.ts";
 import { assemble } from "../src/jobs/assemble.ts";
 import { backfill } from "../src/jobs/backfill.ts";
+import { entities } from "../src/jobs/entities.ts";
 
 const HELP = `radar — research-radar & newsletter pipeline
 
@@ -15,6 +16,7 @@ Usage:
   radar doctor    [--config <dir>]     validate config + report environment
   radar rebuild-index [--archive <dir>]  rebuild the libSQL index from the archive
   radar backfill  [--archive <dir>] [--dry-run]  embed archived records missing a vector
+  radar entities  [--out <file>] [--track-min N] [--dry-run]  build the entity-index extract
 
 digest judges the week's new archive entries with Haiku and prints a raw ranked
 list (design §13, Phase 1). Needs ANTHROPIC_API_KEY.`;
@@ -40,7 +42,7 @@ async function doctor(opts: JobOptions): Promise<void> {
 async function main(): Promise<void> {
   const args = parseArgs(Deno.args, {
     boolean: ["dry-run", "no-embed", "no-fetch", "no-search", "no-citations", "json", "pr", "help"],
-    string: ["config", "archive", "since-days", "limit"],
+    string: ["config", "archive", "since-days", "limit", "out", "track-min"],
     alias: { h: "help" },
   });
   const cmd = String(args._[0] ?? "");
@@ -93,6 +95,13 @@ async function main(): Promise<void> {
     }
     case "backfill":
       await backfill(opts);
+      break;
+    case "entities":
+      await entities({
+        ...opts,
+        out: args.out,
+        trackMin: args["track-min"] ? Number(args["track-min"]) : undefined,
+      });
       break;
     default:
       console.error(`unknown command: ${cmd}`);
