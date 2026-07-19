@@ -1,30 +1,41 @@
 ---
 title: "Hello, community site"
-subtitle: "A home for the newsletter, articles, and posts."
+subtitle: "A weekly radar over the field, plus articles and notes."
 description: >-
-  The Eigenius community site is live: a weekly newsletter archive,
-  longer-form articles, and blog posts, alongside the main site at
-  eigenius.io.
+  The Eigenius community site is live: a weekly, sourced digest of new
+  work in neurosymbolic AI, AI-driven science, formal methods, and AI in
+  the life sciences — plus articles, a blog, and a browsable index of
+  the field.
 pubDate: 2026-07-17
 tags: ["announcement", "meta"]
 ---
 
-The Eigenius community site is live. It sits alongside the main
-project site at [eigenius.io](https://eigenius.io), which explains
-what Eigenius *is* — this site is about what's *happening*.
+The Eigenius community site is live. It sits alongside the main project
+site at [eigenius.io](https://eigenius.io), which explains what Eigenius
+*is* — this site tracks what's *happening* in the research it's built
+for.
 
-Three sections:
+At its center is a weekly **radar**: a curated, sourced digest of new
+work across neurosymbolic AI, AI-driven science, formal methods and
+verification, verified science, and AI in the life sciences. Every item
+is summarized and linked back to its primary source — no unsourced
+claims.
 
-- **Newsletter** — one issue a week on the state of the project,
-  archived in full.
-- **Articles** — longer-form pieces that stand on their own: deep
-  dives, worked examples, case studies.
-- **Blog** — shorter, timelier notes like this one: release notes,
-  announcements, meetups, and quick updates between issues.
+Around it:
+
+- **[Newsletter](../../newsletter/)** — the weekly digest, archived in
+  full.
+- **[Articles](../../articles/)** — longer-form pieces: deep dives,
+  perspective, and worked examples.
+- **Blog** — shorter, timelier notes like this one.
+- **Field index** — the archive doubles as a typed knowledge base of the
+  field, browsable by [research area](../../research/), by
+  [source](../../sources/), and by the [people](../../people/) doing the
+  work — the same shape Eigenius is built around.
 
 Everything here is plain Markdown in a public repository, built with
-Astro and served from GitHub Pages — if you spot a typo or want to
-contribute a piece, a pull request is all it takes.
+Astro and served from GitHub Pages — spot a typo or want to contribute a
+piece? A pull request is all it takes.
 
-[Issue #1 of the newsletter](../../newsletter/001-welcome/) is out
-today. Start there.
+The [newsletter archive](../../newsletter/) has its first issue up.
+Start there.

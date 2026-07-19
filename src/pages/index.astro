@@ -26,8 +26,8 @@ const recent = [
 ---
 
 <BaseLayout
-  title="Eigenius Community — newsletter, articles, and blog"
-  description="The community home of the Eigenius project: a weekly newsletter on typed knowledge graphs and auditable AI reasoning, with articles and blog posts from the project and its community."
+  title="Eigenius Community — a weekly research radar"
+  description="The community home of Eigenius: a weekly research radar over neurosymbolic AI, AI-driven science, formal methods and verification, and AI in the life sciences — a curated, sourced digest, with articles, a blog, and a browsable index of the field."
 >
   <!-- ───────── Hero ───────── -->
   <section class="hero">
@@ -38,11 +38,12 @@ const recent = [
           Follow the work,<br />week by week.
         </h1>
         <p class="hero-pitch">
-          Eigenius is an open-source typed knowledge graph for
-          AI-assisted scientific reasoning &mdash; a compiler for AI
-          thought. This is its community home: a weekly newsletter on
-          where the project is going, plus articles and posts from the
-          people building and using it.
+          A weekly radar over the research frontier where formal rigor
+          meets AI: neurosymbolic reasoning, AI-driven science, formal
+          methods and verification, and AI in the life sciences. Each
+          issue is a curated, sourced digest of the week's new papers,
+          tools, and writing &mdash; every item summarized and linked back
+          to the original.
         </p>
         <div class="hero-actions">
           <a class="cta cta-primary" href={withBase("/newsletter/")}>
@@ -60,15 +61,15 @@ const recent = [
   <section class="section section-tinted">
     <div class="section-inner">
       <span class="section-eyebrow">What's here</span>
-      <h2 class="section-title">Three ways to follow along.</h2>
+      <h2 class="section-title">Read the digest &mdash; and browse the field.</h2>
       <div class="card-grid">
         <SectionCard
           label="Newsletter"
-          tagline="One issue a week on the state of the project."
+          tagline="One issue a week, curated from across the field."
           bullets={[
-            "What landed, what changed, what's next",
-            "Highlights from the community",
-            "Every issue archived here, readable without email",
+            "New papers, tools, and writing — summarized",
+            "Every item linked to its primary source",
+            "Archived here in full, readable without email",
           ]}
           href={withBase("/newsletter/")}
           linkLabel="Browse the archive →"
@@ -77,8 +78,8 @@ const recent = [
           label="Articles"
           tagline="Longer-form pieces that stand on their own."
           bullets={[
-            "Deep dives on concepts and design decisions",
-            "Worked examples and case studies",
+            "Deep dives on concepts and open problems",
+            "Perspective and analysis, not just links",
             "Written to be readable months later",
           ]}
           href={withBase("/articles/")}
@@ -88,9 +89,9 @@ const recent = [
           label="Blog"
           tagline="Shorter, timelier notes from the project."
           bullets={[
-            "Release notes and announcements",
+            "Project updates and announcements",
             "Meetups, talks, and community calls",
-            "Quick updates between newsletter issues",
+            "Quick notes between newsletter issues",
           ]}
           href={withBase("/blog/")}
           linkLabel="Read the blog →"
@@ -144,6 +145,22 @@ const recent = [
       </section>
     )
   }
+
+  <!-- ───────── Browse the field ───────── -->
+  <section class="section">
+    <div class="section-inner">
+      <span class="section-eyebrow">The archive, indexed</span>
+      <h2 class="section-title">Browse the field.</h2>
+      <p class="section-prose">
+        Every issue is drawn from a growing, sourced archive &mdash; which
+        doubles as a typed index of the field, the same shape Eigenius is
+        built around. Explore it by{" "}
+        <a href={withBase("/research/")}>research area</a>, by{" "}
+        <a href={withBase("/sources/")}>source</a>, or by the{" "}
+        <a href={withBase("/people/")}>people</a> doing the work.
+      </p>
+    </div>
+  </section>
 </BaseLayout>
 
 <style>
