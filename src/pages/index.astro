@@ -7,6 +7,7 @@ import { getImage } from "astro:assets";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionCard from "../components/SectionCard.astro";
 import EntryCard from "../components/EntryCard.astro";
+import NewsletterSignup from "../components/NewsletterSignup.astro";
 import { getIssues, getPublished } from "../lib/content";
 import { withBase } from "../lib/url";
 import heroBgSrc from "../assets/hero_background.png";
@@ -121,11 +122,10 @@ const heroBg = await getImage({ src: heroBgSrc, format: "webp", width: 2752 });
               />
             </li>
           </ul>
+          <NewsletterSignup />
           <p class="section-footnote">
-            Every issue is archived on this site and available as an{" "}
+            Every issue is archived on this site and also available as an{" "}
             <a href={withBase("/newsletter/rss.xml")}>RSS feed</a>.
-            Email delivery is coming; until then, the feed is the way
-            to subscribe.
           </p>
         </div>
       </section>

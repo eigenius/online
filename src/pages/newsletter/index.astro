@@ -2,6 +2,7 @@
 // Newsletter archive, highest issue number first.
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import EntryCard from "../../components/EntryCard.astro";
+import NewsletterSignup from "../../components/NewsletterSignup.astro";
 import { getIssues } from "../../lib/content";
 import { withBase } from "../../lib/url";
 
@@ -25,6 +26,8 @@ const issues = await getIssues();
         published here in full.
       </p>
 
+      <NewsletterSignup />
+
       {
         issues.length === 0 ? (
           <p class="section-prose post-empty">No issues yet.</p>
@@ -44,12 +47,10 @@ const issues = await getIssues();
       }
 
       <p class="section-footnote">
-        Subscribe via the{" "}
+        Prefer a feed? Subscribe via the{" "}
         <a href={withBase("/newsletter/rss.xml")}>newsletter RSS feed</a>,
         or follow everything on this site through the{" "}
-        <a href={withBase("/rss.xml")}>combined feed</a>. Email
-        delivery is planned; until then, the feed is the way to
-        subscribe.
+        <a href={withBase("/rss.xml")}>combined feed</a>.
       </p>
     </div>
   </section>

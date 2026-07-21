@@ -1,0 +1,113 @@
+---
+// Email signup. The site is a static build on GitHub Pages, so there is no
+// server to receive a POST — the form submits directly to Buttondown, which
+// stores the address and handles double opt-in, unsubscribe, and compliance.
+// Plain HTML on purpose: it works with JavaScript disabled. `target="_blank"`
+// keeps the reader on the site while Buttondown's confirmation opens alongside.
+interface Props {
+  /** Prompt above the field. */
+  heading?: string;
+  /** Optional supporting line between the heading and the field. */
+  blurb?: string;
+}
+
+const { heading = "Get each issue by email", blurb } = Astro.props;
+---
+
+<form
+  class="signup"
+  action="https://buttondown.com/api/emails/embed-subscribe/eigenius"
+  method="post"
+  target="_blank"
+>
+  <label class="signup-label" for="bd-email">{heading}</label>
+  {blurb && <p class="signup-blurb">{blurb}</p>}
+  <div class="signup-row">
+    <input
+      class="signup-input"
+      type="email"
+      name="email"
+      id="bd-email"
+      required
+      autocomplete="email"
+      placeholder="you@example.com"
+    />
+    <button class="signup-button" type="submit">Subscribe</button>
+  </div>
+  <p class="signup-fineprint">
+    One issue a week. Your address is used only to send the newsletter, and
+    every issue has an unsubscribe link. Prefer a feed? Both RSS options are
+    below.
+  </p>
+</form>
+
+<style>
+  .signup {
+    margin: 1.75rem 0;
+    padding: 1.25rem 1.35rem;
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 12px;
+    background: color-mix(in srgb, var(--sl-color-bg-nav) 45%, transparent);
+  }
+
+  .signup-label {
+    display: block;
+    font-weight: 600;
+    color: var(--sl-color-text);
+  }
+
+  .signup-blurb {
+    margin: 0.4rem 0 0;
+    color: var(--sl-color-gray-3);
+    font-size: 0.95rem;
+  }
+
+  .signup-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.85rem;
+  }
+
+  .signup-input {
+    flex: 1 1 16rem;
+    min-width: 0;
+    padding: 0.6rem 0.75rem;
+    font: inherit;
+    color: var(--sl-color-text);
+    background: var(--sl-color-bg);
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 8px;
+  }
+
+  .signup-input::placeholder {
+    color: var(--sl-color-gray-4);
+  }
+
+  .signup-input:focus-visible,
+  .signup-button:focus-visible {
+    outline: 2px solid var(--eigenius-brand);
+    outline-offset: 1px;
+  }
+
+  .signup-button {
+    padding: 0.6rem 1.15rem;
+    font: inherit;
+    font-weight: 600;
+    color: #fff;
+    background: var(--eigenius-brand);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .signup-button:hover {
+    background: var(--eigenius-brand-bright);
+  }
+
+  .signup-fineprint {
+    margin: 0.75rem 0 0;
+    font-size: 0.82rem;
+    color: var(--sl-color-gray-3);
+  }
+</style>
