@@ -3,6 +3,7 @@
 // issues have their own page (issue chip, previous/next navigation)
 // and do not use this.
 import { render } from "astro:content";
+import { getImage, Image } from "astro:assets";
 import BaseLayout from "./BaseLayout.astro";
 import { formatDate, isoDate, type Entry } from "../lib/content";
 import { withBase } from "../lib/url";
@@ -15,6 +16,20 @@ interface Props {
 
 const { entry, section, backLabel } = Astro.props;
 const { Content } = await render(entry);
+
+// An entry with a lead image gets its own social card, cropped to the 1200x630
+// OpenGraph aspect and encoded as JPEG — scrapers read JPEG reliably but not
+// webp/avif. Entries without one fall back to the site-wide card.
+const ogCard = entry.data.image
+  ? await getImage({
+    src: entry.data.image,
+    format: "jpeg",
+    width: 1200,
+    height: 630,
+    fit: "cover", // crop to the OG aspect; without this Astro keeps the source ratio
+    position: "center",
+  })
+  : undefined;
 ---
 
 <BaseLayout
@@ -22,6 +37,7 @@ const { Content } = await render(entry);
   description={entry.data.description}
   current={section}
   ogType="article"
+  ogImage={ogCard?.src}
 >
   <article class="section">
     <div class="post-body">
@@ -55,9 +71,38 @@ const { Content } = await render(entry);
         }
       </header>
 
+      {
+        entry.data.image && (
+          <figure class="post-figure">
+            <Image
+              src={entry.data.image}
+              alt={entry.data.imageAlt ?? ""}
+              widths={[640, 960, 1600]}
+              sizes="(min-width: 48rem) 44rem, 100vw"
+              loading="eager"
+            />
+          </figure>
+        )
+      }
+
       <div class="post-prose">
         <Content />
       </div>
     </div>
   </article>
 </BaseLayout>
+
+<style>
+  .post-figure {
+    margin: 0 0 2rem;
+    border: 1px solid var(--sl-color-hairline);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .post-figure :global(img) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+</style>
