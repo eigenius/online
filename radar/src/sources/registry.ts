@@ -5,6 +5,7 @@ import { arxivAdapter, type ArxivConfig } from "./arxiv.ts";
 import { rssAdapter } from "./rss.ts";
 import { biorxivAdapter, type BiorxivConfig } from "./biorxiv.ts";
 import { hackerNewsAdapter, type HackerNewsConfig } from "./hacker_news.ts";
+import { type LinkEntry, linksAdapter } from "./links.ts";
 
 /** Build harvest adapters from the source registry (§3). arxiv and rss are
  *  wired up; other kinds warn and are skipped until their adapter lands. */
@@ -54,6 +55,24 @@ export function buildAdapters(sources: SourceConfig[]): SourceAdapter[] {
           queries: cfg.queries,
           minPoints: cfg.minPoints,
           hitsPerQuery: cfg.hitsPerQuery,
+        }));
+        break;
+      }
+      case "links": {
+        const cfg = s as SourceConfig & {
+          urls?: LinkEntry[];
+          sourceKind?: SourceKind;
+          topics?: string[];
+        };
+        if (!cfg.urls || cfg.urls.length === 0) {
+          console.warn(`links source "${s.id}" has no urls, skipping`);
+          break;
+        }
+        adapters.push(linksAdapter({
+          id: s.id,
+          urls: cfg.urls,
+          sourceKind: cfg.sourceKind,
+          topics: cfg.topics,
         }));
         break;
       }

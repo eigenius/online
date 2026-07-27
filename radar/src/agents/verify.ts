@@ -31,7 +31,7 @@ export async function verify(
 ): Promise<FaithfulnessCheck> {
   const res = await client.messages.create({
     model: MODELS.verify,
-    max_tokens: 1024,
+    max_tokens: 4096, // room for adaptive thinking AND the JSON verdict (1024 truncated)
     thinking: { type: "adaptive" }, // careful reading is the whole point here
     output_config: { format: { type: "json_schema", schema: SCHEMA } },
     system: [{ type: "text", text: SYSTEM, cache_control: { type: "ephemeral" } }],
@@ -40,7 +40,21 @@ export async function verify(
     ],
   });
   const text = res.content.map((b) => (b.type === "text" ? b.text : "")).join("");
-  const parsed = JSON.parse(text) as Partial<FaithfulnessCheck>;
+  let parsed: Partial<FaithfulnessCheck> = {};
+  try {
+    if (!text.trim()) throw new Error("empty response");
+    parsed = JSON.parse(text) as Partial<FaithfulnessCheck>;
+  } catch (err) {
+    // A truncated/empty verdict must not crash the run: treat it as
+    // not-supported (the conservative default), so the summary is dropped and
+    // assemble's one retry gets another attempt.
+    console.error(
+      `verify: unparseable verdict (${
+        err instanceof Error ? err.message : err
+      }) — treating as not-supported`,
+    );
+    return { supported: false, unsupportedClaims: ["verifier returned no parseable output"] };
+  }
   return {
     supported: parsed.supported === true,
     unsupportedClaims: Array.isArray(parsed.unsupportedClaims)

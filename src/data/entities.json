@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-07-19T17:01:40.532Z",
+  "generatedAt": "2026-07-27T05:13:29.297Z",
   "counts": {
     "people": 7,
     "organizations": 0,
-    "sources": 14,
+    "sources": 21,
     "research": 4
   },
   "people": [
@@ -19,10 +19,17 @@
       "tracked": true,
       "salience": {
         "items30d": 6,
-        "itemsTotal": 12,
+        "itemsTotal": 13,
         "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:e15ea7e8718b9351cfb451f640f2a5f78e60a1cbb837a93b6a639ea8186f0fd8",
+          "title": "Science-based Shredding",
+          "url": "https://www.argmin.net/p/science-based-shredding",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "opinion"
+        },
         {
           "id": "sha256:9874a2e4e14dd2a68e5b4d2eeeec919d44d6d121df6bb64551ede2b4cf57823c",
           "title": "Engineering Architecture: A Syllabus?",
@@ -127,155 +134,48 @@
       ]
     },
     {
-      "id": "person:name:sakana-ai",
-      "slug": "sakana-ai",
+      "id": "person:name:mit-technology-review-insights",
+      "slug": "mit-technology-review-insights",
       "kind": "person",
-      "displayName": "Sakana AI",
+      "displayName": "MIT Technology Review Insights",
       "aliases": [
-        "Sakana AI"
+        "MIT Technology Review Insights"
       ],
       "links": {},
       "tracked": true,
       "salience": {
-        "items30d": 2,
+        "items30d": 3,
         "itemsTotal": 3,
         "trend": "rising"
       },
       "items": [
         {
-          "id": "sha256:ac9ff977398c5d2e0e77f14d324a9e55e3f21752302d95be102e1b498ce60bbe",
-          "title": "Sakana AI、初の商用プロダクト「Sakana Marlin」を提供開始",
-          "url": "/marlin-release/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
+          "id": "sha256:9a0e0c9ec5df9f929462b6a2b99ef7a989f2f8de2dee867daafb7e8b2cc95867",
+          "title": "How AI helps scientists design the next generation of medicines",
+          "url": "https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "news"
         },
         {
-          "id": "sha256:8d93573a193bd4ee6131256b4ca1fc24bc0416a51811b278b3d38a746d273bce",
-          "title": "Sakana Fugu: One Model to Command Them All",
-          "url": "/fugu-release/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:7f9db41c4866aecc8cf1f94a921f7068f58af5e804b4ed164f202116273f9c4d",
-          "title": "The AI Picbreeder Experiment: Can AI agents be creative when nobody tells them what to create?",
-          "url": "/picbreeder-ai/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        }
-      ],
-      "related": [
-        {
-          "id": "research:formal-rigor",
-          "kind": "research",
-          "displayName": "Formal Methods & Verified Science"
-        },
-        {
-          "id": "research:agentic-ai",
-          "kind": "research",
-          "displayName": "AI Scientists & AI Engineers"
-        }
-      ]
-    },
-    {
-      "id": "person:name:jack-clark",
-      "slug": "jack-clark",
-      "kind": "person",
-      "displayName": "Jack Clark",
-      "aliases": [
-        "Jack Clark"
-      ],
-      "links": {},
-      "tracked": true,
-      "salience": {
-        "items30d": 1,
-        "itemsTotal": 3,
-        "trend": "flat"
-      },
-      "items": [
-        {
-          "id": "sha256:fe05c6e741aa6e1972df7403a6593db0fe6c549ec8b24138438ea4aff09522d1",
-          "title": "Import AI 455: AI systems are about to start building themselves.",
-          "url": "https://importai.substack.com/p/import-ai-455-automating-ai-research",
+          "id": "sha256:97832390d76307960842c3fe9d3b9e9d6eb4d48086b6cd745324c4055b85b9fe",
+          "title": "Achieving operational excellence with AI",
+          "url": "https://www.technologyreview.com/2026/07/02/1140045/achieving-operational-excellence-with-ai/",
           "firstSeen": "2026-07-19T06:32:40.855Z",
           "sourceKind": "news"
         },
         {
-          "id": "sha256:9dd88f73140ab7533a94fef3807796bfe10211670d09482e18a2c87c19c09f5f",
-          "title": "Import AI 459: AI oversight is difficult; scaling laws for protein folding models; and pricing the extinction risk of AI systems",
-          "url": "https://importai.substack.com/p/import-ai-459-ai-oversight-is-difficult",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:02ff8d9b23b15b2ce514c8a939360149d4822a1d54dc8df9a61142c6ca6df432",
-          "title": "Import AI 464: Fable writes GPU kernels; AI automation; and analog computation",
-          "url": "https://importai.substack.com/p/import-ai-464-fables-writes-gpu-kernels",
+          "id": "sha256:ade84b344708d0bdc11078a0f896a4b135d27bbd2a6033475de596cf65f811ee",
+          "title": "The foundational elements of AI architecture that IT leaders need to scale",
+          "url": "https://www.technologyreview.com/2026/07/07/1139413/the-foundational-elements-of-ai-architecture-that-it-leaders-need-to-scale/",
           "firstSeen": "2026-07-19T06:32:40.855Z",
           "sourceKind": "news"
         }
       ],
       "related": [
         {
-          "id": "source:importai.substack.com",
+          "id": "source:technologyreview.com",
           "kind": "source",
-          "displayName": "importai.substack.com"
-        },
-        {
-          "id": "research:formal-rigor",
-          "kind": "research",
-          "displayName": "Formal Methods & Verified Science"
-        },
-        {
-          "id": "research:ai-life-sciences",
-          "kind": "research",
-          "displayName": "AI in Life Sciences & Medicine"
-        }
-      ]
-    },
-    {
-      "id": "person:name:terence-tao",
-      "slug": "terence-tao",
-      "kind": "person",
-      "displayName": "Terence Tao",
-      "aliases": [
-        "Terence Tao"
-      ],
-      "links": {},
-      "tracked": true,
-      "salience": {
-        "items30d": 1,
-        "itemsTotal": 3,
-        "trend": "falling"
-      },
-      "items": [
-        {
-          "id": "sha256:c8760418daa15b6a7bae74a5bbb965a1a6d00a96a6f83f2d70b7753fcc6964b3",
-          "title": "On the proposed rule changes to the administration of federal grants",
-          "url": "https://terrytao.wordpress.com/2026/06/09/on-the-proposed-rule-changes-to-the-administration-of-federal-grants/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:8373029ff257e629f999a780d319651106d6600ffbf61c2ed57227be28243f84",
-          "title": "Third SAIR competition: inverse Galois challenge",
-          "url": "https://terrytao.wordpress.com/2026/06/16/third-sair-competition-inverse-galois-challenge/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:5176921da606026314c98d218fb1e54393f7ac038e1ebc26e8cd44e9165d0540",
-          "title": "Two more apps: visualizing the zeta process and the motions of the heavens",
-          "url": "https://terrytao.wordpress.com/2026/07/16/two-more-apps-visualizing-the-zeta-process-and-the-motions-of-the-heavens/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        }
-      ],
-      "related": [
-        {
-          "id": "source:terrytao.wordpress.com",
-          "kind": "source",
-          "displayName": "terrytao.wordpress.com"
+          "displayName": "technologyreview.com"
         },
         {
           "id": "research:formal-rigor",
@@ -300,11 +200,18 @@
       "links": {},
       "tracked": true,
       "salience": {
-        "items30d": 0,
-        "itemsTotal": 8,
-        "trend": "flat"
+        "items30d": 1,
+        "itemsTotal": 9,
+        "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:7a9cdfd4d85abf193e052db587cb0ef34fcad4e4128bcaf6dc3744c5d3ff7758",
+          "title": "Human mathematicians are being outcounterexampled",
+          "url": "https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "opinion"
+        },
         {
           "id": "sha256:d11bcabdb6045e4b980ab7e947740bf696232ec62f129f8279b7da251a41af63",
           "title": "Fermat’s Last Theorem — how it’s going",
@@ -372,6 +279,113 @@
           "id": "research:formal-rigor",
           "kind": "research",
           "displayName": "Formal Methods & Verified Science"
+        }
+      ]
+    },
+    {
+      "id": "person:name:sakana-ai",
+      "slug": "sakana-ai",
+      "kind": "person",
+      "displayName": "Sakana AI",
+      "aliases": [
+        "Sakana AI"
+      ],
+      "links": {},
+      "tracked": true,
+      "salience": {
+        "items30d": 1,
+        "itemsTotal": 3,
+        "trend": "falling"
+      },
+      "items": [
+        {
+          "id": "sha256:ac9ff977398c5d2e0e77f14d324a9e55e3f21752302d95be102e1b498ce60bbe",
+          "title": "Sakana AI、初の商用プロダクト「Sakana Marlin」を提供開始",
+          "url": "/marlin-release/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:8d93573a193bd4ee6131256b4ca1fc24bc0416a51811b278b3d38a746d273bce",
+          "title": "Sakana Fugu: One Model to Command Them All",
+          "url": "/fugu-release/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:7f9db41c4866aecc8cf1f94a921f7068f58af5e804b4ed164f202116273f9c4d",
+          "title": "The AI Picbreeder Experiment: Can AI agents be creative when nobody tells them what to create?",
+          "url": "/picbreeder-ai/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        }
+      ],
+      "related": [
+        {
+          "id": "research:formal-rigor",
+          "kind": "research",
+          "displayName": "Formal Methods & Verified Science"
+        },
+        {
+          "id": "research:agentic-ai",
+          "kind": "research",
+          "displayName": "AI Scientists & AI Engineers"
+        }
+      ]
+    },
+    {
+      "id": "person:name:terence-tao",
+      "slug": "terence-tao",
+      "kind": "person",
+      "displayName": "Terence Tao",
+      "aliases": [
+        "Terence Tao"
+      ],
+      "links": {},
+      "tracked": true,
+      "salience": {
+        "items30d": 1,
+        "itemsTotal": 3,
+        "trend": "falling"
+      },
+      "items": [
+        {
+          "id": "sha256:c8760418daa15b6a7bae74a5bbb965a1a6d00a96a6f83f2d70b7753fcc6964b3",
+          "title": "On the proposed rule changes to the administration of federal grants",
+          "url": "https://terrytao.wordpress.com/2026/06/09/on-the-proposed-rule-changes-to-the-administration-of-federal-grants/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:8373029ff257e629f999a780d319651106d6600ffbf61c2ed57227be28243f84",
+          "title": "Third SAIR competition: inverse Galois challenge",
+          "url": "https://terrytao.wordpress.com/2026/06/16/third-sair-competition-inverse-galois-challenge/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:5176921da606026314c98d218fb1e54393f7ac038e1ebc26e8cd44e9165d0540",
+          "title": "Two more apps: visualizing the zeta process and the motions of the heavens",
+          "url": "https://terrytao.wordpress.com/2026/07/16/two-more-apps-visualizing-the-zeta-process-and-the-motions-of-the-heavens/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        }
+      ],
+      "related": [
+        {
+          "id": "source:terrytao.wordpress.com",
+          "kind": "source",
+          "displayName": "terrytao.wordpress.com"
+        },
+        {
+          "id": "research:formal-rigor",
+          "kind": "research",
+          "displayName": "Formal Methods & Verified Science"
+        },
+        {
+          "id": "research:ai-life-sciences",
+          "kind": "research",
+          "displayName": "AI in Life Sciences & Medicine"
         }
       ]
     },
@@ -501,11 +515,200 @@
       },
       "tracked": true,
       "salience": {
-        "items30d": 10,
-        "itemsTotal": 10,
+        "items30d": 37,
+        "itemsTotal": 37,
         "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:bd0916502940502bc087cc1de9da682ffe16d5cedbbad008db88dcf634a0e477",
+          "title": "Microbial Metabolites Potentiate MAIT Cell Anti-Tumor Immunity Against Solid Tumors",
+          "url": "https://doi.org/10.64898/2026.07.24.740456",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:98537c8489ae54fa52bcc627a8ff343538027a0a2f4502a84f82853da958d10d",
+          "title": "Glycine molecule radical: Predicted properties and dipeptide formation",
+          "url": "https://doi.org/10.64898/2026.07.07.736934",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:6a380d594fd7e5db2cb6cbfe1518264e3a85b113264fdd15f0f5d5b5ef64c15f",
+          "title": "Molecular basis of tRNA substrate recognition and modification by the atypical SPOUT methyltransferase Trm10",
+          "url": "https://doi.org/10.64898/2025.12.12.694034",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:eb7e29441ff4b02bab21398503c6f6842c30c478adf2c2232713b60fd4f9ba1a",
+          "title": "The BPI-like TULIP domain proteins of Drosophila melanogaster: a novel class of candidate odorant transporters.",
+          "url": "https://doi.org/10.64898/2026.06.25.734463",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:6c2163f0f772553033c70f75e134a90695dfcc89bf2bcf80749e77a43808e785",
+          "title": "Identification of the Down syndrome critical region 3 gene as a mammalian cell size regulator",
+          "url": "https://doi.org/10.64898/2026.07.23.740440",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:31dc243ef3c79e39cb67b05c13642fccf224bce472c1e9c54241b8f1e3f9034e",
+          "title": "Endosome motility controls light-responsive reproductive development and secondary metabolite production in Aspergillus",
+          "url": "https://doi.org/10.64898/2026.03.03.708097",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:ed209f4d4e80f9f381111914b3d866cfcfd7537dc802ebb7a97ad9602f55a3c0",
+          "title": "Unveiling Gloriosine as a Dual-Acting Regulator of Glutamine Metabolism and Ferroptosis in Triple-Negative Breast Cancer: Insights from Network Pharmacology and Experimental Validation",
+          "url": "https://doi.org/10.64898/2026.05.17.725321",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:fc1773bf9f816dc973df6ce9bc57bd31ed7aa824ab5d4403f5d7be29345b636d",
+          "title": "Bidirectional Electron Transfer in Far-Red-Light Adapted Photosystem I. Implications for the Photosystem's Functionality",
+          "url": "https://doi.org/10.64898/2026.07.21.739882",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:38671ac70a3129d0197262624e269f5abdb26ec2475b5f0ceccf67f1a3fec31d",
+          "title": "Phenotype-driven de novo molecular design from gene expression signatures",
+          "url": "https://doi.org/10.64898/2026.07.21.739736",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:0079e3ae78277c09bd375b44ce8feeb1d358d533e88d12d7663448d475883382",
+          "title": "Characterization of NPR-14 in the Regulation of Sleep-Like Behaviour in Caenorhabditis elegans",
+          "url": "https://doi.org/10.64898/2026.07.21.739920",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:7e51ffbda1d96ce35a3f664aff491760016e35b27d341ce88c1ae49fcfffc002",
+          "title": "Intrafilament nucleotide exchange in a prokaryotic actin homolog",
+          "url": "https://doi.org/10.64898/2026.07.24.740542",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:42a9b36a5388a3f0361d73f75ce090c8527e3c04766dbc90338b76878c675400",
+          "title": "Structural and Stereochemical Elucidation of Cyanochelin C, a Siderophore Associated with Novel Class of Cyanobacterial Acyl Hydrolases",
+          "url": "https://doi.org/10.64898/2026.07.24.740629",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:56f47c35ce83529cd32ce09304d7f9931be526d5b8ef630011d0d7d987eb0d66",
+          "title": "Prevalent phenotypic mutation impairs binding of broadly neutralizing antibodies to influenza hemagglutinin",
+          "url": "https://doi.org/10.64898/2026.07.24.740633",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:077a387353c4f1d93075ca1580d7a3aecd6c20835b06c9007c75ec5fe6ba138b",
+          "title": "Cryo-electron microscopy structure of Jabs, a bacteriophage infecting the multidrug-resistant pathogen Mycobacterium abscessus",
+          "url": "https://doi.org/10.64898/2026.07.24.740622",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:d3895d8ea3277b7cebaf896e0094701c4e4dca7bf73772662613db440613d23b",
+          "title": "Live-imaging of endogenous neurofascins reveals glial adhesion shapes developing nodes of Ranvier",
+          "url": "https://doi.org/10.64898/2026.07.24.740328",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:4520eb8e449ce2aa3cfc14b9cab0357d197ce53f73fe551ad8f06a0aaac53988",
+          "title": "Replication-coupled search positions MutH for strand incision in DNA mismatch repair",
+          "url": "https://doi.org/10.64898/2026.07.21.739762",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:8a523a6ac3f0b95f7ec003769aeec5d112710313e9d9bb7d588fae2030287b68",
+          "title": "SpatialJEPA: JEPA-inspired graph-context distillation for spatially aware multiomics integration",
+          "url": "https://doi.org/10.64898/2026.07.21.739810",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:dc430a443b748f4416e608c5e0baaf0e97065c5347e7a99424ef05e2b0031f81",
+          "title": "Single-molecule nanopore-tweezers analysis of transcription elongation by intact and \"stalk-less\" yeast RNA polymerase II",
+          "url": "https://doi.org/10.64898/2026.07.20.739707",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:ab3e0531ac72ee57e206bf2dcadb14dfea65c829837acb15647c27a602562031",
+          "title": "APOE4 disrupts the central dogma by arresting neuronal proteome dynamics",
+          "url": "https://doi.org/10.64898/2026.07.15.738801",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:e599724c80e0165d4e65445d4ba4dbc5f442ee59715ae4a21be733d4b87614ae",
+          "title": "Longitudinal White Matter Trajectories in Clinical High Risk and First-Episode Psychosis: Findings from the Multi-Centre PSYSCAN Study",
+          "url": "https://doi.org/10.64898/2026.07.20.739516",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:7bab5704f2e2b15e185b51b7a0675d263608f7974e1e1a77f9d5bd1969ca1edb",
+          "title": "The carbon-nitrogen metabolism gene E1OGDH1 influences maize root system architecture and nitrogen plasticity",
+          "url": "https://doi.org/10.64898/2026.07.21.739812",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:e95c078ae563d6d32ee87a7ab6352bfb34d09c4617f65bd0d06f60cce77be059",
+          "title": "A TLS11a-decorated ionizable lipid nanoparticle platform and a multilevel-validated CRISPR LDLR-knockout HepG2 model for hepatocyte-preferential mRNA delivery",
+          "url": "https://doi.org/10.64898/2026.07.21.739738",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:c55476f43c8be18d5bdda1d88fcd23447cd6ad08c0b467bdf28248a835503524",
+          "title": "An active-matrix digital microfluidic platform for simultaneous short- and long-read viral genomic surveillance",
+          "url": "https://doi.org/10.64898/2026.07.21.739725",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:969214f81aaf554b9895c667b26767ea60161de31508512871d6215d99836770",
+          "title": "Bacterial Geosmin Biosynthesis is Compartmentalized Inside a Two-Component Protein Shell",
+          "url": "https://doi.org/10.64898/2026.07.21.739788",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:7221adca818ff9c9d525595b08c23ae99ebef2b0251001871faec975cc5f79f8",
+          "title": "HPRC2: A human pangenome reference with near-complete coverage of common genetic variation",
+          "url": "https://doi.org/10.64898/2026.07.21.739710",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:2cd64c4ab74962ec0cfabd15f03324c2528c18d2c9157129bd118cf4a2a2863a",
+          "title": "Targeted modulation of IGFBP5/IGF1, THPO, and P38 MAPK signaling are potent therapeutic strategies generalizable for mitochondrial respiratory chain disease and osteosarcoma",
+          "url": "https://doi.org/10.64898/2026.07.20.739625",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:3bfc664c236fc255faef52407091540155374c259a10f227d2940afc27ff7399",
+          "title": "Expression Pattern of Epilepsy Associated Genes as a Common Pathological Signature in PTE and SE models and possible therapeutics via an in-silico approach",
+          "url": "https://doi.org/10.64898/2026.04.23.720518",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
         {
           "id": "sha256:0aa91d007725e05487796700fdd82d41a3b78fe8cee78b42f5eb8f2f08e1ff0b",
           "title": "Pan-cancer NET-associated immunothrombosis coupling identifies a neutrophil-linked but neutrophil-irreducible tumor ecology",
@@ -701,229 +904,6 @@
       ]
     },
     {
-      "id": "source:technologyreview.com",
-      "slug": "technologyreview-com",
-      "kind": "source",
-      "displayName": "technologyreview.com",
-      "aliases": [],
-      "links": {
-        "homepage": "https://technologyreview.com"
-      },
-      "tracked": true,
-      "salience": {
-        "items30d": 7,
-        "itemsTotal": 7,
-        "trend": "rising"
-      },
-      "items": [
-        {
-          "id": "sha256:a872e8b9e825b6c4166c6835c957c36c1414f1198d818fe2917484122a43e9bb",
-          "title": "Claude Science is Anthropic’s newest flagship product",
-          "url": "https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:8c8513d0103eee77458ededdaebb381dde1aca88937089aa008e7a3023f4b20b",
-          "title": "LLMs are stuck in a groupthink groove. This startup is trying to get them out.",
-          "url": "https://www.technologyreview.com/2026/07/01/1140003/llms-are-stuck-in-a-groupthink-rut-this-startup-is-trying-to-get-them-out/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:97832390d76307960842c3fe9d3b9e9d6eb4d48086b6cd745324c4055b85b9fe",
-          "title": "Achieving operational excellence with AI",
-          "url": "https://www.technologyreview.com/2026/07/02/1140045/achieving-operational-excellence-with-ai/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:ade84b344708d0bdc11078a0f896a4b135d27bbd2a6033475de596cf65f811ee",
-          "title": "The foundational elements of AI architecture that IT leaders need to scale",
-          "url": "https://www.technologyreview.com/2026/07/07/1139413/the-foundational-elements-of-ai-architecture-that-it-leaders-need-to-scale/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:1f93687987573cd6aa08bb242a6181711045e32d855625b77875d94bb17b1749",
-          "title": "Anthropic found a hidden space where Claude puzzles over concepts",
-          "url": "https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:8e61c89f1803069cf5128dc95c241c53ca0c7c9755886c5da5165ea931db2c6d",
-          "title": "What Anthropic’s latest AI discovery does—and doesn’t—show",
-          "url": "https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:5516c2cdd666e8f96e3c9713b6c1c46120af223f7077ef38b7b4fb9563a11a42",
-          "title": "The risk of weather data sabotage is rising",
-          "url": "https://www.technologyreview.com/2026/07/17/1140622/weather-data-sabotage/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        }
-      ],
-      "related": [
-        {
-          "id": "person:name:monique-kuglitsch-jesper-dramsch-franz-g-kuglitsch-andrea-toreti",
-          "kind": "person",
-          "displayName": "Monique Kuglitsch, Jesper Dramsch, Franz G. Kuglitsch, Andrea Toreti"
-        },
-        {
-          "id": "research:formal-rigor",
-          "kind": "research",
-          "displayName": "Formal Methods & Verified Science"
-        },
-        {
-          "id": "person:name:james-o-donnell",
-          "kind": "person",
-          "displayName": "James O'Donnell"
-        },
-        {
-          "id": "research:ai-life-sciences",
-          "kind": "research",
-          "displayName": "AI in Life Sciences & Medicine"
-        },
-        {
-          "id": "person:name:will-douglas-heaven",
-          "kind": "person",
-          "displayName": "Will Douglas Heaven"
-        },
-        {
-          "id": "person:name:mit-technology-review-insights",
-          "kind": "person",
-          "displayName": "MIT Technology Review Insights"
-        },
-        {
-          "id": "person:name:grace-huckins",
-          "kind": "person",
-          "displayName": "Grace Huckins"
-        }
-      ]
-    },
-    {
-      "id": "source:argmin.net",
-      "slug": "argmin-net",
-      "kind": "source",
-      "displayName": "argmin.net",
-      "aliases": [],
-      "links": {
-        "homepage": "https://argmin.net"
-      },
-      "tracked": true,
-      "salience": {
-        "items30d": 6,
-        "itemsTotal": 12,
-        "trend": "rising"
-      },
-      "items": [
-        {
-          "id": "sha256:9874a2e4e14dd2a68e5b4d2eeeec919d44d6d121df6bb64551ede2b4cf57823c",
-          "title": "Engineering Architecture: A Syllabus?",
-          "url": "https://www.argmin.net/p/engineering-architecture-a-syllabus",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:e76c7a7d8752ecf687caf2404a3a273160a6f97e78125405457ad995ed9b72b4",
-          "title": "The Rationality of the Language Machines",
-          "url": "https://www.argmin.net/p/the-rationality-of-the-language-machines",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:484caa6cc6ddfafdd3648371764597853de8dbde8712bd34d2e6aa435c0ee5ea",
-          "title": "Sharing different heartbeats",
-          "url": "https://www.argmin.net/p/sharing-different-heartbeats",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:e5b3763abbc71fde0ec65b764bffecd299bf1702328772cc734d4f9690679d24",
-          "title": "Mesmerized by My Own Beat",
-          "url": "https://www.argmin.net/p/mesmerized-by-my-own-beat",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:74dae115f1587cdc666b4243389dca283b2ccf8264f6dbe3e3e43b54c8b31670",
-          "title": "We're Computerizing and Don't Need You",
-          "url": "https://www.argmin.net/p/were-computerizing-and-dont-need",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:27b6b6a6e62302b7361c60883df1a25120da38a0fc72681315ce75704e608311",
-          "title": "I Want A New Drug",
-          "url": "https://www.argmin.net/p/i-want-a-new-drug",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:f7c1ccc502185fceec367858b1112adff9cbedc9491b07993ea4ceace2a1e33a",
-          "title": "A Tribute to Dimitri Bertsekas",
-          "url": "https://www.argmin.net/p/a-tribute-to-dimitri-bertsekas",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:330b8f76de6ca81ff02ec2d3da610063ea914ec595365f30152420d719706785",
-          "title": "CJ2K battles ALS",
-          "url": "https://www.argmin.net/p/cj2k-battles-als",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:76892fac3e38e373dfb267609b57c2312511a992a64a75a38821c92bfbfbda9f",
-          "title": "Science or bro-science?",
-          "url": "https://www.argmin.net/p/science-or-bro-science",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:32808bdf50b043bae1c7a667b9a67fde3ff82c89e9f784c9e4b47b9cd8a666d1",
-          "title": "Range of Motion",
-          "url": "https://www.argmin.net/p/range-of-motion",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:7b6a6570d07328e0cf533ab8a3c50db7232b369814e25ab3b75d3ac4e245c16c",
-          "title": "Never Ending Math Equation",
-          "url": "https://www.argmin.net/p/never-ending-math-equation",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:86c1972bd5500bc41395d81c9b48e4e73ecbd64e9016d619f125df5ebcc49b5d",
-          "title": "Methods to Madness",
-          "url": "https://www.argmin.net/p/methods-to-madness",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        }
-      ],
-      "related": [
-        {
-          "id": "person:name:ben-recht",
-          "kind": "person",
-          "displayName": "Ben Recht"
-        },
-        {
-          "id": "research:formal-rigor",
-          "kind": "research",
-          "displayName": "Formal Methods & Verified Science"
-        },
-        {
-          "id": "research:ai-life-sciences",
-          "kind": "research",
-          "displayName": "AI in Life Sciences & Medicine"
-        }
-      ]
-    },
-    {
       "id": "source:arxiv.org",
       "slug": "arxiv-org",
       "kind": "source",
@@ -934,11 +914,165 @@
       },
       "tracked": true,
       "salience": {
-        "items30d": 5,
-        "itemsTotal": 5,
+        "items30d": 23,
+        "itemsTotal": 27,
         "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:0f263b408a5f85fb4f4051ebbf4d2fede0006fe5a689c029b94931ba079f0a1d",
+          "title": "From Dependency to Compositionality: A Neurosymbolic Lifting of LLM Outputs via Combinatory Categorial Grammar",
+          "url": "https://arxiv.org/abs/2607.18961",
+          "firstSeen": "2026-07-27T05:00:37.395Z",
+          "sourceKind": "paper"
+        },
+        {
+          "id": "sha256:d957aa8330f36842425e11b90be882000ddd2be11bd2dd3aebcee793e905ee38",
+          "title": "Learning Structural Convergence: A Neuro-Symbolic Benchmark for Temporal Reasoning",
+          "url": "http://arxiv.org/abs/2607.22365v1",
+          "firstSeen": "2026-07-27T05:00:37.395Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:fe63dc874306aac245fc4be765e9a2f0ff24aa21be9ef469d4c88f3225bac1a9",
+          "title": "Universal BCI Personalization: One API for Frozen EEG Trunks and Foundation Models",
+          "url": "http://arxiv.org/abs/2607.22397v1",
+          "firstSeen": "2026-07-27T05:00:37.395Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:48ae0d4208c1fb309944507196eb1b1f285d6baac27a7a54d43a7d8c12569eb6",
+          "title": "Vibe Coding: An Experiment with Test-Driven Development",
+          "url": "http://arxiv.org/abs/2607.22406v1",
+          "firstSeen": "2026-07-27T05:00:37.395Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:c47129084ffdb052c08ff8f8feb474058d2bcb9e22bc0ddbaa94f6187c0ca595",
+          "title": "Learning to Prepare Molecular Ground States with Transformer Models",
+          "url": "http://arxiv.org/abs/2607.22468v1",
+          "firstSeen": "2026-07-27T05:00:37.395Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:92d0e21d3450d3558c8b03ce3800612a274fb79a96b866f270b75c346d0c797d",
+          "title": "Interpretable EEG biomarkers with bag-of-waves: Spatial and temporal waveform dictionaries for low-data regimes",
+          "url": "http://arxiv.org/abs/2607.22508v1",
+          "firstSeen": "2026-07-27T05:00:37.395Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:d49488eccb98a20e5072896deca3f79ed3b2ef5f54c71c0cdd77afcf3d7ce879",
+          "title": "CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference",
+          "url": "http://arxiv.org/abs/2607.22511v1",
+          "firstSeen": "2026-07-27T05:00:37.395Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:aa3976f08cadbfaf83aad0b0a682ad65d7267b13e844e9ebfe5f9ae5d0a2ca87",
+          "title": "Dysphagia Risk Stratification in Head and Neck Cancer via Two-Stage PRO-Clinical Stacking",
+          "url": "http://arxiv.org/abs/2607.22514v1",
+          "firstSeen": "2026-07-27T05:00:37.395Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:cc9c8c7a8dea064f1c793b8bed46e4ed9c6ececc108e40c475e1dde83707c6c0",
+          "title": "arxiv.org",
+          "url": "https://arxiv.org/html/2607.14500v1",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:5521004ccf2f1e31e1682db66c3ef72adf63f3e89a92ec928ac2127c20654b2d",
+          "title": "arxiv.org",
+          "url": "https://arxiv.org/html/2607.22524v1",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:b5fd8b9bae5b6b21b09656091592b2a5262b725ee80d334fd15e303cc8bbdfb9",
+          "title": "arxiv.org",
+          "url": "https://arxiv.org/html/2606.02006v2",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:4dfde21aca6c04618dbb6b7be781dca382c98ea572c6f3e195f0c364c5ce27dc",
+          "title": "arxiv.org",
+          "url": "https://arxiv.org/html/2511.17644v1",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:b851c2076be557a2e29f1c1d8efb25a68a3bb0d3c15fd423d68ec18cc987cb83",
+          "title": "arxiv.org",
+          "url": "https://arxiv.org/abs/2604.19137",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:452e0d10b4d9d4179a118b309a2cac280cad120f9430f1f90d5c4cc54e5608ce",
+          "title": "arxiv.org",
+          "url": "https://arxiv.org/abs/2603.03177",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:82cd871f8b694190b1e2ecaf55359e759b4f4eafd5939b2b35403ca753cf22f9",
+          "title": "Euclid-MCP: A Model Context Protocol Server for Deterministic Logical Reasoning via Prolog",
+          "url": "http://arxiv.org/abs/2607.21412v1",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:e25d0ece2a432991e9897c12c9830cbdaf7190a651992720c70150769f3d755b",
+          "title": "Agent-Guided Relational Concept Discovery: Toward Interpretable Surgical Margin Assessment",
+          "url": "http://arxiv.org/abs/2607.21437v1",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:5380276f539a037fd69cbfc5b111d8f1437bab80754836b6c466b4a53d90d004",
+          "title": "Test-Time Scaling via Error Localization",
+          "url": "http://arxiv.org/abs/2607.21453v1",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:95ba1ad03ec5612d4efeb715561d471db9e843491e4da365d747050a25d79b0a",
+          "title": "Agentic coding without the cloud: evaluating open-weight large language models on longitudinal data preparation tasks",
+          "url": "http://arxiv.org/abs/2607.21482v1",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:f91bf1eb8959716d6d4c2b911c60124ccb390666f5f7c4a8d30d43f061c412ce",
+          "title": "Toward Generalizable Cognitive Impairment Detection with Speech-Based Multimodal Large Language Models",
+          "url": "http://arxiv.org/abs/2607.21496v1",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:302f3889cdb050c0fa82120a8c0f3457f3664eff3d90cdf1ad6a236ed212dd70",
+          "title": "From Resource Flow to Executable Tests: Petri-Net-Guided LLM Test Generation for Concurrent Stateful Rust APIs",
+          "url": "http://arxiv.org/abs/2607.21530v1",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:26806ebbc03c3f4191b508800572351aa44b601896dcd3e9758ae2165794a21e",
+          "title": "Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context",
+          "url": "http://arxiv.org/abs/2607.21535v1",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:7941b72dd22bf9709fc076410b24e24544ca1bf86006ed65806b82afc67439ee",
+          "title": "Graph Learning on Ensembles of Cyclic Peptides: An Investigation of Molecular Ensemble Modeling",
+          "url": "http://arxiv.org/abs/2607.21561v1",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
         {
           "id": "sha256:5fe8d086ee360c2c36e5b3520b3927953f84b97636025ff9ed580d31afcbc5ce",
           "title": "MedFailBench: A Clinician-Built Open-Source Benchmark for Medical AI Safety Boundary Inspection",
@@ -1099,6 +1233,308 @@
       ]
     },
     {
+      "id": "source:technologyreview.com",
+      "slug": "technologyreview-com",
+      "kind": "source",
+      "displayName": "technologyreview.com",
+      "aliases": [],
+      "links": {
+        "homepage": "https://technologyreview.com"
+      },
+      "tracked": true,
+      "salience": {
+        "items30d": 8,
+        "itemsTotal": 8,
+        "trend": "rising"
+      },
+      "items": [
+        {
+          "id": "sha256:9a0e0c9ec5df9f929462b6a2b99ef7a989f2f8de2dee867daafb7e8b2cc95867",
+          "title": "How AI helps scientists design the next generation of medicines",
+          "url": "https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:a872e8b9e825b6c4166c6835c957c36c1414f1198d818fe2917484122a43e9bb",
+          "title": "Claude Science is Anthropic’s newest flagship product",
+          "url": "https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:8c8513d0103eee77458ededdaebb381dde1aca88937089aa008e7a3023f4b20b",
+          "title": "LLMs are stuck in a groupthink groove. This startup is trying to get them out.",
+          "url": "https://www.technologyreview.com/2026/07/01/1140003/llms-are-stuck-in-a-groupthink-rut-this-startup-is-trying-to-get-them-out/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:97832390d76307960842c3fe9d3b9e9d6eb4d48086b6cd745324c4055b85b9fe",
+          "title": "Achieving operational excellence with AI",
+          "url": "https://www.technologyreview.com/2026/07/02/1140045/achieving-operational-excellence-with-ai/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:ade84b344708d0bdc11078a0f896a4b135d27bbd2a6033475de596cf65f811ee",
+          "title": "The foundational elements of AI architecture that IT leaders need to scale",
+          "url": "https://www.technologyreview.com/2026/07/07/1139413/the-foundational-elements-of-ai-architecture-that-it-leaders-need-to-scale/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:1f93687987573cd6aa08bb242a6181711045e32d855625b77875d94bb17b1749",
+          "title": "Anthropic found a hidden space where Claude puzzles over concepts",
+          "url": "https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:8e61c89f1803069cf5128dc95c241c53ca0c7c9755886c5da5165ea931db2c6d",
+          "title": "What Anthropic’s latest AI discovery does—and doesn’t—show",
+          "url": "https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:5516c2cdd666e8f96e3c9713b6c1c46120af223f7077ef38b7b4fb9563a11a42",
+          "title": "The risk of weather data sabotage is rising",
+          "url": "https://www.technologyreview.com/2026/07/17/1140622/weather-data-sabotage/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        }
+      ],
+      "related": [
+        {
+          "id": "person:name:monique-kuglitsch-jesper-dramsch-franz-g-kuglitsch-andrea-toreti",
+          "kind": "person",
+          "displayName": "Monique Kuglitsch, Jesper Dramsch, Franz G. Kuglitsch, Andrea Toreti"
+        },
+        {
+          "id": "research:formal-rigor",
+          "kind": "research",
+          "displayName": "Formal Methods & Verified Science"
+        },
+        {
+          "id": "person:name:james-o-donnell",
+          "kind": "person",
+          "displayName": "James O'Donnell"
+        },
+        {
+          "id": "research:ai-life-sciences",
+          "kind": "research",
+          "displayName": "AI in Life Sciences & Medicine"
+        },
+        {
+          "id": "person:name:will-douglas-heaven",
+          "kind": "person",
+          "displayName": "Will Douglas Heaven"
+        },
+        {
+          "id": "person:name:mit-technology-review-insights",
+          "kind": "person",
+          "displayName": "MIT Technology Review Insights"
+        },
+        {
+          "id": "person:name:grace-huckins",
+          "kind": "person",
+          "displayName": "Grace Huckins"
+        }
+      ]
+    },
+    {
+      "id": "source:argmin.net",
+      "slug": "argmin-net",
+      "kind": "source",
+      "displayName": "argmin.net",
+      "aliases": [],
+      "links": {
+        "homepage": "https://argmin.net"
+      },
+      "tracked": true,
+      "salience": {
+        "items30d": 6,
+        "itemsTotal": 13,
+        "trend": "rising"
+      },
+      "items": [
+        {
+          "id": "sha256:e15ea7e8718b9351cfb451f640f2a5f78e60a1cbb837a93b6a639ea8186f0fd8",
+          "title": "Science-based Shredding",
+          "url": "https://www.argmin.net/p/science-based-shredding",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:9874a2e4e14dd2a68e5b4d2eeeec919d44d6d121df6bb64551ede2b4cf57823c",
+          "title": "Engineering Architecture: A Syllabus?",
+          "url": "https://www.argmin.net/p/engineering-architecture-a-syllabus",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:e76c7a7d8752ecf687caf2404a3a273160a6f97e78125405457ad995ed9b72b4",
+          "title": "The Rationality of the Language Machines",
+          "url": "https://www.argmin.net/p/the-rationality-of-the-language-machines",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:484caa6cc6ddfafdd3648371764597853de8dbde8712bd34d2e6aa435c0ee5ea",
+          "title": "Sharing different heartbeats",
+          "url": "https://www.argmin.net/p/sharing-different-heartbeats",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:e5b3763abbc71fde0ec65b764bffecd299bf1702328772cc734d4f9690679d24",
+          "title": "Mesmerized by My Own Beat",
+          "url": "https://www.argmin.net/p/mesmerized-by-my-own-beat",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:74dae115f1587cdc666b4243389dca283b2ccf8264f6dbe3e3e43b54c8b31670",
+          "title": "We're Computerizing and Don't Need You",
+          "url": "https://www.argmin.net/p/were-computerizing-and-dont-need",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:27b6b6a6e62302b7361c60883df1a25120da38a0fc72681315ce75704e608311",
+          "title": "I Want A New Drug",
+          "url": "https://www.argmin.net/p/i-want-a-new-drug",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:f7c1ccc502185fceec367858b1112adff9cbedc9491b07993ea4ceace2a1e33a",
+          "title": "A Tribute to Dimitri Bertsekas",
+          "url": "https://www.argmin.net/p/a-tribute-to-dimitri-bertsekas",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:330b8f76de6ca81ff02ec2d3da610063ea914ec595365f30152420d719706785",
+          "title": "CJ2K battles ALS",
+          "url": "https://www.argmin.net/p/cj2k-battles-als",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:76892fac3e38e373dfb267609b57c2312511a992a64a75a38821c92bfbfbda9f",
+          "title": "Science or bro-science?",
+          "url": "https://www.argmin.net/p/science-or-bro-science",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:32808bdf50b043bae1c7a667b9a67fde3ff82c89e9f784c9e4b47b9cd8a666d1",
+          "title": "Range of Motion",
+          "url": "https://www.argmin.net/p/range-of-motion",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:7b6a6570d07328e0cf533ab8a3c50db7232b369814e25ab3b75d3ac4e245c16c",
+          "title": "Never Ending Math Equation",
+          "url": "https://www.argmin.net/p/never-ending-math-equation",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:86c1972bd5500bc41395d81c9b48e4e73ecbd64e9016d619f125df5ebcc49b5d",
+          "title": "Methods to Madness",
+          "url": "https://www.argmin.net/p/methods-to-madness",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        }
+      ],
+      "related": [
+        {
+          "id": "person:name:ben-recht",
+          "kind": "person",
+          "displayName": "Ben Recht"
+        },
+        {
+          "id": "research:formal-rigor",
+          "kind": "research",
+          "displayName": "Formal Methods & Verified Science"
+        },
+        {
+          "id": "research:ai-life-sciences",
+          "kind": "research",
+          "displayName": "AI in Life Sciences & Medicine"
+        }
+      ]
+    },
+    {
+      "id": "source:simonwillison.net",
+      "slug": "simonwillison-net",
+      "kind": "source",
+      "displayName": "simonwillison.net",
+      "aliases": [],
+      "links": {
+        "homepage": "https://simonwillison.net"
+      },
+      "tracked": true,
+      "salience": {
+        "items30d": 3,
+        "itemsTotal": 5,
+        "trend": "rising"
+      },
+      "items": [
+        {
+          "id": "sha256:30f92ce069833e93b405b4d77d6c40aeac066013c1837a5a5f88278b4c6d12ab",
+          "title": "A Fireside Chat with Cat and Thariq from the Claude Code team",
+          "url": "https://simonwillison.net/2026/Jul/21/cat-and-thariq/#atom-entries",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:e4675e3f4038d544eecbb4b2624105316c8944928f68bbae0d1fe530de11589a",
+          "title": "OpenAI’s accidental cyberattack against Hugging Face is science fiction that happened",
+          "url": "https://simonwillison.net/2026/Jul/22/openai-cyberattack/#atom-entries",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:351949916d5e43815910491b655c00fe566c7b5e335118d15aeb1950958b67d4",
+          "title": "Running Python code in a sandbox with MicroPython and WASM",
+          "url": "https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/#atom-entries",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:396b94ed7dc811f84a24995753ad0f50365a7b9b8046128d729e3fd65dc8c7bf",
+          "title": "Initial impressions of Claude Fable 5",
+          "url": "https://simonwillison.net/2026/Jun/9/claude-fable-5/#atom-entries",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:8bd82ea947286aba3a705ede01cfba85740210165c19d57fd76a8626b6070572",
+          "title": "sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)",
+          "url": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-entries",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        }
+      ],
+      "related": [
+        {
+          "id": "research:formal-rigor",
+          "kind": "research",
+          "displayName": "Formal Methods & Verified Science"
+        },
+        {
+          "id": "research:agentic-ai",
+          "kind": "research",
+          "displayName": "AI Scientists & AI Engineers"
+        }
+      ]
+    },
+    {
       "id": "source:nature.com",
       "slug": "nature-com",
       "kind": "source",
@@ -1150,48 +1586,182 @@
       ]
     },
     {
-      "id": "source:garymarcus.substack.com",
-      "slug": "garymarcus-substack-com",
+      "id": "source:neurosymbolic-ai-journal.com",
+      "slug": "neurosymbolic-ai-journal-com",
       "kind": "source",
-      "displayName": "garymarcus.substack.com",
+      "displayName": "neurosymbolic-ai-journal.com",
       "aliases": [],
       "links": {
-        "homepage": "https://garymarcus.substack.com"
+        "homepage": "https://neurosymbolic-ai-journal.com"
       },
       "tracked": true,
       "salience": {
-        "items30d": 2,
+        "items30d": 3,
         "itemsTotal": 3,
         "trend": "rising"
       },
       "items": [
         {
-          "id": "sha256:09a46ced3d83cb66b472ceddd0a9c68b08dbd0b93e66f8456f8bcaa0cd756c05",
-          "title": "Even more good news for the future of neurosymbolic AI",
-          "url": "https://garymarcus.substack.com/p/even-more-good-news-for-the-future",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "id": "sha256:51f6f644b656b4add6ca4e17d47dfdecfb2458e538bbfc2f32fec509b37bd308",
+          "title": "NAI journal issues",
+          "url": "https://neurosymbolic-ai-journal.com/content/nai-journal-issues",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
           "sourceKind": "news"
         },
         {
-          "id": "sha256:93ddd8bd4600e1870ed54259d5d004732a43de1e9aaa7ec8443ad4eedf2fbe67",
-          "title": "Accenture: Then and now, and how it may signify things to come",
-          "url": "https://garymarcus.substack.com/p/accenture-then-and-now-and-how-it",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
+          "id": "sha256:b45bbae29b24c0beed8e7eb8cdab224443d10dcbaaa7db591eda2eae3822bb0f",
+          "title": "A survey of neurosymbolic artificial intelligence: foundations, advances, and future trajectories",
+          "url": "https://neurosymbolic-ai-journal.com/paper/survey-neurosymbolic-artificial-intelligence-foundations-advances-and-future-trajectories",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
         },
         {
-          "id": "sha256:f68d8eb95d9a84d8e0fbb82694a74ec2e504a1f9c612119ed277a54f02318eb5",
-          "title": "The month Generative AI lost its mojo",
-          "url": "https://garymarcus.substack.com/p/the-month-generative-ai-lost-its",
+          "id": "sha256:584ab4fc37602f7668793c9f58b88b96426b449ee6cfcfae66081e10631e257e",
+          "title": "neurosymbolic-ai-journal.com",
+          "url": "https://neurosymbolic-ai-journal.com/underreview",
           "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
+          "sourceKind": "news"
         }
       ],
       "related": [
         {
-          "id": "person:name:gary-marcus",
+          "id": "research:neurosymbolic",
+          "kind": "research",
+          "displayName": "Neurosymbolic & Hybrid AI"
+        }
+      ]
+    },
+    {
+      "id": "source:openreview.net",
+      "slug": "openreview-net",
+      "kind": "source",
+      "displayName": "openreview.net",
+      "aliases": [],
+      "links": {
+        "homepage": "https://openreview.net"
+      },
+      "tracked": true,
+      "salience": {
+        "items30d": 3,
+        "itemsTotal": 3,
+        "trend": "rising"
+      },
+      "items": [
+        {
+          "id": "sha256:c03187aafee4f35262f668d29c4bc66f63fd8c57344de73bdd80047d09941505",
+          "title": "Verifying your browser",
+          "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DhcO7EwDTL5",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:db80fd183e31134a845b39ea7a5725f625e6e67770ed6f3c73a2871f4332755e",
+          "title": "Verifying your browser",
+          "url": "https://openreview.net/pdf/0c49f5e8b9d9da26dc4edc662ac732e667a55c34.pdf",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:74a502b59b1885eb210fd65ae58cdcdc23e552d22cce363ab0f4fcc8424513ef",
+          "title": "Verifying your browser",
+          "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DEWbCCYsR9M",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        }
+      ],
+      "related": [
+        {
+          "id": "research:agentic-ai",
+          "kind": "research",
+          "displayName": "AI Scientists & AI Engineers"
+        },
+        {
+          "id": "research:neurosymbolic",
+          "kind": "research",
+          "displayName": "Neurosymbolic & Hybrid AI"
+        },
+        {
+          "id": "research:formal-rigor",
+          "kind": "research",
+          "displayName": "Formal Methods & Verified Science"
+        }
+      ]
+    },
+    {
+      "id": "source:emergentmind.com",
+      "slug": "emergentmind-com",
+      "kind": "source",
+      "displayName": "emergentmind.com",
+      "aliases": [],
+      "links": {
+        "homepage": "https://emergentmind.com"
+      },
+      "tracked": true,
+      "salience": {
+        "items30d": 2,
+        "itemsTotal": 2,
+        "trend": "rising"
+      },
+      "items": [
+        {
+          "id": "sha256:85eaa7207081c25dbb04105e74529d5220bdc1b135a75ef1c23cf2f7bf5db7d5",
+          "title": "Programming Knowledge Graphs (PKG)",
+          "url": "https://www.emergentmind.com/topics/programming-knowledge-graph-pkg",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:56f565fad53c282f7c04b849eb428463b80b31811a1f015e204696eeae86893e",
+          "title": "Symbolic-Neural Integration",
+          "url": "https://www.emergentmind.com/topics/symbolic-neural-integration",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        }
+      ],
+      "related": [
+        {
+          "id": "research:neurosymbolic",
+          "kind": "research",
+          "displayName": "Neurosymbolic & Hybrid AI"
+        }
+      ]
+    },
+    {
+      "id": "source:github.com",
+      "slug": "github-com",
+      "kind": "source",
+      "displayName": "github.com",
+      "aliases": [],
+      "links": {
+        "homepage": "https://github.com"
+      },
+      "tracked": true,
+      "salience": {
+        "items30d": 2,
+        "itemsTotal": 2,
+        "trend": "rising"
+      },
+      "items": [
+        {
+          "id": "sha256:7397e2bf86a29e4286248ad9cb0018b159b521dddfb764e8c6ee5fe4f7939d5d",
+          "title": "GitHub - jindongli-Ai/LLM-Symbolic-Reasoning-Survey: The official GitHub page for the survey paper \"A Survey on LLM Symbolic Reasoning\". And this paper is under review.",
+          "url": "https://github.com/jindongli-Ai/LLM-Symbolic-Reasoning-Survey",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:9fc9f829928c345bfcb59de24b7f192ceaba5f09e352aa04f1b7d9baca525536",
+          "title": "Show HN: Frugon – Find which LLM calls a cheaper model could handle (local, MIT)",
+          "url": "https://github.com/Rodiun/frugon",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        }
+      ],
+      "related": [
+        {
+          "id": "person:name:jarodrh",
           "kind": "person",
-          "displayName": "Gary Marcus"
+          "displayName": "jarodrh"
         },
         {
           "id": "research:formal-rigor",
@@ -1202,11 +1772,187 @@
           "id": "research:neurosymbolic",
           "kind": "research",
           "displayName": "Neurosymbolic & Hybrid AI"
+        }
+      ]
+    },
+    {
+      "id": "source:lean-lang.org",
+      "slug": "lean-lang-org",
+      "kind": "source",
+      "displayName": "lean-lang.org",
+      "aliases": [],
+      "links": {
+        "homepage": "https://lean-lang.org"
+      },
+      "tracked": true,
+      "salience": {
+        "items30d": 2,
+        "itemsTotal": 2,
+        "trend": "rising"
+      },
+      "items": [
+        {
+          "id": "sha256:8cc37c7ac4d55426c67da6938f37e844cb85bc4c2611dbbc6e92bcfd309cb9bf",
+          "title": "Lean Programming Language",
+          "url": "https://lean-lang.org/",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
         },
         {
-          "id": "research:ai-life-sciences",
+          "id": "sha256:334e6e25069e0ea098b46a50131f215b4a309adfc2d888ab061f6fbb6efde879",
+          "title": "Lean Programming Language",
+          "url": "https://lean-lang.org/fro/about/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        }
+      ],
+      "related": [
+        {
+          "id": "research:formal-rigor",
           "kind": "research",
-          "displayName": "AI in Life Sciences & Medicine"
+          "displayName": "Formal Methods & Verified Science"
+        }
+      ]
+    },
+    {
+      "id": "source:leandojo.org",
+      "slug": "leandojo-org",
+      "kind": "source",
+      "displayName": "leandojo.org",
+      "aliases": [],
+      "links": {
+        "homepage": "https://leandojo.org"
+      },
+      "tracked": true,
+      "salience": {
+        "items30d": 2,
+        "itemsTotal": 2,
+        "trend": "rising"
+      },
+      "items": [
+        {
+          "id": "sha256:e2d9f28c5b2904279a7a57619426d00c5a70ca3eb5fa9ee8b7562fc4af4f285c",
+          "title": "LeanDojo: AI",
+          "url": "https://leandojo.org/leandojo.html",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:59682dad016fe7cd2b0cfd3bcb32f137dde377a23fed60704f2baf477ff47aa3",
+          "title": "AI-Driven Formal Theorem Proving in the Lean Ecosystem",
+          "url": "https://leandojo.org/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        }
+      ],
+      "related": [
+        {
+          "id": "research:neurosymbolic",
+          "kind": "research",
+          "displayName": "Neurosymbolic & Hybrid AI"
+        },
+        {
+          "id": "research:formal-rigor",
+          "kind": "research",
+          "displayName": "Formal Methods & Verified Science"
+        }
+      ]
+    },
+    {
+      "id": "source:researchgate.net",
+      "slug": "researchgate-net",
+      "kind": "source",
+      "displayName": "researchgate.net",
+      "aliases": [],
+      "links": {
+        "homepage": "https://researchgate.net"
+      },
+      "tracked": true,
+      "salience": {
+        "items30d": 2,
+        "itemsTotal": 2,
+        "trend": "rising"
+      },
+      "items": [
+        {
+          "id": "sha256:20a4d28a80f01608afb6fff1deab805720ee9640f5dbd324ee8baf124aacdba0",
+          "title": "researchgate.net",
+          "url": "https://www.researchgate.net/publication/385603994_Symbolic_Reasoning_and_Deep_Learning_Creating_Hybrid_AI_Models_for_Adaptive_Autonomous_Decision-Making_Systems",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:9567aa1c2a22e4780fd3231210d4d90ec6880c927fae09cf439e82619f965bbc",
+          "title": "researchgate.net",
+          "url": "https://www.researchgate.net/publication/408312269_pamaldi_at_SemEval-2026_Task_11_Neuro-Symbolic_Syllogistic_Reasoning_via_LLM-Guided_Structure_Extraction_and_Deterministic_Validation",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        }
+      ],
+      "related": [
+        {
+          "id": "research:neurosymbolic",
+          "kind": "research",
+          "displayName": "Neurosymbolic & Hybrid AI"
+        }
+      ]
+    },
+    {
+      "id": "source:science.org",
+      "slug": "science-org",
+      "kind": "source",
+      "displayName": "science.org",
+      "aliases": [],
+      "links": {
+        "homepage": "https://science.org"
+      },
+      "tracked": true,
+      "salience": {
+        "items30d": 2,
+        "itemsTotal": 2,
+        "trend": "rising"
+      },
+      "items": [
+        {
+          "id": "sha256:b292f9d48411953b21c038d23caad04143426d5d4154025b3b9ade8f75413616",
+          "title": "Advancing science by designing for surprise",
+          "url": "https://www.science.org/doi/10.1126/science.aej4257",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "paper"
+        },
+        {
+          "id": "sha256:32412daecce8b37d01b7f353707b83ccdca1f5537351214faf41049adeba163a",
+          "title": "AI in scientific publishing: Slower, worse, and more expensive",
+          "url": "https://www.science.org/doi/10.1126/science.aek5570",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "opinion"
+        }
+      ],
+      "related": [
+        {
+          "id": "person:name:h-holden-thorp",
+          "kind": "person",
+          "displayName": "H. Holden Thorp"
+        },
+        {
+          "id": "research:formal-rigor",
+          "kind": "research",
+          "displayName": "Formal Methods & Verified Science"
+        },
+        {
+          "id": "person:name:james-evans",
+          "kind": "person",
+          "displayName": "James Evans"
+        },
+        {
+          "id": "person:name:casey-petroff",
+          "kind": "person",
+          "displayName": "Casey Petroff"
+        },
+        {
+          "id": "person:name:gary-king",
+          "kind": "person",
+          "displayName": "Gary King"
         }
       ]
     },
@@ -1358,164 +2104,6 @@
       ]
     },
     {
-      "id": "source:importai.substack.com",
-      "slug": "importai-substack-com",
-      "kind": "source",
-      "displayName": "importai.substack.com",
-      "aliases": [],
-      "links": {
-        "homepage": "https://importai.substack.com"
-      },
-      "tracked": true,
-      "salience": {
-        "items30d": 1,
-        "itemsTotal": 3,
-        "trend": "flat"
-      },
-      "items": [
-        {
-          "id": "sha256:fe05c6e741aa6e1972df7403a6593db0fe6c549ec8b24138438ea4aff09522d1",
-          "title": "Import AI 455: AI systems are about to start building themselves.",
-          "url": "https://importai.substack.com/p/import-ai-455-automating-ai-research",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:9dd88f73140ab7533a94fef3807796bfe10211670d09482e18a2c87c19c09f5f",
-          "title": "Import AI 459: AI oversight is difficult; scaling laws for protein folding models; and pricing the extinction risk of AI systems",
-          "url": "https://importai.substack.com/p/import-ai-459-ai-oversight-is-difficult",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:02ff8d9b23b15b2ce514c8a939360149d4822a1d54dc8df9a61142c6ca6df432",
-          "title": "Import AI 464: Fable writes GPU kernels; AI automation; and analog computation",
-          "url": "https://importai.substack.com/p/import-ai-464-fables-writes-gpu-kernels",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        }
-      ],
-      "related": [
-        {
-          "id": "person:name:jack-clark",
-          "kind": "person",
-          "displayName": "Jack Clark"
-        },
-        {
-          "id": "research:formal-rigor",
-          "kind": "research",
-          "displayName": "Formal Methods & Verified Science"
-        },
-        {
-          "id": "research:ai-life-sciences",
-          "kind": "research",
-          "displayName": "AI in Life Sciences & Medicine"
-        }
-      ]
-    },
-    {
-      "id": "source:simonwillison.net",
-      "slug": "simonwillison-net",
-      "kind": "source",
-      "displayName": "simonwillison.net",
-      "aliases": [],
-      "links": {
-        "homepage": "https://simonwillison.net"
-      },
-      "tracked": true,
-      "salience": {
-        "items30d": 1,
-        "itemsTotal": 3,
-        "trend": "falling"
-      },
-      "items": [
-        {
-          "id": "sha256:351949916d5e43815910491b655c00fe566c7b5e335118d15aeb1950958b67d4",
-          "title": "Running Python code in a sandbox with MicroPython and WASM",
-          "url": "https://simonwillison.net/2026/Jun/6/micropython-in-a-sandbox/#atom-entries",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:396b94ed7dc811f84a24995753ad0f50365a7b9b8046128d729e3fd65dc8c7bf",
-          "title": "Initial impressions of Claude Fable 5",
-          "url": "https://simonwillison.net/2026/Jun/9/claude-fable-5/#atom-entries",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:8bd82ea947286aba3a705ede01cfba85740210165c19d57fd76a8626b6070572",
-          "title": "sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)",
-          "url": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-entries",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        }
-      ],
-      "related": [
-        {
-          "id": "research:formal-rigor",
-          "kind": "research",
-          "displayName": "Formal Methods & Verified Science"
-        }
-      ]
-    },
-    {
-      "id": "source:terrytao.wordpress.com",
-      "slug": "terrytao-wordpress-com",
-      "kind": "source",
-      "displayName": "terrytao.wordpress.com",
-      "aliases": [],
-      "links": {
-        "homepage": "https://terrytao.wordpress.com"
-      },
-      "tracked": true,
-      "salience": {
-        "items30d": 1,
-        "itemsTotal": 3,
-        "trend": "falling"
-      },
-      "items": [
-        {
-          "id": "sha256:c8760418daa15b6a7bae74a5bbb965a1a6d00a96a6f83f2d70b7753fcc6964b3",
-          "title": "On the proposed rule changes to the administration of federal grants",
-          "url": "https://terrytao.wordpress.com/2026/06/09/on-the-proposed-rule-changes-to-the-administration-of-federal-grants/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:8373029ff257e629f999a780d319651106d6600ffbf61c2ed57227be28243f84",
-          "title": "Third SAIR competition: inverse Galois challenge",
-          "url": "https://terrytao.wordpress.com/2026/06/16/third-sair-competition-inverse-galois-challenge/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:5176921da606026314c98d218fb1e54393f7ac038e1ebc26e8cd44e9165d0540",
-          "title": "Two more apps: visualizing the zeta process and the motions of the heavens",
-          "url": "https://terrytao.wordpress.com/2026/07/16/two-more-apps-visualizing-the-zeta-process-and-the-motions-of-the-heavens/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        }
-      ],
-      "related": [
-        {
-          "id": "person:name:terence-tao",
-          "kind": "person",
-          "displayName": "Terence Tao"
-        },
-        {
-          "id": "research:formal-rigor",
-          "kind": "research",
-          "displayName": "Formal Methods & Verified Science"
-        },
-        {
-          "id": "research:ai-life-sciences",
-          "kind": "research",
-          "displayName": "AI in Life Sciences & Medicine"
-        }
-      ]
-    },
-    {
       "id": "source:xenaproject.wordpress.com",
       "slug": "xenaproject-wordpress-com",
       "kind": "source",
@@ -1526,11 +2114,18 @@
       },
       "tracked": true,
       "salience": {
-        "items30d": 0,
-        "itemsTotal": 8,
-        "trend": "flat"
+        "items30d": 1,
+        "itemsTotal": 9,
+        "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:7a9cdfd4d85abf193e052db587cb0ef34fcad4e4128bcaf6dc3744c5d3ff7758",
+          "title": "Human mathematicians are being outcounterexampled",
+          "url": "https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "opinion"
+        },
         {
           "id": "sha256:d11bcabdb6045e4b980ab7e947740bf696232ec62f129f8279b7da251a41af63",
           "title": "Fermat’s Last Theorem — how it’s going",
@@ -1598,6 +2193,123 @@
           "id": "research:formal-rigor",
           "kind": "research",
           "displayName": "Formal Methods & Verified Science"
+        }
+      ]
+    },
+    {
+      "id": "source:garymarcus.substack.com",
+      "slug": "garymarcus-substack-com",
+      "kind": "source",
+      "displayName": "garymarcus.substack.com",
+      "aliases": [],
+      "links": {
+        "homepage": "https://garymarcus.substack.com"
+      },
+      "tracked": true,
+      "salience": {
+        "items30d": 1,
+        "itemsTotal": 3,
+        "trend": "falling"
+      },
+      "items": [
+        {
+          "id": "sha256:09a46ced3d83cb66b472ceddd0a9c68b08dbd0b93e66f8456f8bcaa0cd756c05",
+          "title": "Even more good news for the future of neurosymbolic AI",
+          "url": "https://garymarcus.substack.com/p/even-more-good-news-for-the-future",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:93ddd8bd4600e1870ed54259d5d004732a43de1e9aaa7ec8443ad4eedf2fbe67",
+          "title": "Accenture: Then and now, and how it may signify things to come",
+          "url": "https://garymarcus.substack.com/p/accenture-then-and-now-and-how-it",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:f68d8eb95d9a84d8e0fbb82694a74ec2e504a1f9c612119ed277a54f02318eb5",
+          "title": "The month Generative AI lost its mojo",
+          "url": "https://garymarcus.substack.com/p/the-month-generative-ai-lost-its",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        }
+      ],
+      "related": [
+        {
+          "id": "person:name:gary-marcus",
+          "kind": "person",
+          "displayName": "Gary Marcus"
+        },
+        {
+          "id": "research:formal-rigor",
+          "kind": "research",
+          "displayName": "Formal Methods & Verified Science"
+        },
+        {
+          "id": "research:neurosymbolic",
+          "kind": "research",
+          "displayName": "Neurosymbolic & Hybrid AI"
+        },
+        {
+          "id": "research:ai-life-sciences",
+          "kind": "research",
+          "displayName": "AI in Life Sciences & Medicine"
+        }
+      ]
+    },
+    {
+      "id": "source:terrytao.wordpress.com",
+      "slug": "terrytao-wordpress-com",
+      "kind": "source",
+      "displayName": "terrytao.wordpress.com",
+      "aliases": [],
+      "links": {
+        "homepage": "https://terrytao.wordpress.com"
+      },
+      "tracked": true,
+      "salience": {
+        "items30d": 1,
+        "itemsTotal": 3,
+        "trend": "falling"
+      },
+      "items": [
+        {
+          "id": "sha256:c8760418daa15b6a7bae74a5bbb965a1a6d00a96a6f83f2d70b7753fcc6964b3",
+          "title": "On the proposed rule changes to the administration of federal grants",
+          "url": "https://terrytao.wordpress.com/2026/06/09/on-the-proposed-rule-changes-to-the-administration-of-federal-grants/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:8373029ff257e629f999a780d319651106d6600ffbf61c2ed57227be28243f84",
+          "title": "Third SAIR competition: inverse Galois challenge",
+          "url": "https://terrytao.wordpress.com/2026/06/16/third-sair-competition-inverse-galois-challenge/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:5176921da606026314c98d218fb1e54393f7ac038e1ebc26e8cd44e9165d0540",
+          "title": "Two more apps: visualizing the zeta process and the motions of the heavens",
+          "url": "https://terrytao.wordpress.com/2026/07/16/two-more-apps-visualizing-the-zeta-process-and-the-motions-of-the-heavens/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        }
+      ],
+      "related": [
+        {
+          "id": "person:name:terence-tao",
+          "kind": "person",
+          "displayName": "Terence Tao"
+        },
+        {
+          "id": "research:formal-rigor",
+          "kind": "research",
+          "displayName": "Formal Methods & Verified Science"
+        },
+        {
+          "id": "research:ai-life-sciences",
+          "kind": "research",
+          "displayName": "AI in Life Sciences & Medicine"
         }
       ]
     },
@@ -1699,6 +2411,69 @@
       ]
     },
     {
+      "id": "source:deepmind.google",
+      "slug": "deepmind-google",
+      "kind": "source",
+      "displayName": "deepmind.google",
+      "aliases": [],
+      "links": {
+        "homepage": "https://deepmind.google"
+      },
+      "tracked": true,
+      "salience": {
+        "items30d": 0,
+        "itemsTotal": 4,
+        "trend": "flat"
+      },
+      "items": [
+        {
+          "id": "sha256:4643ed7a232a15f85c8ee979dc3e3716ff342f9a5060183e5f8319ace33d7595",
+          "title": "Gemma 4: Byte for byte, the most capable open models",
+          "url": "https://deepmind.google/blog/gemma-4-byte-for-byte-the-most-capable-open-models/",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:dccbefc2b4acbf497b5d9b41bc4c939c2722fb320f876a58c67f35e7732f09b9",
+          "title": "Gemini 3.5: frontier intelligence with action",
+          "url": "https://deepmind.google/blog/gemini-3-5-frontier-intelligence-with-action/",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:bf6c7185c31f1d62278145774bb43d7ba69ca19b01e2778f0429fc1ce634fcb9",
+          "title": "Bringing AI to the next generation of fusion energy",
+          "url": "https://deepmind.google/blog/bringing-ai-to-the-next-generation-of-fusion-energy/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:e237389f23f63a4fb8f0715a1250c6d451bd34ec2158949a74818a3cdfa66e72",
+          "title": "Revealing a key protein behind heart disease",
+          "url": "https://deepmind.google/blog/revealing-a-key-protein-behind-heart-disease/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        }
+      ],
+      "related": [
+        {
+          "id": "research:ai-life-sciences",
+          "kind": "research",
+          "displayName": "AI in Life Sciences & Medicine"
+        },
+        {
+          "id": "research:formal-rigor",
+          "kind": "research",
+          "displayName": "Formal Methods & Verified Science"
+        },
+        {
+          "id": "research:agentic-ai",
+          "kind": "research",
+          "displayName": "AI Scientists & AI Engineers"
+        }
+      ]
+    },
+    {
       "id": "source:blog.sigplan.org",
       "slug": "blog-sigplan-org",
       "kind": "source",
@@ -1710,10 +2485,17 @@
       "tracked": true,
       "salience": {
         "items30d": 0,
-        "itemsTotal": 2,
+        "itemsTotal": 3,
         "trend": "flat"
       },
       "items": [
+        {
+          "id": "sha256:7abbcb50f02636f64e1b5652633ccdee1cc84e34fe676e877c8611804068baee",
+          "title": "Think Globally, Discuss PL Locally",
+          "url": "https://blog.sigplan.org/2025/09/16/think-globally-discuss-pl-locally/",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "news"
+        },
         {
           "id": "sha256:375a8e0017d08d8669580afb41aa06156520a8b67af0016a036dac7743ad342c",
           "title": "Testing AI Software Isn’t Like Testing Plain Old Software",
@@ -1749,55 +2531,504 @@
           "id": "research:neurosymbolic",
           "kind": "research",
           "displayName": "Neurosymbolic & Hybrid AI"
-        }
-      ]
-    },
-    {
-      "id": "source:deepmind.google",
-      "slug": "deepmind-google",
-      "kind": "source",
-      "displayName": "deepmind.google",
-      "aliases": [],
-      "links": {
-        "homepage": "https://deepmind.google"
-      },
-      "tracked": true,
-      "salience": {
-        "items30d": 0,
-        "itemsTotal": 2,
-        "trend": "flat"
-      },
-      "items": [
-        {
-          "id": "sha256:bf6c7185c31f1d62278145774bb43d7ba69ca19b01e2778f0429fc1ce634fcb9",
-          "title": "Bringing AI to the next generation of fusion energy",
-          "url": "https://deepmind.google/blog/bringing-ai-to-the-next-generation-of-fusion-energy/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
         },
         {
-          "id": "sha256:e237389f23f63a4fb8f0715a1250c6d451bd34ec2158949a74818a3cdfa66e72",
-          "title": "Revealing a key protein behind heart disease",
-          "url": "https://deepmind.google/blog/revealing-a-key-protein-behind-heart-disease/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        }
-      ],
-      "related": [
-        {
-          "id": "research:ai-life-sciences",
-          "kind": "research",
-          "displayName": "AI in Life Sciences & Medicine"
-        },
-        {
-          "id": "research:formal-rigor",
-          "kind": "research",
-          "displayName": "Formal Methods & Verified Science"
+          "id": "person:name:harrison-goldstein",
+          "kind": "person",
+          "displayName": "Harrison Goldstein"
         }
       ]
     }
   ],
   "research": [
+    {
+      "id": "research:ai-life-sciences",
+      "slug": "ai-life-sciences",
+      "kind": "research",
+      "displayName": "AI in Life Sciences & Medicine",
+      "aliases": [],
+      "links": {},
+      "tracked": true,
+      "salience": {
+        "items30d": 67,
+        "itemsTotal": 83,
+        "trend": "rising"
+      },
+      "items": [
+        {
+          "id": "sha256:c47129084ffdb052c08ff8f8feb474058d2bcb9e22bc0ddbaa94f6187c0ca595",
+          "title": "Learning to Prepare Molecular Ground States with Transformer Models",
+          "url": "http://arxiv.org/abs/2607.22468v1",
+          "firstSeen": "2026-07-27T05:00:37.395Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:92d0e21d3450d3558c8b03ce3800612a274fb79a96b866f270b75c346d0c797d",
+          "title": "Interpretable EEG biomarkers with bag-of-waves: Spatial and temporal waveform dictionaries for low-data regimes",
+          "url": "http://arxiv.org/abs/2607.22508v1",
+          "firstSeen": "2026-07-27T05:00:37.395Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:aa3976f08cadbfaf83aad0b0a682ad65d7267b13e844e9ebfe5f9ae5d0a2ca87",
+          "title": "Dysphagia Risk Stratification in Head and Neck Cancer via Two-Stage PRO-Clinical Stacking",
+          "url": "http://arxiv.org/abs/2607.22514v1",
+          "firstSeen": "2026-07-27T05:00:37.395Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:e2c3be43ee43b4e85e25356e0f8b56237c4061a2e8e8f0f5777b326e32547ac3",
+          "title": "nih.gov",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12860534/",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:128a49238fb36bedf184149d3b805d8dcbc6b435d8da920887d05ce6350a90bb",
+          "title": "Precision medicine trends and AI solutions for 2026",
+          "url": "https://blog.genematrix.io/blog/precision-medicine-trends-ai-solutions-2026",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:76508b0850736300e06b85c699c56242f08cf92209016e1b3d3b215aa6304a6d",
+          "title": "AI Research Breakthroughs in July 2026: What Happened",
+          "url": "https://skycrumbs.com/blog/ai-research-july-2026",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:9d13738760ed5777dff2d065eff51140e45af539365c8b8776be5b1802a88208",
+          "title": "A Small AI Company Just Took the Stage at One of the Biggest Events in Computing, and It Points to Where Drug Discovery Is Headed",
+          "url": "https://www.prnewswire.com/news-releases/a-small-ai-company-just-took-the-stage-at-one-of-the-biggest-events-in-computing-and-it-points-to-where-drug-discovery-is-headed-302833251.html",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:c64a90b7d000c0f47e71c04c9db3b1cd342da55b3526b7f023f79ad483714575",
+          "title": "How Generative AI Is Reshaping Healthcare Breakthroughs in 2026",
+          "url": "https://que.com/how-generative-ai-is-reshaping-healthcare-breakthroughs-in-2026/",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:e9b10bd0c9e8bceeb0219a1a916fdd4b7d8ca277dbc8d9abcb25ed872b56fb55",
+          "title": "AI-directed protein-engineering cloud lab receives $20 million from NSF",
+          "url": "https://news.northwestern.edu/stories/2026/07/ai-directed-protein-engineering-cloud-lab-receives-20-million-from-nsf",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:bd0916502940502bc087cc1de9da682ffe16d5cedbbad008db88dcf634a0e477",
+          "title": "Microbial Metabolites Potentiate MAIT Cell Anti-Tumor Immunity Against Solid Tumors",
+          "url": "https://doi.org/10.64898/2026.07.24.740456",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:98537c8489ae54fa52bcc627a8ff343538027a0a2f4502a84f82853da958d10d",
+          "title": "Glycine molecule radical: Predicted properties and dipeptide formation",
+          "url": "https://doi.org/10.64898/2026.07.07.736934",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:6a380d594fd7e5db2cb6cbfe1518264e3a85b113264fdd15f0f5d5b5ef64c15f",
+          "title": "Molecular basis of tRNA substrate recognition and modification by the atypical SPOUT methyltransferase Trm10",
+          "url": "https://doi.org/10.64898/2025.12.12.694034",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:eb7e29441ff4b02bab21398503c6f6842c30c478adf2c2232713b60fd4f9ba1a",
+          "title": "The BPI-like TULIP domain proteins of Drosophila melanogaster: a novel class of candidate odorant transporters.",
+          "url": "https://doi.org/10.64898/2026.06.25.734463",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:6c2163f0f772553033c70f75e134a90695dfcc89bf2bcf80749e77a43808e785",
+          "title": "Identification of the Down syndrome critical region 3 gene as a mammalian cell size regulator",
+          "url": "https://doi.org/10.64898/2026.07.23.740440",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:31dc243ef3c79e39cb67b05c13642fccf224bce472c1e9c54241b8f1e3f9034e",
+          "title": "Endosome motility controls light-responsive reproductive development and secondary metabolite production in Aspergillus",
+          "url": "https://doi.org/10.64898/2026.03.03.708097",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:ed209f4d4e80f9f381111914b3d866cfcfd7537dc802ebb7a97ad9602f55a3c0",
+          "title": "Unveiling Gloriosine as a Dual-Acting Regulator of Glutamine Metabolism and Ferroptosis in Triple-Negative Breast Cancer: Insights from Network Pharmacology and Experimental Validation",
+          "url": "https://doi.org/10.64898/2026.05.17.725321",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:fc1773bf9f816dc973df6ce9bc57bd31ed7aa824ab5d4403f5d7be29345b636d",
+          "title": "Bidirectional Electron Transfer in Far-Red-Light Adapted Photosystem I. Implications for the Photosystem's Functionality",
+          "url": "https://doi.org/10.64898/2026.07.21.739882",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:38671ac70a3129d0197262624e269f5abdb26ec2475b5f0ceccf67f1a3fec31d",
+          "title": "Phenotype-driven de novo molecular design from gene expression signatures",
+          "url": "https://doi.org/10.64898/2026.07.21.739736",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:0079e3ae78277c09bd375b44ce8feeb1d358d533e88d12d7663448d475883382",
+          "title": "Characterization of NPR-14 in the Regulation of Sleep-Like Behaviour in Caenorhabditis elegans",
+          "url": "https://doi.org/10.64898/2026.07.21.739920",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:7e51ffbda1d96ce35a3f664aff491760016e35b27d341ce88c1ae49fcfffc002",
+          "title": "Intrafilament nucleotide exchange in a prokaryotic actin homolog",
+          "url": "https://doi.org/10.64898/2026.07.24.740542",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:42a9b36a5388a3f0361d73f75ce090c8527e3c04766dbc90338b76878c675400",
+          "title": "Structural and Stereochemical Elucidation of Cyanochelin C, a Siderophore Associated with Novel Class of Cyanobacterial Acyl Hydrolases",
+          "url": "https://doi.org/10.64898/2026.07.24.740629",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:56f47c35ce83529cd32ce09304d7f9931be526d5b8ef630011d0d7d987eb0d66",
+          "title": "Prevalent phenotypic mutation impairs binding of broadly neutralizing antibodies to influenza hemagglutinin",
+          "url": "https://doi.org/10.64898/2026.07.24.740633",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:077a387353c4f1d93075ca1580d7a3aecd6c20835b06c9007c75ec5fe6ba138b",
+          "title": "Cryo-electron microscopy structure of Jabs, a bacteriophage infecting the multidrug-resistant pathogen Mycobacterium abscessus",
+          "url": "https://doi.org/10.64898/2026.07.24.740622",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:d3895d8ea3277b7cebaf896e0094701c4e4dca7bf73772662613db440613d23b",
+          "title": "Live-imaging of endogenous neurofascins reveals glial adhesion shapes developing nodes of Ranvier",
+          "url": "https://doi.org/10.64898/2026.07.24.740328",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:9a0e0c9ec5df9f929462b6a2b99ef7a989f2f8de2dee867daafb7e8b2cc95867",
+          "title": "How AI helps scientists design the next generation of medicines",
+          "url": "https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:4520eb8e449ce2aa3cfc14b9cab0357d197ce53f73fe551ad8f06a0aaac53988",
+          "title": "Replication-coupled search positions MutH for strand incision in DNA mismatch repair",
+          "url": "https://doi.org/10.64898/2026.07.21.739762",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:8a523a6ac3f0b95f7ec003769aeec5d112710313e9d9bb7d588fae2030287b68",
+          "title": "SpatialJEPA: JEPA-inspired graph-context distillation for spatially aware multiomics integration",
+          "url": "https://doi.org/10.64898/2026.07.21.739810",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:dc430a443b748f4416e608c5e0baaf0e97065c5347e7a99424ef05e2b0031f81",
+          "title": "Single-molecule nanopore-tweezers analysis of transcription elongation by intact and \"stalk-less\" yeast RNA polymerase II",
+          "url": "https://doi.org/10.64898/2026.07.20.739707",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:ab3e0531ac72ee57e206bf2dcadb14dfea65c829837acb15647c27a602562031",
+          "title": "APOE4 disrupts the central dogma by arresting neuronal proteome dynamics",
+          "url": "https://doi.org/10.64898/2026.07.15.738801",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:e599724c80e0165d4e65445d4ba4dbc5f442ee59715ae4a21be733d4b87614ae",
+          "title": "Longitudinal White Matter Trajectories in Clinical High Risk and First-Episode Psychosis: Findings from the Multi-Centre PSYSCAN Study",
+          "url": "https://doi.org/10.64898/2026.07.20.739516",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:7bab5704f2e2b15e185b51b7a0675d263608f7974e1e1a77f9d5bd1969ca1edb",
+          "title": "The carbon-nitrogen metabolism gene E1OGDH1 influences maize root system architecture and nitrogen plasticity",
+          "url": "https://doi.org/10.64898/2026.07.21.739812",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:e95c078ae563d6d32ee87a7ab6352bfb34d09c4617f65bd0d06f60cce77be059",
+          "title": "A TLS11a-decorated ionizable lipid nanoparticle platform and a multilevel-validated CRISPR LDLR-knockout HepG2 model for hepatocyte-preferential mRNA delivery",
+          "url": "https://doi.org/10.64898/2026.07.21.739738",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:c55476f43c8be18d5bdda1d88fcd23447cd6ad08c0b467bdf28248a835503524",
+          "title": "An active-matrix digital microfluidic platform for simultaneous short- and long-read viral genomic surveillance",
+          "url": "https://doi.org/10.64898/2026.07.21.739725",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:969214f81aaf554b9895c667b26767ea60161de31508512871d6215d99836770",
+          "title": "Bacterial Geosmin Biosynthesis is Compartmentalized Inside a Two-Component Protein Shell",
+          "url": "https://doi.org/10.64898/2026.07.21.739788",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:7221adca818ff9c9d525595b08c23ae99ebef2b0251001871faec975cc5f79f8",
+          "title": "HPRC2: A human pangenome reference with near-complete coverage of common genetic variation",
+          "url": "https://doi.org/10.64898/2026.07.21.739710",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:2cd64c4ab74962ec0cfabd15f03324c2528c18d2c9157129bd118cf4a2a2863a",
+          "title": "Targeted modulation of IGFBP5/IGF1, THPO, and P38 MAPK signaling are potent therapeutic strategies generalizable for mitochondrial respiratory chain disease and osteosarcoma",
+          "url": "https://doi.org/10.64898/2026.07.20.739625",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:3bfc664c236fc255faef52407091540155374c259a10f227d2940afc27ff7399",
+          "title": "Expression Pattern of Epilepsy Associated Genes as a Common Pathological Signature in PTE and SE models and possible therapeutics via an in-silico approach",
+          "url": "https://doi.org/10.64898/2026.04.23.720518",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:e25d0ece2a432991e9897c12c9830cbdaf7190a651992720c70150769f3d755b",
+          "title": "Agent-Guided Relational Concept Discovery: Toward Interpretable Surgical Margin Assessment",
+          "url": "http://arxiv.org/abs/2607.21437v1",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:f91bf1eb8959716d6d4c2b911c60124ccb390666f5f7c4a8d30d43f061c412ce",
+          "title": "Toward Generalizable Cognitive Impairment Detection with Speech-Based Multimodal Large Language Models",
+          "url": "http://arxiv.org/abs/2607.21496v1",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:7941b72dd22bf9709fc076410b24e24544ca1bf86006ed65806b82afc67439ee",
+          "title": "Graph Learning on Ensembles of Cyclic Peptides: An Investigation of Molecular Ensemble Modeling",
+          "url": "http://arxiv.org/abs/2607.21561v1",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:ccda5754897d32214eaf2027bad6414bd7205bee0daf153bf61b68b1cdaddd57",
+          "title": "biopharminternational.com",
+          "url": "https://www.biopharminternational.com/view/biohub-open-source-ai-model-targets-protein-design-for-drug-discovery",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:83182d89a97df3db6bb6fe8d7288fff6df93cf0dc3831bd2e2f2f2c87b3920c8",
+          "title": "YuelDesign: AI Diffusion Models for Protein Flexibility",
+          "url": "https://intuitionlabs.ai/articles/yueldesign-ai-drug-design-protein-flexibility",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:ad44c36476a0fa9ee419ede87ddd00cba2b0dbb3bea2065642aa82e4ee430acd",
+          "title": "AlphaFold and the Protein Structure Prediction Revolution: What It Can and Can't Do for Your Research",
+          "url": "https://www.technologynetworks.com/informatics/articles/alphafold-and-the-protein-structure-prediction-revolution-what-it-can-and-cant-do-for-your-research-414654",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:61a78487c9676dd834c4368e0b271568f83ccac41694bafa2422a693444cb8c9",
+          "title": "AI in Drug Discovery: Target ID to Clinical Translation",
+          "url": "https://www.drugdiscoverynews.com/ai-in-drug-discovery-from-target-identification-to-clinical-translation-17335",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:b81ce108049c5e249e5e07a74e8e3b24b08b009b22175e6fa5eeb2ae0035f3b1",
+          "title": "Frontiers | Spectral Analysis and AI/ML-based Data-Driven Approaches for Enhanced Protein Conformation Selection and Prediction in Drug Discovery",
+          "url": "https://www.frontiersin.org/journals/drug-discovery/articles/10.3389/fddsv.2026.1805731/abstract",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:09a46ced3d83cb66b472ceddd0a9c68b08dbd0b93e66f8456f8bcaa0cd756c05",
+          "title": "Even more good news for the future of neurosymbolic AI",
+          "url": "https://garymarcus.substack.com/p/even-more-good-news-for-the-future",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:484caa6cc6ddfafdd3648371764597853de8dbde8712bd34d2e6aa435c0ee5ea",
+          "title": "Sharing different heartbeats",
+          "url": "https://www.argmin.net/p/sharing-different-heartbeats",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:e5b3763abbc71fde0ec65b764bffecd299bf1702328772cc734d4f9690679d24",
+          "title": "Mesmerized by My Own Beat",
+          "url": "https://www.argmin.net/p/mesmerized-by-my-own-beat",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:74dae115f1587cdc666b4243389dca283b2ccf8264f6dbe3e3e43b54c8b31670",
+          "title": "We're Computerizing and Don't Need You",
+          "url": "https://www.argmin.net/p/were-computerizing-and-dont-need",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:27b6b6a6e62302b7361c60883df1a25120da38a0fc72681315ce75704e608311",
+          "title": "I Want A New Drug",
+          "url": "https://www.argmin.net/p/i-want-a-new-drug",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        }
+      ],
+      "related": [
+        {
+          "id": "person:name:hoang-loc-cao",
+          "kind": "person",
+          "displayName": "Hoang-Loc Cao"
+        },
+        {
+          "id": "person:name:van-pham",
+          "kind": "person",
+          "displayName": "Van Pham"
+        },
+        {
+          "id": "person:name:truong-thanh-hung-nguyen",
+          "kind": "person",
+          "displayName": "Truong Thanh Hung Nguyen"
+        },
+        {
+          "id": "person:name:phuc-truong-loc-nguyen",
+          "kind": "person",
+          "displayName": "Phuc Truong Loc Nguyen"
+        },
+        {
+          "id": "person:name:phuc-ho",
+          "kind": "person",
+          "displayName": "Phuc Ho"
+        },
+        {
+          "id": "person:name:veronica-whitford",
+          "kind": "person",
+          "displayName": "Veronica Whitford"
+        },
+        {
+          "id": "person:name:hung-cao",
+          "kind": "person",
+          "displayName": "Hung Cao"
+        },
+        {
+          "id": "source:arxiv.org",
+          "kind": "source",
+          "displayName": "arxiv.org"
+        },
+        {
+          "id": "person:name:goktug-ozkan",
+          "kind": "person",
+          "displayName": "Goktug Ozkan"
+        },
+        {
+          "id": "person:name:rahman-n",
+          "kind": "person",
+          "displayName": "Rahman, N."
+        },
+        {
+          "id": "person:name:rahman-a-s-m-z",
+          "kind": "person",
+          "displayName": "Rahman, A. S. M. Z."
+        },
+        {
+          "id": "person:name:levin-d-b",
+          "kind": "person",
+          "displayName": "Levin, D. B."
+        },
+        {
+          "id": "person:name:mcallister-t",
+          "kind": "person",
+          "displayName": "McAllister, T."
+        },
+        {
+          "id": "person:name:cicek-n",
+          "kind": "person",
+          "displayName": "Cicek, N."
+        },
+        {
+          "id": "person:name:derakhshani-h",
+          "kind": "person",
+          "displayName": "Derakhshani, H."
+        },
+        {
+          "id": "source:doi.org",
+          "kind": "source",
+          "displayName": "doi.org"
+        },
+        {
+          "id": "person:name:ravishankar-v",
+          "kind": "person",
+          "displayName": "Ravishankar, V."
+        },
+        {
+          "id": "person:name:borges-araujo-l",
+          "kind": "person",
+          "displayName": "Borges-Araujo, L."
+        },
+        {
+          "id": "person:name:rajendran-m",
+          "kind": "person",
+          "displayName": "Rajendran, M."
+        },
+        {
+          "id": "person:name:lafargue-e",
+          "kind": "person",
+          "displayName": "Lafargue, E."
+        },
+        {
+          "id": "person:name:byrne-d",
+          "kind": "person",
+          "displayName": "Byrne, D."
+        },
+        {
+          "id": "person:name:buzhinsky-n",
+          "kind": "person",
+          "displayName": "Buzhinsky, N."
+        },
+        {
+          "id": "person:name:wolfe-m",
+          "kind": "person",
+          "displayName": "Wolfe, M."
+        },
+        {
+          "id": "person:name:fitzgerald-w",
+          "kind": "person",
+          "displayName": "Fitzgerald, W."
+        }
+      ]
+    },
     {
       "id": "research:formal-rigor",
       "slug": "formal-rigor",
@@ -1807,11 +3038,214 @@
       "links": {},
       "tracked": true,
       "salience": {
-        "items30d": 32,
-        "itemsTotal": 57,
+        "items30d": 54,
+        "itemsTotal": 84,
         "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:fe63dc874306aac245fc4be765e9a2f0ff24aa21be9ef469d4c88f3225bac1a9",
+          "title": "Universal BCI Personalization: One API for Frozen EEG Trunks and Foundation Models",
+          "url": "http://arxiv.org/abs/2607.22397v1",
+          "firstSeen": "2026-07-27T05:00:37.395Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:d49488eccb98a20e5072896deca3f79ed3b2ef5f54c71c0cdd77afcf3d7ce879",
+          "title": "CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference",
+          "url": "http://arxiv.org/abs/2607.22511v1",
+          "firstSeen": "2026-07-27T05:00:37.395Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:b643baa80d1b917971d890385d751052d6d6a59fe9f841304a82fd712b2d9a47",
+          "title": "When AI Enters the Architecture Design Loop, What Counts as a Contribution?",
+          "url": "https://www.sigarch.org/when-ai-enters-the-architecture-design-loop-what-counts-as-a-contribution/",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:f8b3ba6ebfc5aa5f5c68ab6d868bfff24115e75a4fe2a7a6d96481c346c0d8f9",
+          "title": "From reproducible evidence to safer and more useful recommendations: nine new ACM TORS articles",
+          "url": "https://recommender-systems.com/news/2026/07/26/from-reproducible-evidence-to-safer-and-more-useful-recommendations-nine-new-acm-tors-articles/",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:f7e4322b3a2a565e4e4b95e77f15129ed560ac417e536ee21fc82ed8c937e960",
+          "title": "ARGOS Geopolitical Risk Engine",
+          "url": "https://argosdash.com/formal-verification",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:1ce4eb4387b4ce64478353295017e056dee9757025c61fc9432233ddc9cf9e31",
+          "title": "76 Quantum Theorems Completed By AI In New Lean 4 Benchmarks",
+          "url": "https://quantumzeitgeist.com/qudeleap-research-quantum-theorems-completed-lean/",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:cc9c8c7a8dea064f1c793b8bed46e4ed9c6ececc108e40c475e1dde83707c6c0",
+          "title": "arxiv.org",
+          "url": "https://arxiv.org/html/2607.14500v1",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:5521004ccf2f1e31e1682db66c3ef72adf63f3e89a92ec928ac2127c20654b2d",
+          "title": "arxiv.org",
+          "url": "https://arxiv.org/html/2607.22524v1",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:b5fd8b9bae5b6b21b09656091592b2a5262b725ee80d334fd15e303cc8bbdfb9",
+          "title": "arxiv.org",
+          "url": "https://arxiv.org/html/2606.02006v2",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:e2d9f28c5b2904279a7a57619426d00c5a70ca3eb5fa9ee8b7562fc4af4f285c",
+          "title": "LeanDojo: AI",
+          "url": "https://leandojo.org/leandojo.html",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:6c2078c5f7cd4b5bc96f6e756ee9dbd38b6cf651901f527dab6480d52eb0fed4",
+          "title": "lean-theorem-proving-guide | Skills Marketplace",
+          "url": "https://lobehub.com/skills/wentorai-research-plugins-lean-theorem-proving-guide",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:98ab175a7ac0c1946acd76ee45496eca278cd524dea66c2f7626362713d8456b",
+          "title": "The Lean Theorem Prover: Design, Evolution, and Impact",
+          "url": "https://leodemoura.github.io/static/floc26/",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:8cc37c7ac4d55426c67da6938f37e844cb85bc4c2611dbbc6e92bcfd309cb9bf",
+          "title": "Lean Programming Language",
+          "url": "https://lean-lang.org/",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:384f17a3287da1595e013ea4a63259ca608d1096e7ee7a07cdfad6bd0018f78a",
+          "title": "Amazon is investing in the Lean Focused Research Organization",
+          "url": "https://www.amazon.science/news/amazon-is-investing-in-the-lean-focused-research-organization",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:d03d4763187298b91b5ebe4f0849bd9e4c01e0b0f81d8d6ac8e4d3dcb0c7e1e9",
+          "title": "AWS bets big on Lean programming language to bring mathematical guarantees to agentic AI",
+          "url": "https://www.computerweekly.com/blog/CW-Developer-Network/AWS-bets-big-on-Lean-programming-language-to-bring-mathematical-guarantees-to-agentic-AI",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:c03187aafee4f35262f668d29c4bc66f63fd8c57344de73bdd80047d09941505",
+          "title": "Verifying your browser",
+          "url": "https://openreview.net/challenge?redirect=%2Fforum%3Fid%3DhcO7EwDTL5",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:e360bdcfc277fd6e4a10dc3979b5f091941a69a7b1b57d97ae1be73e18655d18",
+          "title": "NeurIPS Towards Large Language Models as Copilots for Theorem Proving in Lean",
+          "url": "https://neurips.cc/virtual/2023/74994",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:04a19dbd40c000227a6770f8d6e2f4ced08e8e43e59e8633a9085b56d72bdf51",
+          "title": "theoj.org",
+          "url": "https://joss.theoj.org/papers/10.21105/joss.09910.pdf",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:d86324c8641389c153bffec5cb4969614942598393b1870fd766980e4f4c10c0",
+          "title": "Reproducibility symposium met ‘highest expectations,’ laid plans for more robust science",
+          "url": "https://frederick.cancer.gov/news/reproducibility-symposium-met-highest-expectations-laid-plans-more-robust",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:e4675e3f4038d544eecbb4b2624105316c8944928f68bbae0d1fe530de11589a",
+          "title": "OpenAI’s accidental cyberattack against Hugging Face is science fiction that happened",
+          "url": "https://simonwillison.net/2026/Jul/22/openai-cyberattack/#atom-entries",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:e15ea7e8718b9351cfb451f640f2a5f78e60a1cbb837a93b6a639ea8186f0fd8",
+          "title": "Science-based Shredding",
+          "url": "https://www.argmin.net/p/science-based-shredding",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:7a9cdfd4d85abf193e052db587cb0ef34fcad4e4128bcaf6dc3744c5d3ff7758",
+          "title": "Human mathematicians are being outcounterexampled",
+          "url": "https://xenaproject.wordpress.com/2026/07/20/human-mathematicians-are-being-outcounterexampled/",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:7abbcb50f02636f64e1b5652633ccdee1cc84e34fe676e877c8611804068baee",
+          "title": "Think Globally, Discuss PL Locally",
+          "url": "https://blog.sigplan.org/2025/09/16/think-globally-discuss-pl-locally/",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:b292f9d48411953b21c038d23caad04143426d5d4154025b3b9ade8f75413616",
+          "title": "Advancing science by designing for surprise",
+          "url": "https://www.science.org/doi/10.1126/science.aej4257",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "paper"
+        },
+        {
+          "id": "sha256:32412daecce8b37d01b7f353707b83ccdca1f5537351214faf41049adeba163a",
+          "title": "AI in scientific publishing: Slower, worse, and more expensive",
+          "url": "https://www.science.org/doi/10.1126/science.aek5570",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:9105db7ecf932d66826b3c70f7ca89b359111e5586e18f57186e6cb551b79a40",
+          "title": "Introduction to Formal Verification with Lean Part 1",
+          "url": "https://hashcloak.com/blog/tutorial-introduction-to-formal-verification-with-lean-(part-1)",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:5380276f539a037fd69cbfc5b111d8f1437bab80754836b6c466b4a53d90d004",
+          "title": "Test-Time Scaling via Error Localization",
+          "url": "http://arxiv.org/abs/2607.21453v1",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:95ba1ad03ec5612d4efeb715561d471db9e843491e4da365d747050a25d79b0a",
+          "title": "Agentic coding without the cloud: evaluating open-weight large language models on longitudinal data preparation tasks",
+          "url": "http://arxiv.org/abs/2607.21482v1",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:26806ebbc03c3f4191b508800572351aa44b601896dcd3e9758ae2165794a21e",
+          "title": "Windowed-MTP: Removing the Full-Context Draft-KV Tax at Million-Token Context",
+          "url": "http://arxiv.org/abs/2607.21535v1",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
         {
           "id": "sha256:59682dad016fe7cd2b0cfd3bcb32f137dde377a23fed60704f2baf477ff47aa3",
           "title": "AI-Driven Formal Theorem Proving in the Lean Ecosystem",
@@ -1958,209 +3392,6 @@
           "url": "https://xenaproject.wordpress.com/2025/10/22/formal-or-not-formal-that-is-the-question-in-ai-for-theorem-proving/",
           "firstSeen": "2026-07-19T06:32:40.855Z",
           "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:f5e8da988ed72f7ed89ff83cb4d409168d73fa6c48218f16360ee3bc02170bf2",
-          "title": "Formalization of Erdős problems",
-          "url": "https://xenaproject.wordpress.com/2025/12/05/formalization-of-erdos-problems/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:ae0d7d434e58f7ca668497abc9a7c9cf803dbcee89234cca636d99a710398bc0",
-          "title": "Accelerating mathematics",
-          "url": "https://xenaproject.wordpress.com/2026/02/09/accelerating-mathematics/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:945a3e65091f9dadaa50679dc6779b9150867650ccd3225e08790497b697739a",
-          "title": "Formalizing Fermat workshop",
-          "url": "https://xenaproject.wordpress.com/2026/05/15/formalizing-fermat-workshop/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:8373029ff257e629f999a780d319651106d6600ffbf61c2ed57227be28243f84",
-          "title": "Third SAIR competition: inverse Galois challenge",
-          "url": "https://terrytao.wordpress.com/2026/06/16/third-sair-competition-inverse-galois-challenge/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:5176921da606026314c98d218fb1e54393f7ac038e1ebc26e8cd44e9165d0540",
-          "title": "Two more apps: visualizing the zeta process and the motions of the heavens",
-          "url": "https://terrytao.wordpress.com/2026/07/16/two-more-apps-visualizing-the-zeta-process-and-the-motions-of-the-heavens/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:fe05c6e741aa6e1972df7403a6593db0fe6c549ec8b24138438ea4aff09522d1",
-          "title": "Import AI 455: AI systems are about to start building themselves.",
-          "url": "https://importai.substack.com/p/import-ai-455-automating-ai-research",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:02ff8d9b23b15b2ce514c8a939360149d4822a1d54dc8df9a61142c6ca6df432",
-          "title": "Import AI 464: Fable writes GPU kernels; AI automation; and analog computation",
-          "url": "https://importai.substack.com/p/import-ai-464-fables-writes-gpu-kernels",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:a872e8b9e825b6c4166c6835c957c36c1414f1198d818fe2917484122a43e9bb",
-          "title": "Claude Science is Anthropic’s newest flagship product",
-          "url": "https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:8c8513d0103eee77458ededdaebb381dde1aca88937089aa008e7a3023f4b20b",
-          "title": "LLMs are stuck in a groupthink groove. This startup is trying to get them out.",
-          "url": "https://www.technologyreview.com/2026/07/01/1140003/llms-are-stuck-in-a-groupthink-rut-this-startup-is-trying-to-get-them-out/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:97832390d76307960842c3fe9d3b9e9d6eb4d48086b6cd745324c4055b85b9fe",
-          "title": "Achieving operational excellence with AI",
-          "url": "https://www.technologyreview.com/2026/07/02/1140045/achieving-operational-excellence-with-ai/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:ade84b344708d0bdc11078a0f896a4b135d27bbd2a6033475de596cf65f811ee",
-          "title": "The foundational elements of AI architecture that IT leaders need to scale",
-          "url": "https://www.technologyreview.com/2026/07/07/1139413/the-foundational-elements-of-ai-architecture-that-it-leaders-need-to-scale/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:8e61c89f1803069cf5128dc95c241c53ca0c7c9755886c5da5165ea931db2c6d",
-          "title": "What Anthropic’s latest AI discovery does—and doesn’t—show",
-          "url": "https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:5516c2cdd666e8f96e3c9713b6c1c46120af223f7077ef38b7b4fb9563a11a42",
-          "title": "The risk of weather data sabotage is rising",
-          "url": "https://www.technologyreview.com/2026/07/17/1140622/weather-data-sabotage/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:375a8e0017d08d8669580afb41aa06156520a8b67af0016a036dac7743ad342c",
-          "title": "Testing AI Software Isn’t Like Testing Plain Old Software",
-          "url": "https://blog.sigplan.org/2025/03/20/testing-ai-software-isnt-like-testing-plain-old-software/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:8e9cadaacd51818ae80dbf503326b2b10edd6f305f4b65b9f12a64364e3de8f4",
-          "title": "The Academic Pipeline Stall: Why Industry Must Stand for Academia",
-          "url": "https://blog.sigplan.org/2025/05/19/the-academic-pipeline-stall-why-industry-must-stand-for-academia/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:53b3c264c05edcaeb104ba180b16e4c4c434d5b33d4d784ead00c9300ed1c743",
-          "title": "Automated Reasoning and Amazon s2n",
-          "url": "https://aws.amazon.com/blogs/security/automated-reasoning-and-amazon-s2n/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:65758831edc9c7a0af233e9912f1b74e7b1df571d7fae9a8b3554eec1ea31295",
-          "title": "How AWS uses automated reasoning to help you achieve security at scale",
-          "url": "https://aws.amazon.com/blogs/security/protect-sensitive-data-in-the-cloud-with-automated-reasoning-zelkova/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:39bf2c0dbb41ac474caea727727b25bb178743be2d73962cc7d97af68b435b32",
-          "title": "Provable security podcast: automated reasoning’s past, present, and future with Moshe Vardi",
-          "url": "https://aws.amazon.com/blogs/security/provable-security-podcast-automated-reasonings-past-present-and-future-with-moshe-vardi/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:c3f87b6a79d2d237b1090ec1274f3925776f095a9bc2c30da920f293a6f00864",
-          "title": "AWS Security Profile: Rustan Leino, Senior Principal Applied Scientist",
-          "url": "https://aws.amazon.com/blogs/security/aws-security-profile-rustan-leino-senior-principal-applied-scientist/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:2b90fbf0056204fac4797d7aec714be07b6f059f9eef5ef4af4c9d4f59cad1dd",
-          "title": "AWS Security Profile: Byron Cook, Director of the AWS Automated Reasoning Group",
-          "url": "https://aws.amazon.com/blogs/security/aws-security-profile-byron-cook-director-aws-automated-reasoning-group/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:67302868f39346bfd1b68da5d4116083e376ba4b2f4c55ef5ed7e93d9336895e",
-          "title": "Towards Reasoning in Virtual Cells",
-          "url": "https://valencelabs.substack.com/p/towards-reasoning-in-virtual-cells",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:827d58250b747ebb684edca89d426638d32e0b7b15a45f128b19c7b10e9f145e",
-          "title": "Grounding Perturbation Prediction in Biological Knowledge",
-          "url": "https://valencelabs.substack.com/p/grounding-perturbation-prediction",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:102daf62f019fa9328f322449b2650c31c01777e7bf175b38aebbe4426ab74e3",
-          "title": "From Crystals to Drugs: What Drug Discovery Can Learn From Materials Science as Revealed at ICLR’s AI4Mat 2026",
-          "url": "https://valencelabs.substack.com/p/from-crystals-to-drugs-what-drug",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:ae6308d4291d66ed8ff0d51a13c86f3c80a7306a74463b9b370da5f00f1de846",
-          "title": "Truly All-Atom Boltzmann sampling with AquaGen",
-          "url": "https://valencelabs.substack.com/p/truly-all-atom-boltzmann-sampling",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:8d93573a193bd4ee6131256b4ca1fc24bc0416a51811b278b3d38a746d273bce",
-          "title": "Sakana Fugu: One Model to Command Them All",
-          "url": "/fugu-release/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:7f9db41c4866aecc8cf1f94a921f7068f58af5e804b4ed164f202116273f9c4d",
-          "title": "The AI Picbreeder Experiment: Can AI agents be creative when nobody tells them what to create?",
-          "url": "/picbreeder-ai/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:bf6c7185c31f1d62278145774bb43d7ba69ca19b01e2778f0429fc1ce634fcb9",
-          "title": "Bringing AI to the next generation of fusion energy",
-          "url": "https://deepmind.google/blog/bringing-ai-to-the-next-generation-of-fusion-energy/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:76bda50743199c8c872c92d57d2046e39b7271aa25f2beb3a16e1f681323616c",
-          "title": "Show HN: zkGolf – Competitive optimization of formally verified circuits",
-          "url": "https://zk.golf/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:466891fefc4199e1101fccba77f9d580a72460be5a757105364767d900e06ad7",
-          "title": "Show HN: Requirements Engineering with Formal Verification",
-          "url": "https://fizzbee.ai/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
         }
       ],
       "related": [
@@ -2287,452 +3518,6 @@
       ]
     },
     {
-      "id": "research:ai-life-sciences",
-      "slug": "ai-life-sciences",
-      "kind": "research",
-      "displayName": "AI in Life Sciences & Medicine",
-      "aliases": [],
-      "links": {},
-      "tracked": true,
-      "salience": {
-        "items30d": 27,
-        "itemsTotal": 44,
-        "trend": "rising"
-      },
-      "items": [
-        {
-          "id": "sha256:ccda5754897d32214eaf2027bad6414bd7205bee0daf153bf61b68b1cdaddd57",
-          "title": "biopharminternational.com",
-          "url": "https://www.biopharminternational.com/view/biohub-open-source-ai-model-targets-protein-design-for-drug-discovery",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:83182d89a97df3db6bb6fe8d7288fff6df93cf0dc3831bd2e2f2f2c87b3920c8",
-          "title": "YuelDesign: AI Diffusion Models for Protein Flexibility",
-          "url": "https://intuitionlabs.ai/articles/yueldesign-ai-drug-design-protein-flexibility",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:ad44c36476a0fa9ee419ede87ddd00cba2b0dbb3bea2065642aa82e4ee430acd",
-          "title": "AlphaFold and the Protein Structure Prediction Revolution: What It Can and Can't Do for Your Research",
-          "url": "https://www.technologynetworks.com/informatics/articles/alphafold-and-the-protein-structure-prediction-revolution-what-it-can-and-cant-do-for-your-research-414654",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:61a78487c9676dd834c4368e0b271568f83ccac41694bafa2422a693444cb8c9",
-          "title": "AI in Drug Discovery: Target ID to Clinical Translation",
-          "url": "https://www.drugdiscoverynews.com/ai-in-drug-discovery-from-target-identification-to-clinical-translation-17335",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:b81ce108049c5e249e5e07a74e8e3b24b08b009b22175e6fa5eeb2ae0035f3b1",
-          "title": "Frontiers | Spectral Analysis and AI/ML-based Data-Driven Approaches for Enhanced Protein Conformation Selection and Prediction in Drug Discovery",
-          "url": "https://www.frontiersin.org/journals/drug-discovery/articles/10.3389/fddsv.2026.1805731/abstract",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:09a46ced3d83cb66b472ceddd0a9c68b08dbd0b93e66f8456f8bcaa0cd756c05",
-          "title": "Even more good news for the future of neurosymbolic AI",
-          "url": "https://garymarcus.substack.com/p/even-more-good-news-for-the-future",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:484caa6cc6ddfafdd3648371764597853de8dbde8712bd34d2e6aa435c0ee5ea",
-          "title": "Sharing different heartbeats",
-          "url": "https://www.argmin.net/p/sharing-different-heartbeats",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:e5b3763abbc71fde0ec65b764bffecd299bf1702328772cc734d4f9690679d24",
-          "title": "Mesmerized by My Own Beat",
-          "url": "https://www.argmin.net/p/mesmerized-by-my-own-beat",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:74dae115f1587cdc666b4243389dca283b2ccf8264f6dbe3e3e43b54c8b31670",
-          "title": "We're Computerizing and Don't Need You",
-          "url": "https://www.argmin.net/p/were-computerizing-and-dont-need",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:27b6b6a6e62302b7361c60883df1a25120da38a0fc72681315ce75704e608311",
-          "title": "I Want A New Drug",
-          "url": "https://www.argmin.net/p/i-want-a-new-drug",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:330b8f76de6ca81ff02ec2d3da610063ea914ec595365f30152420d719706785",
-          "title": "CJ2K battles ALS",
-          "url": "https://www.argmin.net/p/cj2k-battles-als",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:76892fac3e38e373dfb267609b57c2312511a992a64a75a38821c92bfbfbda9f",
-          "title": "Science or bro-science?",
-          "url": "https://www.argmin.net/p/science-or-bro-science",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:c8760418daa15b6a7bae74a5bbb965a1a6d00a96a6f83f2d70b7753fcc6964b3",
-          "title": "On the proposed rule changes to the administration of federal grants",
-          "url": "https://terrytao.wordpress.com/2026/06/09/on-the-proposed-rule-changes-to-the-administration-of-federal-grants/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:9dd88f73140ab7533a94fef3807796bfe10211670d09482e18a2c87c19c09f5f",
-          "title": "Import AI 459: AI oversight is difficult; scaling laws for protein folding models; and pricing the extinction risk of AI systems",
-          "url": "https://importai.substack.com/p/import-ai-459-ai-oversight-is-difficult",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:a872e8b9e825b6c4166c6835c957c36c1414f1198d818fe2917484122a43e9bb",
-          "title": "Claude Science is Anthropic’s newest flagship product",
-          "url": "https://www.technologyreview.com/2026/06/30/1139987/claude-science-is-anthropics-newest-flagship-product/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:1f93687987573cd6aa08bb242a6181711045e32d855625b77875d94bb17b1749",
-          "title": "Anthropic found a hidden space where Claude puzzles over concepts",
-          "url": "https://www.technologyreview.com/2026/07/09/1140293/anthropic-found-a-hidden-space-where-claude-puzzles-over-concepts/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:8e61c89f1803069cf5128dc95c241c53ca0c7c9755886c5da5165ea931db2c6d",
-          "title": "What Anthropic’s latest AI discovery does—and doesn’t—show",
-          "url": "https://www.technologyreview.com/2026/07/13/1140343/what-anthropics-latest-ai-discovery-does-and-doesnt-show/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:4f862fc46699f25a1bbe0de4306d4e8cae5ee527f2bc0010497b230268e4ae53",
-          "title": "Empowering clinical trial design with agentic intelligence and real-world data",
-          "url": "https://www.nature.com/articles/s41467-026-74501-2",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:b43e5abbf91deae89f1e7685a9d174e7c77501cb07aa15900d6e3fe3a1165973",
-          "title": "Which ‘AI scientist’ suits your lab? A guide for the perplexed",
-          "url": "https://www.nature.com/articles/d41586-026-02091-6",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:61223c863b8fbed5f9b0539b6a2b8f9272e53cc160a06af4cdf156b4bc36ed34",
-          "title": "An enzyme-specific protein language model for catalytic property prediction",
-          "url": "https://www.nature.com/articles/s41467-026-75283-3",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:2f30ae1bad63490d79d5788291e1f954739c28036fc3d52414d13a3fcf9581e1",
-          "title": "The Virtual Cell Comeback",
-          "url": "https://valencelabs.substack.com/p/the-virtual-cell-comeback",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:dd861cfe27ae4388a44093c354e28303face4f9739354ee9ba37094b0c9b20f8",
-          "title": "Virtual Cells for Microscopy Assays",
-          "url": "https://valencelabs.substack.com/p/virtual-cells-for-microscopy-assays",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:e82c2a78812f067674a806bf9f36eb9750c2e8758192cb3a06db3974815cb057",
-          "title": "Building the Virtual Protein",
-          "url": "https://valencelabs.substack.com/p/building-the-virtual-protein",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:67302868f39346bfd1b68da5d4116083e376ba4b2f4c55ef5ed7e93d9336895e",
-          "title": "Towards Reasoning in Virtual Cells",
-          "url": "https://valencelabs.substack.com/p/towards-reasoning-in-virtual-cells",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:95f3bf04f48c4858495b373e09e724c05ed2d70e93f8e6d75c60145edaa86eff",
-          "title": "Virtual Cell @ ICLR: A Sea of Silos",
-          "url": "https://valencelabs.substack.com/p/virtual-cell-iclr-a-sea-of-silos",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:827d58250b747ebb684edca89d426638d32e0b7b15a45f128b19c7b10e9f145e",
-          "title": "Grounding Perturbation Prediction in Biological Knowledge",
-          "url": "https://valencelabs.substack.com/p/grounding-perturbation-prediction",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:102daf62f019fa9328f322449b2650c31c01777e7bf175b38aebbe4426ab74e3",
-          "title": "From Crystals to Drugs: What Drug Discovery Can Learn From Materials Science as Revealed at ICLR’s AI4Mat 2026",
-          "url": "https://valencelabs.substack.com/p/from-crystals-to-drugs-what-drug",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:113446c951ab891e8ba0801898e143da77751864b7e28fd7163aab4132c1c162",
-          "title": "Deep Learning for Microscopy: What Are We Really Learning?",
-          "url": "https://valencelabs.substack.com/p/deep-learning-for-microscopy-what",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:37247c82b27d62c8bbd986afb084118ee96edf8aa262ef9e93b1b1377f501f75",
-          "title": "How AI Experts Can Drive Better Collaboration in Drug Discovery",
-          "url": "https://valencelabs.substack.com/p/how-ai-experts-can-drive-better-collaboration",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:7856ba4ad5b277203a7932b96607ef59e6c3ce30f8c53b35dd71544b038d93e2",
-          "title": "f-Trajectory Balance: a loss family that enables exploration in molecule generation, LLMs and generative models",
-          "url": "https://valencelabs.substack.com/p/f-trajectory-balance-a-loss-family",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:ae6308d4291d66ed8ff0d51a13c86f3c80a7306a74463b9b370da5f00f1de846",
-          "title": "Truly All-Atom Boltzmann sampling with AquaGen",
-          "url": "https://valencelabs.substack.com/p/truly-all-atom-boltzmann-sampling",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:e237389f23f63a4fb8f0715a1250c6d451bd34ec2158949a74818a3cdfa66e72",
-          "title": "Revealing a key protein behind heart disease",
-          "url": "https://deepmind.google/blog/revealing-a-key-protein-behind-heart-disease/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:0aa91d007725e05487796700fdd82d41a3b78fe8cee78b42f5eb8f2f08e1ff0b",
-          "title": "Pan-cancer NET-associated immunothrombosis coupling identifies a neutrophil-linked but neutrophil-irreducible tumor ecology",
-          "url": "https://doi.org/10.64898/2026.07.14.738403",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:997c0c20faf9842cf462d14c059509223668a61a9e440e0187461977fdaa4744",
-          "title": "Quantitative Susceptibility Mapping for Differentiating Hydroxyapatite and Calcium Oxalate Breast Calcifications at 3T: A Phantom Study",
-          "url": "https://doi.org/10.64898/2026.07.15.738683",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:cfad531cae82416126f184589eeec35f80650224d237d6843fd5d70ac26e40c1",
-          "title": "GW182 silencing domain engages the tristetraprolin-binding pocket of CNOT1 to recruit CNOT1 into multiprotein condensates",
-          "url": "https://doi.org/10.64898/2026.07.16.738963",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:3c57a80989f883f02266fa39a8a27ab0a3bcae07126ef6c6c753077b8f53b687",
-          "title": "A Glycan-Aware Diffusion Model for Carbohydrate and Glycoprotein Structure Prediction",
-          "url": "https://doi.org/10.64898/2026.07.16.738959",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:73e0b19c3f9319aa53377aff82dedbf8cc2d39ff558ad0dbb363f47bf1929294",
-          "title": "Transcriptomic signature of Human Cardiac Fibroblast in Hypertrophic Obstructive Cardiomyopathy",
-          "url": "https://doi.org/10.64898/2026.07.12.738095",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:84164418f5729adfdfbaa0be46a7dd15b8423752efb471bac6f94c7758807c7c",
-          "title": "Aphid stylin cuticular proteins contribute to turnip mosaic virus (Potyvirus) transmission",
-          "url": "https://doi.org/10.64898/2026.03.13.711641",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:51c87eb2afa677aa65a5fa00b50c05421da021326831c838fd409257bcf629dd",
-          "title": "How the terminal glucoside of the N-glycan donor affects the catalytic efficiency of the eukaryotic oligosaccharyltransferase",
-          "url": "https://doi.org/10.64898/2026.07.16.738906",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:a8b77d8c2b93690c129f7fd1e2ce04c4af148597225b7d02f88d29377f737db4",
-          "title": "Conditional Deletion of All Neurexins Defines Diversity of Essential Synaptic Organizer Functions for Neurexins",
-          "url": "https://doi.org/10.64898/2026.07.15.738748",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:2422c25a9bf86daf637627dc4c0089e8351cc540378fa5ae83827d82462b63d8",
-          "title": "A Membrane-Disruptive Action of VBIT-4 Challenges Its Role as a Widely Used VDAC Oligomerization Inhibitor",
-          "url": "https://doi.org/10.1101/2025.06.30.661942",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:9f0e8553e73a8e9611ec4359a4bfa19394ffe3fc2e6cca8666978a54881a790a",
-          "title": "Optimizing a Culture-Enriched Hybrid Metagenomics Pipeline to Assess the AMR Footprint of Livestock Manure in Anaerobic Digestate",
-          "url": "https://doi.org/10.64898/2026.04.24.720626",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:5fe8d086ee360c2c36e5b3520b3927953f84b97636025ff9ed580d31afcbc5ce",
-          "title": "MedFailBench: A Clinician-Built Open-Source Benchmark for Medical AI Safety Boundary Inspection",
-          "url": "http://arxiv.org/abs/2607.15166v1",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:c58e4387875cce2a3fde96d027e836b1f3c4123a138a90c5449b5e945b61d3d0",
-          "title": "Self-Evolving Human-Centered Framework for Explainable Depression Symptom Annotation",
-          "url": "http://arxiv.org/abs/2607.15202v1",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        }
-      ],
-      "related": [
-        {
-          "id": "person:name:hoang-loc-cao",
-          "kind": "person",
-          "displayName": "Hoang-Loc Cao"
-        },
-        {
-          "id": "person:name:van-pham",
-          "kind": "person",
-          "displayName": "Van Pham"
-        },
-        {
-          "id": "person:name:truong-thanh-hung-nguyen",
-          "kind": "person",
-          "displayName": "Truong Thanh Hung Nguyen"
-        },
-        {
-          "id": "person:name:phuc-truong-loc-nguyen",
-          "kind": "person",
-          "displayName": "Phuc Truong Loc Nguyen"
-        },
-        {
-          "id": "person:name:phuc-ho",
-          "kind": "person",
-          "displayName": "Phuc Ho"
-        },
-        {
-          "id": "person:name:veronica-whitford",
-          "kind": "person",
-          "displayName": "Veronica Whitford"
-        },
-        {
-          "id": "person:name:hung-cao",
-          "kind": "person",
-          "displayName": "Hung Cao"
-        },
-        {
-          "id": "source:arxiv.org",
-          "kind": "source",
-          "displayName": "arxiv.org"
-        },
-        {
-          "id": "person:name:goktug-ozkan",
-          "kind": "person",
-          "displayName": "Goktug Ozkan"
-        },
-        {
-          "id": "person:name:rahman-n",
-          "kind": "person",
-          "displayName": "Rahman, N."
-        },
-        {
-          "id": "person:name:rahman-a-s-m-z",
-          "kind": "person",
-          "displayName": "Rahman, A. S. M. Z."
-        },
-        {
-          "id": "person:name:levin-d-b",
-          "kind": "person",
-          "displayName": "Levin, D. B."
-        },
-        {
-          "id": "person:name:mcallister-t",
-          "kind": "person",
-          "displayName": "McAllister, T."
-        },
-        {
-          "id": "person:name:cicek-n",
-          "kind": "person",
-          "displayName": "Cicek, N."
-        },
-        {
-          "id": "person:name:derakhshani-h",
-          "kind": "person",
-          "displayName": "Derakhshani, H."
-        },
-        {
-          "id": "source:doi.org",
-          "kind": "source",
-          "displayName": "doi.org"
-        },
-        {
-          "id": "person:name:ravishankar-v",
-          "kind": "person",
-          "displayName": "Ravishankar, V."
-        },
-        {
-          "id": "person:name:borges-araujo-l",
-          "kind": "person",
-          "displayName": "Borges-Araujo, L."
-        },
-        {
-          "id": "person:name:rajendran-m",
-          "kind": "person",
-          "displayName": "Rajendran, M."
-        },
-        {
-          "id": "person:name:lafargue-e",
-          "kind": "person",
-          "displayName": "Lafargue, E."
-        },
-        {
-          "id": "person:name:byrne-d",
-          "kind": "person",
-          "displayName": "Byrne, D."
-        },
-        {
-          "id": "person:name:buzhinsky-n",
-          "kind": "person",
-          "displayName": "Buzhinsky, N."
-        },
-        {
-          "id": "person:name:wolfe-m",
-          "kind": "person",
-          "displayName": "Wolfe, M."
-        },
-        {
-          "id": "person:name:fitzgerald-w",
-          "kind": "person",
-          "displayName": "Fitzgerald, W."
-        }
-      ]
-    },
-    {
       "id": "research:neurosymbolic",
       "slug": "neurosymbolic",
       "kind": "research",
@@ -2741,11 +3526,144 @@
       "links": {},
       "tracked": true,
       "salience": {
-        "items30d": 10,
-        "itemsTotal": 16,
+        "items30d": 26,
+        "itemsTotal": 35,
         "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:0f263b408a5f85fb4f4051ebbf4d2fede0006fe5a689c029b94931ba079f0a1d",
+          "title": "From Dependency to Compositionality: A Neurosymbolic Lifting of LLM Outputs via Combinatory Categorial Grammar",
+          "url": "https://arxiv.org/abs/2607.18961",
+          "firstSeen": "2026-07-27T05:00:37.395Z",
+          "sourceKind": "paper"
+        },
+        {
+          "id": "sha256:d957aa8330f36842425e11b90be882000ddd2be11bd2dd3aebcee793e905ee38",
+          "title": "Learning Structural Convergence: A Neuro-Symbolic Benchmark for Temporal Reasoning",
+          "url": "http://arxiv.org/abs/2607.22365v1",
+          "firstSeen": "2026-07-27T05:00:37.395Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:489a2cbe597cc31deb101a9de3bb3e0822812e53c9ee264300b4e57ec3ce1ff2",
+          "title": "Neuro-Symbolic AI Global Market Report 2026",
+          "url": "https://www.researchandmarkets.com/reports/6226593/neuro-symbolic-ai-global-market-report",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:6d0f0fd19776e6922aa9dea15dc665dff7a78bd3fd0efb95234bdd09acffc487",
+          "title": "2026 predictions: Neuro-Symbolic AI, robotics and the future of computing",
+          "url": "https://www.youtube.com/watch?v=8lkdGDoyuTY",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:51f6f644b656b4add6ca4e17d47dfdecfb2458e538bbfc2f32fec509b37bd308",
+          "title": "NAI journal issues",
+          "url": "https://neurosymbolic-ai-journal.com/content/nai-journal-issues",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:20a4d28a80f01608afb6fff1deab805720ee9640f5dbd324ee8baf124aacdba0",
+          "title": "researchgate.net",
+          "url": "https://www.researchgate.net/publication/385603994_Symbolic_Reasoning_and_Deep_Learning_Creating_Hybrid_AI_Models_for_Adaptive_Autonomous_Decision-Making_Systems",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:4dfde21aca6c04618dbb6b7be781dca382c98ea572c6f3e195f0c364c5ce27dc",
+          "title": "arxiv.org",
+          "url": "https://arxiv.org/html/2511.17644v1",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:85eaa7207081c25dbb04105e74529d5220bdc1b135a75ef1c23cf2f7bf5db7d5",
+          "title": "Programming Knowledge Graphs (PKG)",
+          "url": "https://www.emergentmind.com/topics/programming-knowledge-graph-pkg",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:a34f7e7507af54ad0013d2c5a51d38c20b02dadb0f68c5fe46622bb51c006614",
+          "title": "Using LLMs with Knowledge Graphs to Enhance Code Generation « DBIS",
+          "url": "https://dbis.rwth-aachen.de/dbis/index.php/2026/using-llms-with-knowledge-graphs-to-enhance-code-generation/",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:db80fd183e31134a845b39ea7a5725f625e6e67770ed6f3c73a2871f4332755e",
+          "title": "Verifying your browser",
+          "url": "https://openreview.net/pdf/0c49f5e8b9d9da26dc4edc662ac732e667a55c34.pdf",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:64670387f63399706a33936cb58f89dbb8bf08c9ee06ccac8bf14470ea3ea55f",
+          "title": "dice-research.org",
+          "url": "https://papers.dice-research.org/2026/WWW_SimplexKG/public.pdf",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:b851c2076be557a2e29f1c1d8efb25a68a3bb0d3c15fd423d68ec18cc987cb83",
+          "title": "arxiv.org",
+          "url": "https://arxiv.org/abs/2604.19137",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:ef2c5347983e83e705d86a41fa87b542c5883f554594bf415623133d707e25d2",
+          "title": "ucla.edu",
+          "url": "https://starai.cs.ucla.edu/slides/Wallenberg26.pdf",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:b45bbae29b24c0beed8e7eb8cdab224443d10dcbaaa7db591eda2eae3822bb0f",
+          "title": "A survey of neurosymbolic artificial intelligence: foundations, advances, and future trajectories",
+          "url": "https://neurosymbolic-ai-journal.com/paper/survey-neurosymbolic-artificial-intelligence-foundations-advances-and-future-trajectories",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:452e0d10b4d9d4179a118b309a2cac280cad120f9430f1f90d5c4cc54e5608ce",
+          "title": "arxiv.org",
+          "url": "https://arxiv.org/abs/2603.03177",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:7397e2bf86a29e4286248ad9cb0018b159b521dddfb764e8c6ee5fe4f7939d5d",
+          "title": "GitHub - jindongli-Ai/LLM-Symbolic-Reasoning-Survey: The official GitHub page for the survey paper \"A Survey on LLM Symbolic Reasoning\". And this paper is under review.",
+          "url": "https://github.com/jindongli-Ai/LLM-Symbolic-Reasoning-Survey",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:b6701c0eb9a0af7300b24d953723c68faf7d9399419d93b0e9070d423367220f",
+          "title": "Launch HN: Bloomy (YC S26) – AI-powered mastery learning for K-12",
+          "url": "https://news.ycombinator.com/item?id=48981136",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:82cd871f8b694190b1e2ecaf55359e759b4f4eafd5939b2b35403ca753cf22f9",
+          "title": "Euclid-MCP: A Model Context Protocol Server for Deterministic Logical Reasoning via Prolog",
+          "url": "http://arxiv.org/abs/2607.21412v1",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:e25d0ece2a432991e9897c12c9830cbdaf7190a651992720c70150769f3d755b",
+          "title": "Agent-Guided Relational Concept Discovery: Toward Interpretable Surgical Margin Assessment",
+          "url": "http://arxiv.org/abs/2607.21437v1",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
         {
           "id": "sha256:59682dad016fe7cd2b0cfd3bcb32f137dde377a23fed60704f2baf477ff47aa3",
           "title": "AI-Driven Formal Theorem Proving in the Lean Ecosystem",
@@ -2969,6 +3887,16 @@
           "id": "source:leandojo.org",
           "kind": "source",
           "displayName": "leandojo.org"
+        },
+        {
+          "id": "person:name:nooshin-maghsoodi",
+          "kind": "person",
+          "displayName": "Nooshin Maghsoodi"
+        },
+        {
+          "id": "person:name:amoon-jamzad",
+          "kind": "person",
+          "displayName": "Amoon Jamzad"
         }
       ]
     },
@@ -2981,11 +3909,74 @@
       "links": {},
       "tracked": true,
       "salience": {
-        "items30d": 4,
-        "itemsTotal": 6,
+        "items30d": 11,
+        "itemsTotal": 15,
         "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:48ae0d4208c1fb309944507196eb1b1f285d6baac27a7a54d43a7d8c12569eb6",
+          "title": "Vibe Coding: An Experiment with Test-Driven Development",
+          "url": "http://arxiv.org/abs/2607.22406v1",
+          "firstSeen": "2026-07-27T05:00:37.395Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:d49488eccb98a20e5072896deca3f79ed3b2ef5f54c71c0cdd77afcf3d7ce879",
+          "title": "CausalForge: A Formally Grounded, Self-Improving Agentic Framework for Automated Research in Causal Inference",
+          "url": "http://arxiv.org/abs/2607.22511v1",
+          "firstSeen": "2026-07-27T05:00:37.395Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:06a29c862c8413aea10feeabb0151c734734fff33ab69b1e0ece673c70a91b3a",
+          "title": "Self-Driving Laboratories",
+          "url": "https://lifesciencesaihandbook.com/automation/self-driving-labs.html",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:96ac16f2db9e81e6b7ad87ea767b90d496ea509f4d29413a8ef3631d95eb8b35",
+          "title": "Chinese AI agent outperforms Anthropic’s Claude Code in autonomous research",
+          "url": "https://www.scmp.com/news/china/science/article/3361370/chinese-ai-agent-outperforms-anthropics-claude-code-autonomous-research",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:22f313633b77820510f5054cedde0b6a004849e0d3bf76bad93c4044728a5c13",
+          "title": "How to Run an Autoresearch Workflow with RL Agent Skills and NVIDIA NeMo",
+          "url": "https://developer.nvidia.com/blog/how-to-run-an-autoresearch-workflow-with-rl-agent-skills-and-nvidia-nemo/",
+          "firstSeen": "2026-07-27T04:20:12.556Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:30f92ce069833e93b405b4d77d6c40aeac066013c1837a5a5f88278b4c6d12ab",
+          "title": "A Fireside Chat with Cat and Thariq from the Claude Code team",
+          "url": "https://simonwillison.net/2026/Jul/21/cat-and-thariq/#atom-entries",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:4643ed7a232a15f85c8ee979dc3e3716ff342f9a5060183e5f8319ace33d7595",
+          "title": "Gemma 4: Byte for byte, the most capable open models",
+          "url": "https://deepmind.google/blog/gemma-4-byte-for-byte-the-most-capable-open-models/",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:dccbefc2b4acbf497b5d9b41bc4c939c2722fb320f876a58c67f35e7732f09b9",
+          "title": "Gemini 3.5: frontier intelligence with action",
+          "url": "https://deepmind.google/blog/gemini-3-5-frontier-intelligence-with-action/",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:302f3889cdb050c0fa82120a8c0f3457f3664eff3d90cdf1ad6a236ed212dd70",
+          "title": "From Resource Flow to Executable Tests: Petri-Net-Guided LLM Test Generation for Concurrent Stateful Rust APIs",
+          "url": "http://arxiv.org/abs/2607.21530v1",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
         {
           "id": "sha256:d7d52df127d3d65a3e747646ab32afb9d98dd8c384e16aabcd90931398aed4dd",
           "title": "acs.org",
@@ -3074,6 +4065,71 @@
           "id": "source:pubs.acs.org",
           "kind": "source",
           "displayName": "pubs.acs.org"
+        },
+        {
+          "id": "person:name:kaiwen-zhang",
+          "kind": "person",
+          "displayName": "Kaiwen Zhang"
+        },
+        {
+          "id": "person:name:guanjun-liu",
+          "kind": "person",
+          "displayName": "Guanjun Liu"
+        },
+        {
+          "id": "source:arxiv.org",
+          "kind": "source",
+          "displayName": "arxiv.org"
+        },
+        {
+          "id": "source:deepmind.google",
+          "kind": "source",
+          "displayName": "deepmind.google"
+        },
+        {
+          "id": "source:simonwillison.net",
+          "kind": "source",
+          "displayName": "simonwillison.net"
+        },
+        {
+          "id": "source:developer.nvidia.com",
+          "kind": "source",
+          "displayName": "developer.nvidia.com"
+        },
+        {
+          "id": "source:scmp.com",
+          "kind": "source",
+          "displayName": "scmp.com"
+        },
+        {
+          "id": "source:lifesciencesaihandbook.com",
+          "kind": "source",
+          "displayName": "lifesciencesaihandbook.com"
+        },
+        {
+          "id": "person:name:jiyuan-tan",
+          "kind": "person",
+          "displayName": "Jiyuan Tan"
+        },
+        {
+          "id": "person:name:vasilis-syrgkanis",
+          "kind": "person",
+          "displayName": "Vasilis Syrgkanis"
+        },
+        {
+          "id": "research:formal-rigor",
+          "kind": "research",
+          "displayName": "Formal Methods & Verified Science"
+        },
+        {
+          "id": "person:name:moritz-mock",
+          "kind": "person",
+          "displayName": "Moritz Mock"
+        },
+        {
+          "id": "person:name:barbara-russo",
+          "kind": "person",
+          "displayName": "Barbara Russo"
         }
       ]
     }

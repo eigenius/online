@@ -9,6 +9,7 @@ export * from "./sources/arxiv.ts";
 export * from "./sources/rss.ts";
 export * from "./sources/biorxiv.ts";
 export * from "./sources/hacker_news.ts";
+export * from "./sources/links.ts";
 export * from "./sources/semantic_scholar.ts";
 export * from "./sources/registry.ts";
 export * from "./sources/search/provider.ts";

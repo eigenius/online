@@ -60,6 +60,13 @@ export async function harvest(opts: JobOptions = {}): Promise<void> {
   const adapters = buildAdapters(cfg.sources);
   const now = new Date().toISOString();
 
+  // Curated `links` sources are editorially chosen, so they bypass the keyword
+  // gate — otherwise a manually-added URL (no text yet at gate time) would be
+  // dropped as off-topic before its page is ever fetched.
+  const curatedSources = new Set(
+    cfg.sources.filter((s) => s.kind === "links").map((s) => s.id),
+  );
+
   // Canonical-id dedup (§4, stage 3): skip anything already archived, plus
   // repeats within this run. (Fuzzy/embedding dedup is still pipeline/dedup.ts.)
   const known = opts.dryRun ? new Set<string>() : await records.existingIds();
@@ -74,8 +81,12 @@ export async function harvest(opts: JobOptions = {}): Promise<void> {
   const consider = async (candidate: Candidate): Promise<void> => {
     seen++;
     const rec = await normalize(candidate, now);
-    const topics = gate(rec, cfg.topics);
-    if (topics.length === 0) return; // cheap gate drop (§4, stage 4)
+    const curated = curatedSources.has(candidate.source);
+    // Editor-assigned topics win; otherwise the keyword gate assigns them.
+    const topics = candidate.topics && candidate.topics.length > 0
+      ? candidate.topics
+      : gate(rec, cfg.topics);
+    if (topics.length === 0 && !curated) return; // cheap gate drop (§4, stage 4)
     onTopic++;
     if (known.has(rec.id) || seenThisRun.has(rec.id)) return;
     seenThisRun.add(rec.id);

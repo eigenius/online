@@ -18,9 +18,10 @@ const KEEP_RANK: Record<SourceKind, number> = {
 };
 
 /** Default: an item published more than this many days ago isn't "new" for the
- *  issue, even if we only just discovered it. Generous enough for slightly-lagged
- *  discovery; a stale RSS post or a resurfaced old paper is dropped. */
-export const DEFAULT_MAX_AGE_DAYS = 90;
+ *  issue, even if we only just discovered it. A weekly digest wants genuinely
+ *  timely material; 30 days allows for slightly-lagged discovery while dropping
+ *  stale RSS posts and resurfaced old papers. */
+export const DEFAULT_MAX_AGE_DAYS = 30;
 
 export interface Candidates {
   /** New records with near-duplicates collapsed (keep-preference order). */

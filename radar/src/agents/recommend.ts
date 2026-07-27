@@ -53,7 +53,7 @@ export async function recommend(
 
   const res = await client.messages.create({
     model: MODELS.recommend,
-    max_tokens: 2048,
+    max_tokens: 4096, // room for adaptive thinking AND the JSON list
     thinking: { type: "adaptive" },
     output_config: { effort: "medium", format: { type: "json_schema", schema: SCHEMA } },
     system: [{
@@ -71,7 +71,18 @@ export async function recommend(
   });
 
   const text = res.content.map((b) => (b.type === "text" ? b.text : "")).join("");
-  const parsed = JSON.parse(text) as { recommendations?: TopicRecommendation[] };
+  let parsed: { recommendations?: TopicRecommendation[] } = {};
+  try {
+    if (text.trim()) parsed = JSON.parse(text);
+  } catch (err) {
+    // Recommendations are optional flavor — an unparseable response just means
+    // none this issue, not a failed run.
+    console.error(
+      `recommend: unparseable output (${
+        err instanceof Error ? err.message : err
+      }) — no recommendations this issue`,
+    );
+  }
   return (parsed.recommendations ?? []).map((r) => ({
     topic: String(r.topic ?? ""),
     rationale: String(r.rationale ?? ""),

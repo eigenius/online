@@ -44,8 +44,18 @@ const md = renderIssue({
 Deno.test("renders a progressive-disclosure card per item", () => {
   const cards = md.match(/<details class="nl-item">/g) ?? [];
   assert(cards.length === 2, `expected 2 cards, got ${cards.length}`);
-  assertStringIncludes(md, `<summary><span class="nl-item-title">`);
-  assertStringIncludes(md, `<a href="https://www.arxiv.org/abs/1">Read the source →</a>`);
+  assertStringIncludes(md, `<summary><a class="nl-item-title"`);
+  assertStringIncludes(
+    md,
+    `<a href="https://www.arxiv.org/abs/1" target="_blank" rel="noopener">Read the source →</a>`,
+  );
+});
+
+Deno.test("the collapsed title links to the source (visible reference)", () => {
+  assertStringIncludes(
+    md,
+    `<a class="nl-item-title" href="https://www.arxiv.org/abs/1" target="_blank" rel="noopener">`,
+  );
 });
 
 Deno.test("escapes HTML in titles and shows the summary in the body", () => {

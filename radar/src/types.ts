@@ -27,6 +27,8 @@ export interface Candidate {
   abstract?: string;
   /** The adapter's best guess at a canonical id. */
   canonicalHint?: Canonical;
+  /** Editor-assigned topics (curated sources only) — bypass the keyword gate. */
+  topics?: TopicKey[];
 }
 
 /** One place a work was seen — the dedup rollup, also a significance signal (§4, stage 3). */

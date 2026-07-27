@@ -114,6 +114,21 @@ const { prev, next } = await getIssueContext(issue);
     color: var(--sl-color-gray-3);
     font-size: 0.97rem;
   }
+  /* "From Eigenius" editorial callout — the site's own voice inside a neutral
+     digest, so it's visually set apart with the brand accent. */
+  .post-prose .nl-callout {
+    margin: 1.5rem 0;
+    padding: 1rem 1.2rem;
+    border-left: 3px solid var(--eigenius-brand);
+    border-radius: 0 10px 10px 0;
+    background: color-mix(in srgb, var(--eigenius-brand) 9%, transparent);
+  }
+  .post-prose .nl-callout p {
+    margin: 0;
+  }
+  .post-prose .nl-callout strong {
+    color: var(--sl-color-text-accent);
+  }
   .post-prose details.nl-item {
     border: 1px solid var(--sl-color-hairline);
     border-radius: 10px;
@@ -144,14 +159,16 @@ const { prev, next } = await getIssueContext(issue);
   .post-prose details.nl-item[open] > summary {
     border-bottom: 1px solid var(--sl-color-hairline);
   }
-  .post-prose .nl-item-title {
+  .post-prose a.nl-item-title {
     display: block;
     font-weight: 600;
     color: var(--sl-color-text);
     line-height: 1.35;
+    text-decoration: none;
   }
-  .post-prose details.nl-item > summary:hover .nl-item-title {
+  .post-prose a.nl-item-title:hover {
     color: var(--sl-color-text-accent);
+    text-decoration: underline;
   }
   .post-prose .nl-item-meta {
     display: block;

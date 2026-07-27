@@ -38,7 +38,11 @@ function text(v: unknown): string {
 export async function enrichArxiv(records: ArchiveRecord[]): Promise<number> {
   const targets = new Map<string, ArchiveRecord>();
   for (const rec of records) {
-    if (rec.authors.length > 0 && rec.publishedAt) continue; // already complete
+    // A curated/searched link often arrives with just a URL: no authors/date and
+    // the URL standing in as the title. Enrich if any of those are missing.
+    const needsMeta = rec.authors.length === 0 || !rec.publishedAt;
+    const needsTitle = !rec.title || rec.title === rec.url;
+    if (!needsMeta && !needsTitle) continue; // already complete
     const id = rec.canonical.type === "arxiv" ? rec.canonical.value : arxivId(rec.url);
     if (id) targets.set(id, rec);
   }
@@ -67,6 +71,8 @@ export async function enrichArxiv(records: ArchiveRecord[]): Promise<number> {
         .replace(/v\d+$/, "");
       const rec = targets.get(id);
       if (!rec) continue;
+      const title = text(field(entry, "title")).replace(/\s+/g, " ").trim();
+      if (title && (!rec.title || rec.title === rec.url)) rec.title = title;
       const authors = asArray(field(entry, "author"))
         .map((a) => text(field(a, "name")))
         .filter((n) => n.length > 0);

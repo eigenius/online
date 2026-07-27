@@ -26,6 +26,30 @@ sources:
       - AI for science
       - protein design
 
+  # ---- Curated links (editor-picked URLs; bypass the keyword gate) ----
+  # Add papers/articles you want pulled in by hand. Entries are a bare URL, or
+  # { url, title?, sourceKind?, topics? }. `topics` tags them for /research and
+  # ranking (the gate can't, since there's no text until the page is fetched).
+  - id: curated
+    kind: links
+    sourceKind: paper
+    urls:
+      - {
+          url: "https://www.science.org/doi/10.1126/science.aek5570",
+          title: "AI in scientific publishing: Slower, worse, and more expensive",
+          topics: [formal-rigor],
+          sourceKind: opinion,
+        } # Thorp, Science 2026-07-16 (title set: page 403s bot fetches)
+      - {
+          url: "https://www.science.org/doi/10.1126/science.aej4257",
+          title: "Advancing science by designing for surprise",
+          topics: [formal-rigor],
+        } # Evans, Petroff & King, Science 2026-07-16 (title set: page 403s bot fetches)
+      - {
+          url: "https://arxiv.org/abs/2607.18961",
+          topics: [neurosymbolic],
+        } # Pareschi, Neurosymbolic lifting of LLM outputs via CCG (arXiv 2607.18961)
+
   # ---- Industry (company / lab blogs) ----
   - {
       id: deepmind-blog,
@@ -81,12 +105,9 @@ sources:
       url: "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
       sourceKind: news,
     } # ai-scientist, ai-life-sciences
-  - {
-      id: import-ai,
-      kind: rss,
-      url: "https://importai.substack.com/feed",
-      sourceKind: news,
-    } # ai-scientist, verified-science
+  # Import AI (Jack Clark) removed 2026-07-26: it's a weekly *roundup* newsletter,
+  # so featuring it means re-digesting a digest. A radar should surface the
+  # primary work, not another curator's summary of it.
 
   # ---- Opinion (individual blogs / Substacks) ----
   - {

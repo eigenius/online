@@ -25,8 +25,10 @@ export interface IssuePlan {
 const SYSTEM = "You are the editor of a weekly research newsletter on AI scientists and " +
   "AI engineers, neurosymbolic and hybrid AI, formal methods and verified science, and " +
   "AI in the life sciences. From the candidate items, select the most interesting " +
-  "ones (up to the stated maximum), drop the rest, group the picks into 2-4 " +
-  "sections, and order them most-interesting first. Write a short issue title, " +
+  "ones (up to the stated maximum), drop the rest, and group the picks into 2-4 " +
+  "sections ordered most-interesting first. Favor a coherent through-line for the " +
+  "issue, and prefer source diversity: pick at most one item per outlet or author " +
+  "unless an item is genuinely exceptional. Write a short issue title, " +
   "a one-to-two sentence description, and a 2-3 sentence intro. Reference items " +
   "only by the ids provided; do not invent ids.";
 
@@ -87,10 +89,19 @@ export async function select(
   });
 
   const text = res.content.map((b) => (b.type === "text" ? b.text : "")).join("");
-  const plan = JSON.parse(text) as IssuePlan;
+  let plan: IssuePlan;
+  try {
+    plan = JSON.parse(text) as IssuePlan;
+  } catch {
+    // No graceful fallback here — without a plan there's no issue — but a clear
+    // message beats a raw SyntaxError from deep in the run.
+    throw new Error(
+      `select: the editor model returned no parseable plan (${text.length} chars) — re-run assemble`,
+    );
+  }
 
   // Keep only selections whose id is a real shortlist member, and cap at maxItems.
   const valid = new Set(shortlist.map((r) => r.id));
-  plan.selections = plan.selections.filter((s) => valid.has(s.id)).slice(0, maxItems);
+  plan.selections = (plan.selections ?? []).filter((s) => valid.has(s.id)).slice(0, maxItems);
   return plan;
 }

@@ -19,6 +19,7 @@ const SourceSchema = z.object({
     "crossref",
     "biorxiv",
     "hacker_news",
+    "links",
   ]),
 }).passthrough();
 export type SourceConfig = z.infer<typeof SourceSchema>;

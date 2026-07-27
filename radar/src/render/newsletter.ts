@@ -121,20 +121,25 @@ function metaLine(r: ArchiveRecord): string {
 /**
  * One item as a progressive-disclosure card. Emitted as a single contiguous
  * raw-HTML block (no blank lines inside), so Markdown passes it through intact;
- * the site styles `.nl-item`. Collapsed shows title + author/source/date; the
- * summary and source link are revealed on expand.
+ * the site styles `.nl-item`. Collapsed shows the title (linked to the original)
+ * + author/source/date; the summary is revealed on expand. The title links out
+ * so every item references its source even while collapsed.
  */
 function itemCard(r: ArchiveRecord): string {
   const meta = metaLine(r);
   const summary = r.editorial?.summary ?? "";
+  const href = esc(r.url);
   return [
     `<details class="nl-item">`,
-    `<summary><span class="nl-item-title">${inline(r.title)}</span>` +
+    `<summary>` +
+    `<a class="nl-item-title" href="${href}" target="_blank" rel="noopener">${
+      inline(r.title)
+    }</a>` +
     (meta ? `<span class="nl-item-meta">${inline(meta)}</span>` : "") +
     `</summary>`,
     `<div class="nl-item-body">`,
     ...(summary ? [`<p>${inline(summary)}</p>`] : []),
-    `<p class="nl-item-more"><a href="${esc(r.url)}">Read the source →</a></p>`,
+    `<p class="nl-item-more"><a href="${href}" target="_blank" rel="noopener">Read the source →</a></p>`,
     `</div>`,
     `</details>`,
   ].join("\n");
