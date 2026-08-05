@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-07-27T05:13:29.297Z",
+  "generatedAt": "2026-08-05T08:39:09.076Z",
   "counts": {
-    "people": 7,
+    "people": 9,
     "organizations": 0,
     "sources": 21,
     "research": 4
@@ -19,10 +19,24 @@
       "tracked": true,
       "salience": {
         "items30d": 6,
-        "itemsTotal": 13,
+        "itemsTotal": 15,
         "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:c45cec9ccf60ddb7fe56f72c07ab924caa70f888382189cf1b86fb42539cefab",
+          "title": "Public Intelligence",
+          "url": "https://www.argmin.net/p/public-intelligence",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:207bda79b329972d87d01d3ee2d5ab2aa11047b65846dd0b1b98477edfeb04fa",
+          "title": "Open and Shut",
+          "url": "https://www.argmin.net/p/open-and-shut",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "opinion"
+        },
         {
           "id": "sha256:e15ea7e8718b9351cfb451f640f2a5f78e60a1cbb837a93b6a639ea8186f0fd8",
           "title": "Science-based Shredding",
@@ -144,11 +158,25 @@
       "links": {},
       "tracked": true,
       "salience": {
-        "items30d": 3,
-        "itemsTotal": 3,
+        "items30d": 4,
+        "itemsTotal": 5,
         "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:30193a8ad91b2b7ab8d20beb31b99f411dcfd510a14b28da8a1dba98e46acfa6",
+          "title": "Closing the data loop in AI-driven drug discovery",
+          "url": "https://www.technologyreview.com/2026/07/27/1139667/closing-the-data-loop-in-ai-driven-drug-discovery/",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:5b28474cae1c69dcfcc6632dccfb5265a4ef701a8b4bda7c253648a560cd9da3",
+          "title": "The path to artificial superintelligence",
+          "url": "https://www.technologyreview.com/2026/07/27/1140724/the-path-to-artificial-superintelligence/",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "news"
+        },
         {
           "id": "sha256:9a0e0c9ec5df9f929462b6a2b99ef7a989f2f8de2dee867daafb7e8b2cc95867",
           "title": "How AI helps scientists design the next generation of medicines",
@@ -186,6 +214,314 @@
           "id": "research:ai-life-sciences",
           "kind": "research",
           "displayName": "AI in Life Sciences & Medicine"
+        }
+      ]
+    },
+    {
+      "id": "person:name:li-y",
+      "slug": "li-y",
+      "kind": "person",
+      "displayName": "Li, Y.",
+      "aliases": [
+        "Li, Y."
+      ],
+      "links": {},
+      "tracked": true,
+      "salience": {
+        "items30d": 4,
+        "itemsTotal": 4,
+        "trend": "rising"
+      },
+      "items": [
+        {
+          "id": "sha256:3bb3ff7bc484417c1a5e408151b4477c83b9e9f983ac00d712744f77f7581514",
+          "title": "MGMG: Cell Morphology-Guided Molecule Generation for Drug Discovery",
+          "url": "https://doi.org/10.1101/2025.07.11.664424",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:706fa283627999a81439ed0c41363f880fff5b1989a8acc83900b72b1620b051",
+          "title": "A novel pan class-I glucose transporter inhibitor DRB18 exhibits synergistic effects in vitro and in vivo with paclitaxel against human non-small cell lung cancer",
+          "url": "https://doi.org/10.1101/2024.12.15.628558",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:8a523a6ac3f0b95f7ec003769aeec5d112710313e9d9bb7d588fae2030287b68",
+          "title": "SpatialJEPA: JEPA-inspired graph-context distillation for spatially aware multiomics integration",
+          "url": "https://doi.org/10.64898/2026.07.21.739810",
+          "firstSeen": "2026-07-24T21:29:17.806Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:a8b77d8c2b93690c129f7fd1e2ce04c4af148597225b7d02f88d29377f737db4",
+          "title": "Conditional Deletion of All Neurexins Defines Diversity of Essential Synaptic Organizer Functions for Neurexins",
+          "url": "https://doi.org/10.64898/2026.07.15.738748",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "preprint"
+        }
+      ],
+      "related": [
+        {
+          "id": "person:name:jiang-m",
+          "kind": "person",
+          "displayName": "Jiang, M."
+        },
+        {
+          "id": "person:name:artyukhova-m",
+          "kind": "person",
+          "displayName": "Artyukhova, M."
+        },
+        {
+          "id": "person:name:zhang-l",
+          "kind": "person",
+          "displayName": "Zhang, L."
+        },
+        {
+          "id": "person:name:luo-s",
+          "kind": "person",
+          "displayName": "Luo, S."
+        },
+        {
+          "id": "person:name:zhan-w",
+          "kind": "person",
+          "displayName": "Zhan, W."
+        },
+        {
+          "id": "person:name:zhang-b",
+          "kind": "person",
+          "displayName": "Zhang, B."
+        },
+        {
+          "id": "person:name:gokce-o",
+          "kind": "person",
+          "displayName": "Gokce, O."
+        },
+        {
+          "id": "person:name:sudhof-t-c",
+          "kind": "person",
+          "displayName": "Sudhof, T. C."
+        },
+        {
+          "id": "source:doi.org",
+          "kind": "source",
+          "displayName": "doi.org"
+        },
+        {
+          "id": "research:ai-life-sciences",
+          "kind": "research",
+          "displayName": "AI in Life Sciences & Medicine"
+        },
+        {
+          "id": "person:name:mann-krzisnik-d",
+          "kind": "person",
+          "displayName": "Mann-Krzisnik, D."
+        },
+        {
+          "id": "person:name:shriwas-p",
+          "kind": "person",
+          "displayName": "Shriwas, P."
+        },
+        {
+          "id": "person:name:bachmann-l",
+          "kind": "person",
+          "displayName": "Bachmann, L."
+        },
+        {
+          "id": "person:name:ward-r",
+          "kind": "person",
+          "displayName": "Ward, R."
+        },
+        {
+          "id": "person:name:adhicary-s",
+          "kind": "person",
+          "displayName": "Adhicary, S."
+        },
+        {
+          "id": "person:name:nielsen-c-m",
+          "kind": "person",
+          "displayName": "Nielsen, C. M."
+        },
+        {
+          "id": "person:name:zhang-h",
+          "kind": "person",
+          "displayName": "Zhang, H."
+        },
+        {
+          "id": "person:name:song-j",
+          "kind": "person",
+          "displayName": "Song, J."
+        },
+        {
+          "id": "person:name:roberts-d",
+          "kind": "person",
+          "displayName": "Roberts, D."
+        },
+        {
+          "id": "person:name:bergmeier-s",
+          "kind": "person",
+          "displayName": "Bergmeier, S."
+        },
+        {
+          "id": "person:name:chen-x",
+          "kind": "person",
+          "displayName": "Chen, X."
+        },
+        {
+          "id": "person:name:tang-q",
+          "kind": "person",
+          "displayName": "Tang, Q."
+        },
+        {
+          "id": "person:name:ding-d",
+          "kind": "person",
+          "displayName": "Ding, D."
+        },
+        {
+          "id": "person:name:yuan-x",
+          "kind": "person",
+          "displayName": "Yuan, X."
+        }
+      ]
+    },
+    {
+      "id": "person:name:gary-marcus",
+      "slug": "gary-marcus",
+      "kind": "person",
+      "displayName": "Gary Marcus",
+      "aliases": [
+        "Gary Marcus"
+      ],
+      "links": {},
+      "tracked": true,
+      "salience": {
+        "items30d": 3,
+        "itemsTotal": 5,
+        "trend": "rising"
+      },
+      "items": [
+        {
+          "id": "sha256:07d2a75e387ebd07542c43d7769d34fd7c051600325de16ee8a4dcd4083bccb8",
+          "title": "Circular financing ain’t what it used to be",
+          "url": "https://garymarcus.substack.com/p/circular-financing-aint-what-it-used",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:c4bb92bc958828865874495068be3f975dd65ddd2efa76658527c47d7ddcca77",
+          "title": "The seven most shambolic things that happened in AI today.",
+          "url": "https://garymarcus.substack.com/p/the-seven-most-shambolic-things-that",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:bc33adc33c7d8ef4ce1ac55636f2add40a47bb71e63f29e50bc387c367737046",
+          "title": "OpenAI’s amazing — but vastly oversold — new model Astra",
+          "url": "https://garymarcus.substack.com/p/openais-amazing-but-vastly-oversold",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:93ddd8bd4600e1870ed54259d5d004732a43de1e9aaa7ec8443ad4eedf2fbe67",
+          "title": "Accenture: Then and now, and how it may signify things to come",
+          "url": "https://garymarcus.substack.com/p/accenture-then-and-now-and-how-it",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:f68d8eb95d9a84d8e0fbb82694a74ec2e504a1f9c612119ed277a54f02318eb5",
+          "title": "The month Generative AI lost its mojo",
+          "url": "https://garymarcus.substack.com/p/the-month-generative-ai-lost-its",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        }
+      ],
+      "related": [
+        {
+          "id": "source:garymarcus.substack.com",
+          "kind": "source",
+          "displayName": "garymarcus.substack.com"
+        },
+        {
+          "id": "research:formal-rigor",
+          "kind": "research",
+          "displayName": "Formal Methods & Verified Science"
+        },
+        {
+          "id": "research:neurosymbolic",
+          "kind": "research",
+          "displayName": "Neurosymbolic & Hybrid AI"
+        },
+        {
+          "id": "research:agentic-ai",
+          "kind": "research",
+          "displayName": "AI Scientists & AI Engineers"
+        }
+      ]
+    },
+    {
+      "id": "person:name:sakana-ai",
+      "slug": "sakana-ai",
+      "kind": "person",
+      "displayName": "Sakana AI",
+      "aliases": [
+        "Sakana AI"
+      ],
+      "links": {},
+      "tracked": true,
+      "salience": {
+        "items30d": 3,
+        "itemsTotal": 5,
+        "trend": "rising"
+      },
+      "items": [
+        {
+          "id": "sha256:031d2986a0a44db84b49922c09a7ad849af7b2c5d8bd430998e10d184ecc6ebc",
+          "title": "From Japan, Products the World Will Use: An Interview with Sakana AI’s Head of Product Development",
+          "url": "/product-development-interview/",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:cb64118b5e9d2eddc6985baee91bc1288e9426e3f5c9ea6a3a5a23b0c6636921",
+          "title": "Sakana AI、日本語特化のLLM API「Sakana Namazu」を提供開始",
+          "url": "/namazu-api/",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:ac9ff977398c5d2e0e77f14d324a9e55e3f21752302d95be102e1b498ce60bbe",
+          "title": "Sakana AI、初の商用プロダクト「Sakana Marlin」を提供開始",
+          "url": "/marlin-release/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:8d93573a193bd4ee6131256b4ca1fc24bc0416a51811b278b3d38a746d273bce",
+          "title": "Sakana Fugu: One Model to Command Them All",
+          "url": "/fugu-release/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:7f9db41c4866aecc8cf1f94a921f7068f58af5e804b4ed164f202116273f9c4d",
+          "title": "The AI Picbreeder Experiment: Can AI agents be creative when nobody tells them what to create?",
+          "url": "/picbreeder-ai/",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "industry"
+        }
+      ],
+      "related": [
+        {
+          "id": "research:formal-rigor",
+          "kind": "research",
+          "displayName": "Formal Methods & Verified Science"
+        },
+        {
+          "id": "research:agentic-ai",
+          "kind": "research",
+          "displayName": "AI Scientists & AI Engineers"
         }
       ]
     },
@@ -283,57 +619,6 @@
       ]
     },
     {
-      "id": "person:name:sakana-ai",
-      "slug": "sakana-ai",
-      "kind": "person",
-      "displayName": "Sakana AI",
-      "aliases": [
-        "Sakana AI"
-      ],
-      "links": {},
-      "tracked": true,
-      "salience": {
-        "items30d": 1,
-        "itemsTotal": 3,
-        "trend": "falling"
-      },
-      "items": [
-        {
-          "id": "sha256:ac9ff977398c5d2e0e77f14d324a9e55e3f21752302d95be102e1b498ce60bbe",
-          "title": "Sakana AI、初の商用プロダクト「Sakana Marlin」を提供開始",
-          "url": "/marlin-release/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:8d93573a193bd4ee6131256b4ca1fc24bc0416a51811b278b3d38a746d273bce",
-          "title": "Sakana Fugu: One Model to Command Them All",
-          "url": "/fugu-release/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        },
-        {
-          "id": "sha256:7f9db41c4866aecc8cf1f94a921f7068f58af5e804b4ed164f202116273f9c4d",
-          "title": "The AI Picbreeder Experiment: Can AI agents be creative when nobody tells them what to create?",
-          "url": "/picbreeder-ai/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "industry"
-        }
-      ],
-      "related": [
-        {
-          "id": "research:formal-rigor",
-          "kind": "research",
-          "displayName": "Formal Methods & Verified Science"
-        },
-        {
-          "id": "research:agentic-ai",
-          "kind": "research",
-          "displayName": "AI Scientists & AI Engineers"
-        }
-      ]
-    },
-    {
       "id": "person:name:terence-tao",
       "slug": "terence-tao",
       "kind": "person",
@@ -402,7 +687,7 @@
       "salience": {
         "items30d": 0,
         "itemsTotal": 3,
-        "trend": "falling"
+        "trend": "flat"
       },
       "items": [
         {
@@ -515,11 +800,172 @@
       },
       "tracked": true,
       "salience": {
-        "items30d": 37,
-        "itemsTotal": 37,
+        "items30d": 60,
+        "itemsTotal": 60,
         "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:0da773366d7aecbb29d91b8c476001c360421801feaba90eec4fe67750f20ec8",
+          "title": "Differential Regulation of Branched-Chain Amino Acids During Early Germination of Mungbean (Vigna radiata L.)",
+          "url": "https://doi.org/10.64898/2026.07.31.741962",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:3a3b47adaadcb6823583fb2faf557c7423fbf8f5d719553aa7fc943cec0fe320",
+          "title": "Immobilized dicot and monocot viral vectors enable rapid screening of RNA mobility elements for mobile RNA engineering and RNA-based genome editing",
+          "url": "https://doi.org/10.64898/2026.07.31.741600",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:0861b55e4087d6a989a85ee40a1864d4ee48f8a4357d711f97adcaf73c02d64c",
+          "title": "PG-LLM: Benchmarking General-Purpose Language Models for Protein Variant Ranking",
+          "url": "https://doi.org/10.64898/2026.07.27.741045",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:0208911a260a860718df80233032fcb8b87178e4d8d23b380bf7bdf111a2917e",
+          "title": "Epigenomic regulatory programs reveal the latent heterogeneity of complex diseases",
+          "url": "https://doi.org/10.64898/2026.05.01.722123",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:c59a679253c05ddfb58e2e5a847cca0911482a6b5204d7b4c1bf543852aa27d7",
+          "title": "ZDHHC17 Links S-Acylation, Huntington Disease, VCP-associated Multisystem Proteinopathy, and Amyotrophic Lateral Sclerosis.",
+          "url": "https://doi.org/10.64898/2026.04.05.716148",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:caf0ee6d9df2297fa81b6b9361bfd62014ca7cdd585b632df3f38d97162c8617",
+          "title": "MLL4/KMT2D mutations increase immune activity and predict therapyefficacy in colorectal cancer",
+          "url": "https://doi.org/10.64898/2026.07.31.742076",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:fbb0a342934c865134c3d467669e91cc060ccf7077aa1262b4eee5a95780f5f4",
+          "title": "Extracellular Vesicle Carryover Distorts Nanoparticle Protein Corona Profiles in Human Plasma",
+          "url": "https://doi.org/10.64898/2026.02.19.706828",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:d3487d3dac273c158e47503c224d0100019b359f74de64dd40b4fcbb61874386",
+          "title": "Structural Basis of a Novel Heme Binding Bacterial One-Component Switch",
+          "url": "https://doi.org/10.64898/2026.03.15.711900",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:bafa7a3021fb443f75d2c5053140d4b1bbe1d40790816677ced0e4a869be918c",
+          "title": "Reverse Engineering the Programming Logic of Cytoskeletal Dynamics",
+          "url": "https://doi.org/10.1101/2025.09.10.674348",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:14993150bb3aaef6b2218d2450acbd9b24bebf7b011409d8ad8ffde2644d4da7",
+          "title": "Electrostatic Complementarity at the ClpX Substrate-EntryChannel Governs ATP-Driven Protein Unfolding",
+          "url": "https://doi.org/10.64898/2026.07.31.739446",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:046e6df15d9d279a7122ac9a87fd8c8c456c4af23362cf69c69067aa052fac6f",
+          "title": "Integrative genomics of the siphonophore Physalia utriculus reveals the regulatory logic of colonial division of labour and the molecular basis of venom activity",
+          "url": "https://doi.org/10.64898/2026.08.01.742136",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:d349bdccc83c57ed98f004ea4fa24b0ae585b37ac23e1f1afcb0363cd3f92f03",
+          "title": "Maintenance of phenotypic divergence in two sympatric monkeyflowers with weak reproductive isolation",
+          "url": "https://doi.org/10.64898/2026.07.28.741377",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:e33243bb53a0cfaee9247df895220d396c47e708c080b1e07ece8b887f5336c8",
+          "title": "Carbohydrate degradation machineries in lichen fungal symbionts reveal distinct symbiotic footprints across Ascomycota",
+          "url": "https://doi.org/10.64898/2026.07.28.741190",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:5ff96b2b07be9502701b576767f9f2a81a5ee78c27d8c796dc92f15755f7d0c3",
+          "title": "FITdb, an Integrated Functional Immunogenomics and Transcriptomics Database",
+          "url": "https://doi.org/10.64898/2026.07.28.741304",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:3bb3ff7bc484417c1a5e408151b4477c83b9e9f983ac00d712744f77f7581514",
+          "title": "MGMG: Cell Morphology-Guided Molecule Generation for Drug Discovery",
+          "url": "https://doi.org/10.1101/2025.07.11.664424",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:32455d5cb7538ce0cde1604cc3bd6f5831dd08bdd75a2099a9eb69a4584d1fa1",
+          "title": "Engagement with the nucleus enhances the efficiency of basement membrane invasion",
+          "url": "https://doi.org/10.1101/2025.03.13.643012",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:706fa283627999a81439ed0c41363f880fff5b1989a8acc83900b72b1620b051",
+          "title": "A novel pan class-I glucose transporter inhibitor DRB18 exhibits synergistic effects in vitro and in vivo with paclitaxel against human non-small cell lung cancer",
+          "url": "https://doi.org/10.1101/2024.12.15.628558",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:b1af7ba61d642aa517425b2ae5afe27100365575b831e8dccaf7186da93c8a87",
+          "title": "Omega-seq: ultra-low-background RNA sequencing with faithful molecular counting and precise transcript-end capture",
+          "url": "https://doi.org/10.64898/2026.03.12.711386",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:3638f69842500375abf25e7932c8026a0a79d5120fbdb0ff943198e055560321",
+          "title": "Stepwise and lineage-specific divergence of a major immune co-chaperone complex in leptosporangiate ferns",
+          "url": "https://doi.org/10.64898/2025.12.17.694876",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:14f768f053f2b0870cdb337996231827cc9031400dcd9481cfdcf085658c017f",
+          "title": "Spatial population structure can reverse the dependence of mutant burden on the death-to-birth ratio of cells",
+          "url": "https://doi.org/10.1101/2025.11.17.688895",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:637d858e19e1444edb8885a7567ed02a698867511520d3ef7cb7b9fa464a1de1",
+          "title": "Mouse suppressyn-like 1 suppresses membrane fusion through envelope glycoprotein recognition",
+          "url": "https://doi.org/10.64898/2026.07.22.739964",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:944ebd7ed42263d9cff2fa6608d9066acf6505e20bd393588fdf0f4ea796372a",
+          "title": "Variation of anti-oomycete activity in Pseudomonas spp.: phenotypic characterization and comparative genomics",
+          "url": "https://doi.org/10.64898/2026.04.24.720349",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:a11401c9b6e0ad693fc8280c922d0ee6fb20e64f441102d757fe87078a023a17",
+          "title": "Global analysis of the cold-shock response in the model antibiotic producing actinomycete, Streptomyces coelicolor A3(2)",
+          "url": "https://doi.org/10.1101/2025.04.11.648403",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
         {
           "id": "sha256:bd0916502940502bc087cc1de9da682ffe16d5cedbbad008db88dcf634a0e477",
           "title": "Microbial Metabolites Potentiate MAIT Cell Anti-Tumor Immunity Against Solid Tumors",
@@ -708,76 +1154,6 @@
           "url": "https://doi.org/10.64898/2026.04.23.720518",
           "firstSeen": "2026-07-24T21:29:17.806Z",
           "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:0aa91d007725e05487796700fdd82d41a3b78fe8cee78b42f5eb8f2f08e1ff0b",
-          "title": "Pan-cancer NET-associated immunothrombosis coupling identifies a neutrophil-linked but neutrophil-irreducible tumor ecology",
-          "url": "https://doi.org/10.64898/2026.07.14.738403",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:997c0c20faf9842cf462d14c059509223668a61a9e440e0187461977fdaa4744",
-          "title": "Quantitative Susceptibility Mapping for Differentiating Hydroxyapatite and Calcium Oxalate Breast Calcifications at 3T: A Phantom Study",
-          "url": "https://doi.org/10.64898/2026.07.15.738683",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:cfad531cae82416126f184589eeec35f80650224d237d6843fd5d70ac26e40c1",
-          "title": "GW182 silencing domain engages the tristetraprolin-binding pocket of CNOT1 to recruit CNOT1 into multiprotein condensates",
-          "url": "https://doi.org/10.64898/2026.07.16.738963",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:3c57a80989f883f02266fa39a8a27ab0a3bcae07126ef6c6c753077b8f53b687",
-          "title": "A Glycan-Aware Diffusion Model for Carbohydrate and Glycoprotein Structure Prediction",
-          "url": "https://doi.org/10.64898/2026.07.16.738959",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:73e0b19c3f9319aa53377aff82dedbf8cc2d39ff558ad0dbb363f47bf1929294",
-          "title": "Transcriptomic signature of Human Cardiac Fibroblast in Hypertrophic Obstructive Cardiomyopathy",
-          "url": "https://doi.org/10.64898/2026.07.12.738095",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:84164418f5729adfdfbaa0be46a7dd15b8423752efb471bac6f94c7758807c7c",
-          "title": "Aphid stylin cuticular proteins contribute to turnip mosaic virus (Potyvirus) transmission",
-          "url": "https://doi.org/10.64898/2026.03.13.711641",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:51c87eb2afa677aa65a5fa00b50c05421da021326831c838fd409257bcf629dd",
-          "title": "How the terminal glucoside of the N-glycan donor affects the catalytic efficiency of the eukaryotic oligosaccharyltransferase",
-          "url": "https://doi.org/10.64898/2026.07.16.738906",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:a8b77d8c2b93690c129f7fd1e2ce04c4af148597225b7d02f88d29377f737db4",
-          "title": "Conditional Deletion of All Neurexins Defines Diversity of Essential Synaptic Organizer Functions for Neurexins",
-          "url": "https://doi.org/10.64898/2026.07.15.738748",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:2422c25a9bf86daf637627dc4c0089e8351cc540378fa5ae83827d82462b63d8",
-          "title": "A Membrane-Disruptive Action of VBIT-4 Challenges Its Role as a Widely Used VDAC Oligomerization Inhibitor",
-          "url": "https://doi.org/10.1101/2025.06.30.661942",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:9f0e8553e73a8e9611ec4359a4bfa19394ffe3fc2e6cca8666978a54881a790a",
-          "title": "Optimizing a Culture-Enriched Hybrid Metagenomics Pipeline to Assess the AMR Footprint of Livestock Manure in Anaerobic Digestate",
-          "url": "https://doi.org/10.64898/2026.04.24.720626",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "preprint"
         }
       ],
       "related": [
@@ -914,11 +1290,81 @@
       },
       "tracked": true,
       "salience": {
-        "items30d": 23,
-        "itemsTotal": 27,
+        "items30d": 33,
+        "itemsTotal": 37,
         "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:d812fc88181d4206232fe8a64cb13c485b44cf60a094638394c901d910ff8348",
+          "title": "Sensitivity, Causality, and Repair Dissociate: A Layer-Wise Analysis of Perturbation Robustness and Its Scaling",
+          "url": "http://arxiv.org/abs/2608.03842v1",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:a7bfc1d35af22896051a074c373d29c15680ce0b3bb13b1f0e114fad43334656",
+          "title": "CRS-Triage: Confidence- and Reliability-Aware Selective Triage under Incomplete Clinical Evidence",
+          "url": "http://arxiv.org/abs/2608.03862v1",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:3424c39fb2fd522fa5a7c4cc5b56d976c4bebf4a88aa230f4f777c074b0bc55c",
+          "title": "MultiGlobeQA: A Multilingual and Globally Diverse Benchmark for Geospatial Reasoning",
+          "url": "http://arxiv.org/abs/2608.03882v1",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:37796e0cb0a50dbc4f5c33d8107818db009052471b472ada43d3780196ce5d8a",
+          "title": "CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement",
+          "url": "http://arxiv.org/abs/2608.03890v1",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:2b09b71a902ce7425c8c3353599b5dc600b71c1102f2eaa5550fb54b0790729c",
+          "title": "Test-Time Scaling in Reasoning LLMs: Inference Regimes, Evaluation, and Reproducibility",
+          "url": "http://arxiv.org/abs/2608.04001v1",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:cdaba482f2b967b20557f615b0a97c010fbfb8e3785e3a5966c5b5f0fd4a3e2c",
+          "title": "MoPET: Parameter-Efficient Mixture-of-Experts for Unified Medical Image Classification",
+          "url": "http://arxiv.org/abs/2607.29462v1",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:0b5cbec53c8f43c0107bef1fccb63401ac343e7cdb6e2c6e7895762866cd3cf3",
+          "title": "MolGVR: A Chemistry-Grounded Framework for Text-to-Molecule Generation",
+          "url": "http://arxiv.org/abs/2607.29479v1",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:7d068d6748cd7372b7664d6b2b8876013e07b7920080fdd37ae26e3e7b23ec48",
+          "title": "A Neurosymbolic Approach for Explainable Early Diagnosis of Alzheimer's Disease",
+          "url": "http://arxiv.org/abs/2607.29530v1",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:ccf8e989bc8badeb0691e2b830ba1473edbc3b32e198d3577bde3237e9dd0d33",
+          "title": "The gate of self-address: where decidable adjudication ends",
+          "url": "http://arxiv.org/abs/2607.29576v1",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:93a2ddd2c1087fe78baf0bf6bb3ade2e5492b323e24a839ab0b3e055cc0d2f39",
+          "title": "FriendBench: Benchmarking Dyadic Familiarity Inference in Humans and Multimodal Large Language Models",
+          "url": "http://arxiv.org/abs/2607.29602v1",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
         {
           "id": "sha256:0f263b408a5f85fb4f4051ebbf4d2fede0006fe5a689c029b94931ba079f0a1d",
           "title": "From Dependency to Compositionality: A Neurosymbolic Lifting of LLM Outputs via Combinatory Categorial Grammar",
@@ -1243,11 +1689,39 @@
       },
       "tracked": true,
       "salience": {
-        "items30d": 8,
-        "itemsTotal": 8,
+        "items30d": 9,
+        "itemsTotal": 12,
         "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:ca2e14b501820e8302ed9f53e847fb32ca2e5d02ea849515ce19bdefb404030b",
+          "title": "Trump’s AI protectionism has come for robotics",
+          "url": "https://www.technologyreview.com/2026/08/03/1141056/trumps-ai-protectionism-has-come-for-robotics/",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:48f59fd9272f2d35a856a07834b1c3f3046d19a9d7b28e326acbbe0bf3bf7c7c",
+          "title": "Building the enterprise environment for agentic AI",
+          "url": "https://www.technologyreview.com/2026/07/27/1140668/building-the-enterprise-environment-for-agentic-ai/",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:30193a8ad91b2b7ab8d20beb31b99f411dcfd510a14b28da8a1dba98e46acfa6",
+          "title": "Closing the data loop in AI-driven drug discovery",
+          "url": "https://www.technologyreview.com/2026/07/27/1139667/closing-the-data-loop-in-ai-driven-drug-discovery/",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:5b28474cae1c69dcfcc6632dccfb5265a4ef701a8b4bda7c253648a560cd9da3",
+          "title": "The path to artificial superintelligence",
+          "url": "https://www.technologyreview.com/2026/07/27/1140724/the-path-to-artificial-superintelligence/",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "news"
+        },
         {
           "id": "sha256:9a0e0c9ec5df9f929462b6a2b99ef7a989f2f8de2dee867daafb7e8b2cc95867",
           "title": "How AI helps scientists design the next generation of medicines",
@@ -1340,6 +1814,97 @@
           "id": "person:name:grace-huckins",
           "kind": "person",
           "displayName": "Grace Huckins"
+        },
+        {
+          "id": "person:name:keegan-sheedy-lucas-melo",
+          "kind": "person",
+          "displayName": "Keegan Sheedy, Lucas Melo"
+        }
+      ]
+    },
+    {
+      "id": "source:nature.com",
+      "slug": "nature-com",
+      "kind": "source",
+      "displayName": "nature.com",
+      "aliases": [],
+      "links": {
+        "homepage": "https://nature.com"
+      },
+      "tracked": true,
+      "salience": {
+        "items30d": 8,
+        "itemsTotal": 8,
+        "trend": "rising"
+      },
+      "items": [
+        {
+          "id": "sha256:1070134661d96731c06fededf407ce1a907bc7b91502cb5931ede8a3d9a3f762",
+          "title": "A foundation model for sleep-based risk stratification and clinical outcomes",
+          "url": "https://www.nature.com/articles/s41467-026-75326-9",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:29d28d8563388676c7380284f65306cbfaf70e0f6ec4c8bc2bdfa1ddbff21cac",
+          "title": "Miniaturizing and modifying natural proteins with Raygun",
+          "url": "https://www.nature.com/articles/s41586-026-10842-8",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:92ef3fc27685b48ede5ea5186d35b815495eb482591b8f089780d6fed8f3b1cd",
+          "title": "Property guidance for protein sequence generative models with ProteinGuide",
+          "url": "https://www.nature.com/articles/s41587-026-03207-z",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:d76fa3bbace2bf5a784df7670514657200be991ec1989baee45df341c075dd22",
+          "title": "This AI Raygun can shrink and supersize proteins — opening the door to easy editing",
+          "url": "https://www.nature.com/articles/d41586-026-02335-5",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:e3981576cc11eb4f367c2e22b841b0f955de1ad3b280e4b8bbf1b9b68a8da23e",
+          "title": "A machine learning framework for predicting and modulating condition-dependent protein phase separation",
+          "url": "https://www.nature.com/articles/s41467-026-76248-2",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:4f862fc46699f25a1bbe0de4306d4e8cae5ee527f2bc0010497b230268e4ae53",
+          "title": "Empowering clinical trial design with agentic intelligence and real-world data",
+          "url": "https://www.nature.com/articles/s41467-026-74501-2",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:b43e5abbf91deae89f1e7685a9d174e7c77501cb07aa15900d6e3fe3a1165973",
+          "title": "Which ‘AI scientist’ suits your lab? A guide for the perplexed",
+          "url": "https://www.nature.com/articles/d41586-026-02091-6",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:61223c863b8fbed5f9b0539b6a2b8f9272e53cc160a06af4cdf156b4bc36ed34",
+          "title": "An enzyme-specific protein language model for catalytic property prediction",
+          "url": "https://www.nature.com/articles/s41467-026-75283-3",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        }
+      ],
+      "related": [
+        {
+          "id": "research:ai-life-sciences",
+          "kind": "research",
+          "displayName": "AI in Life Sciences & Medicine"
+        },
+        {
+          "id": "research:agentic-ai",
+          "kind": "research",
+          "displayName": "AI Scientists & AI Engineers"
         }
       ]
     },
@@ -1355,10 +1920,24 @@
       "tracked": true,
       "salience": {
         "items30d": 6,
-        "itemsTotal": 13,
+        "itemsTotal": 15,
         "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:c45cec9ccf60ddb7fe56f72c07ab924caa70f888382189cf1b86fb42539cefab",
+          "title": "Public Intelligence",
+          "url": "https://www.argmin.net/p/public-intelligence",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:207bda79b329972d87d01d3ee2d5ab2aa11047b65846dd0b1b98477edfeb04fa",
+          "title": "Open and Shut",
+          "url": "https://www.argmin.net/p/open-and-shut",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "opinion"
+        },
         {
           "id": "sha256:e15ea7e8718b9351cfb451f640f2a5f78e60a1cbb837a93b6a639ea8186f0fd8",
           "title": "Science-based Shredding",
@@ -1470,6 +2049,93 @@
       ]
     },
     {
+      "id": "source:garymarcus.substack.com",
+      "slug": "garymarcus-substack-com",
+      "kind": "source",
+      "displayName": "garymarcus.substack.com",
+      "aliases": [],
+      "links": {
+        "homepage": "https://garymarcus.substack.com"
+      },
+      "tracked": true,
+      "salience": {
+        "items30d": 4,
+        "itemsTotal": 6,
+        "trend": "rising"
+      },
+      "items": [
+        {
+          "id": "sha256:07d2a75e387ebd07542c43d7769d34fd7c051600325de16ee8a4dcd4083bccb8",
+          "title": "Circular financing ain’t what it used to be",
+          "url": "https://garymarcus.substack.com/p/circular-financing-aint-what-it-used",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:c4bb92bc958828865874495068be3f975dd65ddd2efa76658527c47d7ddcca77",
+          "title": "The seven most shambolic things that happened in AI today.",
+          "url": "https://garymarcus.substack.com/p/the-seven-most-shambolic-things-that",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:bc33adc33c7d8ef4ce1ac55636f2add40a47bb71e63f29e50bc387c367737046",
+          "title": "OpenAI’s amazing — but vastly oversold — new model Astra",
+          "url": "https://garymarcus.substack.com/p/openais-amazing-but-vastly-oversold",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:09a46ced3d83cb66b472ceddd0a9c68b08dbd0b93e66f8456f8bcaa0cd756c05",
+          "title": "Even more good news for the future of neurosymbolic AI",
+          "url": "https://garymarcus.substack.com/p/even-more-good-news-for-the-future",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:93ddd8bd4600e1870ed54259d5d004732a43de1e9aaa7ec8443ad4eedf2fbe67",
+          "title": "Accenture: Then and now, and how it may signify things to come",
+          "url": "https://garymarcus.substack.com/p/accenture-then-and-now-and-how-it",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:f68d8eb95d9a84d8e0fbb82694a74ec2e504a1f9c612119ed277a54f02318eb5",
+          "title": "The month Generative AI lost its mojo",
+          "url": "https://garymarcus.substack.com/p/the-month-generative-ai-lost-its",
+          "firstSeen": "2026-07-19T06:32:40.855Z",
+          "sourceKind": "opinion"
+        }
+      ],
+      "related": [
+        {
+          "id": "person:name:gary-marcus",
+          "kind": "person",
+          "displayName": "Gary Marcus"
+        },
+        {
+          "id": "research:formal-rigor",
+          "kind": "research",
+          "displayName": "Formal Methods & Verified Science"
+        },
+        {
+          "id": "research:neurosymbolic",
+          "kind": "research",
+          "displayName": "Neurosymbolic & Hybrid AI"
+        },
+        {
+          "id": "research:ai-life-sciences",
+          "kind": "research",
+          "displayName": "AI in Life Sciences & Medicine"
+        },
+        {
+          "id": "research:agentic-ai",
+          "kind": "research",
+          "displayName": "AI Scientists & AI Engineers"
+        }
+      ]
+    },
+    {
       "id": "source:simonwillison.net",
       "slug": "simonwillison-net",
       "kind": "source",
@@ -1481,10 +2147,17 @@
       "tracked": true,
       "salience": {
         "items30d": 3,
-        "itemsTotal": 5,
+        "itemsTotal": 6,
         "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:d88d30af38453810dd9ee3b90d0e4d2a68f965dd34ffc4b8ad32db81354c1666",
+          "title": "Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)",
+          "url": "https://simonwillison.net/2026/Jul/31/stateless-mcp/#atom-entries",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "opinion"
+        },
         {
           "id": "sha256:30f92ce069833e93b405b4d77d6c40aeac066013c1837a5a5f88278b4c6d12ab",
           "title": "A Fireside Chat with Cat and Thariq from the Claude Code team",
@@ -1526,57 +2199,6 @@
           "id": "research:formal-rigor",
           "kind": "research",
           "displayName": "Formal Methods & Verified Science"
-        },
-        {
-          "id": "research:agentic-ai",
-          "kind": "research",
-          "displayName": "AI Scientists & AI Engineers"
-        }
-      ]
-    },
-    {
-      "id": "source:nature.com",
-      "slug": "nature-com",
-      "kind": "source",
-      "displayName": "nature.com",
-      "aliases": [],
-      "links": {
-        "homepage": "https://nature.com"
-      },
-      "tracked": true,
-      "salience": {
-        "items30d": 3,
-        "itemsTotal": 3,
-        "trend": "rising"
-      },
-      "items": [
-        {
-          "id": "sha256:4f862fc46699f25a1bbe0de4306d4e8cae5ee527f2bc0010497b230268e4ae53",
-          "title": "Empowering clinical trial design with agentic intelligence and real-world data",
-          "url": "https://www.nature.com/articles/s41467-026-74501-2",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:b43e5abbf91deae89f1e7685a9d174e7c77501cb07aa15900d6e3fe3a1165973",
-          "title": "Which ‘AI scientist’ suits your lab? A guide for the perplexed",
-          "url": "https://www.nature.com/articles/d41586-026-02091-6",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:61223c863b8fbed5f9b0539b6a2b8f9272e53cc160a06af4cdf156b4bc36ed34",
-          "title": "An enzyme-specific protein language model for catalytic property prediction",
-          "url": "https://www.nature.com/articles/s41467-026-75283-3",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        }
-      ],
-      "related": [
-        {
-          "id": "research:ai-life-sciences",
-          "kind": "research",
-          "displayName": "AI in Life Sciences & Medicine"
         },
         {
           "id": "research:agentic-ai",
@@ -1968,10 +2590,17 @@
       "tracked": true,
       "salience": {
         "items30d": 1,
-        "itemsTotal": 11,
+        "itemsTotal": 12,
         "trend": "falling"
       },
       "items": [
+        {
+          "id": "sha256:13e34cbc33d7fc30a5a4c0e2e8ca9ffe3480fcf668aa46832079ff313a29cbf1",
+          "title": "Reflections on ICML 2026",
+          "url": "https://valencelabs.substack.com/p/reflections-on-icml-2026",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "industry"
+        },
         {
           "id": "sha256:2f30ae1bad63490d79d5788291e1f954739c28036fc3d52414d13a3fcf9581e1",
           "title": "The Virtual Cell Comeback",
@@ -2100,6 +2729,11 @@
           "id": "person:name:cas",
           "kind": "person",
           "displayName": "Cas"
+        },
+        {
+          "id": "person:name:alina-selega",
+          "kind": "person",
+          "displayName": "Alina Selega"
         }
       ]
     },
@@ -2193,67 +2827,6 @@
           "id": "research:formal-rigor",
           "kind": "research",
           "displayName": "Formal Methods & Verified Science"
-        }
-      ]
-    },
-    {
-      "id": "source:garymarcus.substack.com",
-      "slug": "garymarcus-substack-com",
-      "kind": "source",
-      "displayName": "garymarcus.substack.com",
-      "aliases": [],
-      "links": {
-        "homepage": "https://garymarcus.substack.com"
-      },
-      "tracked": true,
-      "salience": {
-        "items30d": 1,
-        "itemsTotal": 3,
-        "trend": "falling"
-      },
-      "items": [
-        {
-          "id": "sha256:09a46ced3d83cb66b472ceddd0a9c68b08dbd0b93e66f8456f8bcaa0cd756c05",
-          "title": "Even more good news for the future of neurosymbolic AI",
-          "url": "https://garymarcus.substack.com/p/even-more-good-news-for-the-future",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:93ddd8bd4600e1870ed54259d5d004732a43de1e9aaa7ec8443ad4eedf2fbe67",
-          "title": "Accenture: Then and now, and how it may signify things to come",
-          "url": "https://garymarcus.substack.com/p/accenture-then-and-now-and-how-it",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:f68d8eb95d9a84d8e0fbb82694a74ec2e504a1f9c612119ed277a54f02318eb5",
-          "title": "The month Generative AI lost its mojo",
-          "url": "https://garymarcus.substack.com/p/the-month-generative-ai-lost-its",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        }
-      ],
-      "related": [
-        {
-          "id": "person:name:gary-marcus",
-          "kind": "person",
-          "displayName": "Gary Marcus"
-        },
-        {
-          "id": "research:formal-rigor",
-          "kind": "research",
-          "displayName": "Formal Methods & Verified Science"
-        },
-        {
-          "id": "research:neurosymbolic",
-          "kind": "research",
-          "displayName": "Neurosymbolic & Hybrid AI"
-        },
-        {
-          "id": "research:ai-life-sciences",
-          "kind": "research",
-          "displayName": "AI in Life Sciences & Medicine"
         }
       ]
     },
@@ -2550,11 +3123,263 @@
       "links": {},
       "tracked": true,
       "salience": {
-        "items30d": 67,
-        "itemsTotal": 83,
+        "items30d": 99,
+        "itemsTotal": 119,
         "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:1070134661d96731c06fededf407ce1a907bc7b91502cb5931ede8a3d9a3f762",
+          "title": "A foundation model for sleep-based risk stratification and clinical outcomes",
+          "url": "https://www.nature.com/articles/s41467-026-75326-9",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:13e34cbc33d7fc30a5a4c0e2e8ca9ffe3480fcf668aa46832079ff313a29cbf1",
+          "title": "Reflections on ICML 2026",
+          "url": "https://valencelabs.substack.com/p/reflections-on-icml-2026",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:0da773366d7aecbb29d91b8c476001c360421801feaba90eec4fe67750f20ec8",
+          "title": "Differential Regulation of Branched-Chain Amino Acids During Early Germination of Mungbean (Vigna radiata L.)",
+          "url": "https://doi.org/10.64898/2026.07.31.741962",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:3a3b47adaadcb6823583fb2faf557c7423fbf8f5d719553aa7fc943cec0fe320",
+          "title": "Immobilized dicot and monocot viral vectors enable rapid screening of RNA mobility elements for mobile RNA engineering and RNA-based genome editing",
+          "url": "https://doi.org/10.64898/2026.07.31.741600",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:0861b55e4087d6a989a85ee40a1864d4ee48f8a4357d711f97adcaf73c02d64c",
+          "title": "PG-LLM: Benchmarking General-Purpose Language Models for Protein Variant Ranking",
+          "url": "https://doi.org/10.64898/2026.07.27.741045",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:0208911a260a860718df80233032fcb8b87178e4d8d23b380bf7bdf111a2917e",
+          "title": "Epigenomic regulatory programs reveal the latent heterogeneity of complex diseases",
+          "url": "https://doi.org/10.64898/2026.05.01.722123",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:c59a679253c05ddfb58e2e5a847cca0911482a6b5204d7b4c1bf543852aa27d7",
+          "title": "ZDHHC17 Links S-Acylation, Huntington Disease, VCP-associated Multisystem Proteinopathy, and Amyotrophic Lateral Sclerosis.",
+          "url": "https://doi.org/10.64898/2026.04.05.716148",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:caf0ee6d9df2297fa81b6b9361bfd62014ca7cdd585b632df3f38d97162c8617",
+          "title": "MLL4/KMT2D mutations increase immune activity and predict therapyefficacy in colorectal cancer",
+          "url": "https://doi.org/10.64898/2026.07.31.742076",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:fbb0a342934c865134c3d467669e91cc060ccf7077aa1262b4eee5a95780f5f4",
+          "title": "Extracellular Vesicle Carryover Distorts Nanoparticle Protein Corona Profiles in Human Plasma",
+          "url": "https://doi.org/10.64898/2026.02.19.706828",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:d3487d3dac273c158e47503c224d0100019b359f74de64dd40b4fcbb61874386",
+          "title": "Structural Basis of a Novel Heme Binding Bacterial One-Component Switch",
+          "url": "https://doi.org/10.64898/2026.03.15.711900",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:bafa7a3021fb443f75d2c5053140d4b1bbe1d40790816677ced0e4a869be918c",
+          "title": "Reverse Engineering the Programming Logic of Cytoskeletal Dynamics",
+          "url": "https://doi.org/10.1101/2025.09.10.674348",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:14993150bb3aaef6b2218d2450acbd9b24bebf7b011409d8ad8ffde2644d4da7",
+          "title": "Electrostatic Complementarity at the ClpX Substrate-EntryChannel Governs ATP-Driven Protein Unfolding",
+          "url": "https://doi.org/10.64898/2026.07.31.739446",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:a7bfc1d35af22896051a074c373d29c15680ce0b3bb13b1f0e114fad43334656",
+          "title": "CRS-Triage: Confidence- and Reliability-Aware Selective Triage under Incomplete Clinical Evidence",
+          "url": "http://arxiv.org/abs/2608.03862v1",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:37796e0cb0a50dbc4f5c33d8107818db009052471b472ada43d3780196ce5d8a",
+          "title": "CARE-X: Towards Clinically Useful Radiology VLMs with Auxiliary Supervision, Reward-Aligned Learning, and Tool-Augmented Measurement",
+          "url": "http://arxiv.org/abs/2608.03890v1",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:30193a8ad91b2b7ab8d20beb31b99f411dcfd510a14b28da8a1dba98e46acfa6",
+          "title": "Closing the data loop in AI-driven drug discovery",
+          "url": "https://www.technologyreview.com/2026/07/27/1139667/closing-the-data-loop-in-ai-driven-drug-discovery/",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:5b28474cae1c69dcfcc6632dccfb5265a4ef701a8b4bda7c253648a560cd9da3",
+          "title": "The path to artificial superintelligence",
+          "url": "https://www.technologyreview.com/2026/07/27/1140724/the-path-to-artificial-superintelligence/",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:29d28d8563388676c7380284f65306cbfaf70e0f6ec4c8bc2bdfa1ddbff21cac",
+          "title": "Miniaturizing and modifying natural proteins with Raygun",
+          "url": "https://www.nature.com/articles/s41586-026-10842-8",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:92ef3fc27685b48ede5ea5186d35b815495eb482591b8f089780d6fed8f3b1cd",
+          "title": "Property guidance for protein sequence generative models with ProteinGuide",
+          "url": "https://www.nature.com/articles/s41587-026-03207-z",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:d76fa3bbace2bf5a784df7670514657200be991ec1989baee45df341c075dd22",
+          "title": "This AI Raygun can shrink and supersize proteins — opening the door to easy editing",
+          "url": "https://www.nature.com/articles/d41586-026-02335-5",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:e3981576cc11eb4f367c2e22b841b0f955de1ad3b280e4b8bbf1b9b68a8da23e",
+          "title": "A machine learning framework for predicting and modulating condition-dependent protein phase separation",
+          "url": "https://www.nature.com/articles/s41467-026-76248-2",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:046e6df15d9d279a7122ac9a87fd8c8c456c4af23362cf69c69067aa052fac6f",
+          "title": "Integrative genomics of the siphonophore Physalia utriculus reveals the regulatory logic of colonial division of labour and the molecular basis of venom activity",
+          "url": "https://doi.org/10.64898/2026.08.01.742136",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:d349bdccc83c57ed98f004ea4fa24b0ae585b37ac23e1f1afcb0363cd3f92f03",
+          "title": "Maintenance of phenotypic divergence in two sympatric monkeyflowers with weak reproductive isolation",
+          "url": "https://doi.org/10.64898/2026.07.28.741377",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:e33243bb53a0cfaee9247df895220d396c47e708c080b1e07ece8b887f5336c8",
+          "title": "Carbohydrate degradation machineries in lichen fungal symbionts reveal distinct symbiotic footprints across Ascomycota",
+          "url": "https://doi.org/10.64898/2026.07.28.741190",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:5ff96b2b07be9502701b576767f9f2a81a5ee78c27d8c796dc92f15755f7d0c3",
+          "title": "FITdb, an Integrated Functional Immunogenomics and Transcriptomics Database",
+          "url": "https://doi.org/10.64898/2026.07.28.741304",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:3bb3ff7bc484417c1a5e408151b4477c83b9e9f983ac00d712744f77f7581514",
+          "title": "MGMG: Cell Morphology-Guided Molecule Generation for Drug Discovery",
+          "url": "https://doi.org/10.1101/2025.07.11.664424",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:32455d5cb7538ce0cde1604cc3bd6f5831dd08bdd75a2099a9eb69a4584d1fa1",
+          "title": "Engagement with the nucleus enhances the efficiency of basement membrane invasion",
+          "url": "https://doi.org/10.1101/2025.03.13.643012",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:706fa283627999a81439ed0c41363f880fff5b1989a8acc83900b72b1620b051",
+          "title": "A novel pan class-I glucose transporter inhibitor DRB18 exhibits synergistic effects in vitro and in vivo with paclitaxel against human non-small cell lung cancer",
+          "url": "https://doi.org/10.1101/2024.12.15.628558",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:b1af7ba61d642aa517425b2ae5afe27100365575b831e8dccaf7186da93c8a87",
+          "title": "Omega-seq: ultra-low-background RNA sequencing with faithful molecular counting and precise transcript-end capture",
+          "url": "https://doi.org/10.64898/2026.03.12.711386",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:3638f69842500375abf25e7932c8026a0a79d5120fbdb0ff943198e055560321",
+          "title": "Stepwise and lineage-specific divergence of a major immune co-chaperone complex in leptosporangiate ferns",
+          "url": "https://doi.org/10.64898/2025.12.17.694876",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:14f768f053f2b0870cdb337996231827cc9031400dcd9481cfdcf085658c017f",
+          "title": "Spatial population structure can reverse the dependence of mutant burden on the death-to-birth ratio of cells",
+          "url": "https://doi.org/10.1101/2025.11.17.688895",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:637d858e19e1444edb8885a7567ed02a698867511520d3ef7cb7b9fa464a1de1",
+          "title": "Mouse suppressyn-like 1 suppresses membrane fusion through envelope glycoprotein recognition",
+          "url": "https://doi.org/10.64898/2026.07.22.739964",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:944ebd7ed42263d9cff2fa6608d9066acf6505e20bd393588fdf0f4ea796372a",
+          "title": "Variation of anti-oomycete activity in Pseudomonas spp.: phenotypic characterization and comparative genomics",
+          "url": "https://doi.org/10.64898/2026.04.24.720349",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:a11401c9b6e0ad693fc8280c922d0ee6fb20e64f441102d757fe87078a023a17",
+          "title": "Global analysis of the cold-shock response in the model antibiotic producing actinomycete, Streptomyces coelicolor A3(2)",
+          "url": "https://doi.org/10.1101/2025.04.11.648403",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:cdaba482f2b967b20557f615b0a97c010fbfb8e3785e3a5966c5b5f0fd4a3e2c",
+          "title": "MoPET: Parameter-Efficient Mixture-of-Experts for Unified Medical Image Classification",
+          "url": "http://arxiv.org/abs/2607.29462v1",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:0b5cbec53c8f43c0107bef1fccb63401ac343e7cdb6e2c6e7895762866cd3cf3",
+          "title": "MolGVR: A Chemistry-Grounded Framework for Text-to-Molecule Generation",
+          "url": "http://arxiv.org/abs/2607.29479v1",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:7d068d6748cd7372b7664d6b2b8876013e07b7920080fdd37ae26e3e7b23ec48",
+          "title": "A Neurosymbolic Approach for Explainable Early Diagnosis of Alzheimer's Disease",
+          "url": "http://arxiv.org/abs/2607.29530v1",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
         {
           "id": "sha256:c47129084ffdb052c08ff8f8feb474058d2bcb9e22bc0ddbaa94f6187c0ca595",
           "title": "Learning to Prepare Molecular Ground States with Transformer Models",
@@ -2652,258 +3477,6 @@
           "url": "https://doi.org/10.64898/2026.07.23.740440",
           "firstSeen": "2026-07-27T04:20:12.556Z",
           "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:31dc243ef3c79e39cb67b05c13642fccf224bce472c1e9c54241b8f1e3f9034e",
-          "title": "Endosome motility controls light-responsive reproductive development and secondary metabolite production in Aspergillus",
-          "url": "https://doi.org/10.64898/2026.03.03.708097",
-          "firstSeen": "2026-07-27T04:20:12.556Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:ed209f4d4e80f9f381111914b3d866cfcfd7537dc802ebb7a97ad9602f55a3c0",
-          "title": "Unveiling Gloriosine as a Dual-Acting Regulator of Glutamine Metabolism and Ferroptosis in Triple-Negative Breast Cancer: Insights from Network Pharmacology and Experimental Validation",
-          "url": "https://doi.org/10.64898/2026.05.17.725321",
-          "firstSeen": "2026-07-27T04:20:12.556Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:fc1773bf9f816dc973df6ce9bc57bd31ed7aa824ab5d4403f5d7be29345b636d",
-          "title": "Bidirectional Electron Transfer in Far-Red-Light Adapted Photosystem I. Implications for the Photosystem's Functionality",
-          "url": "https://doi.org/10.64898/2026.07.21.739882",
-          "firstSeen": "2026-07-27T04:20:12.556Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:38671ac70a3129d0197262624e269f5abdb26ec2475b5f0ceccf67f1a3fec31d",
-          "title": "Phenotype-driven de novo molecular design from gene expression signatures",
-          "url": "https://doi.org/10.64898/2026.07.21.739736",
-          "firstSeen": "2026-07-27T04:20:12.556Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:0079e3ae78277c09bd375b44ce8feeb1d358d533e88d12d7663448d475883382",
-          "title": "Characterization of NPR-14 in the Regulation of Sleep-Like Behaviour in Caenorhabditis elegans",
-          "url": "https://doi.org/10.64898/2026.07.21.739920",
-          "firstSeen": "2026-07-27T04:20:12.556Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:7e51ffbda1d96ce35a3f664aff491760016e35b27d341ce88c1ae49fcfffc002",
-          "title": "Intrafilament nucleotide exchange in a prokaryotic actin homolog",
-          "url": "https://doi.org/10.64898/2026.07.24.740542",
-          "firstSeen": "2026-07-27T04:20:12.556Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:42a9b36a5388a3f0361d73f75ce090c8527e3c04766dbc90338b76878c675400",
-          "title": "Structural and Stereochemical Elucidation of Cyanochelin C, a Siderophore Associated with Novel Class of Cyanobacterial Acyl Hydrolases",
-          "url": "https://doi.org/10.64898/2026.07.24.740629",
-          "firstSeen": "2026-07-27T04:20:12.556Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:56f47c35ce83529cd32ce09304d7f9931be526d5b8ef630011d0d7d987eb0d66",
-          "title": "Prevalent phenotypic mutation impairs binding of broadly neutralizing antibodies to influenza hemagglutinin",
-          "url": "https://doi.org/10.64898/2026.07.24.740633",
-          "firstSeen": "2026-07-27T04:20:12.556Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:077a387353c4f1d93075ca1580d7a3aecd6c20835b06c9007c75ec5fe6ba138b",
-          "title": "Cryo-electron microscopy structure of Jabs, a bacteriophage infecting the multidrug-resistant pathogen Mycobacterium abscessus",
-          "url": "https://doi.org/10.64898/2026.07.24.740622",
-          "firstSeen": "2026-07-27T04:20:12.556Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:d3895d8ea3277b7cebaf896e0094701c4e4dca7bf73772662613db440613d23b",
-          "title": "Live-imaging of endogenous neurofascins reveals glial adhesion shapes developing nodes of Ranvier",
-          "url": "https://doi.org/10.64898/2026.07.24.740328",
-          "firstSeen": "2026-07-27T04:20:12.556Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:9a0e0c9ec5df9f929462b6a2b99ef7a989f2f8de2dee867daafb7e8b2cc95867",
-          "title": "How AI helps scientists design the next generation of medicines",
-          "url": "https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/",
-          "firstSeen": "2026-07-24T21:29:17.806Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:4520eb8e449ce2aa3cfc14b9cab0357d197ce53f73fe551ad8f06a0aaac53988",
-          "title": "Replication-coupled search positions MutH for strand incision in DNA mismatch repair",
-          "url": "https://doi.org/10.64898/2026.07.21.739762",
-          "firstSeen": "2026-07-24T21:29:17.806Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:8a523a6ac3f0b95f7ec003769aeec5d112710313e9d9bb7d588fae2030287b68",
-          "title": "SpatialJEPA: JEPA-inspired graph-context distillation for spatially aware multiomics integration",
-          "url": "https://doi.org/10.64898/2026.07.21.739810",
-          "firstSeen": "2026-07-24T21:29:17.806Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:dc430a443b748f4416e608c5e0baaf0e97065c5347e7a99424ef05e2b0031f81",
-          "title": "Single-molecule nanopore-tweezers analysis of transcription elongation by intact and \"stalk-less\" yeast RNA polymerase II",
-          "url": "https://doi.org/10.64898/2026.07.20.739707",
-          "firstSeen": "2026-07-24T21:29:17.806Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:ab3e0531ac72ee57e206bf2dcadb14dfea65c829837acb15647c27a602562031",
-          "title": "APOE4 disrupts the central dogma by arresting neuronal proteome dynamics",
-          "url": "https://doi.org/10.64898/2026.07.15.738801",
-          "firstSeen": "2026-07-24T21:29:17.806Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:e599724c80e0165d4e65445d4ba4dbc5f442ee59715ae4a21be733d4b87614ae",
-          "title": "Longitudinal White Matter Trajectories in Clinical High Risk and First-Episode Psychosis: Findings from the Multi-Centre PSYSCAN Study",
-          "url": "https://doi.org/10.64898/2026.07.20.739516",
-          "firstSeen": "2026-07-24T21:29:17.806Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:7bab5704f2e2b15e185b51b7a0675d263608f7974e1e1a77f9d5bd1969ca1edb",
-          "title": "The carbon-nitrogen metabolism gene E1OGDH1 influences maize root system architecture and nitrogen plasticity",
-          "url": "https://doi.org/10.64898/2026.07.21.739812",
-          "firstSeen": "2026-07-24T21:29:17.806Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:e95c078ae563d6d32ee87a7ab6352bfb34d09c4617f65bd0d06f60cce77be059",
-          "title": "A TLS11a-decorated ionizable lipid nanoparticle platform and a multilevel-validated CRISPR LDLR-knockout HepG2 model for hepatocyte-preferential mRNA delivery",
-          "url": "https://doi.org/10.64898/2026.07.21.739738",
-          "firstSeen": "2026-07-24T21:29:17.806Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:c55476f43c8be18d5bdda1d88fcd23447cd6ad08c0b467bdf28248a835503524",
-          "title": "An active-matrix digital microfluidic platform for simultaneous short- and long-read viral genomic surveillance",
-          "url": "https://doi.org/10.64898/2026.07.21.739725",
-          "firstSeen": "2026-07-24T21:29:17.806Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:969214f81aaf554b9895c667b26767ea60161de31508512871d6215d99836770",
-          "title": "Bacterial Geosmin Biosynthesis is Compartmentalized Inside a Two-Component Protein Shell",
-          "url": "https://doi.org/10.64898/2026.07.21.739788",
-          "firstSeen": "2026-07-24T21:29:17.806Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:7221adca818ff9c9d525595b08c23ae99ebef2b0251001871faec975cc5f79f8",
-          "title": "HPRC2: A human pangenome reference with near-complete coverage of common genetic variation",
-          "url": "https://doi.org/10.64898/2026.07.21.739710",
-          "firstSeen": "2026-07-24T21:29:17.806Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:2cd64c4ab74962ec0cfabd15f03324c2528c18d2c9157129bd118cf4a2a2863a",
-          "title": "Targeted modulation of IGFBP5/IGF1, THPO, and P38 MAPK signaling are potent therapeutic strategies generalizable for mitochondrial respiratory chain disease and osteosarcoma",
-          "url": "https://doi.org/10.64898/2026.07.20.739625",
-          "firstSeen": "2026-07-24T21:29:17.806Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:3bfc664c236fc255faef52407091540155374c259a10f227d2940afc27ff7399",
-          "title": "Expression Pattern of Epilepsy Associated Genes as a Common Pathological Signature in PTE and SE models and possible therapeutics via an in-silico approach",
-          "url": "https://doi.org/10.64898/2026.04.23.720518",
-          "firstSeen": "2026-07-24T21:29:17.806Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:e25d0ece2a432991e9897c12c9830cbdaf7190a651992720c70150769f3d755b",
-          "title": "Agent-Guided Relational Concept Discovery: Toward Interpretable Surgical Margin Assessment",
-          "url": "http://arxiv.org/abs/2607.21437v1",
-          "firstSeen": "2026-07-24T21:29:17.806Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:f91bf1eb8959716d6d4c2b911c60124ccb390666f5f7c4a8d30d43f061c412ce",
-          "title": "Toward Generalizable Cognitive Impairment Detection with Speech-Based Multimodal Large Language Models",
-          "url": "http://arxiv.org/abs/2607.21496v1",
-          "firstSeen": "2026-07-24T21:29:17.806Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:7941b72dd22bf9709fc076410b24e24544ca1bf86006ed65806b82afc67439ee",
-          "title": "Graph Learning on Ensembles of Cyclic Peptides: An Investigation of Molecular Ensemble Modeling",
-          "url": "http://arxiv.org/abs/2607.21561v1",
-          "firstSeen": "2026-07-24T21:29:17.806Z",
-          "sourceKind": "preprint"
-        },
-        {
-          "id": "sha256:ccda5754897d32214eaf2027bad6414bd7205bee0daf153bf61b68b1cdaddd57",
-          "title": "biopharminternational.com",
-          "url": "https://www.biopharminternational.com/view/biohub-open-source-ai-model-targets-protein-design-for-drug-discovery",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:83182d89a97df3db6bb6fe8d7288fff6df93cf0dc3831bd2e2f2f2c87b3920c8",
-          "title": "YuelDesign: AI Diffusion Models for Protein Flexibility",
-          "url": "https://intuitionlabs.ai/articles/yueldesign-ai-drug-design-protein-flexibility",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:ad44c36476a0fa9ee419ede87ddd00cba2b0dbb3bea2065642aa82e4ee430acd",
-          "title": "AlphaFold and the Protein Structure Prediction Revolution: What It Can and Can't Do for Your Research",
-          "url": "https://www.technologynetworks.com/informatics/articles/alphafold-and-the-protein-structure-prediction-revolution-what-it-can-and-cant-do-for-your-research-414654",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:61a78487c9676dd834c4368e0b271568f83ccac41694bafa2422a693444cb8c9",
-          "title": "AI in Drug Discovery: Target ID to Clinical Translation",
-          "url": "https://www.drugdiscoverynews.com/ai-in-drug-discovery-from-target-identification-to-clinical-translation-17335",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:b81ce108049c5e249e5e07a74e8e3b24b08b009b22175e6fa5eeb2ae0035f3b1",
-          "title": "Frontiers | Spectral Analysis and AI/ML-based Data-Driven Approaches for Enhanced Protein Conformation Selection and Prediction in Drug Discovery",
-          "url": "https://www.frontiersin.org/journals/drug-discovery/articles/10.3389/fddsv.2026.1805731/abstract",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:09a46ced3d83cb66b472ceddd0a9c68b08dbd0b93e66f8456f8bcaa0cd756c05",
-          "title": "Even more good news for the future of neurosymbolic AI",
-          "url": "https://garymarcus.substack.com/p/even-more-good-news-for-the-future",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "news"
-        },
-        {
-          "id": "sha256:484caa6cc6ddfafdd3648371764597853de8dbde8712bd34d2e6aa435c0ee5ea",
-          "title": "Sharing different heartbeats",
-          "url": "https://www.argmin.net/p/sharing-different-heartbeats",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:e5b3763abbc71fde0ec65b764bffecd299bf1702328772cc734d4f9690679d24",
-          "title": "Mesmerized by My Own Beat",
-          "url": "https://www.argmin.net/p/mesmerized-by-my-own-beat",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:74dae115f1587cdc666b4243389dca283b2ccf8264f6dbe3e3e43b54c8b31670",
-          "title": "We're Computerizing and Don't Need You",
-          "url": "https://www.argmin.net/p/were-computerizing-and-dont-need",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:27b6b6a6e62302b7361c60883df1a25120da38a0fc72681315ce75704e608311",
-          "title": "I Want A New Drug",
-          "url": "https://www.argmin.net/p/i-want-a-new-drug",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
         }
       ],
       "related": [
@@ -3038,11 +3611,116 @@
       "links": {},
       "tracked": true,
       "salience": {
-        "items30d": 54,
-        "itemsTotal": 84,
+        "items30d": 61,
+        "itemsTotal": 99,
         "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:ca2e14b501820e8302ed9f53e847fb32ca2e5d02ea849515ce19bdefb404030b",
+          "title": "Trump’s AI protectionism has come for robotics",
+          "url": "https://www.technologyreview.com/2026/08/03/1141056/trumps-ai-protectionism-has-come-for-robotics/",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:13e34cbc33d7fc30a5a4c0e2e8ca9ffe3480fcf668aa46832079ff313a29cbf1",
+          "title": "Reflections on ICML 2026",
+          "url": "https://valencelabs.substack.com/p/reflections-on-icml-2026",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:d812fc88181d4206232fe8a64cb13c485b44cf60a094638394c901d910ff8348",
+          "title": "Sensitivity, Causality, and Repair Dissociate: A Layer-Wise Analysis of Perturbation Robustness and Its Scaling",
+          "url": "http://arxiv.org/abs/2608.03842v1",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:2b09b71a902ce7425c8c3353599b5dc600b71c1102f2eaa5550fb54b0790729c",
+          "title": "Test-Time Scaling in Reasoning LLMs: Inference Regimes, Evaluation, and Reproducibility",
+          "url": "http://arxiv.org/abs/2608.04001v1",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:d88d30af38453810dd9ee3b90d0e4d2a68f965dd34ffc4b8ad32db81354c1666",
+          "title": "Stateless MCP has recaptured my interest (and inspired mcp-explorer and datasette-mcp)",
+          "url": "https://simonwillison.net/2026/Jul/31/stateless-mcp/#atom-entries",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:07d2a75e387ebd07542c43d7769d34fd7c051600325de16ee8a4dcd4083bccb8",
+          "title": "Circular financing ain’t what it used to be",
+          "url": "https://garymarcus.substack.com/p/circular-financing-aint-what-it-used",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:bc33adc33c7d8ef4ce1ac55636f2add40a47bb71e63f29e50bc387c367737046",
+          "title": "OpenAI’s amazing — but vastly oversold — new model Astra",
+          "url": "https://garymarcus.substack.com/p/openais-amazing-but-vastly-oversold",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:c45cec9ccf60ddb7fe56f72c07ab924caa70f888382189cf1b86fb42539cefab",
+          "title": "Public Intelligence",
+          "url": "https://www.argmin.net/p/public-intelligence",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:207bda79b329972d87d01d3ee2d5ab2aa11047b65846dd0b1b98477edfeb04fa",
+          "title": "Open and Shut",
+          "url": "https://www.argmin.net/p/open-and-shut",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "opinion"
+        },
+        {
+          "id": "sha256:48f59fd9272f2d35a856a07834b1c3f3046d19a9d7b28e326acbbe0bf3bf7c7c",
+          "title": "Building the enterprise environment for agentic AI",
+          "url": "https://www.technologyreview.com/2026/07/27/1140668/building-the-enterprise-environment-for-agentic-ai/",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "news"
+        },
+        {
+          "id": "sha256:031d2986a0a44db84b49922c09a7ad849af7b2c5d8bd430998e10d184ecc6ebc",
+          "title": "From Japan, Products the World Will Use: An Interview with Sakana AI’s Head of Product Development",
+          "url": "/product-development-interview/",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:cb64118b5e9d2eddc6985baee91bc1288e9426e3f5c9ea6a3a5a23b0c6636921",
+          "title": "Sakana AI、日本語特化のLLM API「Sakana Namazu」を提供開始",
+          "url": "/namazu-api/",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "industry"
+        },
+        {
+          "id": "sha256:b1af7ba61d642aa517425b2ae5afe27100365575b831e8dccaf7186da93c8a87",
+          "title": "Omega-seq: ultra-low-background RNA sequencing with faithful molecular counting and precise transcript-end capture",
+          "url": "https://doi.org/10.64898/2026.03.12.711386",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:ccf8e989bc8badeb0691e2b830ba1473edbc3b32e198d3577bde3237e9dd0d33",
+          "title": "The gate of self-address: where decidable adjudication ends",
+          "url": "http://arxiv.org/abs/2607.29576v1",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:93a2ddd2c1087fe78baf0bf6bb3ade2e5492b323e24a839ab0b3e055cc0d2f39",
+          "title": "FriendBench: Benchmarking Dyadic Familiarity Inference in Humans and Multimodal Large Language Models",
+          "url": "http://arxiv.org/abs/2607.29602v1",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
         {
           "id": "sha256:fe63dc874306aac245fc4be765e9a2f0ff24aa21be9ef469d4c88f3225bac1a9",
           "title": "Universal BCI Personalization: One API for Frozen EEG Trunks and Foundation Models",
@@ -3287,111 +3965,6 @@
           "url": "https://simonwillison.net/2026/Jun/9/claude-fable-5/#atom-entries",
           "firstSeen": "2026-07-19T06:32:40.855Z",
           "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:8bd82ea947286aba3a705ede01cfba85740210165c19d57fd76a8626b6070572",
-          "title": "sqlite-utils 4.0rc2, mostly written by Claude Fable (for about $149.25)",
-          "url": "https://simonwillison.net/2026/Jul/5/sqlite-utils-fable/#atom-entries",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:b4d272183b6265e3cbc770fa18b0ae9a0f146d4001e55dfbf12239dc1d94d7db",
-          "title": "Using Local Coding Agents",
-          "url": "https://magazine.sebastianraschka.com/p/using-local-coding-agents",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:f68d8eb95d9a84d8e0fbb82694a74ec2e504a1f9c612119ed277a54f02318eb5",
-          "title": "The month Generative AI lost its mojo",
-          "url": "https://garymarcus.substack.com/p/the-month-generative-ai-lost-its",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:9874a2e4e14dd2a68e5b4d2eeeec919d44d6d121df6bb64551ede2b4cf57823c",
-          "title": "Engineering Architecture: A Syllabus?",
-          "url": "https://www.argmin.net/p/engineering-architecture-a-syllabus",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:e76c7a7d8752ecf687caf2404a3a273160a6f97e78125405457ad995ed9b72b4",
-          "title": "The Rationality of the Language Machines",
-          "url": "https://www.argmin.net/p/the-rationality-of-the-language-machines",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:f7c1ccc502185fceec367858b1112adff9cbedc9491b07993ea4ceace2a1e33a",
-          "title": "A Tribute to Dimitri Bertsekas",
-          "url": "https://www.argmin.net/p/a-tribute-to-dimitri-bertsekas",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:76892fac3e38e373dfb267609b57c2312511a992a64a75a38821c92bfbfbda9f",
-          "title": "Science or bro-science?",
-          "url": "https://www.argmin.net/p/science-or-bro-science",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:32808bdf50b043bae1c7a667b9a67fde3ff82c89e9f784c9e4b47b9cd8a666d1",
-          "title": "Range of Motion",
-          "url": "https://www.argmin.net/p/range-of-motion",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:7b6a6570d07328e0cf533ab8a3c50db7232b369814e25ab3b75d3ac4e245c16c",
-          "title": "Never Ending Math Equation",
-          "url": "https://www.argmin.net/p/never-ending-math-equation",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:86c1972bd5500bc41395d81c9b48e4e73ecbd64e9016d619f125df5ebcc49b5d",
-          "title": "Methods to Madness",
-          "url": "https://www.argmin.net/p/methods-to-madness",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:d11bcabdb6045e4b980ab7e947740bf696232ec62f129f8279b7da251a41af63",
-          "title": "Fermat’s Last Theorem — how it’s going",
-          "url": "https://xenaproject.wordpress.com/2024/12/11/fermats-last-theorem-how-its-going/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:efd9bba6e56516da74b7920dc42fd4cfdcbeb1f9e7726bb17ca647bad64f8f4c",
-          "title": "Think of a number.",
-          "url": "https://xenaproject.wordpress.com/2025/01/20/think-of-a-number/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:d15bec2216ab4aedcf20029d2e79b15b45274d886469ec639a389c6b0346def3",
-          "title": "What is a quotient?",
-          "url": "https://xenaproject.wordpress.com/2025/02/09/what-is-a-quotient/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:66c2cdea6136eff9911139b49129e3d13a65c9dab036b169ce2c52585165cf8e",
-          "title": "AI at IMO 2025: a round-up",
-          "url": "https://xenaproject.wordpress.com/2025/08/03/ai-at-imo-2025-a-round-up/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
-        },
-        {
-          "id": "sha256:11be2bb8dedbf862ed1c4cf783a868cd3aac02fa0bad7922cc667b02c6dc527b",
-          "title": "Formal or not formal? That is the question in AI for theorem proving.",
-          "url": "https://xenaproject.wordpress.com/2025/10/22/formal-or-not-formal-that-is-the-question-in-ai-for-theorem-proving/",
-          "firstSeen": "2026-07-19T06:32:40.855Z",
-          "sourceKind": "opinion"
         }
       ],
       "related": [
@@ -3526,11 +4099,25 @@
       "links": {},
       "tracked": true,
       "salience": {
-        "items30d": 26,
-        "itemsTotal": 35,
+        "items30d": 28,
+        "itemsTotal": 37,
         "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:3424c39fb2fd522fa5a7c4cc5b56d976c4bebf4a88aa230f4f777c074b0bc55c",
+          "title": "MultiGlobeQA: A Multilingual and Globally Diverse Benchmark for Geospatial Reasoning",
+          "url": "http://arxiv.org/abs/2608.03882v1",
+          "firstSeen": "2026-08-05T08:27:59.507Z",
+          "sourceKind": "preprint"
+        },
+        {
+          "id": "sha256:7d068d6748cd7372b7664d6b2b8876013e07b7920080fdd37ae26e3e7b23ec48",
+          "title": "A Neurosymbolic Approach for Explainable Early Diagnosis of Alzheimer's Disease",
+          "url": "http://arxiv.org/abs/2607.29530v1",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "preprint"
+        },
         {
           "id": "sha256:0f263b408a5f85fb4f4051ebbf4d2fede0006fe5a689c029b94931ba079f0a1d",
           "title": "From Dependency to Compositionality: A Neurosymbolic Lifting of LLM Outputs via Combinatory Categorial Grammar",
@@ -3909,11 +4496,18 @@
       "links": {},
       "tracked": true,
       "salience": {
-        "items30d": 11,
-        "itemsTotal": 15,
+        "items30d": 12,
+        "itemsTotal": 16,
         "trend": "rising"
       },
       "items": [
+        {
+          "id": "sha256:c4bb92bc958828865874495068be3f975dd65ddd2efa76658527c47d7ddcca77",
+          "title": "The seven most shambolic things that happened in AI today.",
+          "url": "https://garymarcus.substack.com/p/the-seven-most-shambolic-things-that",
+          "firstSeen": "2026-08-03T07:42:32.878Z",
+          "sourceKind": "opinion"
+        },
         {
           "id": "sha256:48ae0d4208c1fb309944507196eb1b1f285d6baac27a7a54d43a7d8c12569eb6",
           "title": "Vibe Coding: An Experiment with Test-Driven Development",
@@ -4130,6 +4724,16 @@
           "id": "person:name:barbara-russo",
           "kind": "person",
           "displayName": "Barbara Russo"
+        },
+        {
+          "id": "person:name:gary-marcus",
+          "kind": "person",
+          "displayName": "Gary Marcus"
+        },
+        {
+          "id": "source:garymarcus.substack.com",
+          "kind": "source",
+          "displayName": "garymarcus.substack.com"
         }
       ]
     }
