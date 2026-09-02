@@ -1,0 +1,6 @@
+# pnpm blocks dependency build scripts by default; these two are approved.
+# esbuild — compiles/fetches its native binary (Astro's bundler).
+# sharp   — builds its native libvips bindings (hero images + OG cards).
+allowBuilds:
+  esbuild: true
+  sharp: true
